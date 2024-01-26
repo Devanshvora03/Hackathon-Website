@@ -15535,7 +15535,7 @@
           $2(brandElement).attr("style", fullScreen ? "display: none !important;" : "");
         }
         function createBadge() {
-          return 0;
+          return false;
         }
         function ensureBrand() {
           var found = $body.children(namespace);

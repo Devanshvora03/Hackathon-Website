@@ -1,8 +1,8 @@
+const result = [];
 function csvToObject(csv) {
     const lines = csv.split('\n');
     const headers = lines[0].split(',');
 
-    const result = [];
 
     for (let i = 1; i < lines.length; i++) {
         const obj = {};
@@ -24,8 +24,24 @@ function fetchDataAndConvert() {
         .then(csvData => {
             const objects = csvToObject(csvData);
             console.log(objects);
+            const outputDiv = document.getElementById('contact_data_from_csv');
+
+                    objects.forEach(obj => {
+                        console.log(obj.name);
+                        const anchor = document.createElement('a');
+                        anchor.textContent = `${obj.name}`;
+                        anchor.classList.add('m-5');
+                        outputDiv.appendChild(anchor);
+                    });
         })
         .catch(error => console.error('Error fetching data:', error));
 }
 
+// console.log(result)
 fetchDataAndConvert();
+
+
+
+
+
+

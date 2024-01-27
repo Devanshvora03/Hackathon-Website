@@ -2611,34 +2611,36 @@ h3 {
   left: 0%;
   right: 0%;
 }
-
+.c-background{
+  background-color: #000;
+}
 .speaker-image.one {
   background-image: url("image.png");
 }
 
 .speaker-image.two {
-  /* background-image: url("image.png"); */
+  background-image: url("image.png");
 }
 
 .speaker-image.three {
-  background-image: url("https://assets-global.website-files.com/65b138c4e673c7a4d58fb00b/65b138c5e673c7a4d58fb1bb_Portrait001.jpg");
+  background-image: url("image.png");
   background-position: 100% 0;
   margin-right: 0;
 }
 
 .speaker-image.four {
-  background-image: url("https://assets-global.website-files.com/65b138c4e673c7a4d58fb00b/65b138c5e673c7a4d58fb1c1_Portrait0018.jpeg");
+  background-image: url("image.png");
   background-position: 50% 0;
 }
 
 .speaker-image.five {
   width: 101%;
-  background-image: url("https://assets-global.website-files.com/65b138c4e673c7a4d58fb00b/65b138c5e673c7a4d58fb1c0_Portrait006.jpg");
+  background-image: url("image.png");
   background-position: 0 0;
 }
 
 .speaker-image.six {
-  /* background-image: url("image.png"); */
+  background-image: url("image.png");
   background-position: 50% 0;
 }
 
@@ -2661,19 +2663,19 @@ h3 {
 }
 
 .speaker-image.team-one {
-  background-image: url("https://assets-global.website-files.com/65b138c4e673c7a4d58fb00b/65b138c5e673c7a4d58fb1cc_Team002.jpeg");
+  background-image: url("image.png");
 }
 
 .speaker-image.team-two {
-  background-image: url("https://assets-global.website-files.com/65b138c4e673c7a4d58fb00b/65b138c5e673c7a4d58fb1cd_Team003.jpeg");
+  background-image: url("image.png");
 }
 
 .speaker-image.team-three {
-  background-image: url("https://assets-global.website-files.com/65b138c4e673c7a4d58fb00b/65b138c5e673c7a4d58fb1ce_Team004.jpeg");
+  background-image: url("image.png");
 }
 
 .speaker-image.team-four {
-  background-image: url("https://assets-global.website-files.com/65b138c4e673c7a4d58fb00b/65b138c5e673c7a4d58fb1cf_Team005.jpeg");
+  background-image: url("image.png");
 }
 
 .lottie-menu {
@@ -2733,7 +2735,7 @@ h3 {
 }
 
 .quick-list-image-hover.quick-list {
-  background-image: url("https://assets-global.website-files.com/65b138c4e673c7a4d58fb00b/65b138c5e673c7a4d58fb1b9_Gradient%20Blur%20001.jpg");
+  background-image: url("image.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;

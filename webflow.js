@@ -46,13 +46,13 @@
   var require_tram_min = __commonJS({
     "packages/shared/render/plugins/BaseSiteModules/tram-min.js"() {
       "use strict";
-      window.tram = function(a) {
+      window.tram = function (a) {
         function b(a2, b2) {
           var c2 = new M.Bare();
           return c2.init(a2, b2);
         }
         function c(a2) {
-          return a2.replace(/[A-Z]/g, function(a3) {
+          return a2.replace(/[A-Z]/g, function (a3) {
             return "-" + a3.toLowerCase();
           });
         }
@@ -81,13 +81,13 @@
           U.debug && window && window.console.warn(a2);
         }
         function k(a2) {
-          for (var b2 = -1, c2 = a2 ? a2.length : 0, d2 = []; ++b2 < c2; ) {
+          for (var b2 = -1, c2 = a2 ? a2.length : 0, d2 = []; ++b2 < c2;) {
             var e2 = a2[b2];
             e2 && d2.push(e2);
           }
           return d2;
         }
-        var l = function(a2, b2, c2) {
+        var l = function (a2, b2, c2) {
           function d2(a3) {
             return "object" == typeof a3;
           }
@@ -105,9 +105,9 @@
             }
             i2 === c2 && (i2 = h2, h2 = Object), j2.Bare = k2;
             var l2, m2 = f2[a2] = h2[a2], n2 = k2[a2] = j2[a2] = new f2();
-            return n2.constructor = j2, j2.mixin = function(b3) {
+            return n2.constructor = j2, j2.mixin = function (b3) {
               return k2[a2] = j2[a2] = g2(j2, b3)[a2], j2;
-            }, j2.open = function(a3) {
+            }, j2.open = function (a3) {
               if (l2 = {}, e2(a3) ? l2 = a3.call(j2, n2, m2, j2, h2) : d2(a3) && (l2 = a3), d2(l2))
                 for (var c3 in l2)
                   b2.call(l2, c3) && (n2[c3] = l2[c3]);
@@ -116,102 +116,102 @@
           }
           return g2;
         }("prototype", {}.hasOwnProperty), m = {
-          ease: ["ease", function(a2, b2, c2, d2) {
+          ease: ["ease", function (a2, b2, c2, d2) {
             var e2 = (a2 /= d2) * a2, f2 = e2 * a2;
             return b2 + c2 * (-2.75 * f2 * e2 + 11 * e2 * e2 + -15.5 * f2 + 8 * e2 + 0.25 * a2);
           }],
-          "ease-in": ["ease-in", function(a2, b2, c2, d2) {
+          "ease-in": ["ease-in", function (a2, b2, c2, d2) {
             var e2 = (a2 /= d2) * a2, f2 = e2 * a2;
             return b2 + c2 * (-1 * f2 * e2 + 3 * e2 * e2 + -3 * f2 + 2 * e2);
           }],
-          "ease-out": ["ease-out", function(a2, b2, c2, d2) {
+          "ease-out": ["ease-out", function (a2, b2, c2, d2) {
             var e2 = (a2 /= d2) * a2, f2 = e2 * a2;
             return b2 + c2 * (0.3 * f2 * e2 + -1.6 * e2 * e2 + 2.2 * f2 + -1.8 * e2 + 1.9 * a2);
           }],
-          "ease-in-out": ["ease-in-out", function(a2, b2, c2, d2) {
+          "ease-in-out": ["ease-in-out", function (a2, b2, c2, d2) {
             var e2 = (a2 /= d2) * a2, f2 = e2 * a2;
             return b2 + c2 * (2 * f2 * e2 + -5 * e2 * e2 + 2 * f2 + 2 * e2);
           }],
-          linear: ["linear", function(a2, b2, c2, d2) {
+          linear: ["linear", function (a2, b2, c2, d2) {
             return c2 * a2 / d2 + b2;
           }],
-          "ease-in-quad": ["cubic-bezier(0.550, 0.085, 0.680, 0.530)", function(a2, b2, c2, d2) {
+          "ease-in-quad": ["cubic-bezier(0.550, 0.085, 0.680, 0.530)", function (a2, b2, c2, d2) {
             return c2 * (a2 /= d2) * a2 + b2;
           }],
-          "ease-out-quad": ["cubic-bezier(0.250, 0.460, 0.450, 0.940)", function(a2, b2, c2, d2) {
+          "ease-out-quad": ["cubic-bezier(0.250, 0.460, 0.450, 0.940)", function (a2, b2, c2, d2) {
             return -c2 * (a2 /= d2) * (a2 - 2) + b2;
           }],
-          "ease-in-out-quad": ["cubic-bezier(0.455, 0.030, 0.515, 0.955)", function(a2, b2, c2, d2) {
+          "ease-in-out-quad": ["cubic-bezier(0.455, 0.030, 0.515, 0.955)", function (a2, b2, c2, d2) {
             return (a2 /= d2 / 2) < 1 ? c2 / 2 * a2 * a2 + b2 : -c2 / 2 * (--a2 * (a2 - 2) - 1) + b2;
           }],
-          "ease-in-cubic": ["cubic-bezier(0.550, 0.055, 0.675, 0.190)", function(a2, b2, c2, d2) {
+          "ease-in-cubic": ["cubic-bezier(0.550, 0.055, 0.675, 0.190)", function (a2, b2, c2, d2) {
             return c2 * (a2 /= d2) * a2 * a2 + b2;
           }],
-          "ease-out-cubic": ["cubic-bezier(0.215, 0.610, 0.355, 1)", function(a2, b2, c2, d2) {
+          "ease-out-cubic": ["cubic-bezier(0.215, 0.610, 0.355, 1)", function (a2, b2, c2, d2) {
             return c2 * ((a2 = a2 / d2 - 1) * a2 * a2 + 1) + b2;
           }],
-          "ease-in-out-cubic": ["cubic-bezier(0.645, 0.045, 0.355, 1)", function(a2, b2, c2, d2) {
+          "ease-in-out-cubic": ["cubic-bezier(0.645, 0.045, 0.355, 1)", function (a2, b2, c2, d2) {
             return (a2 /= d2 / 2) < 1 ? c2 / 2 * a2 * a2 * a2 + b2 : c2 / 2 * ((a2 -= 2) * a2 * a2 + 2) + b2;
           }],
-          "ease-in-quart": ["cubic-bezier(0.895, 0.030, 0.685, 0.220)", function(a2, b2, c2, d2) {
+          "ease-in-quart": ["cubic-bezier(0.895, 0.030, 0.685, 0.220)", function (a2, b2, c2, d2) {
             return c2 * (a2 /= d2) * a2 * a2 * a2 + b2;
           }],
-          "ease-out-quart": ["cubic-bezier(0.165, 0.840, 0.440, 1)", function(a2, b2, c2, d2) {
+          "ease-out-quart": ["cubic-bezier(0.165, 0.840, 0.440, 1)", function (a2, b2, c2, d2) {
             return -c2 * ((a2 = a2 / d2 - 1) * a2 * a2 * a2 - 1) + b2;
           }],
-          "ease-in-out-quart": ["cubic-bezier(0.770, 0, 0.175, 1)", function(a2, b2, c2, d2) {
+          "ease-in-out-quart": ["cubic-bezier(0.770, 0, 0.175, 1)", function (a2, b2, c2, d2) {
             return (a2 /= d2 / 2) < 1 ? c2 / 2 * a2 * a2 * a2 * a2 + b2 : -c2 / 2 * ((a2 -= 2) * a2 * a2 * a2 - 2) + b2;
           }],
-          "ease-in-quint": ["cubic-bezier(0.755, 0.050, 0.855, 0.060)", function(a2, b2, c2, d2) {
+          "ease-in-quint": ["cubic-bezier(0.755, 0.050, 0.855, 0.060)", function (a2, b2, c2, d2) {
             return c2 * (a2 /= d2) * a2 * a2 * a2 * a2 + b2;
           }],
-          "ease-out-quint": ["cubic-bezier(0.230, 1, 0.320, 1)", function(a2, b2, c2, d2) {
+          "ease-out-quint": ["cubic-bezier(0.230, 1, 0.320, 1)", function (a2, b2, c2, d2) {
             return c2 * ((a2 = a2 / d2 - 1) * a2 * a2 * a2 * a2 + 1) + b2;
           }],
-          "ease-in-out-quint": ["cubic-bezier(0.860, 0, 0.070, 1)", function(a2, b2, c2, d2) {
+          "ease-in-out-quint": ["cubic-bezier(0.860, 0, 0.070, 1)", function (a2, b2, c2, d2) {
             return (a2 /= d2 / 2) < 1 ? c2 / 2 * a2 * a2 * a2 * a2 * a2 + b2 : c2 / 2 * ((a2 -= 2) * a2 * a2 * a2 * a2 + 2) + b2;
           }],
-          "ease-in-sine": ["cubic-bezier(0.470, 0, 0.745, 0.715)", function(a2, b2, c2, d2) {
+          "ease-in-sine": ["cubic-bezier(0.470, 0, 0.745, 0.715)", function (a2, b2, c2, d2) {
             return -c2 * Math.cos(a2 / d2 * (Math.PI / 2)) + c2 + b2;
           }],
-          "ease-out-sine": ["cubic-bezier(0.390, 0.575, 0.565, 1)", function(a2, b2, c2, d2) {
+          "ease-out-sine": ["cubic-bezier(0.390, 0.575, 0.565, 1)", function (a2, b2, c2, d2) {
             return c2 * Math.sin(a2 / d2 * (Math.PI / 2)) + b2;
           }],
-          "ease-in-out-sine": ["cubic-bezier(0.445, 0.050, 0.550, 0.950)", function(a2, b2, c2, d2) {
+          "ease-in-out-sine": ["cubic-bezier(0.445, 0.050, 0.550, 0.950)", function (a2, b2, c2, d2) {
             return -c2 / 2 * (Math.cos(Math.PI * a2 / d2) - 1) + b2;
           }],
-          "ease-in-expo": ["cubic-bezier(0.950, 0.050, 0.795, 0.035)", function(a2, b2, c2, d2) {
+          "ease-in-expo": ["cubic-bezier(0.950, 0.050, 0.795, 0.035)", function (a2, b2, c2, d2) {
             return 0 === a2 ? b2 : c2 * Math.pow(2, 10 * (a2 / d2 - 1)) + b2;
           }],
-          "ease-out-expo": ["cubic-bezier(0.190, 1, 0.220, 1)", function(a2, b2, c2, d2) {
+          "ease-out-expo": ["cubic-bezier(0.190, 1, 0.220, 1)", function (a2, b2, c2, d2) {
             return a2 === d2 ? b2 + c2 : c2 * (-Math.pow(2, -10 * a2 / d2) + 1) + b2;
           }],
-          "ease-in-out-expo": ["cubic-bezier(1, 0, 0, 1)", function(a2, b2, c2, d2) {
+          "ease-in-out-expo": ["cubic-bezier(1, 0, 0, 1)", function (a2, b2, c2, d2) {
             return 0 === a2 ? b2 : a2 === d2 ? b2 + c2 : (a2 /= d2 / 2) < 1 ? c2 / 2 * Math.pow(2, 10 * (a2 - 1)) + b2 : c2 / 2 * (-Math.pow(2, -10 * --a2) + 2) + b2;
           }],
-          "ease-in-circ": ["cubic-bezier(0.600, 0.040, 0.980, 0.335)", function(a2, b2, c2, d2) {
+          "ease-in-circ": ["cubic-bezier(0.600, 0.040, 0.980, 0.335)", function (a2, b2, c2, d2) {
             return -c2 * (Math.sqrt(1 - (a2 /= d2) * a2) - 1) + b2;
           }],
-          "ease-out-circ": ["cubic-bezier(0.075, 0.820, 0.165, 1)", function(a2, b2, c2, d2) {
+          "ease-out-circ": ["cubic-bezier(0.075, 0.820, 0.165, 1)", function (a2, b2, c2, d2) {
             return c2 * Math.sqrt(1 - (a2 = a2 / d2 - 1) * a2) + b2;
           }],
-          "ease-in-out-circ": ["cubic-bezier(0.785, 0.135, 0.150, 0.860)", function(a2, b2, c2, d2) {
+          "ease-in-out-circ": ["cubic-bezier(0.785, 0.135, 0.150, 0.860)", function (a2, b2, c2, d2) {
             return (a2 /= d2 / 2) < 1 ? -c2 / 2 * (Math.sqrt(1 - a2 * a2) - 1) + b2 : c2 / 2 * (Math.sqrt(1 - (a2 -= 2) * a2) + 1) + b2;
           }],
-          "ease-in-back": ["cubic-bezier(0.600, -0.280, 0.735, 0.045)", function(a2, b2, c2, d2, e2) {
+          "ease-in-back": ["cubic-bezier(0.600, -0.280, 0.735, 0.045)", function (a2, b2, c2, d2, e2) {
             return void 0 === e2 && (e2 = 1.70158), c2 * (a2 /= d2) * a2 * ((e2 + 1) * a2 - e2) + b2;
           }],
-          "ease-out-back": ["cubic-bezier(0.175, 0.885, 0.320, 1.275)", function(a2, b2, c2, d2, e2) {
+          "ease-out-back": ["cubic-bezier(0.175, 0.885, 0.320, 1.275)", function (a2, b2, c2, d2, e2) {
             return void 0 === e2 && (e2 = 1.70158), c2 * ((a2 = a2 / d2 - 1) * a2 * ((e2 + 1) * a2 + e2) + 1) + b2;
           }],
-          "ease-in-out-back": ["cubic-bezier(0.680, -0.550, 0.265, 1.550)", function(a2, b2, c2, d2, e2) {
+          "ease-in-out-back": ["cubic-bezier(0.680, -0.550, 0.265, 1.550)", function (a2, b2, c2, d2, e2) {
             return void 0 === e2 && (e2 = 1.70158), (a2 /= d2 / 2) < 1 ? c2 / 2 * a2 * a2 * (((e2 *= 1.525) + 1) * a2 - e2) + b2 : c2 / 2 * ((a2 -= 2) * a2 * (((e2 *= 1.525) + 1) * a2 + e2) + 2) + b2;
           }]
         }, n = {
           "ease-in-back": "cubic-bezier(0.600, 0, 0.735, 0.045)",
           "ease-out-back": "cubic-bezier(0.175, 0.885, 0.320, 1)",
           "ease-in-out-back": "cubic-bezier(0.680, 0, 0.265, 1)"
-        }, o = document, p = window, q = "bkwld-tram", r = /[\-\.0-9]/g, s = /[A-Z]/, t = "number", u = /^(rgb|#)/, v = /(em|cm|mm|in|pt|pc|px)$/, w = /(em|cm|mm|in|pt|pc|px|%)$/, x = /(deg|rad|turn)$/, y = "unitless", z = /(all|none) 0s ease 0s/, A = /^(width|height)$/, B = " ", C = o.createElement("a"), D = ["Webkit", "Moz", "O", "ms"], E = ["-webkit-", "-moz-", "-o-", "-ms-"], F = function(a2) {
+        }, o = document, p = window, q = "bkwld-tram", r = /[\-\.0-9]/g, s = /[A-Z]/, t = "number", u = /^(rgb|#)/, v = /(em|cm|mm|in|pt|pc|px)$/, w = /(em|cm|mm|in|pt|pc|px|%)$/, x = /(deg|rad|turn)$/, y = "unitless", z = /(all|none) 0s ease 0s/, A = /^(width|height)$/, B = " ", C = o.createElement("a"), D = ["Webkit", "Moz", "O", "ms"], E = ["-webkit-", "-moz-", "-o-", "-ms-"], F = function (a2) {
           if (a2 in C.style)
             return {
               dom: a2,
@@ -239,17 +239,17 @@
             for (var I in n)
               m[I][0] = n[I];
         }
-        var J = b.frame = function() {
+        var J = b.frame = function () {
           var a2 = p.requestAnimationFrame || p.webkitRequestAnimationFrame || p.mozRequestAnimationFrame || p.oRequestAnimationFrame || p.msRequestAnimationFrame;
-          return a2 && G.bind ? a2.bind(p) : function(a3) {
+          return a2 && G.bind ? a2.bind(p) : function (a3) {
             p.setTimeout(a3, 16);
           };
-        }(), K = b.now = function() {
+        }(), K = b.now = function () {
           var a2 = p.performance, b2 = a2 && (a2.now || a2.webkitNow || a2.msNow || a2.mozNow);
-          return b2 && G.bind ? b2.bind(a2) : Date.now || function() {
+          return b2 && G.bind ? b2.bind(a2) : Date.now || function () {
             return +/* @__PURE__ */ new Date();
           };
-        }(), L = l(function(b2) {
+        }(), L = l(function (b2) {
           function d2(a2, b3) {
             var c2 = k(("" + a2).split(B)), d3 = c2[0];
             b3 = b3 || {};
@@ -290,17 +290,17 @@
                 return void a2.call(this, this);
               if ("object" == e3) {
                 var f3 = 0;
-                u2.call(this, a2, function(a3, b4) {
+                u2.call(this, a2, function (a3, b4) {
                   a3.span > f3 && (f3 = a3.span), a3.stop(), a3.animate(b4);
-                }, function(a3) {
+                }, function (a3) {
                   "wait" in a3 && (f3 = i(a3.wait, 0));
                 }), t2.call(this), f3 > 0 && (this.timer = new S({
                   duration: f3,
                   context: this
                 }), this.active = true, b3 && (this.timer.complete = h2));
                 var g3 = this, j2 = false, k2 = {};
-                J(function() {
-                  u2.call(g3, a2, function(a3) {
+                J(function () {
+                  u2.call(g3, a2, function (a3) {
                     a3.active && (j2 = true, k2[a3.name] = a3.nextStyle);
                   }), j2 && g3.$el.css(k2);
                 });
@@ -379,7 +379,7 @@
             this.$el.css(a2);
           }
           function y2(a2, c2) {
-            b2[a2] = function() {
+            b2[a2] = function () {
               return this.children ? A2.call(this, c2, arguments) : (this.el && c2.apply(this, arguments), this);
             };
           }
@@ -389,30 +389,30 @@
               a2.apply(this.children[c2], b3);
             return this;
           }
-          b2.init = function(b3) {
+          b2.init = function (b3) {
             if (this.$el = a(b3), this.el = this.$el[0], this.props = {}, this.queue = [], this.style = "", this.active = false, U.keepInherited && !U.fallback) {
               var c2 = W(this.el, "transition");
               c2 && !z.test(c2) && (this.upstream = c2);
             }
             G.backface && U.hideBackface && V(this.el, G.backface.css, "hidden");
           }, y2("add", d2), y2("start", e2), y2("wait", f2), y2("then", g2), y2("next", h2), y2("stop", l2), y2("set", m2), y2("show", n2), y2("hide", o2), y2("redraw", p2), y2("destroy", r2);
-        }), M = l(L, function(b2) {
+        }), M = l(L, function (b2) {
           function c2(b3, c3) {
             var d2 = a.data(b3, q) || a.data(b3, q, new L.Bare());
             return d2.el || d2.init(b3), c3 ? d2.start(c3) : d2;
           }
-          b2.init = function(b3, d2) {
+          b2.init = function (b3, d2) {
             var e2 = a(b3);
             if (!e2.length)
               return this;
             if (1 === e2.length)
               return c2(e2[0], d2);
             var f2 = [];
-            return e2.each(function(a2, b4) {
+            return e2.each(function (a2, b4) {
               f2.push(c2(b4, d2));
             }), this.children = f2, this;
           };
-        }), N = l(function(a2) {
+        }), N = l(function (a2) {
           function b2() {
             var a3 = this.get();
             this.update("auto");
@@ -431,15 +431,15 @@
             ease: "ease",
             delay: 0
           };
-          a2.init = function(a3, b3, d3, e2) {
+          a2.init = function (a3, b3, d3, e2) {
             this.$el = a3, this.el = a3[0];
             var g2 = b3[0];
             d3[2] && (g2 = d3[2]), X[g2] && (g2 = X[g2]), this.name = g2, this.type = d3[1], this.duration = i(b3[1], this.duration, f2.duration), this.ease = c2(b3[2], this.ease, f2.ease), this.delay = i(b3[3], this.delay, f2.delay), this.span = this.duration + this.delay, this.active = false, this.nextStyle = null, this.auto = A.test(this.name), this.unit = e2.unit || this.unit || U.defaultUnit, this.angle = e2.angle || this.angle || U.defaultAngle, U.fallback || e2.fallback ? this.animate = this.fallback : (this.animate = this.transition, this.string = this.name + B + this.duration + "ms" + ("ease" != this.ease ? B + m[this.ease][0] : "") + (this.delay ? B + this.delay + "ms" : ""));
-          }, a2.set = function(a3) {
+          }, a2.set = function (a3) {
             a3 = this.convert(a3, this.type), this.update(a3), this.redraw();
-          }, a2.transition = function(a3) {
+          }, a2.transition = function (a3) {
             this.active = true, a3 = this.convert(a3, this.type), this.auto && ("auto" == this.el.style[this.name] && (this.update(this.get()), this.redraw()), "auto" == a3 && (a3 = b2.call(this))), this.nextStyle = a3;
-          }, a2.fallback = function(a3) {
+          }, a2.fallback = function (a3) {
             var c3 = this.el.style[this.name] || this.convert(this.get(), this.type);
             a3 = this.convert(a3, this.type), this.auto && ("auto" == c3 && (c3 = this.convert(this.get(), this.type)), "auto" == a3 && (a3 = b2.call(this))), this.tween = new R({
               from: c3,
@@ -450,15 +450,15 @@
               update: this.update,
               context: this
             });
-          }, a2.get = function() {
+          }, a2.get = function () {
             return W(this.el, this.name);
-          }, a2.update = function(a3) {
+          }, a2.update = function (a3) {
             V(this.el, this.name, a3);
-          }, a2.stop = function() {
+          }, a2.stop = function () {
             (this.active || this.nextStyle) && (this.active = false, this.nextStyle = null, V(this.el, this.name, this.get()));
             var a3 = this.tween;
             a3 && a3.context && a3.destroy();
-          }, a2.convert = function(a3, b3) {
+          }, a2.convert = function (a3, b3) {
             if ("auto" == a3 && this.auto)
               return a3;
             var c3, e2 = "number" == typeof a3, f3 = "string" == typeof a3;
@@ -508,34 +508,34 @@
                 c3 = "number(unitless) or string(unit or %)";
             }
             return g(c3, a3), a3;
-          }, a2.redraw = function() {
+          }, a2.redraw = function () {
             this.el.offsetHeight;
           };
-        }), O = l(N, function(a2, b2) {
-          a2.init = function() {
+        }), O = l(N, function (a2, b2) {
+          a2.init = function () {
             b2.init.apply(this, arguments), this.original || (this.original = this.convert(this.get(), u));
           };
-        }), P = l(N, function(a2, b2) {
-          a2.init = function() {
+        }), P = l(N, function (a2, b2) {
+          a2.init = function () {
             b2.init.apply(this, arguments), this.animate = this.fallback;
-          }, a2.get = function() {
+          }, a2.get = function () {
             return this.$el[this.name]();
-          }, a2.update = function(a3) {
+          }, a2.update = function (a3) {
             this.$el[this.name](a3);
           };
-        }), Q = l(N, function(a2, b2) {
+        }), Q = l(N, function (a2, b2) {
           function c2(a3, b3) {
             var c3, d2, e2, f2, g2;
             for (c3 in a3)
               f2 = Z[c3], e2 = f2[0], d2 = f2[1] || c3, g2 = this.convert(a3[c3], e2), b3.call(this, d2, g2, e2);
           }
-          a2.init = function() {
+          a2.init = function () {
             b2.init.apply(this, arguments), this.current || (this.current = {}, Z.perspective && U.perspective && (this.current.perspective = U.perspective, V(this.el, this.name, this.style(this.current)), this.redraw()));
-          }, a2.set = function(a3) {
-            c2.call(this, a3, function(a4, b3) {
+          }, a2.set = function (a3) {
+            c2.call(this, a3, function (a4, b3) {
               this.current[a4] = b3;
             }), V(this.el, this.name, this.style(this.current)), this.redraw();
-          }, a2.transition = function(a3) {
+          }, a2.transition = function (a3) {
             var b3 = this.values(a3);
             this.tween = new T({
               current: this.current,
@@ -548,7 +548,7 @@
             for (c3 in this.current)
               d2[c3] = c3 in b3 ? b3[c3] : this.current[c3];
             this.active = true, this.nextStyle = this.style(d2);
-          }, a2.fallback = function(a3) {
+          }, a2.fallback = function (a3) {
             var b3 = this.values(a3);
             this.tween = new T({
               current: this.current,
@@ -559,27 +559,27 @@
               update: this.update,
               context: this
             });
-          }, a2.update = function() {
+          }, a2.update = function () {
             V(this.el, this.name, this.style(this.current));
-          }, a2.style = function(a3) {
+          }, a2.style = function (a3) {
             var b3, c3 = "";
             for (b3 in a3)
               c3 += b3 + "(" + a3[b3] + ") ";
             return c3;
-          }, a2.values = function(a3) {
+          }, a2.values = function (a3) {
             var b3, d2 = {};
-            return c2.call(this, a3, function(a4, c3, e2) {
+            return c2.call(this, a3, function (a4, c3, e2) {
               d2[a4] = c3, void 0 === this.current[a4] && (b3 = 0, ~a4.indexOf("scale") && (b3 = 1), this.current[a4] = this.convert(b3, e2));
             }), d2;
           };
-        }), R = l(function(b2) {
+        }), R = l(function (b2) {
           function c2(a2) {
             1 === n2.push(a2) && J(g2);
           }
           function g2() {
             var a2, b3, c3, d2 = n2.length;
             if (d2)
-              for (J(g2), b3 = K(), a2 = d2; a2--; )
+              for (J(g2), b3 = K(), a2 = d2; a2--;)
                 c3 = n2[a2], c3 && c3.render(b3);
           }
           function i2(b3) {
@@ -597,17 +597,17 @@
             from: 0,
             to: 1
           };
-          b2.init = function(a2) {
+          b2.init = function (a2) {
             this.duration = a2.duration || 0, this.delay = a2.delay || 0;
             var b3 = a2.ease || l2.ease;
             m[b3] && (b3 = m[b3][1]), "function" != typeof b3 && (b3 = l2.ease), this.ease = b3, this.update = a2.update || f, this.complete = a2.complete || f, this.context = a2.context || this, this.name = a2.name;
             var c3 = a2.from, d2 = a2.to;
             void 0 === c3 && (c3 = l2.from), void 0 === d2 && (d2 = l2.to), this.unit = a2.unit || "", "number" == typeof c3 && "number" == typeof d2 ? (this.begin = c3, this.change = d2 - c3) : this.format(d2, c3), this.value = this.begin + this.unit, this.start = K(), a2.autoplay !== false && this.play();
-          }, b2.play = function() {
+          }, b2.play = function () {
             this.active || (this.start || (this.start = K()), this.active = true, c2(this));
-          }, b2.stop = function() {
+          }, b2.stop = function () {
             this.active && (this.active = false, i2(this));
-          }, b2.render = function(a2) {
+          }, b2.render = function (a2) {
             var b3, c3 = a2 - this.start;
             if (this.delay) {
               if (c3 <= this.delay)
@@ -619,7 +619,7 @@
               return b3 = this.startRGB ? k2(this.startRGB, this.endRGB, d2) : j2(this.begin + d2 * this.change), this.value = b3 + this.unit, void this.update.call(this.context, this.value);
             }
             b3 = this.endHex || this.begin + this.change, this.value = b3 + this.unit, this.update.call(this.context, this.value), this.complete.call(this.context), this.destroy();
-          }, b2.format = function(a2, b3) {
+          }, b2.format = function (a2, b3) {
             if (b3 += "", a2 += "", "#" == a2.charAt(0))
               return this.startRGB = d(b3), this.endRGB = d(a2), this.endHex = a2, this.begin = 0, void (this.change = 1);
             if (!this.unit) {
@@ -627,19 +627,19 @@
               c3 !== e2 && h("tween", b3, a2), this.unit = c3;
             }
             b3 = parseFloat(b3), a2 = parseFloat(a2), this.begin = this.value = b3, this.change = a2 - b3;
-          }, b2.destroy = function() {
+          }, b2.destroy = function () {
             this.stop(), this.context = null, this.ease = this.update = this.complete = f;
           };
           var n2 = [], o2 = 1e3;
-        }), S = l(R, function(a2) {
-          a2.init = function(a3) {
+        }), S = l(R, function (a2) {
+          a2.init = function (a3) {
             this.duration = a3.duration || 0, this.complete = a3.complete || f, this.context = a3.context, this.play();
-          }, a2.render = function(a3) {
+          }, a2.render = function (a3) {
             var b2 = a3 - this.start;
             b2 < this.duration || (this.complete.call(this.context), this.destroy());
           };
-        }), T = l(R, function(a2, b2) {
-          a2.init = function(a3) {
+        }), T = l(R, function (a2, b2) {
+          a2.init = function (a3) {
             this.context = a3.context, this.update = a3.update, this.tweens = [], this.current = a3.current;
             var b3, c2;
             for (b3 in a3.values)
@@ -653,15 +653,15 @@
                 autoplay: false
               }));
             this.play();
-          }, a2.render = function(a3) {
+          }, a2.render = function (a3) {
             var b3, c2, d2 = this.tweens.length, e2 = false;
-            for (b3 = d2; b3--; )
+            for (b3 = d2; b3--;)
               c2 = this.tweens[b3], c2.context && (c2.render(a3), this.current[c2.name] = c2.value, e2 = true);
             return e2 ? void (this.update && this.update.call(this.context)) : this.destroy();
-          }, a2.destroy = function() {
+          }, a2.destroy = function () {
             if (b2.destroy.call(this), this.tweens) {
               var a3, c2 = this.tweens.length;
-              for (a3 = c2; a3--; )
+              for (a3 = c2; a3--;)
                 this.tweens[a3].destroy();
               this.tweens = null, this.current = null;
             }
@@ -676,21 +676,21 @@
           fallback: !G.transition,
           agentTests: []
         };
-        b.fallback = function(a2) {
+        b.fallback = function (a2) {
           if (!G.transition)
             return U.fallback = true;
           U.agentTests.push("(" + a2 + ")");
           var b2 = new RegExp(U.agentTests.join("|"), "i");
           U.fallback = b2.test(navigator.userAgent);
-        }, b.fallback("6.0.[2-5] Safari"), b.tween = function(a2) {
+        }, b.fallback("6.0.[2-5] Safari"), b.tween = function (a2) {
           return new R(a2);
-        }, b.delay = function(a2, b2, c2) {
+        }, b.delay = function (a2, b2, c2) {
           return new S({
             complete: b2,
             duration: a2,
             context: c2
           });
-        }, a.fn.tram = function(a2) {
+        }, a.fn.tram = function (a2) {
           return b.call(null, this, a2);
         };
         var V = a.style, W = a.css, X = {
@@ -765,14 +765,14 @@
       "use strict";
       var $2 = window.$;
       var tram = require_tram_min() && $2.tram;
-      module2.exports = function() {
+      module2.exports = function () {
         var _ = {};
         _.VERSION = "1.6.0-Webflow";
         var breaker = {};
         var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
         var push = ArrayProto.push, slice = ArrayProto.slice, concat = ArrayProto.concat, toString = ObjProto.toString, hasOwnProperty2 = ObjProto.hasOwnProperty;
         var nativeForEach = ArrayProto.forEach, nativeMap = ArrayProto.map, nativeReduce = ArrayProto.reduce, nativeReduceRight = ArrayProto.reduceRight, nativeFilter = ArrayProto.filter, nativeEvery = ArrayProto.every, nativeSome = ArrayProto.some, nativeIndexOf = ArrayProto.indexOf, nativeLastIndexOf = ArrayProto.lastIndexOf, nativeIsArray = Array.isArray, nativeKeys = Object.keys, nativeBind = FuncProto.bind;
-        var each = _.each = _.forEach = function(obj, iterator, context) {
+        var each = _.each = _.forEach = function (obj, iterator, context) {
           if (obj == null)
             return obj;
           if (nativeForEach && obj.forEach === nativeForEach) {
@@ -791,20 +791,20 @@
           }
           return obj;
         };
-        _.map = _.collect = function(obj, iterator, context) {
+        _.map = _.collect = function (obj, iterator, context) {
           var results = [];
           if (obj == null)
             return results;
           if (nativeMap && obj.map === nativeMap)
             return obj.map(iterator, context);
-          each(obj, function(value2, index2, list) {
+          each(obj, function (value2, index2, list) {
             results.push(iterator.call(context, value2, index2, list));
           });
           return results;
         };
-        _.find = _.detect = function(obj, predicate, context) {
+        _.find = _.detect = function (obj, predicate, context) {
           var result;
-          any(obj, function(value2, index2, list) {
+          any(obj, function (value2, index2, list) {
             if (predicate.call(context, value2, index2, list)) {
               result = value2;
               return true;
@@ -812,66 +812,66 @@
           });
           return result;
         };
-        _.filter = _.select = function(obj, predicate, context) {
+        _.filter = _.select = function (obj, predicate, context) {
           var results = [];
           if (obj == null)
             return results;
           if (nativeFilter && obj.filter === nativeFilter)
             return obj.filter(predicate, context);
-          each(obj, function(value2, index2, list) {
+          each(obj, function (value2, index2, list) {
             if (predicate.call(context, value2, index2, list))
               results.push(value2);
           });
           return results;
         };
-        var any = _.some = _.any = function(obj, predicate, context) {
+        var any = _.some = _.any = function (obj, predicate, context) {
           predicate || (predicate = _.identity);
           var result = false;
           if (obj == null)
             return result;
           if (nativeSome && obj.some === nativeSome)
             return obj.some(predicate, context);
-          each(obj, function(value2, index2, list) {
+          each(obj, function (value2, index2, list) {
             if (result || (result = predicate.call(context, value2, index2, list)))
               return breaker;
           });
           return !!result;
         };
-        _.contains = _.include = function(obj, target) {
+        _.contains = _.include = function (obj, target) {
           if (obj == null)
             return false;
           if (nativeIndexOf && obj.indexOf === nativeIndexOf)
             return obj.indexOf(target) != -1;
-          return any(obj, function(value2) {
+          return any(obj, function (value2) {
             return value2 === target;
           });
         };
-        _.delay = function(func, wait) {
+        _.delay = function (func, wait) {
           var args = slice.call(arguments, 2);
-          return setTimeout(function() {
+          return setTimeout(function () {
             return func.apply(null, args);
           }, wait);
         };
-        _.defer = function(func) {
+        _.defer = function (func) {
           return _.delay.apply(_, [func, 1].concat(slice.call(arguments, 1)));
         };
-        _.throttle = function(func) {
+        _.throttle = function (func) {
           var wait, args, context;
-          return function() {
+          return function () {
             if (wait)
               return;
             wait = true;
             args = arguments;
             context = this;
-            tram.frame(function() {
+            tram.frame(function () {
               wait = false;
               func.apply(context, args);
             });
           };
         };
-        _.debounce = function(func, wait, immediate) {
+        _.debounce = function (func, wait, immediate) {
           var timeout, args, context, timestamp, result;
-          var later = function() {
+          var later = function () {
             var last = _.now() - timestamp;
             if (last < wait) {
               timeout = setTimeout(later, wait - last);
@@ -883,7 +883,7 @@
               }
             }
           };
-          return function() {
+          return function () {
             context = this;
             args = arguments;
             timestamp = _.now();
@@ -898,7 +898,7 @@
             return result;
           };
         };
-        _.defaults = function(obj) {
+        _.defaults = function (obj) {
           if (!_.isObject(obj))
             return obj;
           for (var i = 1, length2 = arguments.length; i < length2; i++) {
@@ -910,7 +910,7 @@
           }
           return obj;
         };
-        _.keys = function(obj) {
+        _.keys = function (obj) {
           if (!_.isObject(obj))
             return [];
           if (nativeKeys)
@@ -921,13 +921,13 @@
               keys.push(key2);
           return keys;
         };
-        _.has = function(obj, key2) {
+        _.has = function (obj, key2) {
           return hasOwnProperty2.call(obj, key2);
         };
-        _.isObject = function(obj) {
+        _.isObject = function (obj) {
           return obj === Object(obj);
         };
-        _.now = Date.now || function() {
+        _.now = Date.now || function () {
           return (/* @__PURE__ */ new Date()).getTime();
         };
         _.templateSettings = {
@@ -945,18 +945,18 @@
           "\u2029": "u2029"
         };
         var escapeRegExp = /\\|'|\r|\n|\u2028|\u2029/g;
-        var escapeChar = function(match) {
+        var escapeChar = function (match) {
           return "\\" + escapes[match];
         };
         var bareIdentifier = /^\s*(\w|\$)+\s*$/;
-        _.template = function(text2, settings, oldSettings) {
+        _.template = function (text2, settings, oldSettings) {
           if (!settings && oldSettings)
             settings = oldSettings;
           settings = _.defaults({}, settings, _.templateSettings);
           var matcher = RegExp([(settings.escape || noMatch).source, (settings.interpolate || noMatch).source, (settings.evaluate || noMatch).source].join("|") + "|$", "g");
           var index2 = 0;
           var source = "__p+='";
-          text2.replace(matcher, function(match, escape, interpolate, evaluate, offset) {
+          text2.replace(matcher, function (match, escape, interpolate, evaluate, offset) {
             source += text2.slice(index2, offset).replace(escapeRegExp, escapeChar);
             index2 = offset + match.length;
             if (escape) {
@@ -985,7 +985,7 @@
             e.source = source;
             throw e;
           }
-          var template = function(data2) {
+          var template = function (data2) {
             return render.call(this, data2, _);
           };
           template.source = "function(" + argument + "){\n" + source + "}";
@@ -1014,7 +1014,7 @@
       var destroyed = false;
       tram.config.hideBackface = false;
       tram.config.keepInherited = true;
-      Webflow2.define = function(name2, factory2, options) {
+      Webflow2.define = function (name2, factory2, options) {
         if (modules[name2]) {
           unbindModule(modules[name2]);
         }
@@ -1022,7 +1022,7 @@
         bindModule(instance);
         return instance;
       };
-      Webflow2.require = function(name2) {
+      Webflow2.require = function (name2) {
         return modules[name2];
       };
       function bindModule(module3) {
@@ -1054,18 +1054,18 @@
         }
       }
       function removeReady(module3) {
-        primary = _.filter(primary, function(readyFn) {
+        primary = _.filter(primary, function (readyFn) {
           return readyFn !== module3.ready;
         });
       }
-      Webflow2.push = function(ready2) {
+      Webflow2.push = function (ready2) {
         if (domready) {
           isFunction(ready2) && ready2();
           return;
         }
         secondary.push(ready2);
       };
-      Webflow2.env = function(mode) {
+      Webflow2.env = function (mode) {
         var designFlag = window.__wf_design;
         var inApp = typeof designFlag !== "undefined";
         if (!mode) {
@@ -1096,12 +1096,12 @@
       var ios = Webflow2.env.ios = /(ipod|iphone|ipad)/.test(userAgent);
       Webflow2.env.safari = /safari/.test(userAgent) && !chrome && !ios;
       var touchTarget;
-      touch && $doc.on("touchstart mousedown", function(evt) {
+      touch && $doc.on("touchstart mousedown", function (evt) {
         touchTarget = evt.target;
       });
-      Webflow2.validClick = touch ? function(clickTarget) {
+      Webflow2.validClick = touch ? function (clickTarget) {
         return clickTarget === touchTarget || $2.contains(clickTarget, touchTarget);
-      } : function() {
+      } : function () {
         return true;
       };
       var resizeEvents = "resize.webflow orientationchange.webflow load.webflow";
@@ -1112,15 +1112,15 @@
       function eventProxy(target, types) {
         var handlers = [];
         var proxy = {};
-        proxy.up = _.throttle(function(evt) {
-          _.each(handlers, function(h) {
+        proxy.up = _.throttle(function (evt) {
+          _.each(handlers, function (h) {
             h(evt);
           });
         });
         if (target && types) {
           target.on(types, proxy.up);
         }
-        proxy.on = function(handler) {
+        proxy.on = function (handler) {
           if (typeof handler !== "function") {
             return;
           }
@@ -1129,25 +1129,25 @@
           }
           handlers.push(handler);
         };
-        proxy.off = function(handler) {
+        proxy.off = function (handler) {
           if (!arguments.length) {
             handlers = [];
             return;
           }
-          handlers = _.filter(handlers, function(h) {
+          handlers = _.filter(handlers, function (h) {
             return h !== handler;
           });
         };
         return proxy;
       }
-      Webflow2.location = function(url) {
+      Webflow2.location = function (url) {
         window.location = url;
       };
       if (Webflow2.env()) {
-        Webflow2.location = function() {
+        Webflow2.location = function () {
         };
       }
-      Webflow2.ready = function() {
+      Webflow2.ready = function () {
         domready = true;
         if (destroyed) {
           restoreModules();
@@ -1165,7 +1165,7 @@
         _.each(modules, bindModule);
       }
       var deferLoad;
-      Webflow2.load = function(handler) {
+      Webflow2.load = function (handler) {
         deferLoad.then(handler);
       };
       function bindLoad() {
@@ -1176,7 +1176,7 @@
         deferLoad = new $2.Deferred();
         $win.on("load", deferLoad.resolve);
       }
-      Webflow2.destroy = function(options) {
+      Webflow2.destroy = function (options) {
         options = options || {};
         destroyed = true;
         $win.triggerHandler("__wf_destroy");
@@ -1518,7 +1518,7 @@
   var require_isMasked = __commonJS({
     "node_modules/lodash/_isMasked.js"(exports2, module2) {
       var coreJsData = require_coreJsData();
-      var maskSrcKey = function() {
+      var maskSrcKey = function () {
         var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || "");
         return uid ? "Symbol(src)_1." + uid : "";
       }();
@@ -1981,7 +1981,7 @@
             break;
           }
           if (seen) {
-            if (!arraySome(other, function(othValue2, othIndex) {
+            if (!arraySome(other, function (othValue2, othIndex) {
               if (!cacheHas(seen, othIndex) && (arrValue === othValue2 || equalFunc(arrValue, othValue2, bitmask, customizer, stack))) {
                 return seen.push(othIndex);
               }
@@ -2016,7 +2016,7 @@
     "node_modules/lodash/_mapToArray.js"(exports2, module2) {
       function mapToArray(map) {
         var index2 = -1, result = Array(map.size);
-        map.forEach(function(value2, key2) {
+        map.forEach(function (value2, key2) {
           result[++index2] = [key2, value2];
         });
         return result;
@@ -2030,7 +2030,7 @@
     "node_modules/lodash/_setToArray.js"(exports2, module2) {
       function setToArray(set3) {
         var index2 = -1, result = Array(set3.size);
-        set3.forEach(function(value2) {
+        set3.forEach(function (value2) {
           result[++index2] = value2;
         });
         return result;
@@ -2183,12 +2183,12 @@
       var objectProto = Object.prototype;
       var propertyIsEnumerable = objectProto.propertyIsEnumerable;
       var nativeGetSymbols = Object.getOwnPropertySymbols;
-      var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
+      var getSymbols = !nativeGetSymbols ? stubArray : function (object) {
         if (object == null) {
           return [];
         }
         object = Object(object);
-        return arrayFilter(nativeGetSymbols(object), function(symbol) {
+        return arrayFilter(nativeGetSymbols(object), function (symbol) {
           return propertyIsEnumerable.call(object, symbol);
         });
       };
@@ -2241,9 +2241,9 @@
       var objectProto = Object.prototype;
       var hasOwnProperty2 = objectProto.hasOwnProperty;
       var propertyIsEnumerable = objectProto.propertyIsEnumerable;
-      var isArguments = baseIsArguments(function() {
+      var isArguments = baseIsArguments(function () {
         return arguments;
-      }()) ? baseIsArguments : function(value2) {
+      }()) ? baseIsArguments : function (value2) {
         return isObjectLike(value2) && hasOwnProperty2.call(value2, "callee") && !propertyIsEnumerable.call(value2, "callee");
       };
       module2.exports = isArguments;
@@ -2344,7 +2344,7 @@
   var require_baseUnary = __commonJS({
     "node_modules/lodash/_baseUnary.js"(exports2, module2) {
       function baseUnary(func) {
-        return function(value2) {
+        return function (value2) {
           return func(value2);
         };
       }
@@ -2360,7 +2360,7 @@
       var freeModule = freeExports && typeof module2 == "object" && module2 && !module2.nodeType && module2;
       var moduleExports = freeModule && freeModule.exports === freeExports;
       var freeProcess = moduleExports && freeGlobal.process;
-      var nodeUtil = function() {
+      var nodeUtil = function () {
         try {
           var types = freeModule && freeModule.require && freeModule.require("util").types;
           if (types) {
@@ -2401,10 +2401,10 @@
         var isArr = isArray(value2), isArg = !isArr && isArguments(value2), isBuff = !isArr && !isArg && isBuffer(value2), isType = !isArr && !isArg && !isBuff && isTypedArray(value2), skipIndexes = isArr || isArg || isBuff || isType, result = skipIndexes ? baseTimes(value2.length, String) : [], length2 = result.length;
         for (var key2 in value2) {
           if ((inherited || hasOwnProperty2.call(value2, key2)) && !(skipIndexes && // Safari 9 has enumerable `arguments.length` in strict mode.
-          (key2 == "length" || // Node.js 0.10 has enumerable non-index properties on buffers.
-          isBuff && (key2 == "offset" || key2 == "parent") || // PhantomJS 2 has enumerable non-index properties on typed arrays.
-          isType && (key2 == "buffer" || key2 == "byteLength" || key2 == "byteOffset") || // Skip index properties.
-          isIndex(key2, length2)))) {
+            (key2 == "length" || // Node.js 0.10 has enumerable non-index properties on buffers.
+              isBuff && (key2 == "offset" || key2 == "parent") || // PhantomJS 2 has enumerable non-index properties on typed arrays.
+              isType && (key2 == "buffer" || key2 == "byteLength" || key2 == "byteOffset") || // Skip index properties.
+              isIndex(key2, length2)))) {
             result.push(key2);
           }
         }
@@ -2430,7 +2430,7 @@
   var require_overArg = __commonJS({
     "node_modules/lodash/_overArg.js"(exports2, module2) {
       function overArg(func, transform2) {
-        return function(arg) {
+        return function (arg) {
           return func(transform2(arg));
         };
       }
@@ -2625,7 +2625,7 @@
       var weakMapCtorString = toSource(WeakMap2);
       var getTag = baseGetTag;
       if (DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag || Map2 && getTag(new Map2()) != mapTag || Promise2 && getTag(Promise2.resolve()) != promiseTag || Set && getTag(new Set()) != setTag || WeakMap2 && getTag(new WeakMap2()) != weakMapTag) {
-        getTag = function(value2) {
+        getTag = function (value2) {
           var result = baseGetTag(value2), Ctor = result == objectTag ? value2.constructor : void 0, ctorString = Ctor ? toSource(Ctor) : "";
           if (ctorString) {
             switch (ctorString) {
@@ -2791,7 +2791,7 @@
   var require_matchesStrictComparable = __commonJS({
     "node_modules/lodash/_matchesStrictComparable.js"(exports2, module2) {
       function matchesStrictComparable(key2, srcValue) {
-        return function(object) {
+        return function (object) {
           if (object == null) {
             return false;
           }
@@ -2813,7 +2813,7 @@
         if (matchData.length == 1 && matchData[0][2]) {
           return matchesStrictComparable(matchData[0][0], matchData[0][1]);
         }
-        return function(object) {
+        return function (object) {
           return object === source || baseIsMatch(object, source, matchData);
         };
       }
@@ -2864,7 +2864,7 @@
         if (typeof func != "function" || resolver != null && typeof resolver != "function") {
           throw new TypeError(FUNC_ERROR_TEXT);
         }
-        var memoized = function() {
+        var memoized = function () {
           var args = arguments, key2 = resolver ? resolver.apply(this, args) : args[0], cache2 = memoized.cache;
           if (cache2.has(key2)) {
             return cache2.get(key2);
@@ -2887,7 +2887,7 @@
       var memoize = require_memoize();
       var MAX_MEMOIZE_SIZE = 500;
       function memoizeCapped(func) {
-        var result = memoize(func, function(key2) {
+        var result = memoize(func, function (key2) {
           if (cache2.size === MAX_MEMOIZE_SIZE) {
             cache2.clear();
           }
@@ -2906,12 +2906,12 @@
       var memoizeCapped = require_memoizeCapped();
       var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
       var reEscapeChar = /\\(\\)?/g;
-      var stringToPath = memoizeCapped(function(string) {
+      var stringToPath = memoizeCapped(function (string) {
         var result = [];
         if (string.charCodeAt(0) === 46) {
           result.push("");
         }
-        string.replace(rePropName, function(match, number, quote, subString) {
+        string.replace(rePropName, function (match, number, quote, subString) {
           result.push(quote ? subString.replace(reEscapeChar, "$1") : number || match);
         });
         return result;
@@ -3101,7 +3101,7 @@
         if (isKey(path) && isStrictComparable(srcValue)) {
           return matchesStrictComparable(toKey(path), srcValue);
         }
-        return function(object) {
+        return function (object) {
           var objValue = get3(object, path);
           return objValue === void 0 && objValue === srcValue ? hasIn(object, path) : baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG);
         };
@@ -3124,7 +3124,7 @@
   var require_baseProperty = __commonJS({
     "node_modules/lodash/_baseProperty.js"(exports2, module2) {
       function baseProperty(key2) {
-        return function(object) {
+        return function (object) {
           return object == null ? void 0 : object[key2];
         };
       }
@@ -3137,7 +3137,7 @@
     "node_modules/lodash/_basePropertyDeep.js"(exports2, module2) {
       var baseGet = require_baseGet();
       function basePropertyDeep(path) {
-        return function(object) {
+        return function (object) {
           return baseGet(object, path);
         };
       }
@@ -3300,22 +3300,22 @@
   // node_modules/core-js/internals/global.js
   var require_global = __commonJS({
     "node_modules/core-js/internals/global.js"(exports2, module2) {
-      var check = function(it) {
+      var check = function (it) {
         return it && it.Math == Math && it;
       };
       module2.exports = // eslint-disable-next-line es/no-global-this -- safe
-      check(typeof globalThis == "object" && globalThis) || check(typeof window == "object" && window) || // eslint-disable-next-line no-restricted-globals -- safe
-      check(typeof self == "object" && self) || check(typeof global == "object" && global) || // eslint-disable-next-line no-new-func -- fallback
-      function() {
-        return this;
-      }() || Function("return this")();
+        check(typeof globalThis == "object" && globalThis) || check(typeof window == "object" && window) || // eslint-disable-next-line no-restricted-globals -- safe
+        check(typeof self == "object" && self) || check(typeof global == "object" && global) || // eslint-disable-next-line no-new-func -- fallback
+        function () {
+          return this;
+        }() || Function("return this")();
     }
   });
 
   // node_modules/core-js/internals/fails.js
   var require_fails = __commonJS({
     "node_modules/core-js/internals/fails.js"(exports2, module2) {
-      module2.exports = function(exec) {
+      module2.exports = function (exec) {
         try {
           return !!exec();
         } catch (error) {
@@ -3329,10 +3329,12 @@
   var require_descriptors = __commonJS({
     "node_modules/core-js/internals/descriptors.js"(exports2, module2) {
       var fails = require_fails();
-      module2.exports = !fails(function() {
-        return Object.defineProperty({}, 1, { get: function() {
-          return 7;
-        } })[1] != 7;
+      module2.exports = !fails(function () {
+        return Object.defineProperty({}, 1, {
+          get: function () {
+            return 7;
+          }
+        })[1] != 7;
       });
     }
   });
@@ -3341,7 +3343,7 @@
   var require_function_call = __commonJS({
     "node_modules/core-js/internals/function-call.js"(exports2, module2) {
       var call = Function.prototype.call;
-      module2.exports = call.bind ? call.bind(call) : function() {
+      module2.exports = call.bind ? call.bind(call) : function () {
         return call.apply(call, arguments);
       };
     }
@@ -3364,7 +3366,7 @@
   // node_modules/core-js/internals/create-property-descriptor.js
   var require_create_property_descriptor = __commonJS({
     "node_modules/core-js/internals/create-property-descriptor.js"(exports2, module2) {
-      module2.exports = function(bitmap, value2) {
+      module2.exports = function (bitmap, value2) {
         return {
           enumerable: !(bitmap & 1),
           configurable: !(bitmap & 2),
@@ -3382,10 +3384,10 @@
       var bind = FunctionPrototype.bind;
       var call = FunctionPrototype.call;
       var callBind = bind && bind.bind(call);
-      module2.exports = bind ? function(fn) {
+      module2.exports = bind ? function (fn) {
         return fn && callBind(call, fn);
-      } : function(fn) {
-        return fn && function() {
+      } : function (fn) {
+        return fn && function () {
           return call.apply(fn, arguments);
         };
       };
@@ -3398,7 +3400,7 @@
       var uncurryThis = require_function_uncurry_this();
       var toString = uncurryThis({}.toString);
       var stringSlice = uncurryThis("".slice);
-      module2.exports = function(it) {
+      module2.exports = function (it) {
         return stringSlice(toString(it), 8, -1);
       };
     }
@@ -3413,9 +3415,9 @@
       var classof = require_classof_raw();
       var Object2 = global2.Object;
       var split = uncurryThis("".split);
-      module2.exports = fails(function() {
+      module2.exports = fails(function () {
         return !Object2("z").propertyIsEnumerable(0);
-      }) ? function(it) {
+      }) ? function (it) {
         return classof(it) == "String" ? split(it, "") : Object2(it);
       } : Object2;
     }
@@ -3426,7 +3428,7 @@
     "node_modules/core-js/internals/require-object-coercible.js"(exports2, module2) {
       var global2 = require_global();
       var TypeError2 = global2.TypeError;
-      module2.exports = function(it) {
+      module2.exports = function (it) {
         if (it == void 0)
           throw TypeError2("Can't call method on " + it);
         return it;
@@ -3439,7 +3441,7 @@
     "node_modules/core-js/internals/to-indexed-object.js"(exports2, module2) {
       var IndexedObject = require_indexed_object();
       var requireObjectCoercible = require_require_object_coercible();
-      module2.exports = function(it) {
+      module2.exports = function (it) {
         return IndexedObject(requireObjectCoercible(it));
       };
     }
@@ -3448,7 +3450,7 @@
   // node_modules/core-js/internals/is-callable.js
   var require_is_callable = __commonJS({
     "node_modules/core-js/internals/is-callable.js"(exports2, module2) {
-      module2.exports = function(argument) {
+      module2.exports = function (argument) {
         return typeof argument == "function";
       };
     }
@@ -3458,7 +3460,7 @@
   var require_is_object = __commonJS({
     "node_modules/core-js/internals/is-object.js"(exports2, module2) {
       var isCallable = require_is_callable();
-      module2.exports = function(it) {
+      module2.exports = function (it) {
         return typeof it == "object" ? it !== null : isCallable(it);
       };
     }
@@ -3469,10 +3471,10 @@
     "node_modules/core-js/internals/get-built-in.js"(exports2, module2) {
       var global2 = require_global();
       var isCallable = require_is_callable();
-      var aFunction = function(argument) {
+      var aFunction = function (argument) {
         return isCallable(argument) ? argument : void 0;
       };
-      module2.exports = function(namespace, method) {
+      module2.exports = function (namespace, method) {
         return arguments.length < 2 ? aFunction(global2[namespace]) : global2[namespace] && global2[namespace][method];
       };
     }
@@ -3526,10 +3528,10 @@
     "node_modules/core-js/internals/native-symbol.js"(exports2, module2) {
       var V8_VERSION = require_engine_v8_version();
       var fails = require_fails();
-      module2.exports = !!Object.getOwnPropertySymbols && !fails(function() {
+      module2.exports = !!Object.getOwnPropertySymbols && !fails(function () {
         var symbol = Symbol();
         return !String(symbol) || !(Object(symbol) instanceof Symbol) || // Chrome 38-40 symbols are not inherited from DOM collections prototypes to instances
-        !Symbol.sham && V8_VERSION && V8_VERSION < 41;
+          !Symbol.sham && V8_VERSION && V8_VERSION < 41;
       });
     }
   });
@@ -3551,9 +3553,9 @@
       var isPrototypeOf = require_object_is_prototype_of();
       var USE_SYMBOL_AS_UID = require_use_symbol_as_uid();
       var Object2 = global2.Object;
-      module2.exports = USE_SYMBOL_AS_UID ? function(it) {
+      module2.exports = USE_SYMBOL_AS_UID ? function (it) {
         return typeof it == "symbol";
-      } : function(it) {
+      } : function (it) {
         var $Symbol = getBuiltIn("Symbol");
         return isCallable($Symbol) && isPrototypeOf($Symbol.prototype, Object2(it));
       };
@@ -3565,7 +3567,7 @@
     "node_modules/core-js/internals/try-to-string.js"(exports2, module2) {
       var global2 = require_global();
       var String2 = global2.String;
-      module2.exports = function(argument) {
+      module2.exports = function (argument) {
         try {
           return String2(argument);
         } catch (error) {
@@ -3582,7 +3584,7 @@
       var isCallable = require_is_callable();
       var tryToString = require_try_to_string();
       var TypeError2 = global2.TypeError;
-      module2.exports = function(argument) {
+      module2.exports = function (argument) {
         if (isCallable(argument))
           return argument;
         throw TypeError2(tryToString(argument) + " is not a function");
@@ -3594,7 +3596,7 @@
   var require_get_method = __commonJS({
     "node_modules/core-js/internals/get-method.js"(exports2, module2) {
       var aCallable = require_a_callable();
-      module2.exports = function(V, P) {
+      module2.exports = function (V, P) {
         var func = V[P];
         return func == null ? void 0 : aCallable(func);
       };
@@ -3609,7 +3611,7 @@
       var isCallable = require_is_callable();
       var isObject = require_is_object();
       var TypeError2 = global2.TypeError;
-      module2.exports = function(input, pref) {
+      module2.exports = function (input, pref) {
         var fn, val2;
         if (pref === "string" && isCallable(fn = input.toString) && !isObject(val2 = call(fn, input)))
           return val2;
@@ -3634,7 +3636,7 @@
     "node_modules/core-js/internals/set-global.js"(exports2, module2) {
       var global2 = require_global();
       var defineProperty = Object.defineProperty;
-      module2.exports = function(key2, value2) {
+      module2.exports = function (key2, value2) {
         try {
           defineProperty(global2, key2, { value: value2, configurable: true, writable: true });
         } catch (error) {
@@ -3661,7 +3663,7 @@
     "node_modules/core-js/internals/shared.js"(exports2, module2) {
       var IS_PURE = require_is_pure();
       var store = require_shared_store();
-      (module2.exports = function(key2, value2) {
+      (module2.exports = function (key2, value2) {
         return store[key2] || (store[key2] = value2 !== void 0 ? value2 : {});
       })("versions", []).push({
         version: "3.19.0",
@@ -3677,7 +3679,7 @@
       var global2 = require_global();
       var requireObjectCoercible = require_require_object_coercible();
       var Object2 = global2.Object;
-      module2.exports = function(argument) {
+      module2.exports = function (argument) {
         return Object2(requireObjectCoercible(argument));
       };
     }
@@ -3702,7 +3704,7 @@
       var id = 0;
       var postfix = Math.random();
       var toString = uncurryThis(1 .toString);
-      module2.exports = function(key2) {
+      module2.exports = function (key2) {
         return "Symbol(" + (key2 === void 0 ? "" : key2) + ")_" + toString(++id + postfix, 36);
       };
     }
@@ -3721,7 +3723,7 @@
       var Symbol2 = global2.Symbol;
       var symbolFor = Symbol2 && Symbol2["for"];
       var createWellKnownSymbol = USE_SYMBOL_AS_UID ? Symbol2 : Symbol2 && Symbol2.withoutSetter || uid;
-      module2.exports = function(name2) {
+      module2.exports = function (name2) {
         if (!hasOwn(WellKnownSymbolsStore, name2) || !(NATIVE_SYMBOL || typeof WellKnownSymbolsStore[name2] == "string")) {
           var description = "Symbol." + name2;
           if (NATIVE_SYMBOL && hasOwn(Symbol2, name2)) {
@@ -3749,7 +3751,7 @@
       var wellKnownSymbol = require_well_known_symbol();
       var TypeError2 = global2.TypeError;
       var TO_PRIMITIVE = wellKnownSymbol("toPrimitive");
-      module2.exports = function(input, pref) {
+      module2.exports = function (input, pref) {
         if (!isObject(input) || isSymbol(input))
           return input;
         var exoticToPrim = getMethod(input, TO_PRIMITIVE);
@@ -3774,7 +3776,7 @@
     "node_modules/core-js/internals/to-property-key.js"(exports2, module2) {
       var toPrimitive = require_to_primitive();
       var isSymbol = require_is_symbol();
-      module2.exports = function(argument) {
+      module2.exports = function (argument) {
         var key2 = toPrimitive(argument, "string");
         return isSymbol(key2) ? key2 : key2 + "";
       };
@@ -3788,7 +3790,7 @@
       var isObject = require_is_object();
       var document2 = global2.document;
       var EXISTS = isObject(document2) && isObject(document2.createElement);
-      module2.exports = function(it) {
+      module2.exports = function (it) {
         return EXISTS ? document2.createElement(it) : {};
       };
     }
@@ -3800,9 +3802,9 @@
       var DESCRIPTORS = require_descriptors();
       var fails = require_fails();
       var createElement = require_document_create_element();
-      module2.exports = !DESCRIPTORS && !fails(function() {
+      module2.exports = !DESCRIPTORS && !fails(function () {
         return Object.defineProperty(createElement("div"), "a", {
-          get: function() {
+          get: function () {
             return 7;
           }
         }).a != 7;
@@ -3843,7 +3845,7 @@
       var isObject = require_is_object();
       var String2 = global2.String;
       var TypeError2 = global2.TypeError;
-      module2.exports = function(argument) {
+      module2.exports = function (argument) {
         if (isObject(argument))
           return argument;
         throw TypeError2(String2(argument) + " is not an object");
@@ -3885,9 +3887,9 @@
       var DESCRIPTORS = require_descriptors();
       var definePropertyModule = require_object_define_property();
       var createPropertyDescriptor = require_create_property_descriptor();
-      module2.exports = DESCRIPTORS ? function(object, key2, value2) {
+      module2.exports = DESCRIPTORS ? function (object, key2, value2) {
         return definePropertyModule.f(object, key2, createPropertyDescriptor(1, value2));
-      } : function(object, key2, value2) {
+      } : function (object, key2, value2) {
         object[key2] = value2;
         return object;
       };
@@ -3902,7 +3904,7 @@
       var store = require_shared_store();
       var functionToString = uncurryThis(Function.toString);
       if (!isCallable(store.inspectSource)) {
-        store.inspectSource = function(it) {
+        store.inspectSource = function (it) {
           return functionToString(it);
         };
       }
@@ -3927,7 +3929,7 @@
       var shared = require_shared();
       var uid = require_uid();
       var keys = shared("keys");
-      module2.exports = function(key2) {
+      module2.exports = function (key2) {
         return keys[key2] || (keys[key2] = uid(key2));
       };
     }
@@ -3958,11 +3960,11 @@
       var set3;
       var get3;
       var has;
-      var enforce = function(it) {
+      var enforce = function (it) {
         return has(it) ? get3(it) : set3(it, {});
       };
-      var getterFor = function(TYPE) {
-        return function(it) {
+      var getterFor = function (TYPE) {
+        return function (it) {
           var state;
           if (!isObject(it) || (state = get3(it)).type !== TYPE) {
             throw TypeError2("Incompatible receiver, " + TYPE + " required");
@@ -3975,33 +3977,33 @@
         wmget = uncurryThis(store.get);
         wmhas = uncurryThis(store.has);
         wmset = uncurryThis(store.set);
-        set3 = function(it, metadata) {
+        set3 = function (it, metadata) {
           if (wmhas(store, it))
             throw new TypeError2(OBJECT_ALREADY_INITIALIZED);
           metadata.facade = it;
           wmset(store, it, metadata);
           return metadata;
         };
-        get3 = function(it) {
+        get3 = function (it) {
           return wmget(store, it) || {};
         };
-        has = function(it) {
+        has = function (it) {
           return wmhas(store, it);
         };
       } else {
         STATE = sharedKey("state");
         hiddenKeys[STATE] = true;
-        set3 = function(it, metadata) {
+        set3 = function (it, metadata) {
           if (hasOwn(it, STATE))
             throw new TypeError2(OBJECT_ALREADY_INITIALIZED);
           metadata.facade = it;
           createNonEnumerableProperty(it, STATE, metadata);
           return metadata;
         };
-        get3 = function(it) {
+        get3 = function (it) {
           return hasOwn(it, STATE) ? it[STATE] : {};
         };
-        has = function(it) {
+        has = function (it) {
           return hasOwn(it, STATE);
         };
       }
@@ -4053,7 +4055,7 @@
       var getInternalState = InternalStateModule.get;
       var enforceInternalState = InternalStateModule.enforce;
       var TEMPLATE = String(String).split("String");
-      (module2.exports = function(O, key2, value2, options) {
+      (module2.exports = function (O, key2, value2, options) {
         var unsafe = options ? !!options.unsafe : false;
         var simple = options ? !!options.enumerable : false;
         var noTargetGet = options ? !!options.noTargetGet : false;
@@ -4097,7 +4099,7 @@
     "node_modules/core-js/internals/to-integer-or-infinity.js"(exports2, module2) {
       var ceil = Math.ceil;
       var floor = Math.floor;
-      module2.exports = function(argument) {
+      module2.exports = function (argument) {
         var number = +argument;
         return number !== number || number === 0 ? 0 : (number > 0 ? floor : ceil)(number);
       };
@@ -4110,7 +4112,7 @@
       var toIntegerOrInfinity = require_to_integer_or_infinity();
       var max = Math.max;
       var min = Math.min;
-      module2.exports = function(index2, length2) {
+      module2.exports = function (index2, length2) {
         var integer = toIntegerOrInfinity(index2);
         return integer < 0 ? max(integer + length2, 0) : min(integer, length2);
       };
@@ -4122,7 +4124,7 @@
     "node_modules/core-js/internals/to-length.js"(exports2, module2) {
       var toIntegerOrInfinity = require_to_integer_or_infinity();
       var min = Math.min;
-      module2.exports = function(argument) {
+      module2.exports = function (argument) {
         return argument > 0 ? min(toIntegerOrInfinity(argument), 9007199254740991) : 0;
       };
     }
@@ -4132,7 +4134,7 @@
   var require_length_of_array_like = __commonJS({
     "node_modules/core-js/internals/length-of-array-like.js"(exports2, module2) {
       var toLength = require_to_length();
-      module2.exports = function(obj) {
+      module2.exports = function (obj) {
         return toLength(obj.length);
       };
     }
@@ -4144,8 +4146,8 @@
       var toIndexedObject = require_to_indexed_object();
       var toAbsoluteIndex = require_to_absolute_index();
       var lengthOfArrayLike = require_length_of_array_like();
-      var createMethod = function(IS_INCLUDES) {
-        return function($this, el, fromIndex) {
+      var createMethod = function (IS_INCLUDES) {
+        return function ($this, el, fromIndex) {
           var O = toIndexedObject($this);
           var length2 = lengthOfArrayLike(O);
           var index2 = toAbsoluteIndex(fromIndex, length2);
@@ -4184,7 +4186,7 @@
       var indexOf = require_array_includes().indexOf;
       var hiddenKeys = require_hidden_keys();
       var push = uncurryThis([].push);
-      module2.exports = function(object, names) {
+      module2.exports = function (object, names) {
         var O = toIndexedObject(object);
         var i = 0;
         var result = [];
@@ -4258,7 +4260,7 @@
       var ownKeys = require_own_keys();
       var getOwnPropertyDescriptorModule = require_object_get_own_property_descriptor();
       var definePropertyModule = require_object_define_property();
-      module2.exports = function(target, source) {
+      module2.exports = function (target, source) {
         var keys = ownKeys(source);
         var defineProperty = definePropertyModule.f;
         var getOwnPropertyDescriptor = getOwnPropertyDescriptorModule.f;
@@ -4277,11 +4279,11 @@
       var fails = require_fails();
       var isCallable = require_is_callable();
       var replacement = /#|\.prototype\./;
-      var isForced = function(feature, detection) {
+      var isForced = function (feature, detection) {
         var value2 = data2[normalize2(feature)];
         return value2 == POLYFILL ? true : value2 == NATIVE ? false : isCallable(detection) ? fails(detection) : !!detection;
       };
-      var normalize2 = isForced.normalize = function(string) {
+      var normalize2 = isForced.normalize = function (string) {
         return String(string).replace(replacement, ".").toLowerCase();
       };
       var data2 = isForced.data = {};
@@ -4301,7 +4303,7 @@
       var setGlobal = require_set_global();
       var copyConstructorProperties = require_copy_constructor_properties();
       var isForced = require_is_forced();
-      module2.exports = function(options, source) {
+      module2.exports = function (options, source) {
         var TARGET = options.target;
         var GLOBAL = options.global;
         var STATIC = options.stat;
@@ -4342,9 +4344,9 @@
       var uncurryThis = require_function_uncurry_this();
       var aCallable = require_a_callable();
       var bind = uncurryThis(uncurryThis.bind);
-      module2.exports = function(fn, that) {
+      module2.exports = function (fn, that) {
         aCallable(fn);
-        return that === void 0 ? fn : bind ? bind(fn, that) : function() {
+        return that === void 0 ? fn : bind ? bind(fn, that) : function () {
           return fn.apply(that, arguments);
         };
       };
@@ -4357,7 +4359,7 @@
       var call = require_function_call();
       var anObject = require_an_object();
       var getMethod = require_get_method();
-      module2.exports = function(iterator, kind, value2) {
+      module2.exports = function (iterator, kind, value2) {
         var innerResult, innerError;
         anObject(iterator);
         try {
@@ -4387,7 +4389,7 @@
     "node_modules/core-js/internals/call-with-safe-iteration-closing.js"(exports2, module2) {
       var anObject = require_an_object();
       var iteratorClose = require_iterator_close();
-      module2.exports = function(iterator, fn, value2, ENTRIES) {
+      module2.exports = function (iterator, fn, value2, ENTRIES) {
         try {
           return ENTRIES ? fn(anObject(value2)[0], value2[1]) : fn(value2);
         } catch (error) {
@@ -4411,7 +4413,7 @@
       var Iterators = require_iterators();
       var ITERATOR = wellKnownSymbol("iterator");
       var ArrayPrototype = Array.prototype;
-      module2.exports = function(it) {
+      module2.exports = function (it) {
         return it !== void 0 && (Iterators.Array === it || ArrayPrototype[ITERATOR] === it);
       };
     }
@@ -4438,16 +4440,16 @@
       var wellKnownSymbol = require_well_known_symbol();
       var TO_STRING_TAG = wellKnownSymbol("toStringTag");
       var Object2 = global2.Object;
-      var CORRECT_ARGUMENTS = classofRaw(function() {
+      var CORRECT_ARGUMENTS = classofRaw(function () {
         return arguments;
       }()) == "Arguments";
-      var tryGet = function(it, key2) {
+      var tryGet = function (it, key2) {
         try {
           return it[key2];
         } catch (error) {
         }
       };
-      module2.exports = TO_STRING_TAG_SUPPORT ? classofRaw : function(it) {
+      module2.exports = TO_STRING_TAG_SUPPORT ? classofRaw : function (it) {
         var O, tag, result;
         return it === void 0 ? "Undefined" : it === null ? "Null" : typeof (tag = tryGet(O = Object2(it), TO_STRING_TAG)) == "string" ? tag : CORRECT_ARGUMENTS ? classofRaw(O) : (result = classofRaw(O)) == "Object" && isCallable(O.callee) ? "Arguments" : result;
       };
@@ -4463,14 +4465,14 @@
       var classof = require_classof();
       var getBuiltIn = require_get_built_in();
       var inspectSource = require_inspect_source();
-      var noop = function() {
+      var noop = function () {
       };
       var empty = [];
       var construct = getBuiltIn("Reflect", "construct");
       var constructorRegExp = /^\s*(?:class|function)\b/;
       var exec = uncurryThis(constructorRegExp.exec);
       var INCORRECT_TO_STRING = !constructorRegExp.exec(noop);
-      var isConstructorModern = function(argument) {
+      var isConstructorModern = function (argument) {
         if (!isCallable(argument))
           return false;
         try {
@@ -4480,7 +4482,7 @@
           return false;
         }
       };
-      var isConstructorLegacy = function(argument) {
+      var isConstructorLegacy = function (argument) {
         if (!isCallable(argument))
           return false;
         switch (classof(argument)) {
@@ -4491,9 +4493,9 @@
         }
         return INCORRECT_TO_STRING || !!exec(constructorRegExp, inspectSource(argument));
       };
-      module2.exports = !construct || fails(function() {
+      module2.exports = !construct || fails(function () {
         var called;
-        return isConstructorModern(isConstructorModern.call) || !isConstructorModern(Object) || !isConstructorModern(function() {
+        return isConstructorModern(isConstructorModern.call) || !isConstructorModern(Object) || !isConstructorModern(function () {
           called = true;
         }) || called;
       }) ? isConstructorLegacy : isConstructorModern;
@@ -4507,7 +4509,7 @@
       var toPropertyKey = require_to_property_key();
       var definePropertyModule = require_object_define_property();
       var createPropertyDescriptor = require_create_property_descriptor();
-      module2.exports = function(object, key2, value2) {
+      module2.exports = function (object, key2, value2) {
         var propertyKey = toPropertyKey(key2);
         if (propertyKey in object)
           definePropertyModule.f(object, propertyKey, createPropertyDescriptor(0, value2));
@@ -4525,7 +4527,7 @@
       var Iterators = require_iterators();
       var wellKnownSymbol = require_well_known_symbol();
       var ITERATOR = wellKnownSymbol("iterator");
-      module2.exports = function(it) {
+      module2.exports = function (it) {
         if (it != void 0)
           return getMethod(it, ITERATOR) || getMethod(it, "@@iterator") || Iterators[classof(it)];
       };
@@ -4542,7 +4544,7 @@
       var tryToString = require_try_to_string();
       var getIteratorMethod = require_get_iterator_method();
       var TypeError2 = global2.TypeError;
-      module2.exports = function(argument, usingIterator) {
+      module2.exports = function (argument, usingIterator) {
         var iteratorMethod = arguments.length < 2 ? getIteratorMethod(argument) : usingIterator;
         if (aCallable(iteratorMethod))
           return anObject(call(iteratorMethod, argument));
@@ -4609,32 +4611,32 @@
       try {
         called = 0;
         iteratorWithReturn = {
-          next: function() {
+          next: function () {
             return { done: !!called++ };
           },
-          "return": function() {
+          "return": function () {
             SAFE_CLOSING = true;
           }
         };
-        iteratorWithReturn[ITERATOR] = function() {
+        iteratorWithReturn[ITERATOR] = function () {
           return this;
         };
-        Array.from(iteratorWithReturn, function() {
+        Array.from(iteratorWithReturn, function () {
           throw 2;
         });
       } catch (error) {
       }
       var called;
       var iteratorWithReturn;
-      module2.exports = function(exec, SKIP_CLOSING) {
+      module2.exports = function (exec, SKIP_CLOSING) {
         if (!SKIP_CLOSING && !SAFE_CLOSING)
           return false;
         var ITERATION_SUPPORT = false;
         try {
           var object = {};
-          object[ITERATOR] = function() {
+          object[ITERATOR] = function () {
             return {
-              next: function() {
+              next: function () {
                 return { done: ITERATION_SUPPORT = true };
               }
             };
@@ -4653,7 +4655,7 @@
       var $2 = require_export();
       var from = require_array_from();
       var checkCorrectnessOfIteration = require_check_correctness_of_iteration();
-      var INCORRECT_ITERATION = !checkCorrectnessOfIteration(function(iterable) {
+      var INCORRECT_ITERATION = !checkCorrectnessOfIteration(function (iterable) {
         Array.from(iterable);
       });
       $2({ target: "Array", stat: true, forced: INCORRECT_ITERATION }, {
@@ -4693,7 +4695,7 @@
       var isConstructor = require_is_constructor();
       var createProperty = require_create_property();
       var Array2 = global2.Array;
-      var ISNT_GENERIC = fails(function() {
+      var ISNT_GENERIC = fails(function () {
         function F() {
         }
         return !(Array2.of.call(F) instanceof F);
@@ -4768,19 +4770,19 @@
       var PROTOTYPE = "prototype";
       var SCRIPT = "script";
       var IE_PROTO = sharedKey("IE_PROTO");
-      var EmptyConstructor = function() {
+      var EmptyConstructor = function () {
       };
-      var scriptTag = function(content2) {
+      var scriptTag = function (content2) {
         return LT + SCRIPT + GT + content2 + LT + "/" + SCRIPT + GT;
       };
-      var NullProtoObjectViaActiveX = function(activeXDocument2) {
+      var NullProtoObjectViaActiveX = function (activeXDocument2) {
         activeXDocument2.write(scriptTag(""));
         activeXDocument2.close();
         var temp = activeXDocument2.parentWindow.Object;
         activeXDocument2 = null;
         return temp;
       };
-      var NullProtoObjectViaIFrame = function() {
+      var NullProtoObjectViaIFrame = function () {
         var iframe = documentCreateElement("iframe");
         var JS = "java" + SCRIPT + ":";
         var iframeDocument;
@@ -4794,7 +4796,7 @@
         return iframeDocument.F;
       };
       var activeXDocument;
-      var NullProtoObject = function() {
+      var NullProtoObject = function () {
         try {
           activeXDocument = new ActiveXObject("htmlfile");
         } catch (error) {
@@ -4834,7 +4836,7 @@
           value: create(null)
         });
       }
-      module2.exports = function(key2) {
+      module2.exports = function (key2) {
         ArrayPrototype[UNSCOPABLES][key2] = true;
       };
     }
@@ -4872,7 +4874,7 @@
       var wellKnownSymbol = require_well_known_symbol();
       var SPECIES = wellKnownSymbol("species");
       var Array2 = global2.Array;
-      module2.exports = function(originalArray) {
+      module2.exports = function (originalArray) {
         var C;
         if (isArray(originalArray)) {
           C = originalArray.constructor;
@@ -4893,7 +4895,7 @@
   var require_array_species_create = __commonJS({
     "node_modules/core-js/internals/array-species-create.js"(exports2, module2) {
       var arraySpeciesConstructor = require_array_species_constructor();
-      module2.exports = function(originalArray, length2) {
+      module2.exports = function (originalArray, length2) {
         return new (arraySpeciesConstructor(originalArray))(length2 === 0 ? 0 : length2);
       };
     }
@@ -4906,11 +4908,11 @@
       var wellKnownSymbol = require_well_known_symbol();
       var V8_VERSION = require_engine_v8_version();
       var SPECIES = wellKnownSymbol("species");
-      module2.exports = function(METHOD_NAME) {
-        return V8_VERSION >= 51 || !fails(function() {
+      module2.exports = function (METHOD_NAME) {
+        return V8_VERSION >= 51 || !fails(function () {
           var array = [];
           var constructor = array.constructor = {};
-          constructor[SPECIES] = function() {
+          constructor[SPECIES] = function () {
             return { foo: 1 };
           };
           return array[METHOD_NAME](Boolean).foo !== 1;
@@ -4939,13 +4941,13 @@
       var MAX_SAFE_INTEGER = 9007199254740991;
       var MAXIMUM_ALLOWED_INDEX_EXCEEDED = "Maximum allowed index exceeded";
       var TypeError2 = global2.TypeError;
-      var IS_CONCAT_SPREADABLE_SUPPORT = V8_VERSION >= 51 || !fails(function() {
+      var IS_CONCAT_SPREADABLE_SUPPORT = V8_VERSION >= 51 || !fails(function () {
         var array = [];
         array[IS_CONCAT_SPREADABLE] = false;
         return array.concat()[0] !== array;
       });
       var SPECIES_SUPPORT = arrayMethodHasSpeciesSupport("concat");
-      var isConcatSpreadable = function(O) {
+      var isConcatSpreadable = function (O) {
         if (!isObject(O))
           return false;
         var spreadable = O[IS_CONCAT_SPREADABLE];
@@ -5038,7 +5040,7 @@
       var lengthOfArrayLike = require_length_of_array_like();
       var arraySpeciesCreate = require_array_species_create();
       var push = uncurryThis([].push);
-      var createMethod = function(TYPE) {
+      var createMethod = function (TYPE) {
         var IS_MAP = TYPE == 1;
         var IS_FILTER = TYPE == 2;
         var IS_SOME = TYPE == 3;
@@ -5046,7 +5048,7 @@
         var IS_FIND_INDEX = TYPE == 6;
         var IS_FILTER_REJECT = TYPE == 7;
         var NO_HOLES = TYPE == 5 || IS_FIND_INDEX;
-        return function($this, callbackfn, that, specificCreate) {
+        return function ($this, callbackfn, that, specificCreate) {
           var O = toObject($this);
           var self2 = IndexedObject(O);
           var boundFunction = bind(callbackfn, that);
@@ -5119,10 +5121,10 @@
     "node_modules/core-js/internals/array-method-is-strict.js"(exports2, module2) {
       "use strict";
       var fails = require_fails();
-      module2.exports = function(METHOD_NAME, argument) {
+      module2.exports = function (METHOD_NAME, argument) {
         var method = [][METHOD_NAME];
-        return !!method && fails(function() {
-          method.call(null, argument || function() {
+        return !!method && fails(function () {
+          method.call(null, argument || function () {
             throw 1;
           }, 1);
         });
@@ -5206,7 +5208,7 @@
       var FIND = "find";
       var SKIPS_HOLES = true;
       if (FIND in [])
-        Array(1)[FIND](function() {
+        Array(1)[FIND](function () {
           SKIPS_HOLES = false;
         });
       $2({ target: "Array", proto: true, forced: SKIPS_HOLES }, {
@@ -5228,7 +5230,7 @@
       var FIND_INDEX = "findIndex";
       var SKIPS_HOLES = true;
       if (FIND_INDEX in [])
-        Array(1)[FIND_INDEX](function() {
+        Array(1)[FIND_INDEX](function () {
           SKIPS_HOLES = false;
         });
       $2({ target: "Array", proto: true, forced: SKIPS_HOLES }, {
@@ -5249,7 +5251,7 @@
       var lengthOfArrayLike = require_length_of_array_like();
       var bind = require_function_bind_context();
       var TypeError2 = global2.TypeError;
-      var flattenIntoArray = function(target, original, source, sourceLen, start, depth, mapper, thisArg) {
+      var flattenIntoArray = function (target, original, source, sourceLen, start, depth, mapper, thisArg) {
         var targetIndex = start;
         var sourceIndex = 0;
         var mapFn = mapper ? bind(mapper, thisArg) : false;
@@ -5387,7 +5389,7 @@
   var require_correct_prototype_getter = __commonJS({
     "node_modules/core-js/internals/correct-prototype-getter.js"(exports2, module2) {
       var fails = require_fails();
-      module2.exports = !fails(function() {
+      module2.exports = !fails(function () {
         function F() {
         }
         F.prototype.constructor = null;
@@ -5408,7 +5410,7 @@
       var IE_PROTO = sharedKey("IE_PROTO");
       var Object2 = global2.Object;
       var ObjectPrototype = Object2.prototype;
-      module2.exports = CORRECT_PROTOTYPE_GETTER ? Object2.getPrototypeOf : function(O) {
+      module2.exports = CORRECT_PROTOTYPE_GETTER ? Object2.getPrototypeOf : function (O) {
         var object = toObject(O);
         if (hasOwn(object, IE_PROTO))
           return object[IE_PROTO];
@@ -5447,7 +5449,7 @@
             IteratorPrototype = PrototypeOfArrayIteratorPrototype;
         }
       }
-      var NEW_ITERATOR_PROTOTYPE = IteratorPrototype == void 0 || fails(function() {
+      var NEW_ITERATOR_PROTOTYPE = IteratorPrototype == void 0 || fails(function () {
         var test = {};
         return IteratorPrototype[ITERATOR].call(test) !== test;
       });
@@ -5456,7 +5458,7 @@
       else if (IS_PURE)
         IteratorPrototype = create(IteratorPrototype);
       if (!isCallable(IteratorPrototype[ITERATOR])) {
-        redefine(IteratorPrototype, ITERATOR, function() {
+        redefine(IteratorPrototype, ITERATOR, function () {
           return this;
         });
       }
@@ -5474,7 +5476,7 @@
       var hasOwn = require_has_own_property();
       var wellKnownSymbol = require_well_known_symbol();
       var TO_STRING_TAG = wellKnownSymbol("toStringTag");
-      module2.exports = function(it, TAG, STATIC) {
+      module2.exports = function (it, TAG, STATIC) {
         if (it && !hasOwn(it = STATIC ? it : it.prototype, TO_STRING_TAG)) {
           defineProperty(it, TO_STRING_TAG, { configurable: true, value: TAG });
         }
@@ -5491,10 +5493,10 @@
       var createPropertyDescriptor = require_create_property_descriptor();
       var setToStringTag = require_set_to_string_tag();
       var Iterators = require_iterators();
-      var returnThis = function() {
+      var returnThis = function () {
         return this;
       };
-      module2.exports = function(IteratorConstructor, NAME, next) {
+      module2.exports = function (IteratorConstructor, NAME, next) {
         var TO_STRING_TAG = NAME + " Iterator";
         IteratorConstructor.prototype = create(IteratorPrototype, { next: createPropertyDescriptor(1, next) });
         setToStringTag(IteratorConstructor, TO_STRING_TAG, false, true);
@@ -5511,7 +5513,7 @@
       var isCallable = require_is_callable();
       var String2 = global2.String;
       var TypeError2 = global2.TypeError;
-      module2.exports = function(argument) {
+      module2.exports = function (argument) {
         if (typeof argument == "object" || isCallable(argument))
           return argument;
         throw TypeError2("Can't set " + String2(argument) + " as a prototype");
@@ -5525,7 +5527,7 @@
       var uncurryThis = require_function_uncurry_this();
       var anObject = require_an_object();
       var aPossiblePrototype = require_a_possible_prototype();
-      module2.exports = Object.setPrototypeOf || ("__proto__" in {} ? function() {
+      module2.exports = Object.setPrototypeOf || ("__proto__" in {} ? function () {
         var CORRECT_SETTER = false;
         var test = {};
         var setter;
@@ -5574,12 +5576,12 @@
       var KEYS = "keys";
       var VALUES = "values";
       var ENTRIES = "entries";
-      var returnThis = function() {
+      var returnThis = function () {
         return this;
       };
-      module2.exports = function(Iterable, NAME, IteratorConstructor, next, DEFAULT, IS_SET, FORCED) {
+      module2.exports = function (Iterable, NAME, IteratorConstructor, next, DEFAULT, IS_SET, FORCED) {
         createIteratorConstructor(IteratorConstructor, NAME, next);
-        var getIterationMethod = function(KIND) {
+        var getIterationMethod = function (KIND) {
           if (KIND === DEFAULT && defaultIterator)
             return defaultIterator;
           if (!BUGGY_SAFARI_ITERATORS && KIND in IterablePrototype)
@@ -5598,7 +5600,7 @@
                 return new IteratorConstructor(this, KIND);
               };
           }
-          return function() {
+          return function () {
             return new IteratorConstructor(this);
           };
         };
@@ -5670,7 +5672,7 @@
       var ARRAY_ITERATOR = "Array Iterator";
       var setInternalState = InternalStateModule.set;
       var getInternalState = InternalStateModule.getterFor(ARRAY_ITERATOR);
-      module2.exports = defineIterator(Array, "Array", function(iterated, kind) {
+      module2.exports = defineIterator(Array, "Array", function (iterated, kind) {
         setInternalState(this, {
           type: ARRAY_ITERATOR,
           target: toIndexedObject(iterated),
@@ -5680,7 +5682,7 @@
           kind
           // kind
         });
-      }, function() {
+      }, function () {
         var state = getInternalState(this);
         var target = state.target;
         var kind = state.kind;
@@ -5729,7 +5731,7 @@
       var apply = FunctionPrototype.apply;
       var bind = FunctionPrototype.bind;
       var call = FunctionPrototype.call;
-      module2.exports = typeof Reflect == "object" && Reflect.apply || (bind ? call.bind(apply) : function() {
+      module2.exports = typeof Reflect == "object" && Reflect.apply || (bind ? call.bind(apply) : function () {
         return call.apply(apply, arguments);
       });
     }
@@ -5803,8 +5805,8 @@
       var IndexedObject = require_indexed_object();
       var lengthOfArrayLike = require_length_of_array_like();
       var TypeError2 = global2.TypeError;
-      var createMethod = function(IS_RIGHT) {
-        return function(that, callbackfn, argumentsLength, memo) {
+      var createMethod = function (IS_RIGHT) {
+        return function (that, callbackfn, argumentsLength, memo) {
           aCallable(callbackfn);
           var O = toObject(that);
           var self2 = IndexedObject(O);
@@ -5989,7 +5991,7 @@
       var global2 = require_global();
       var classof = require_classof();
       var String2 = global2.String;
-      module2.exports = function(argument) {
+      module2.exports = function (argument) {
         if (classof(argument) === "Symbol")
           throw TypeError("Cannot convert a Symbol value to a string");
         return String2(argument);
@@ -6002,7 +6004,7 @@
     "node_modules/core-js/internals/array-sort.js"(exports2, module2) {
       var arraySlice = require_array_slice();
       var floor = Math.floor;
-      var mergeSort = function(array, comparefn) {
+      var mergeSort = function (array, comparefn) {
         var length2 = array.length;
         var middle = floor(length2 / 2);
         return length2 < 8 ? insertionSort(array, comparefn) : merge3(
@@ -6012,7 +6014,7 @@
           comparefn
         );
       };
-      var insertionSort = function(array, comparefn) {
+      var insertionSort = function (array, comparefn) {
         var length2 = array.length;
         var i = 1;
         var element, j;
@@ -6027,7 +6029,7 @@
         }
         return array;
       };
-      var merge3 = function(array, left, right, comparefn) {
+      var merge3 = function (array, left, right, comparefn) {
         var llength = left.length;
         var rlength = right.length;
         var lindex = 0;
@@ -6087,14 +6089,14 @@
       var test = [];
       var un$Sort = uncurryThis(test.sort);
       var push = uncurryThis(test.push);
-      var FAILS_ON_UNDEFINED = fails(function() {
+      var FAILS_ON_UNDEFINED = fails(function () {
         test.sort(void 0);
       });
-      var FAILS_ON_NULL = fails(function() {
+      var FAILS_ON_NULL = fails(function () {
         test.sort(null);
       });
       var STRICT_METHOD = arrayMethodIsStrict("sort");
-      var STABLE_SORT = !fails(function() {
+      var STABLE_SORT = !fails(function () {
         if (V8)
           return V8 < 70;
         if (FF && FF > 3)
@@ -6125,7 +6127,7 @@
             test.push({ k: chr + index2, v: value2 });
           }
         }
-        test.sort(function(a, b) {
+        test.sort(function (a, b) {
           return b.v - a.v;
         });
         for (index2 = 0; index2 < test.length; index2++) {
@@ -6136,8 +6138,8 @@
         return result !== "DGBEFHACIJK";
       });
       var FORCED = FAILS_ON_UNDEFINED || !FAILS_ON_NULL || !STRICT_METHOD || !STABLE_SORT;
-      var getSortCompare = function(comparefn) {
-        return function(x, y) {
+      var getSortCompare = function (comparefn) {
+        return function (x, y) {
           if (y === void 0)
             return -1;
           if (x === void 0)
@@ -6183,13 +6185,13 @@
       var wellKnownSymbol = require_well_known_symbol();
       var DESCRIPTORS = require_descriptors();
       var SPECIES = wellKnownSymbol("species");
-      module2.exports = function(CONSTRUCTOR_NAME) {
+      module2.exports = function (CONSTRUCTOR_NAME) {
         var Constructor = getBuiltIn(CONSTRUCTOR_NAME);
         var defineProperty = definePropertyModule.f;
         if (DESCRIPTORS && Constructor && !Constructor[SPECIES]) {
           defineProperty(Constructor, SPECIES, {
             configurable: true,
-            get: function() {
+            get: function () {
               return this;
             }
           });
@@ -6332,8 +6334,8 @@
       var charAt = uncurryThis("".charAt);
       var charCodeAt = uncurryThis("".charCodeAt);
       var stringSlice = uncurryThis("".slice);
-      var createMethod = function(CONVERT_TO_STRING) {
-        return function($this, pos) {
+      var createMethod = function (CONVERT_TO_STRING) {
+        return function ($this, pos) {
           var S = toString(requireObjectCoercible($this));
           var position2 = toIntegerOrInfinity(pos);
           var size2 = S.length;
@@ -6366,7 +6368,7 @@
       var STRING_ITERATOR = "String Iterator";
       var setInternalState = InternalStateModule.set;
       var getInternalState = InternalStateModule.getterFor(STRING_ITERATOR);
-      defineIterator(String, "String", function(iterated) {
+      defineIterator(String, "String", function (iterated) {
         setInternalState(this, {
           type: STRING_ITERATOR,
           string: toString(iterated),
@@ -6450,7 +6452,7 @@
       var $getOwnPropertyNames = require_object_get_own_property_names().f;
       var arraySlice = require_array_slice();
       var windowNames = typeof window == "object" && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : [];
-      var getWindowNames = function(it) {
+      var getWindowNames = function (it) {
         try {
           return $getOwnPropertyNames(it);
         } catch (error) {
@@ -6467,7 +6469,7 @@
   var require_freezing = __commonJS({
     "node_modules/core-js/internals/freezing.js"(exports2, module2) {
       var fails = require_fails();
-      module2.exports = !fails(function() {
+      module2.exports = !fails(function () {
         return Object.isExtensible(Object.preventExtensions({}));
       });
     }
@@ -6489,18 +6491,20 @@
       var REQUIRED = false;
       var METADATA = uid("meta");
       var id = 0;
-      var isExtensible = Object.isExtensible || function() {
+      var isExtensible = Object.isExtensible || function () {
         return true;
       };
-      var setMetadata = function(it) {
-        defineProperty(it, METADATA, { value: {
-          objectID: "O" + id++,
-          // object ID
-          weakData: {}
-          // weak collections IDs
-        } });
+      var setMetadata = function (it) {
+        defineProperty(it, METADATA, {
+          value: {
+            objectID: "O" + id++,
+            // object ID
+            weakData: {}
+            // weak collections IDs
+          }
+        });
       };
-      var fastKey = function(it, create) {
+      var fastKey = function (it, create) {
         if (!isObject(it))
           return typeof it == "symbol" ? it : (typeof it == "string" ? "S" : "P") + it;
         if (!hasOwn(it, METADATA)) {
@@ -6512,7 +6516,7 @@
         }
         return it[METADATA].objectID;
       };
-      var getWeakData = function(it, create) {
+      var getWeakData = function (it, create) {
         if (!hasOwn(it, METADATA)) {
           if (!isExtensible(it))
             return true;
@@ -6522,13 +6526,13 @@
         }
         return it[METADATA].weakData;
       };
-      var onFreeze = function(it) {
+      var onFreeze = function (it) {
         if (FREEZING && REQUIRED && isExtensible(it) && !hasOwn(it, METADATA))
           setMetadata(it);
         return it;
       };
-      var enable = function() {
-        meta.enable = function() {
+      var enable = function () {
+        meta.enable = function () {
         };
         REQUIRED = true;
         var getOwnPropertyNames = getOwnPropertyNamesModule.f;
@@ -6536,7 +6540,7 @@
         var test = {};
         test[METADATA] = 1;
         if (getOwnPropertyNames(test).length) {
-          getOwnPropertyNamesModule.f = function(it) {
+          getOwnPropertyNamesModule.f = function (it) {
             var result = getOwnPropertyNames(it);
             for (var i = 0, length2 = result.length; i < length2; i++) {
               if (result[i] === METADATA) {
@@ -6576,24 +6580,24 @@
       var getIteratorMethod = require_get_iterator_method();
       var iteratorClose = require_iterator_close();
       var TypeError2 = global2.TypeError;
-      var Result = function(stopped, result) {
+      var Result = function (stopped, result) {
         this.stopped = stopped;
         this.result = result;
       };
       var ResultPrototype = Result.prototype;
-      module2.exports = function(iterable, unboundFunction, options) {
+      module2.exports = function (iterable, unboundFunction, options) {
         var that = options && options.that;
         var AS_ENTRIES = !!(options && options.AS_ENTRIES);
         var IS_ITERATOR = !!(options && options.IS_ITERATOR);
         var INTERRUPTED = !!(options && options.INTERRUPTED);
         var fn = bind(unboundFunction, that);
         var iterator, iterFn, index2, length2, result, next, step;
-        var stop = function(condition) {
+        var stop = function (condition) {
           if (iterator)
             iteratorClose(iterator, "normal", condition);
           return new Result(true, condition);
         };
-        var callFn = function(value2) {
+        var callFn = function (value2) {
           if (AS_ENTRIES) {
             anObject(value2);
             return INTERRUPTED ? fn(value2[0], value2[1], stop) : fn(value2[0], value2[1]);
@@ -6637,7 +6641,7 @@
       var global2 = require_global();
       var isPrototypeOf = require_object_is_prototype_of();
       var TypeError2 = global2.TypeError;
-      module2.exports = function(it, Prototype) {
+      module2.exports = function (it, Prototype) {
         if (isPrototypeOf(Prototype, it))
           return it;
         throw TypeError2("Incorrect invocation");
@@ -6651,7 +6655,7 @@
       var isCallable = require_is_callable();
       var isObject = require_is_object();
       var setPrototypeOf = require_object_set_prototype_of();
-      module2.exports = function($this, dummy, Wrapper) {
+      module2.exports = function ($this, dummy, Wrapper) {
         var NewTarget, NewTargetPrototype;
         if (
           // it can work only with native `setPrototypeOf`
@@ -6682,7 +6686,7 @@
       var checkCorrectnessOfIteration = require_check_correctness_of_iteration();
       var setToStringTag = require_set_to_string_tag();
       var inheritIfRequired = require_inherit_if_required();
-      module2.exports = function(CONSTRUCTOR_NAME, wrapper, common) {
+      module2.exports = function (CONSTRUCTOR_NAME, wrapper, common) {
         var IS_MAP = CONSTRUCTOR_NAME.indexOf("Map") !== -1;
         var IS_WEAK = CONSTRUCTOR_NAME.indexOf("Weak") !== -1;
         var ADDER = IS_MAP ? "set" : "add";
@@ -6690,7 +6694,7 @@
         var NativePrototype = NativeConstructor && NativeConstructor.prototype;
         var Constructor = NativeConstructor;
         var exported = {};
-        var fixMethod = function(KEY) {
+        var fixMethod = function (KEY) {
           var uncurriedNativeMethod = uncurryThis(NativePrototype[KEY]);
           redefine(
             NativePrototype,
@@ -6698,7 +6702,7 @@
             KEY == "add" ? function add2(value2) {
               uncurriedNativeMethod(this, value2 === 0 ? 0 : value2);
               return this;
-            } : KEY == "delete" ? function(key2) {
+            } : KEY == "delete" ? function (key2) {
               return IS_WEAK && !isObject(key2) ? false : uncurriedNativeMethod(this, key2 === 0 ? 0 : key2);
             } : KEY == "get" ? function get3(key2) {
               return IS_WEAK && !isObject(key2) ? void 0 : uncurriedNativeMethod(this, key2 === 0 ? 0 : key2);
@@ -6712,7 +6716,7 @@
         };
         var REPLACE = isForced(
           CONSTRUCTOR_NAME,
-          !isCallable(NativeConstructor) || !(IS_WEAK || NativePrototype.forEach && !fails(function() {
+          !isCallable(NativeConstructor) || !(IS_WEAK || NativePrototype.forEach && !fails(function () {
             new NativeConstructor().entries().next();
           }))
         );
@@ -6722,13 +6726,13 @@
         } else if (isForced(CONSTRUCTOR_NAME, true)) {
           var instance = new Constructor();
           var HASNT_CHAINING = instance[ADDER](IS_WEAK ? {} : -0, 1) != instance;
-          var THROWS_ON_PRIMITIVES = fails(function() {
+          var THROWS_ON_PRIMITIVES = fails(function () {
             instance.has(1);
           });
-          var ACCEPT_ITERABLES = checkCorrectnessOfIteration(function(iterable) {
+          var ACCEPT_ITERABLES = checkCorrectnessOfIteration(function (iterable) {
             new NativeConstructor(iterable);
           });
-          var BUGGY_ZERO = !IS_WEAK && fails(function() {
+          var BUGGY_ZERO = !IS_WEAK && fails(function () {
             var $instance = new NativeConstructor();
             var index2 = 5;
             while (index2--)
@@ -6736,7 +6740,7 @@
             return !$instance.has(-0);
           });
           if (!ACCEPT_ITERABLES) {
-            Constructor = wrapper(function(dummy, iterable) {
+            Constructor = wrapper(function (dummy, iterable) {
               anInstance(dummy, NativePrototype);
               var that = inheritIfRequired(new NativeConstructor(), dummy, Constructor);
               if (iterable != void 0)
@@ -6770,7 +6774,7 @@
   var require_redefine_all = __commonJS({
     "node_modules/core-js/internals/redefine-all.js"(exports2, module2) {
       var redefine = require_redefine();
-      module2.exports = function(target, src, options) {
+      module2.exports = function (target, src, options) {
         for (var key2 in src)
           redefine(target, key2, src[key2], options);
         return target;
@@ -6796,8 +6800,8 @@
       var setInternalState = InternalStateModule.set;
       var internalStateGetterFor = InternalStateModule.getterFor;
       module2.exports = {
-        getConstructor: function(wrapper, CONSTRUCTOR_NAME, IS_MAP, ADDER) {
-          var Constructor = wrapper(function(that, iterable) {
+        getConstructor: function (wrapper, CONSTRUCTOR_NAME, IS_MAP, ADDER) {
+          var Constructor = wrapper(function (that, iterable) {
             anInstance(that, Prototype);
             setInternalState(that, {
               type: CONSTRUCTOR_NAME,
@@ -6813,7 +6817,7 @@
           });
           var Prototype = Constructor.prototype;
           var getInternalState = internalStateGetterFor(CONSTRUCTOR_NAME);
-          var define2 = function(that, key2, value2) {
+          var define2 = function (that, key2, value2) {
             var state = getInternalState(that);
             var entry = getEntry(that, key2);
             var previous, index2;
@@ -6841,7 +6845,7 @@
             }
             return that;
           };
-          var getEntry = function(that, key2) {
+          var getEntry = function (that, key2) {
             var state = getInternalState(that);
             var index2 = fastKey(key2);
             var entry;
@@ -6877,7 +6881,7 @@
             // `{ Map, Set }.prototype.delete(key)` methods
             // https://tc39.es/ecma262/#sec-map.prototype.delete
             // https://tc39.es/ecma262/#sec-set.prototype.delete
-            "delete": function(key2) {
+            "delete": function (key2) {
               var that = this;
               var state = getInternalState(that);
               var entry = getEntry(that, key2);
@@ -6942,17 +6946,17 @@
           });
           if (DESCRIPTORS)
             defineProperty(Prototype, "size", {
-              get: function() {
+              get: function () {
                 return getInternalState(this).size;
               }
             });
           return Constructor;
         },
-        setStrong: function(Constructor, CONSTRUCTOR_NAME, IS_MAP) {
+        setStrong: function (Constructor, CONSTRUCTOR_NAME, IS_MAP) {
           var ITERATOR_NAME = CONSTRUCTOR_NAME + " Iterator";
           var getInternalCollectionState = internalStateGetterFor(CONSTRUCTOR_NAME);
           var getInternalIteratorState = internalStateGetterFor(ITERATOR_NAME);
-          defineIterator(Constructor, CONSTRUCTOR_NAME, function(iterated, kind) {
+          defineIterator(Constructor, CONSTRUCTOR_NAME, function (iterated, kind) {
             setInternalState(this, {
               type: ITERATOR_NAME,
               target: iterated,
@@ -6960,7 +6964,7 @@
               kind,
               last: void 0
             });
-          }, function() {
+          }, function () {
             var state = getInternalIteratorState(this);
             var kind = state.kind;
             var entry = state.last;
@@ -6988,7 +6992,7 @@
       "use strict";
       var collection = require_collection();
       var collectionStrong = require_collection_strong();
-      collection("Map", function(init2) {
+      collection("Map", function (init2) {
         return function Map2() {
           return init2(this, arguments.length ? arguments[0] : void 0);
         };
@@ -7011,7 +7015,7 @@
       var isConstructor = require_is_constructor();
       var tryToString = require_try_to_string();
       var TypeError2 = global2.TypeError;
-      module2.exports = function(argument) {
+      module2.exports = function (argument) {
         if (isConstructor(argument))
           return argument;
         throw TypeError2(tryToString(argument) + " is not a constructor");
@@ -7026,7 +7030,7 @@
       var aConstructor = require_a_constructor();
       var wellKnownSymbol = require_well_known_symbol();
       var SPECIES = wellKnownSymbol("species");
-      module2.exports = function(O, defaultConstructor) {
+      module2.exports = function (O, defaultConstructor) {
         var C = anObject(O).constructor;
         var S;
         return C === void 0 || (S = anObject(C)[SPECIES]) == void 0 ? defaultConstructor : aConstructor(S);
@@ -7074,28 +7078,28 @@
         location = global2.location;
       } catch (error) {
       }
-      var run = function(id) {
+      var run = function (id) {
         if (hasOwn(queue, id)) {
           var fn = queue[id];
           delete queue[id];
           fn();
         }
       };
-      var runner = function(id) {
-        return function() {
+      var runner = function (id) {
+        return function () {
           run(id);
         };
       };
-      var listener = function(event) {
+      var listener = function (event) {
         run(event.data);
       };
-      var post = function(id) {
+      var post = function (id) {
         global2.postMessage(String2(id), location.protocol + "//" + location.host);
       };
       if (!set3 || !clear) {
         set3 = function setImmediate(fn) {
           var args = arraySlice(arguments, 1);
-          queue[++counter] = function() {
+          queue[++counter] = function () {
             apply(isCallable(fn) ? fn : Function2(fn), void 0, args);
           };
           defer(counter);
@@ -7105,11 +7109,11 @@
           delete queue[id];
         };
         if (IS_NODE) {
-          defer = function(id) {
+          defer = function (id) {
             process2.nextTick(runner(id));
           };
         } else if (Dispatch && Dispatch.now) {
-          defer = function(id) {
+          defer = function (id) {
             Dispatch.now(runner(id));
           };
         } else if (MessageChannel && !IS_IOS) {
@@ -7121,14 +7125,14 @@
           defer = post;
           global2.addEventListener("message", listener, false);
         } else if (ONREADYSTATECHANGE in createElement("script")) {
-          defer = function(id) {
-            html.appendChild(createElement("script"))[ONREADYSTATECHANGE] = function() {
+          defer = function (id) {
+            html.appendChild(createElement("script"))[ONREADYSTATECHANGE] = function () {
               html.removeChild(this);
               run(id);
             };
           };
         } else {
-          defer = function(id) {
+          defer = function (id) {
             setTimeout(runner(id), 0);
           };
         }
@@ -7183,7 +7187,7 @@
       var promise;
       var then;
       if (!queueMicrotask2) {
-        flush = function() {
+        flush = function () {
           var parent2, fn;
           if (IS_NODE && (parent2 = process2.domain))
             parent2.exit();
@@ -7208,28 +7212,28 @@
           toggle = true;
           node = document2.createTextNode("");
           new MutationObserver(flush).observe(node, { characterData: true });
-          notify = function() {
+          notify = function () {
             node.data = toggle = !toggle;
           };
         } else if (!IS_IOS_PEBBLE && Promise2 && Promise2.resolve) {
           promise = Promise2.resolve(void 0);
           promise.constructor = Promise2;
           then = bind(promise.then, promise);
-          notify = function() {
+          notify = function () {
             then(flush);
           };
         } else if (IS_NODE) {
-          notify = function() {
+          notify = function () {
             process2.nextTick(flush);
           };
         } else {
           macrotask = bind(macrotask, global2);
-          notify = function() {
+          notify = function () {
             macrotask(flush);
           };
         }
       }
-      module2.exports = queueMicrotask2 || function(fn) {
+      module2.exports = queueMicrotask2 || function (fn) {
         var task = { fn, next: void 0 };
         if (last)
           last.next = task;
@@ -7247,9 +7251,9 @@
     "node_modules/core-js/internals/new-promise-capability.js"(exports2, module2) {
       "use strict";
       var aCallable = require_a_callable();
-      var PromiseCapability = function(C) {
+      var PromiseCapability = function (C) {
         var resolve, reject;
-        this.promise = new C(function($$resolve, $$reject) {
+        this.promise = new C(function ($$resolve, $$reject) {
           if (resolve !== void 0 || reject !== void 0)
             throw TypeError("Bad Promise constructor");
           resolve = $$resolve;
@@ -7258,7 +7262,7 @@
         this.resolve = aCallable(resolve);
         this.reject = aCallable(reject);
       };
-      module2.exports.f = function(C) {
+      module2.exports.f = function (C) {
         return new PromiseCapability(C);
       };
     }
@@ -7270,7 +7274,7 @@
       var anObject = require_an_object();
       var isObject = require_is_object();
       var newPromiseCapability = require_new_promise_capability();
-      module2.exports = function(C, x) {
+      module2.exports = function (C, x) {
         anObject(C);
         if (isObject(x) && x.constructor === C)
           return x;
@@ -7286,7 +7290,7 @@
   var require_host_report_errors = __commonJS({
     "node_modules/core-js/internals/host-report-errors.js"(exports2, module2) {
       var global2 = require_global();
-      module2.exports = function(a, b) {
+      module2.exports = function (a, b) {
         var console2 = global2.console;
         if (console2 && console2.error) {
           arguments.length == 1 ? console2.error(a) : console2.error(a, b);
@@ -7298,7 +7302,7 @@
   // node_modules/core-js/internals/perform.js
   var require_perform = __commonJS({
     "node_modules/core-js/internals/perform.js"(exports2, module2) {
-      module2.exports = function(exec) {
+      module2.exports = function (exec) {
         try {
           return { error: false, value: exec() };
         } catch (error) {
@@ -7377,7 +7381,7 @@
       var OwnPromiseCapability;
       var PromiseWrapper;
       var nativeThen;
-      var FORCED = isForced(PROMISE, function() {
+      var FORCED = isForced(PROMISE, function () {
         var PROMISE_CONSTRUCTOR_SOURCE = inspectSource(PromiseConstructor);
         var GLOBAL_CORE_JS_PROMISE = PROMISE_CONSTRUCTOR_SOURCE !== String(PromiseConstructor);
         if (!GLOBAL_CORE_JS_PROMISE && V8_VERSION === 66)
@@ -7386,36 +7390,36 @@
           return true;
         if (V8_VERSION >= 51 && /native code/.test(PROMISE_CONSTRUCTOR_SOURCE))
           return false;
-        var promise = new PromiseConstructor(function(resolve) {
+        var promise = new PromiseConstructor(function (resolve) {
           resolve(1);
         });
-        var FakePromise = function(exec) {
-          exec(function() {
-          }, function() {
+        var FakePromise = function (exec) {
+          exec(function () {
+          }, function () {
           });
         };
         var constructor = promise.constructor = {};
         constructor[SPECIES] = FakePromise;
-        SUBCLASSING = promise.then(function() {
+        SUBCLASSING = promise.then(function () {
         }) instanceof FakePromise;
         if (!SUBCLASSING)
           return true;
         return !GLOBAL_CORE_JS_PROMISE && IS_BROWSER && !NATIVE_REJECTION_EVENT;
       });
-      var INCORRECT_ITERATION = FORCED || !checkCorrectnessOfIteration(function(iterable) {
-        PromiseConstructor.all(iterable)["catch"](function() {
+      var INCORRECT_ITERATION = FORCED || !checkCorrectnessOfIteration(function (iterable) {
+        PromiseConstructor.all(iterable)["catch"](function () {
         });
       });
-      var isThenable = function(it) {
+      var isThenable = function (it) {
         var then;
         return isObject(it) && isCallable(then = it.then) ? then : false;
       };
-      var notify = function(state, isReject) {
+      var notify = function (state, isReject) {
         if (state.notified)
           return;
         state.notified = true;
         var chain = state.reactions;
-        microtask(function() {
+        microtask(function () {
           var value2 = state.value;
           var ok = state.state == FULFILLED;
           var index2 = 0;
@@ -7464,7 +7468,7 @@
             onUnhandled(state);
         });
       };
-      var dispatchEvent = function(name2, promise, reason) {
+      var dispatchEvent = function (name2, promise, reason) {
         var event, handler;
         if (DISPATCH_EVENT) {
           event = document2.createEvent("Event");
@@ -7479,14 +7483,14 @@
         else if (name2 === UNHANDLED_REJECTION)
           hostReportErrors("Unhandled promise rejection", reason);
       };
-      var onUnhandled = function(state) {
-        call(task, global2, function() {
+      var onUnhandled = function (state) {
+        call(task, global2, function () {
           var promise = state.facade;
           var value2 = state.value;
           var IS_UNHANDLED = isUnhandled(state);
           var result;
           if (IS_UNHANDLED) {
-            result = perform(function() {
+            result = perform(function () {
               if (IS_NODE) {
                 process2.emit("unhandledRejection", value2, promise);
               } else
@@ -7498,11 +7502,11 @@
           }
         });
       };
-      var isUnhandled = function(state) {
+      var isUnhandled = function (state) {
         return state.rejection !== HANDLED && !state.parent;
       };
-      var onHandleUnhandled = function(state) {
-        call(task, global2, function() {
+      var onHandleUnhandled = function (state) {
+        call(task, global2, function () {
           var promise = state.facade;
           if (IS_NODE) {
             process2.emit("rejectionHandled", promise);
@@ -7510,12 +7514,12 @@
             dispatchEvent(REJECTION_HANDLED, promise, state.value);
         });
       };
-      var bind = function(fn, state, unwrap) {
-        return function(value2) {
+      var bind = function (fn, state, unwrap) {
+        return function (value2) {
           fn(state, value2, unwrap);
         };
       };
-      var internalReject = function(state, value2, unwrap) {
+      var internalReject = function (state, value2, unwrap) {
         if (state.done)
           return;
         state.done = true;
@@ -7525,7 +7529,7 @@
         state.state = REJECTED;
         notify(state, true);
       };
-      var internalResolve = function(state, value2, unwrap) {
+      var internalResolve = function (state, value2, unwrap) {
         if (state.done)
           return;
         state.done = true;
@@ -7536,7 +7540,7 @@
             throw TypeError2("Promise can't be resolved itself");
           var then = isThenable(value2);
           if (then) {
-            microtask(function() {
+            microtask(function () {
               var wrapper = { done: false };
               try {
                 call(
@@ -7601,18 +7605,18 @@
           },
           // `Promise.prototype.catch` method
           // https://tc39.es/ecma262/#sec-promise.prototype.catch
-          "catch": function(onRejected) {
+          "catch": function (onRejected) {
             return this.then(void 0, onRejected);
           }
         });
-        OwnPromiseCapability = function() {
+        OwnPromiseCapability = function () {
           var promise = new Internal();
           var state = getInternalState(promise);
           this.promise = promise;
           this.resolve = bind(internalResolve, state);
           this.reject = bind(internalReject, state);
         };
-        newPromiseCapabilityModule.f = newPromiseCapability = function(C) {
+        newPromiseCapabilityModule.f = newPromiseCapability = function (C) {
           return C === PromiseConstructor || C === PromiseWrapper ? new OwnPromiseCapability(C) : newGenericPromiseCapability(C);
         };
         if (!IS_PURE && isCallable(NativePromise) && NativePromisePrototype !== Object.prototype) {
@@ -7620,7 +7624,7 @@
           if (!SUBCLASSING) {
             redefine(NativePromisePrototype, "then", function then(onFulfilled, onRejected) {
               var that = this;
-              return new PromiseConstructor(function(resolve, reject) {
+              return new PromiseConstructor(function (resolve, reject) {
                 call(nativeThen, that, resolve, reject);
               }).then(onFulfilled, onRejected);
             }, { unsafe: true });
@@ -7665,16 +7669,16 @@
           var capability = newPromiseCapability(C);
           var resolve = capability.resolve;
           var reject = capability.reject;
-          var result = perform(function() {
+          var result = perform(function () {
             var $promiseResolve = aCallable(C.resolve);
             var values = [];
             var counter = 0;
             var remaining = 1;
-            iterate(iterable, function(promise) {
+            iterate(iterable, function (promise) {
               var index2 = counter++;
               var alreadyCalled = false;
               remaining++;
-              call($promiseResolve, C, promise).then(function(value2) {
+              call($promiseResolve, C, promise).then(function (value2) {
                 if (alreadyCalled)
                   return;
                 alreadyCalled = true;
@@ -7694,9 +7698,9 @@
           var C = this;
           var capability = newPromiseCapability(C);
           var reject = capability.reject;
-          var result = perform(function() {
+          var result = perform(function () {
             var $promiseResolve = aCallable(C.resolve);
-            iterate(iterable, function(promise) {
+            iterate(iterable, function (promise) {
               call($promiseResolve, C, promise).then(capability.resolve, reject);
             });
           });
@@ -7742,7 +7746,7 @@
       else if (IS_PURE)
         AsyncIteratorPrototype = create(AsyncIteratorPrototype);
       if (!isCallable(AsyncIteratorPrototype[ASYNC_ITERATOR])) {
-        redefine(AsyncIteratorPrototype, ASYNC_ITERATOR, function() {
+        redefine(AsyncIteratorPrototype, ASYNC_ITERATOR, function () {
           return this;
         });
       }
@@ -7765,9 +7769,9 @@
       var Promise2 = getBuiltIn("Promise");
       var setInternalState = InternalStateModule.set;
       var getInternalState = InternalStateModule.get;
-      var asyncFromSyncIteratorContinuation = function(result, resolve, reject) {
+      var asyncFromSyncIteratorContinuation = function (result, resolve, reject) {
         var done = result.done;
-        Promise2.resolve(result.value).then(function(value2) {
+        Promise2.resolve(result.value).then(function (value2) {
           resolve({ done, value: value2 });
         }, reject);
       };
@@ -7781,15 +7785,15 @@
         next: function next(arg) {
           var state = getInternalState(this);
           var hasArg = !!arguments.length;
-          return new Promise2(function(resolve, reject) {
+          return new Promise2(function (resolve, reject) {
             var result = anObject(apply(state.next, state.iterator, hasArg ? [arg] : []));
             asyncFromSyncIteratorContinuation(result, resolve, reject);
           });
         },
-        "return": function(arg) {
+        "return": function (arg) {
           var iterator = getInternalState(this).iterator;
           var hasArg = !!arguments.length;
-          return new Promise2(function(resolve, reject) {
+          return new Promise2(function (resolve, reject) {
             var $return = getMethod(iterator, "return");
             if ($return === void 0)
               return resolve({ done: true, value: arg });
@@ -7797,10 +7801,10 @@
             asyncFromSyncIteratorContinuation(result, resolve, reject);
           });
         },
-        "throw": function(arg) {
+        "throw": function (arg) {
           var iterator = getInternalState(this).iterator;
           var hasArg = !!arguments.length;
-          return new Promise2(function(resolve, reject) {
+          return new Promise2(function (resolve, reject) {
             var $throw = getMethod(iterator, "throw");
             if ($throw === void 0)
               return reject(arg);
@@ -7823,7 +7827,7 @@
       var getMethod = require_get_method();
       var wellKnownSymbol = require_well_known_symbol();
       var ASYNC_ITERATOR = wellKnownSymbol("asyncIterator");
-      module2.exports = function(it, usingIterator) {
+      module2.exports = function (it, usingIterator) {
         var method = arguments.length < 2 ? getMethod(it, ASYNC_ITERATOR) : usingIterator;
         return method ? anObject(call(method, it)) : new AsyncFromSyncIterator(getIterator(it));
       };
@@ -7834,7 +7838,7 @@
   var require_entry_virtual = __commonJS({
     "node_modules/core-js/internals/entry-virtual.js"(exports2, module2) {
       var global2 = require_global();
-      module2.exports = function(CONSTRUCTOR) {
+      module2.exports = function (CONSTRUCTOR) {
         return global2[CONSTRUCTOR].prototype;
       };
     }
@@ -7852,12 +7856,12 @@
       var getMethod = require_get_method();
       var MAX_SAFE_INTEGER = 9007199254740991;
       var TypeError2 = global2.TypeError;
-      var createMethod = function(TYPE) {
+      var createMethod = function (TYPE) {
         var IS_TO_ARRAY = TYPE == 0;
         var IS_FOR_EACH = TYPE == 1;
         var IS_EVERY = TYPE == 2;
         var IS_SOME = TYPE == 3;
-        return function(iterator, fn, target) {
+        return function (iterator, fn, target) {
           anObject(iterator);
           var Promise2 = getBuiltIn("Promise");
           var next = aCallable(iterator.next);
@@ -7865,14 +7869,14 @@
           var MAPPING = fn !== void 0;
           if (MAPPING || !IS_TO_ARRAY)
             aCallable(fn);
-          return new Promise2(function(resolve, reject) {
-            var closeIteration = function(method, argument) {
+          return new Promise2(function (resolve, reject) {
+            var closeIteration = function (method, argument) {
               try {
                 var returnMethod = getMethod(iterator, "return");
                 if (returnMethod) {
-                  return Promise2.resolve(call(returnMethod, iterator)).then(function() {
+                  return Promise2.resolve(call(returnMethod, iterator)).then(function () {
                     method(argument);
-                  }, function(error) {
+                  }, function (error) {
                     reject(error);
                   });
                 }
@@ -7881,15 +7885,15 @@
               }
               method(argument);
             };
-            var onError = function(error) {
+            var onError = function (error) {
               closeIteration(reject, error);
             };
-            var loop = function() {
+            var loop = function () {
               try {
                 if (IS_TO_ARRAY && index2 > MAX_SAFE_INTEGER && MAPPING) {
                   throw TypeError2("The allowed number of iterations has been exceeded");
                 }
-                Promise2.resolve(anObject(call(next, iterator))).then(function(step) {
+                Promise2.resolve(anObject(call(next, iterator))).then(function (step) {
                   try {
                     if (anObject(step).done) {
                       if (IS_TO_ARRAY) {
@@ -7900,7 +7904,7 @@
                     } else {
                       var value2 = step.value;
                       if (MAPPING) {
-                        Promise2.resolve(IS_TO_ARRAY ? fn(value2, index2) : fn(value2)).then(function(result) {
+                        Promise2.resolve(IS_TO_ARRAY ? fn(value2, index2) : fn(value2)).then(function (result) {
                           if (IS_FOR_EACH) {
                             loop();
                           } else if (IS_EVERY) {
@@ -7962,7 +7966,7 @@
         var argumentsLength = arguments.length;
         var mapfn = argumentsLength > 1 ? arguments[1] : void 0;
         var thisArg = argumentsLength > 2 ? arguments[2] : void 0;
-        return new (getBuiltIn("Promise"))(function(resolve) {
+        return new (getBuiltIn("Promise"))(function (resolve) {
           var O = toObject(asyncItems);
           if (mapfn !== void 0)
             mapfn = bind(mapfn, thisArg);
@@ -8033,9 +8037,9 @@
       var IndexedObject = require_indexed_object();
       var toObject = require_to_object();
       var lengthOfArrayLike = require_length_of_array_like();
-      var createMethod = function(TYPE) {
+      var createMethod = function (TYPE) {
         var IS_FIND_LAST_INDEX = TYPE == 1;
-        return function($this, callbackfn, that) {
+        return function ($this, callbackfn, that) {
           var O = toObject($this);
           var self2 = IndexedObject(O);
           var boundFunction = bind(callbackfn, that);
@@ -8101,7 +8105,7 @@
   // node_modules/core-js/internals/array-from-constructor-and-list.js
   var require_array_from_constructor_and_list = __commonJS({
     "node_modules/core-js/internals/array-from-constructor-and-list.js"(exports2, module2) {
-      module2.exports = function(Constructor, list) {
+      module2.exports = function (Constructor, list) {
         var index2 = 0;
         var length2 = list.length;
         var result = new Constructor(length2);
@@ -8126,7 +8130,7 @@
       var arrayFromConstructorAndList = require_array_from_constructor_and_list();
       var Array2 = global2.Array;
       var push = uncurryThis([].push);
-      module2.exports = function($this, callbackfn, that, specificConstructor) {
+      module2.exports = function ($this, callbackfn, that, specificConstructor) {
         var O = toObject($this);
         var self2 = IndexedObject(O);
         var boundFunction = bind(callbackfn, that);
@@ -8178,7 +8182,7 @@
       var $2 = require_export();
       var isArray = require_is_array();
       var isFrozen = Object.isFrozen;
-      var isFrozenStringArray = function(array, allowUndefined) {
+      var isFrozenStringArray = function (array, allowUndefined) {
         if (!isFrozen || !isArray(array) || !isFrozen(array))
           return false;
         var index2 = 0;
@@ -8277,7 +8281,7 @@
         var length2 = lengthOfArrayLike(that);
         var result = arraySpeciesCreate(that, 0);
         var map = new Map2();
-        var resolverFunction = resolver != null ? aCallable(resolver) : function(value2) {
+        var resolverFunction = resolver != null ? aCallable(resolver) : function (value2) {
           return value2;
         };
         var index2, item, key2;
@@ -8287,7 +8291,7 @@
           if (!mapHas(map, key2))
             mapSet(map, key2, item);
         }
-        mapForEach(map, function(value2) {
+        mapForEach(map, function (value2) {
           push(result, value2);
         });
         return result;
@@ -8340,11 +8344,11 @@
       exports2.strFromU8 = strFromU82;
       exports2.unzip = unzip2;
       var ch2 = {};
-      var wk = function(c, id, msg, transfer, cb) {
+      var wk = function (c, id, msg, transfer, cb) {
         const w = new Worker(ch2[id] || (ch2[id] = URL.createObjectURL(new Blob([c + ';addEventListener("error",function(e){e=e.error;postMessage({$e$:[e.message,e.code,e.stack]})})'], {
           type: "text/javascript"
         }))));
-        return w.onmessage = function(e) {
+        return w.onmessage = function (e) {
           const d = e.data, ed = d.$e$;
           if (ed) {
             const err2 = new Error(ed[0]);
@@ -8359,7 +8363,7 @@
       var fleb = new u8([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0]);
       var fdeb = new u8([0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0]);
       var clim = new u8([16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]);
-      var freb = function(eb, start) {
+      var freb = function (eb, start) {
         const b = new u16(31);
         for (var i2 = 0; i2 < 31; ++i2)
           b[i2] = start += 1 << eb[i2 - 1];
@@ -8381,7 +8385,7 @@
         x = (52428 & x) >>> 2 | (13107 & x) << 2, x = (61680 & x) >>> 4 | (3855 & x) << 4, rev[i] = ((65280 & x) >>> 8 | (255 & x) << 8) >>> 1;
       }
       var i;
-      var hMap = function(cd, mb, r) {
+      var hMap = function (cd, mb, r) {
         const s = cd.length;
         let i2 = 0;
         const l = new u16(mb);
@@ -8420,42 +8424,42 @@
         fdt[i] = 5;
       var flrm = hMap(flt, 9, 1);
       var fdrm = hMap(fdt, 5, 1);
-      var max = function(a) {
+      var max = function (a) {
         let m = a[0];
         for (let i2 = 1; i2 < a.length; ++i2)
           a[i2] > m && (m = a[i2]);
         return m;
       };
-      var bits = function(d, p, m) {
+      var bits = function (d, p, m) {
         const o = p / 8 | 0;
         return (d[o] | d[o + 1] << 8) >> (7 & p) & m;
       };
-      var bits16 = function(d, p) {
+      var bits16 = function (d, p) {
         const o = p / 8 | 0;
         return (d[o] | d[o + 1] << 8 | d[o + 2] << 16) >> (7 & p);
       };
-      var shft = function(p) {
+      var shft = function (p) {
         return (p + 7) / 8 | 0;
       };
-      var slc = function(v, s, e) {
+      var slc = function (v, s, e) {
         (null == s || s < 0) && (s = 0), (null == e || e > v.length) && (e = v.length);
         const n = new (2 === v.BYTES_PER_ELEMENT ? u16 : 4 === v.BYTES_PER_ELEMENT ? u32 : u8)(e - s);
         return n.set(v.subarray(s, e)), n;
       };
       var ec = ["unexpected EOF", "invalid block type", "invalid length/literal", "invalid distance", "stream finished", "no stream handler", , "no callback", "invalid UTF-8 data", "extra field too long", "date not in range 1980-2099", "filename too long", "stream finishing", "invalid zip data"];
-      var err = function(ind, msg, nt) {
+      var err = function (ind, msg, nt) {
         const e = new Error(msg || ec[ind]);
         if (e.code = ind, Error.captureStackTrace && Error.captureStackTrace(e, err), !nt)
           throw e;
         return e;
       };
-      var inflt = function(dat, buf, st) {
+      var inflt = function (dat, buf, st) {
         const sl = dat.length;
         if (!sl || st && st.f && !st.l)
           return buf || new u8(0);
         const noBuf = !buf || st, noSt = !st || st.i;
         st || (st = {}), buf || (buf = new u8(3 * sl));
-        const cbuf = function(l) {
+        const cbuf = function (l) {
           const bl = buf.length;
           if (l > bl) {
             const nbuf = new u8(Math.max(2 * bl, l));
@@ -8487,7 +8491,7 @@
                 clt[clim[i2]] = bits(dat, pos + 3 * i2, 7);
               pos += 3 * hcLen;
               const clb = max(clt), clbmsk = (1 << clb) - 1, clm = hMap(clt, clb, 1);
-              for (i2 = 0; i2 < tl; ) {
+              for (i2 = 0; i2 < tl;) {
                 const r = clm[bits(dat, pos, clbmsk)];
                 var s;
                 if (pos += 15 & r, (s = r >>> 4) < 16)
@@ -8495,7 +8499,7 @@
                 else {
                   var c = 0;
                   let n = 0;
-                  for (16 === s ? (n = 3 + bits(dat, pos, 3), pos += 2, c = ldt[i2 - 1]) : 17 === s ? (n = 3 + bits(dat, pos, 7), pos += 3) : 18 === s && (n = 11 + bits(dat, pos, 127), pos += 7); n--; )
+                  for (16 === s ? (n = 3 + bits(dat, pos, 3), pos += 2, c = ldt[i2 - 1]) : 17 === s ? (n = 3 + bits(dat, pos, 7), pos += 3) : 18 === s && (n = 11 + bits(dat, pos, 127), pos += 7); n--;)
                     ldt[i2++] = c;
                 }
               }
@@ -8554,7 +8558,7 @@
         } while (!final);
         return bt === buf.length ? buf : slc(buf, 0, bt);
       };
-      var mrg = function(a, b) {
+      var mrg = function (a, b) {
         const o = {};
         for (var k in a)
           o[k] = a[k];
@@ -8562,7 +8566,7 @@
           o[k] = b[k];
         return o;
       };
-      var wcln = function(fn, fnStr, td2) {
+      var wcln = function (fn, fnStr, td2) {
         const dt = fn(), st = fn.toString(), ks = st.slice(st.indexOf("[") + 1, st.lastIndexOf("]")).replace(/\s+/g, "").split(",");
         for (let i2 = 0; i2 < dt.length; ++i2) {
           const v = dt[i2], k = ks[i2];
@@ -8586,13 +8590,13 @@
         return [fnStr, td2];
       };
       var ch = [];
-      var cbfs = function(v) {
+      var cbfs = function (v) {
         const tl = [];
         for (const k in v)
           v[k].buffer && tl.push((v[k] = new v[k].constructor(v[k])).buffer);
         return tl;
       };
-      var wrkr = function(fns, init2, id, cb) {
+      var wrkr = function (fns, init2, id, cb) {
         let _a2;
         if (!ch[id]) {
           let fnStr = "", td_1 = {};
@@ -8604,31 +8608,31 @@
         const td2 = mrg({}, ch[id][1]);
         return wk(ch[id][0] + ";onmessage=function(e){for(var kz in e.data)self[kz]=e.data[kz];onmessage=" + init2.toString() + "}", id, td2, cbfs(td2), cb);
       };
-      var bInflt = function() {
+      var bInflt = function () {
         return [u8, u16, u32, fleb, fdeb, clim, fl, fd, flrm, fdrm, rev, ec, hMap, max, bits, bits16, shft, slc, err, inflt, inflateSync, pbf, gu8];
       };
-      var pbf = function(msg) {
+      var pbf = function (msg) {
         return postMessage(msg, [msg.buffer]);
       };
-      var gu8 = function(o) {
+      var gu8 = function (o) {
         return o && o.size && new u8(o.size);
       };
-      var cbify = function(dat, opts, fns, init2, id, cb) {
-        var w = wrkr(fns, init2, id, function(err2, dat2) {
+      var cbify = function (dat, opts, fns, init2, id, cb) {
+        var w = wrkr(fns, init2, id, function (err2, dat2) {
           w.terminate(), cb(err2, dat2);
         });
-        return w.postMessage([dat, opts], opts.consume ? [dat.buffer] : []), function() {
+        return w.postMessage([dat, opts], opts.consume ? [dat.buffer] : []), function () {
           w.terminate();
         };
       };
-      var b2 = function(d, b) {
+      var b2 = function (d, b) {
         return d[b] | d[b + 1] << 8;
       };
-      var b4 = function(d, b) {
+      var b4 = function (d, b) {
         return (d[b] | d[b + 1] << 8 | d[b + 2] << 16 | d[b + 3] << 24) >>> 0;
       };
       function inflate(data2, opts, cb) {
-        return cb || (cb = opts, opts = {}), "function" != typeof cb && err(7), cbify(data2, opts, [bInflt], function(ev) {
+        return cb || (cb = opts, opts = {}), "function" != typeof cb && err(7), cbify(data2, opts, [bInflt], function (ev) {
           return pbf(inflateSync(ev.data[0], gu8(ev.data[1])));
         }, 1, cb);
       }
@@ -8636,8 +8640,8 @@
         return inflt(data2, out);
       }
       var td = "undefined" != typeof TextDecoder && new TextDecoder();
-      var dutf8 = function(d) {
-        for (let r = "", i2 = 0; ; ) {
+      var dutf8 = function (d) {
+        for (let r = "", i2 = 0; ;) {
           let c = d[i2++];
           const eb = (c > 127) + (c > 223) + (c > 239);
           if (i2 + eb > d.length)
@@ -8659,28 +8663,28 @@
           return _a2[1].length && err(8), out;
         }
       }
-      var slzh = function(d, b) {
+      var slzh = function (d, b) {
         return b + 30 + b2(d, b + 26) + b2(d, b + 28);
       };
-      var zh = function(d, b, z) {
+      var zh = function (d, b, z) {
         const fnl = b2(d, b + 28), fn = strFromU82(d.subarray(b + 46, b + 46 + fnl), !(2048 & b2(d, b + 8))), es = b + 46 + fnl, bs = b4(d, b + 20), _a2 = z && 4294967295 === bs ? z64e(d, es) : [bs, b4(d, b + 24), b4(d, b + 42)], sc = _a2[0], su = _a2[1], off = _a2[2];
         return [b2(d, b + 10), sc, su, fn, es + b2(d, b + 30) + b2(d, b + 32), off];
       };
-      var mt = "function" == typeof queueMicrotask ? queueMicrotask : "function" == typeof setTimeout ? setTimeout : function(fn) {
+      var mt = "function" == typeof queueMicrotask ? queueMicrotask : "function" == typeof setTimeout ? setTimeout : function (fn) {
         fn();
       };
       function unzip2(data2, opts, cb) {
         cb || (cb = opts, opts = {}), "function" != typeof cb && err(7);
-        const term = [], tAll = function() {
+        const term = [], tAll = function () {
           for (let i2 = 0; i2 < term.length; ++i2)
             term[i2]();
         }, files = {};
-        let cbd = function(a, b) {
-          mt(function() {
+        let cbd = function (a, b) {
+          mt(function () {
             cb(a, b);
           });
         };
-        mt(function() {
+        mt(function () {
           cbd = cb;
         });
         let e = data2.length - 22;
@@ -8694,10 +8698,10 @@
             const ze = b4(data2, e - 12);
             z = 101075792 === b4(data2, ze), z && (c = lft = b4(data2, ze + 32), o = b4(data2, ze + 48));
           }
-          const fltr = opts && opts.filter, _loop_3 = function() {
+          const fltr = opts && opts.filter, _loop_3 = function () {
             const _a2 = zh(data2, o, z), c_1 = _a2[0], sc = _a2[1], su = _a2[2], fn = _a2[3], no = _a2[4], off = _a2[5], b = slzh(data2, off);
             o = no;
-            const cbl = function(e2, d) {
+            const cbl = function (e2, d) {
               e2 ? (tAll(), cbd(e2, null)) : (d && (files[fn] = d), --lft || cbd(null, files));
             };
             if (!fltr || fltr({
@@ -9226,17 +9230,17 @@
   // node_modules/lottie-web/build/player/lottie.min.js
   var require_lottie_min = __commonJS({
     "node_modules/lottie-web/build/player/lottie.min.js"(exports, module) {
-      "undefined" != typeof navigator && function(t, e) {
+      "undefined" != typeof navigator && function (t, e) {
         "object" == typeof exports && "undefined" != typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define(e) : (t = "undefined" != typeof globalThis ? globalThis : t || self).lottie = e();
-      }(exports, function() {
+      }(exports, function () {
         "use strict";
-        var svgNS = "http://www.w3.org/2000/svg", locationHref = "", _useWebWorker = false, initialDefaultFrame = -999999, setWebWorker = function(t) {
+        var svgNS = "http://www.w3.org/2000/svg", locationHref = "", _useWebWorker = false, initialDefaultFrame = -999999, setWebWorker = function (t) {
           _useWebWorker = !!t;
-        }, getWebWorker = function() {
+        }, getWebWorker = function () {
           return _useWebWorker;
-        }, setLocationHref = function(t) {
+        }, setLocationHref = function (t) {
           locationHref = t;
-        }, getLocationHref = function() {
+        }, getLocationHref = function () {
           return locationHref;
         };
         function createTag(t) {
@@ -9256,51 +9260,55 @@
           }
           return e.prototype = t, e;
         }
-        var audioControllerFactory = function() {
+        var audioControllerFactory = function () {
           function t(t2) {
             this.audios = [], this.audioFactory = t2, this._volume = 1, this._isMuted = false;
           }
-          return t.prototype = { addAudio: function(t2) {
-            this.audios.push(t2);
-          }, pause: function() {
-            var t2, e = this.audios.length;
-            for (t2 = 0; t2 < e; t2 += 1)
-              this.audios[t2].pause();
-          }, resume: function() {
-            var t2, e = this.audios.length;
-            for (t2 = 0; t2 < e; t2 += 1)
-              this.audios[t2].resume();
-          }, setRate: function(t2) {
-            var e, i = this.audios.length;
-            for (e = 0; e < i; e += 1)
-              this.audios[e].setRate(t2);
-          }, createAudio: function(t2) {
-            return this.audioFactory ? this.audioFactory(t2) : window.Howl ? new window.Howl({ src: [t2] }) : { isPlaying: false, play: function() {
-              this.isPlaying = true;
-            }, seek: function() {
-              this.isPlaying = false;
-            }, playing: function() {
-            }, rate: function() {
-            }, setVolume: function() {
-            } };
-          }, setAudioFactory: function(t2) {
-            this.audioFactory = t2;
-          }, setVolume: function(t2) {
-            this._volume = t2, this._updateVolume();
-          }, mute: function() {
-            this._isMuted = true, this._updateVolume();
-          }, unmute: function() {
-            this._isMuted = false, this._updateVolume();
-          }, getVolume: function() {
-            return this._volume;
-          }, _updateVolume: function() {
-            var t2, e = this.audios.length;
-            for (t2 = 0; t2 < e; t2 += 1)
-              this.audios[t2].volume(this._volume * (this._isMuted ? 0 : 1));
-          } }, function() {
+          return t.prototype = {
+            addAudio: function (t2) {
+              this.audios.push(t2);
+            }, pause: function () {
+              var t2, e = this.audios.length;
+              for (t2 = 0; t2 < e; t2 += 1)
+                this.audios[t2].pause();
+            }, resume: function () {
+              var t2, e = this.audios.length;
+              for (t2 = 0; t2 < e; t2 += 1)
+                this.audios[t2].resume();
+            }, setRate: function (t2) {
+              var e, i = this.audios.length;
+              for (e = 0; e < i; e += 1)
+                this.audios[e].setRate(t2);
+            }, createAudio: function (t2) {
+              return this.audioFactory ? this.audioFactory(t2) : window.Howl ? new window.Howl({ src: [t2] }) : {
+                isPlaying: false, play: function () {
+                  this.isPlaying = true;
+                }, seek: function () {
+                  this.isPlaying = false;
+                }, playing: function () {
+                }, rate: function () {
+                }, setVolume: function () {
+                }
+              };
+            }, setAudioFactory: function (t2) {
+              this.audioFactory = t2;
+            }, setVolume: function (t2) {
+              this._volume = t2, this._updateVolume();
+            }, mute: function () {
+              this._isMuted = true, this._updateVolume();
+            }, unmute: function () {
+              this._isMuted = false, this._updateVolume();
+            }, getVolume: function () {
+              return this._volume;
+            }, _updateVolume: function () {
+              var t2, e = this.audios.length;
+              for (t2 = 0; t2 < e; t2 += 1)
+                this.audios[t2].volume(this._volume * (this._isMuted ? 0 : 1));
+            }
+          }, function () {
             return new t();
           };
-        }(), createTypedArray = function() {
+        }(), createTypedArray = function () {
           function t(t2, e) {
             var i, r = 0, s = [];
             switch (t2) {
@@ -9315,7 +9323,7 @@
               s.push(i);
             return s;
           }
-          return "function" == typeof Uint8ClampedArray && "function" == typeof Float32Array ? function(e, i) {
+          return "function" == typeof Uint8ClampedArray && "function" == typeof Float32Array ? function (e, i) {
             return "float32" === e ? new Float32Array(i) : "int16" === e ? new Int16Array(i) : "uint8c" === e ? new Uint8ClampedArray(i) : t(e, i);
           } : t;
         }();
@@ -9323,9 +9331,9 @@
           return Array.apply(null, { length: t });
         }
         function _typeof$6(t) {
-          return _typeof$6 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t2) {
+          return _typeof$6 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (t2) {
             return typeof t2;
-          } : function(t2) {
+          } : function (t2) {
             return t2 && "function" == typeof Symbol && t2.constructor === Symbol && t2 !== Symbol.prototype ? "symbol" : typeof t2;
           }, _typeof$6(t);
         }
@@ -9333,11 +9341,11 @@
         function ProjectInterface$1() {
           return {};
         }
-        !function() {
+        !function () {
           var t, e = ["abs", "acos", "acosh", "asin", "asinh", "atan", "atanh", "atan2", "ceil", "cbrt", "expm1", "clz32", "cos", "cosh", "exp", "floor", "fround", "hypot", "imul", "log", "log1p", "log2", "log10", "max", "min", "pow", "random", "round", "sign", "sin", "sinh", "sqrt", "tan", "tanh", "trunc", "E", "LN10", "LN2", "LOG10E", "LOG2E", "PI", "SQRT1_2", "SQRT2"], i = e.length;
           for (t = 0; t < i; t += 1)
             BMMath[e[t]] = Math[e[t]];
-        }(), BMMath.random = Math.random, BMMath.abs = function(t) {
+        }(), BMMath.random = Math.random, BMMath.abs = function (t) {
           if ("object" === _typeof$6(t) && t.length) {
             var e, i = createSizedArray(t.length), r = t.length;
             for (e = 0; e < r; e += 1)
@@ -9380,7 +9388,7 @@
         function BMAnimationConfigErrorEvent(t, e) {
           this.type = t, this.nativeError = e;
         }
-        var createElementID = (_count = 0, function() {
+        var createElementID = (_count = 0, function () {
           return idPrefix$1 + "__lottie_element_" + (_count += 1);
         }), _count;
         function HSVtoRGB(t, e, i) {
@@ -9435,60 +9443,64 @@
           var i = RGBtoHSV(255 * t[0], 255 * t[1], 255 * t[2]);
           return i[0] += e / 360, i[0] > 1 ? i[0] -= 1 : i[0] < 0 && (i[0] += 1), HSVtoRGB(i[0], i[1], i[2]);
         }
-        var rgbToHex = function() {
+        var rgbToHex = function () {
           var t, e, i = [];
           for (t = 0; t < 256; t += 1)
             e = t.toString(16), i[t] = 1 === e.length ? "0" + e : e;
-          return function(t2, e2, r) {
+          return function (t2, e2, r) {
             return t2 < 0 && (t2 = 0), e2 < 0 && (e2 = 0), r < 0 && (r = 0), "#" + i[t2] + i[e2] + i[r];
           };
-        }(), setSubframeEnabled = function(t) {
+        }(), setSubframeEnabled = function (t) {
           subframeEnabled = !!t;
-        }, getSubframeEnabled = function() {
+        }, getSubframeEnabled = function () {
           return subframeEnabled;
-        }, setExpressionsPlugin = function(t) {
+        }, setExpressionsPlugin = function (t) {
           expressionsPlugin = t;
-        }, getExpressionsPlugin = function() {
+        }, getExpressionsPlugin = function () {
           return expressionsPlugin;
-        }, setExpressionInterfaces = function(t) {
+        }, setExpressionInterfaces = function (t) {
           expressionsInterfaces = t;
-        }, getExpressionInterfaces = function() {
+        }, getExpressionInterfaces = function () {
           return expressionsInterfaces;
-        }, setDefaultCurveSegments = function(t) {
+        }, setDefaultCurveSegments = function (t) {
           defaultCurveSegments = t;
-        }, getDefaultCurveSegments = function() {
+        }, getDefaultCurveSegments = function () {
           return defaultCurveSegments;
-        }, setIdPrefix = function(t) {
+        }, setIdPrefix = function (t) {
           idPrefix$1 = t;
-        }, getIdPrefix = function() {
+        }, getIdPrefix = function () {
           return idPrefix$1;
         };
         function createNS(t) {
           return document.createElementNS(svgNS, t);
         }
         function _typeof$5(t) {
-          return _typeof$5 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t2) {
+          return _typeof$5 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (t2) {
             return typeof t2;
-          } : function(t2) {
+          } : function (t2) {
             return t2 && "function" == typeof Symbol && t2.constructor === Symbol && t2 !== Symbol.prototype ? "symbol" : typeof t2;
           }, _typeof$5(t);
         }
-        var dataManager = function() {
-          var t, e, i = 1, r = [], s = { onmessage: function() {
-          }, postMessage: function(e2) {
-            t({ data: e2 });
-          } }, a = { postMessage: function(t2) {
-            s.onmessage({ data: t2 });
-          } };
+        var dataManager = function () {
+          var t, e, i = 1, r = [], s = {
+            onmessage: function () {
+            }, postMessage: function (e2) {
+              t({ data: e2 });
+            }
+          }, a = {
+            postMessage: function (t2) {
+              s.onmessage({ data: t2 });
+            }
+          };
           function n() {
-            e || (e = function(e2) {
+            e || (e = function (e2) {
               if (window.Worker && window.Blob && getWebWorker()) {
                 var i2 = new Blob(["var _workerSelf = self; self.onmessage = ", e2.toString()], { type: "text/javascript" }), r2 = URL.createObjectURL(i2);
                 return new Worker(r2);
               }
               return t = e2, s;
-            }(function(t2) {
-              if (a.dataManager || (a.dataManager = function() {
+            }(function (t2) {
+              if (a.dataManager || (a.dataManager = function () {
                 function t3(s3, a3) {
                   var n3, o3, h2, l2, p2, m2, c = s3.length;
                   for (o3 = 0; o3 < c; o3 += 1)
@@ -9506,8 +9518,8 @@
                     }
                 }
                 function e3(t4, e4) {
-                  var i3 = function(t5, e5) {
-                    for (var i4 = 0, r3 = e5.length; i4 < r3; ) {
+                  var i3 = function (t5, e5) {
+                    for (var i4 = 0, r3 = e5.length; i4 < r3;) {
                       if (e5[i4].id === t5)
                         return e5[i4];
                       i4 += 1;
@@ -9537,21 +9549,21 @@
                   var i3 = e4 ? e4.split(".") : [100, 100, 100];
                   return t4[0] > i3[0] || !(i3[0] > t4[0]) && (t4[1] > i3[1] || !(i3[1] > t4[1]) && (t4[2] > i3[2] || !(i3[2] > t4[2]) && null));
                 }
-                var a2, n2 = function() {
+                var a2, n2 = function () {
                   var t4 = [4, 4, 14];
                   function e4(t5) {
                     var e5, i3, r3, s3 = t5.length;
                     for (e5 = 0; e5 < s3; e5 += 1)
                       5 === t5[e5].ty && (r3 = void 0, r3 = (i3 = t5[e5]).t.d, i3.t.d = { k: [{ s: r3, t: 0 }] });
                   }
-                  return function(i3) {
+                  return function (i3) {
                     if (s2(t4, i3.v) && (e4(i3.layers), i3.assets)) {
                       var r3, a3 = i3.assets.length;
                       for (r3 = 0; r3 < a3; r3 += 1)
                         i3.assets[r3].layers && e4(i3.assets[r3].layers);
                     }
                   };
-                }(), o2 = (a2 = [4, 7, 99], function(t4) {
+                }(), o2 = (a2 = [4, 7, 99], function (t4) {
                   if (t4.chars && !s2(a2, t4.v)) {
                     var e4, r3 = t4.chars.length;
                     for (e4 = 0; e4 < r3; e4 += 1) {
@@ -9559,21 +9571,21 @@
                       n3.data && n3.data.shapes && (i2(n3.data.shapes), n3.data.ip = 0, n3.data.op = 99999, n3.data.st = 0, n3.data.sr = 1, n3.data.ks = { p: { k: [0, 0], a: 0 }, s: { k: [100, 100], a: 0 }, a: { k: [0, 0], a: 0 }, r: { k: 0, a: 0 }, o: { k: 100, a: 0 } }, t4.chars[e4].t || (n3.data.shapes.push({ ty: "no" }), n3.data.shapes[0].it.push({ p: { k: [0, 0], a: 0 }, s: { k: [100, 100], a: 0 }, a: { k: [0, 0], a: 0 }, r: { k: 0, a: 0 }, o: { k: 100, a: 0 }, sk: { k: 0, a: 0 }, sa: { k: 0, a: 0 }, ty: "tr" })));
                     }
                   }
-                }), h = function() {
+                }), h = function () {
                   var t4 = [5, 7, 15];
                   function e4(t5) {
                     var e5, i3, r3 = t5.length;
                     for (e5 = 0; e5 < r3; e5 += 1)
                       5 === t5[e5].ty && (i3 = void 0, "number" == typeof (i3 = t5[e5].t.p).a && (i3.a = { a: 0, k: i3.a }), "number" == typeof i3.p && (i3.p = { a: 0, k: i3.p }), "number" == typeof i3.r && (i3.r = { a: 0, k: i3.r }));
                   }
-                  return function(i3) {
+                  return function (i3) {
                     if (s2(t4, i3.v) && (e4(i3.layers), i3.assets)) {
                       var r3, a3 = i3.assets.length;
                       for (r3 = 0; r3 < a3; r3 += 1)
                         i3.assets[r3].layers && e4(i3.assets[r3].layers);
                     }
                   };
-                }(), l = function() {
+                }(), l = function () {
                   var t4 = [4, 1, 9];
                   function e4(t5) {
                     var i4, r3, s3, a3 = t5.length;
@@ -9592,14 +9604,14 @@
                     for (i4 = 0; i4 < r3; i4 += 1)
                       4 === t5[i4].ty && e4(t5[i4].shapes);
                   }
-                  return function(e5) {
+                  return function (e5) {
                     if (s2(t4, e5.v) && (i3(e5.layers), e5.assets)) {
                       var r3, a3 = e5.assets.length;
                       for (r3 = 0; r3 < a3; r3 += 1)
                         e5.assets[r3].layers && i3(e5.assets[r3].layers);
                     }
                   };
-                }(), p = function() {
+                }(), p = function () {
                   var t4 = [4, 4, 18];
                   function e4(t5) {
                     var i4, r3, s3;
@@ -9628,7 +9640,7 @@
                       4 === i4.ty && e4(i4.shapes);
                     }
                   }
-                  return function(e5) {
+                  return function (e5) {
                     if (s2(t4, e5.v) && (i3(e5.layers), e5.assets)) {
                       var r3, a3 = e5.assets.length;
                       for (r3 = 0; r3 < a3; r3 += 1)
@@ -9639,61 +9651,65 @@
                 function f(t4) {
                   0 === t4.t.a.length && t4.t.p;
                 }
-                var m = { completeData: function(i3) {
-                  i3.__complete || (l(i3), n2(i3), o2(i3), h(i3), p(i3), t3(i3.layers, i3.assets), function(i4, r3) {
-                    if (i4) {
-                      var s3 = 0, a3 = i4.length;
-                      for (s3 = 0; s3 < a3; s3 += 1)
-                        1 === i4[s3].t && (i4[s3].data.layers = e3(i4[s3].data.refId, r3), t3(i4[s3].data.layers, r3));
-                    }
-                  }(i3.chars, i3.assets), i3.__complete = true);
-                } };
+                var m = {
+                  completeData: function (i3) {
+                    i3.__complete || (l(i3), n2(i3), o2(i3), h(i3), p(i3), t3(i3.layers, i3.assets), function (i4, r3) {
+                      if (i4) {
+                        var s3 = 0, a3 = i4.length;
+                        for (s3 = 0; s3 < a3; s3 += 1)
+                          1 === i4[s3].t && (i4[s3].data.layers = e3(i4[s3].data.refId, r3), t3(i4[s3].data.layers, r3));
+                      }
+                    }(i3.chars, i3.assets), i3.__complete = true);
+                  }
+                };
                 return m.checkColors = l, m.checkChars = o2, m.checkPathProperties = h, m.checkShapes = p, m.completeLayers = t3, m;
-              }()), a.assetLoader || (a.assetLoader = function() {
+              }()), a.assetLoader || (a.assetLoader = function () {
                 function t3(t4) {
                   var e3 = t4.getResponseHeader("content-type");
                   return e3 && "json" === t4.responseType && -1 !== e3.indexOf("json") || t4.response && "object" === _typeof$5(t4.response) ? t4.response : t4.response && "string" == typeof t4.response ? JSON.parse(t4.response) : t4.responseText ? JSON.parse(t4.responseText) : null;
                 }
-                return { load: function(e3, i2, r2, s2) {
-                  var a2, n2 = new XMLHttpRequest();
-                  try {
-                    n2.responseType = "json";
-                  } catch (t4) {
-                  }
-                  n2.onreadystatechange = function() {
-                    if (4 === n2.readyState)
-                      if (200 === n2.status)
-                        a2 = t3(n2), r2(a2);
-                      else
-                        try {
+                return {
+                  load: function (e3, i2, r2, s2) {
+                    var a2, n2 = new XMLHttpRequest();
+                    try {
+                      n2.responseType = "json";
+                    } catch (t4) {
+                    }
+                    n2.onreadystatechange = function () {
+                      if (4 === n2.readyState)
+                        if (200 === n2.status)
                           a2 = t3(n2), r2(a2);
-                        } catch (t4) {
-                          s2 && s2(t4);
-                        }
-                  };
-                  try {
-                    n2.open(["G", "E", "T"].join(""), e3, true);
-                  } catch (t4) {
-                    n2.open(["G", "E", "T"].join(""), i2 + "/" + e3, true);
+                        else
+                          try {
+                            a2 = t3(n2), r2(a2);
+                          } catch (t4) {
+                            s2 && s2(t4);
+                          }
+                    };
+                    try {
+                      n2.open(["G", "E", "T"].join(""), e3, true);
+                    } catch (t4) {
+                      n2.open(["G", "E", "T"].join(""), i2 + "/" + e3, true);
+                    }
+                    n2.send();
                   }
-                  n2.send();
-                } };
+                };
               }()), "loadAnimation" === t2.data.type)
-                a.assetLoader.load(t2.data.path, t2.data.fullPath, function(e3) {
+                a.assetLoader.load(t2.data.path, t2.data.fullPath, function (e3) {
                   a.dataManager.completeData(e3), a.postMessage({ id: t2.data.id, payload: e3, status: "success" });
-                }, function() {
+                }, function () {
                   a.postMessage({ id: t2.data.id, status: "error" });
                 });
               else if ("complete" === t2.data.type) {
                 var e2 = t2.data.animation;
                 a.dataManager.completeData(e2), a.postMessage({ id: t2.data.id, payload: e2, status: "success" });
               } else
-                "loadData" === t2.data.type && a.assetLoader.load(t2.data.path, t2.data.fullPath, function(e3) {
+                "loadData" === t2.data.type && a.assetLoader.load(t2.data.path, t2.data.fullPath, function (e3) {
                   a.postMessage({ id: t2.data.id, payload: e3, status: "success" });
-                }, function() {
+                }, function () {
                   a.postMessage({ id: t2.data.id, status: "error" });
                 });
-            }), e.onmessage = function(t2) {
+            }), e.onmessage = function (t2) {
               var e2 = t2.data, i2 = e2.id, s2 = r[i2];
               r[i2] = null, "success" === e2.status ? s2.onComplete(e2.payload) : s2.onError && s2.onError();
             });
@@ -9702,21 +9718,23 @@
             var s2 = "processId_" + (i += 1);
             return r[s2] = { onComplete: t2, onError: e2 }, s2;
           }
-          return { loadAnimation: function(t2, i2, r2) {
-            n();
-            var s2 = o(i2, r2);
-            e.postMessage({ type: "loadAnimation", path: t2, fullPath: window.location.origin + window.location.pathname, id: s2 });
-          }, loadData: function(t2, i2, r2) {
-            n();
-            var s2 = o(i2, r2);
-            e.postMessage({ type: "loadData", path: t2, fullPath: window.location.origin + window.location.pathname, id: s2 });
-          }, completeAnimation: function(t2, i2, r2) {
-            n();
-            var s2 = o(i2, r2);
-            e.postMessage({ type: "complete", animation: t2, id: s2 });
-          } };
-        }(), ImagePreloader = function() {
-          var t = function() {
+          return {
+            loadAnimation: function (t2, i2, r2) {
+              n();
+              var s2 = o(i2, r2);
+              e.postMessage({ type: "loadAnimation", path: t2, fullPath: window.location.origin + window.location.pathname, id: s2 });
+            }, loadData: function (t2, i2, r2) {
+              n();
+              var s2 = o(i2, r2);
+              e.postMessage({ type: "loadData", path: t2, fullPath: window.location.origin + window.location.pathname, id: s2 });
+            }, completeAnimation: function (t2, i2, r2) {
+              n();
+              var s2 = o(i2, r2);
+              e.postMessage({ type: "complete", animation: t2, id: s2 });
+            }
+          };
+        }(), ImagePreloader = function () {
+          var t = function () {
             var t2 = createTag("canvas");
             t2.width = 1, t2.height = 1;
             var e2 = t2.getContext("2d");
@@ -9740,83 +9758,87 @@
             return r2;
           }
           function s(t2) {
-            var e2 = 0, i2 = setInterval(function() {
+            var e2 = 0, i2 = setInterval(function () {
               (t2.getBBox().width || e2 > 500) && (this._imageLoaded(), clearInterval(i2)), e2 += 1;
             }.bind(this), 50);
           }
           function a(t2) {
             var e2 = { assetData: t2 }, i2 = r(t2, this.assetsPath, this.path);
-            return dataManager.loadData(i2, function(t3) {
+            return dataManager.loadData(i2, function (t3) {
               e2.img = t3, this._footageLoaded();
-            }.bind(this), function() {
+            }.bind(this), function () {
               e2.img = {}, this._footageLoaded();
             }.bind(this)), e2;
           }
           function n() {
             this._imageLoaded = e.bind(this), this._footageLoaded = i.bind(this), this.testImageLoaded = s.bind(this), this.createFootageData = a.bind(this), this.assetsPath = "", this.path = "", this.totalImages = 0, this.totalFootages = 0, this.loadedAssets = 0, this.loadedFootagesCount = 0, this.imagesLoadedCb = null, this.images = [];
           }
-          return n.prototype = { loadAssets: function(t2, e2) {
-            var i2;
-            this.imagesLoadedCb = e2;
-            var r2 = t2.length;
-            for (i2 = 0; i2 < r2; i2 += 1)
-              t2[i2].layers || (t2[i2].t && "seq" !== t2[i2].t ? 3 === t2[i2].t && (this.totalFootages += 1, this.images.push(this.createFootageData(t2[i2]))) : (this.totalImages += 1, this.images.push(this._createImageData(t2[i2]))));
-          }, setAssetsPath: function(t2) {
-            this.assetsPath = t2 || "";
-          }, setPath: function(t2) {
-            this.path = t2 || "";
-          }, loadedImages: function() {
-            return this.totalImages === this.loadedAssets;
-          }, loadedFootages: function() {
-            return this.totalFootages === this.loadedFootagesCount;
-          }, destroy: function() {
-            this.imagesLoadedCb = null, this.images.length = 0;
-          }, getAsset: function(t2) {
-            for (var e2 = 0, i2 = this.images.length; e2 < i2; ) {
-              if (this.images[e2].assetData === t2)
-                return this.images[e2].img;
-              e2 += 1;
+          return n.prototype = {
+            loadAssets: function (t2, e2) {
+              var i2;
+              this.imagesLoadedCb = e2;
+              var r2 = t2.length;
+              for (i2 = 0; i2 < r2; i2 += 1)
+                t2[i2].layers || (t2[i2].t && "seq" !== t2[i2].t ? 3 === t2[i2].t && (this.totalFootages += 1, this.images.push(this.createFootageData(t2[i2]))) : (this.totalImages += 1, this.images.push(this._createImageData(t2[i2]))));
+            }, setAssetsPath: function (t2) {
+              this.assetsPath = t2 || "";
+            }, setPath: function (t2) {
+              this.path = t2 || "";
+            }, loadedImages: function () {
+              return this.totalImages === this.loadedAssets;
+            }, loadedFootages: function () {
+              return this.totalFootages === this.loadedFootagesCount;
+            }, destroy: function () {
+              this.imagesLoadedCb = null, this.images.length = 0;
+            }, getAsset: function (t2) {
+              for (var e2 = 0, i2 = this.images.length; e2 < i2;) {
+                if (this.images[e2].assetData === t2)
+                  return this.images[e2].img;
+                e2 += 1;
+              }
+              return null;
+            }, createImgData: function (e2) {
+              var i2 = r(e2, this.assetsPath, this.path), s2 = createTag("img");
+              s2.crossOrigin = "anonymous", s2.addEventListener("load", this._imageLoaded, false), s2.addEventListener("error", function () {
+                a2.img = t, this._imageLoaded();
+              }.bind(this), false), s2.src = i2;
+              var a2 = { img: s2, assetData: e2 };
+              return a2;
+            }, createImageData: function (e2) {
+              var i2 = r(e2, this.assetsPath, this.path), s2 = createNS("image");
+              isSafari ? this.testImageLoaded(s2) : s2.addEventListener("load", this._imageLoaded, false), s2.addEventListener("error", function () {
+                a2.img = t, this._imageLoaded();
+              }.bind(this), false), s2.setAttributeNS("http://www.w3.org/1999/xlink", "href", i2), this._elementHelper.append ? this._elementHelper.append(s2) : this._elementHelper.appendChild(s2);
+              var a2 = { img: s2, assetData: e2 };
+              return a2;
+            }, imageLoaded: e, footageLoaded: i, setCacheType: function (t2, e2) {
+              "svg" === t2 ? (this._elementHelper = e2, this._createImageData = this.createImageData.bind(this)) : this._createImageData = this.createImgData.bind(this);
             }
-            return null;
-          }, createImgData: function(e2) {
-            var i2 = r(e2, this.assetsPath, this.path), s2 = createTag("img");
-            s2.crossOrigin = "anonymous", s2.addEventListener("load", this._imageLoaded, false), s2.addEventListener("error", function() {
-              a2.img = t, this._imageLoaded();
-            }.bind(this), false), s2.src = i2;
-            var a2 = { img: s2, assetData: e2 };
-            return a2;
-          }, createImageData: function(e2) {
-            var i2 = r(e2, this.assetsPath, this.path), s2 = createNS("image");
-            isSafari ? this.testImageLoaded(s2) : s2.addEventListener("load", this._imageLoaded, false), s2.addEventListener("error", function() {
-              a2.img = t, this._imageLoaded();
-            }.bind(this), false), s2.setAttributeNS("http://www.w3.org/1999/xlink", "href", i2), this._elementHelper.append ? this._elementHelper.append(s2) : this._elementHelper.appendChild(s2);
-            var a2 = { img: s2, assetData: e2 };
-            return a2;
-          }, imageLoaded: e, footageLoaded: i, setCacheType: function(t2, e2) {
-            "svg" === t2 ? (this._elementHelper = e2, this._createImageData = this.createImageData.bind(this)) : this._createImageData = this.createImgData.bind(this);
-          } }, n;
+          }, n;
         }();
         function BaseEvent() {
         }
-        BaseEvent.prototype = { triggerEvent: function(t, e) {
-          if (this._cbs[t])
-            for (var i = this._cbs[t], r = 0; r < i.length; r += 1)
-              i[r](e);
-        }, addEventListener: function(t, e) {
-          return this._cbs[t] || (this._cbs[t] = []), this._cbs[t].push(e), function() {
-            this.removeEventListener(t, e);
-          }.bind(this);
-        }, removeEventListener: function(t, e) {
-          if (e) {
-            if (this._cbs[t]) {
-              for (var i = 0, r = this._cbs[t].length; i < r; )
-                this._cbs[t][i] === e && (this._cbs[t].splice(i, 1), i -= 1, r -= 1), i += 1;
-              this._cbs[t].length || (this._cbs[t] = null);
-            }
-          } else
-            this._cbs[t] = null;
-        } };
-        var markerParser = function() {
+        BaseEvent.prototype = {
+          triggerEvent: function (t, e) {
+            if (this._cbs[t])
+              for (var i = this._cbs[t], r = 0; r < i.length; r += 1)
+                i[r](e);
+          }, addEventListener: function (t, e) {
+            return this._cbs[t] || (this._cbs[t] = []), this._cbs[t].push(e), function () {
+              this.removeEventListener(t, e);
+            }.bind(this);
+          }, removeEventListener: function (t, e) {
+            if (e) {
+              if (this._cbs[t]) {
+                for (var i = 0, r = this._cbs[t].length; i < r;)
+                  this._cbs[t][i] === e && (this._cbs[t].splice(i, 1), i -= 1, r -= 1), i += 1;
+                this._cbs[t].length || (this._cbs[t] = null);
+              }
+            } else
+              this._cbs[t] = null;
+          }
+        };
+        var markerParser = function () {
           function t(t2) {
             for (var e, i = t2.split("\r\n"), r = {}, s = 0, a = 0; a < i.length; a += 1)
               2 === (e = i[a].split(":")).length && (r[e[0]] = e[1].trim(), s += 1);
@@ -9824,7 +9846,7 @@
               throw new Error();
             return r;
           }
-          return function(e) {
+          return function (e) {
             for (var i = [], r = 0; r < e.length; r += 1) {
               var s = e[r], a = { time: s.tm, duration: s.dr };
               try {
@@ -9840,13 +9862,13 @@
             }
             return i;
           };
-        }(), ProjectInterface = function() {
+        }(), ProjectInterface = function () {
           function t(t2) {
             this.compositions.push(t2);
           }
-          return function() {
+          return function () {
             function e(t2) {
-              for (var e2 = 0, i = this.compositions.length; e2 < i; ) {
+              for (var e2 = 0, i = this.compositions.length; e2 < i;) {
                 if (this.compositions[e2].data && this.compositions[e2].data.nm === t2)
                   return this.compositions[e2].prepareFrame && this.compositions[e2].data.xt && this.compositions[e2].prepareFrame(this.currentFrame), this.compositions[e2].compInterface;
                 e2 += 1;
@@ -9855,7 +9877,7 @@
             }
             return e.compositions = [], e.currentFrame = 0, e.registerComposition = t, e;
           };
-        }(), renderers = {}, registerRenderer = function(t, e) {
+        }(), renderers = {}, registerRenderer = function (t, e) {
           renderers[t] = e;
         };
         function getRenderer(t) {
@@ -9870,26 +9892,26 @@
           return "";
         }
         function _typeof$4(t) {
-          return _typeof$4 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t2) {
+          return _typeof$4 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (t2) {
             return typeof t2;
-          } : function(t2) {
+          } : function (t2) {
             return t2 && "function" == typeof Symbol && t2.constructor === Symbol && t2 !== Symbol.prototype ? "symbol" : typeof t2;
           }, _typeof$4(t);
         }
-        var AnimationItem = function() {
+        var AnimationItem = function () {
           this._cbs = [], this.name = "", this.path = "", this.isLoaded = false, this.currentFrame = 0, this.currentRawFrame = 0, this.firstFrame = 0, this.totalFrames = 0, this.frameRate = 0, this.frameMult = 0, this.playSpeed = 1, this.playDirection = 1, this.playCount = 0, this.animationData = {}, this.assets = [], this.isPaused = true, this.autoplay = false, this.loop = true, this.renderer = null, this.animationID = createElementID(), this.assetsPath = "", this.timeCompleted = 0, this.segmentPos = 0, this.isSubframeEnabled = getSubframeEnabled(), this.segments = [], this._idle = true, this._completedLoop = false, this.projectInterface = ProjectInterface(), this.imagePreloader = new ImagePreloader(), this.audioController = audioControllerFactory(), this.markers = [], this.configAnimation = this.configAnimation.bind(this), this.onSetupError = this.onSetupError.bind(this), this.onSegmentComplete = this.onSegmentComplete.bind(this), this.drawnFrameEvent = new BMEnterFrameEvent("drawnFrame", 0, 0, 0), this.expressionsPlugin = getExpressionsPlugin();
         };
-        extendPrototype([BaseEvent], AnimationItem), AnimationItem.prototype.setParams = function(t) {
+        extendPrototype([BaseEvent], AnimationItem), AnimationItem.prototype.setParams = function (t) {
           (t.wrapper || t.container) && (this.wrapper = t.wrapper || t.container);
           var e = "svg";
           t.animType ? e = t.animType : t.renderer && (e = t.renderer);
           var i = getRenderer(e);
           this.renderer = new i(this, t.rendererSettings), this.imagePreloader.setCacheType(e, this.renderer.globalData.defs), this.renderer.setProjectInterface(this.projectInterface), this.animType = e, "" === t.loop || null === t.loop || void 0 === t.loop || true === t.loop ? this.loop = true : false === t.loop ? this.loop = false : this.loop = parseInt(t.loop, 10), this.autoplay = !("autoplay" in t) || t.autoplay, this.name = t.name ? t.name : "", this.autoloadSegments = !Object.prototype.hasOwnProperty.call(t, "autoloadSegments") || t.autoloadSegments, this.assetsPath = t.assetsPath, this.initialSegment = t.initialSegment, t.audioFactory && this.audioController.setAudioFactory(t.audioFactory), t.animationData ? this.setupAnimation(t.animationData) : t.path && (-1 !== t.path.lastIndexOf("\\") ? this.path = t.path.substr(0, t.path.lastIndexOf("\\") + 1) : this.path = t.path.substr(0, t.path.lastIndexOf("/") + 1), this.fileName = t.path.substr(t.path.lastIndexOf("/") + 1), this.fileName = this.fileName.substr(0, this.fileName.lastIndexOf(".json")), dataManager.loadAnimation(t.path, this.configAnimation, this.onSetupError));
-        }, AnimationItem.prototype.onSetupError = function() {
+        }, AnimationItem.prototype.onSetupError = function () {
           this.trigger("data_failed");
-        }, AnimationItem.prototype.setupAnimation = function(t) {
+        }, AnimationItem.prototype.setupAnimation = function (t) {
           dataManager.completeAnimation(t, this.configAnimation);
-        }, AnimationItem.prototype.setData = function(t, e) {
+        }, AnimationItem.prototype.setData = function (t, e) {
           e && "object" !== _typeof$4(e) && (e = JSON.parse(e));
           var i = { wrapper: t, animationData: e }, r = t.attributes;
           i.path = r.getNamedItem("data-animation-path") ? r.getNamedItem("data-animation-path").value : r.getNamedItem("data-bm-path") ? r.getNamedItem("data-bm-path").value : r.getNamedItem("bm-path") ? r.getNamedItem("bm-path").value : "", i.animType = r.getNamedItem("data-anim-type") ? r.getNamedItem("data-anim-type").value : r.getNamedItem("data-bm-type") ? r.getNamedItem("data-bm-type").value : r.getNamedItem("bm-type") ? r.getNamedItem("bm-type").value : r.getNamedItem("data-bm-renderer") ? r.getNamedItem("data-bm-renderer").value : r.getNamedItem("bm-renderer") ? r.getNamedItem("bm-renderer").value : getRegisteredRenderer() || "canvas";
@@ -9897,11 +9919,11 @@
           "false" === s ? i.loop = false : "true" === s ? i.loop = true : "" !== s && (i.loop = parseInt(s, 10));
           var a = r.getNamedItem("data-anim-autoplay") ? r.getNamedItem("data-anim-autoplay").value : r.getNamedItem("data-bm-autoplay") ? r.getNamedItem("data-bm-autoplay").value : !r.getNamedItem("bm-autoplay") || r.getNamedItem("bm-autoplay").value;
           i.autoplay = "false" !== a, i.name = r.getNamedItem("data-name") ? r.getNamedItem("data-name").value : r.getNamedItem("data-bm-name") ? r.getNamedItem("data-bm-name").value : r.getNamedItem("bm-name") ? r.getNamedItem("bm-name").value : "", "false" === (r.getNamedItem("data-anim-prerender") ? r.getNamedItem("data-anim-prerender").value : r.getNamedItem("data-bm-prerender") ? r.getNamedItem("data-bm-prerender").value : r.getNamedItem("bm-prerender") ? r.getNamedItem("bm-prerender").value : "") && (i.prerender = false), i.path ? this.setParams(i) : this.trigger("destroy");
-        }, AnimationItem.prototype.includeLayers = function(t) {
+        }, AnimationItem.prototype.includeLayers = function (t) {
           t.op > this.animationData.op && (this.animationData.op = t.op, this.totalFrames = Math.floor(t.op - this.animationData.ip));
           var e, i, r = this.animationData.layers, s = r.length, a = t.layers, n = a.length;
           for (i = 0; i < n; i += 1)
-            for (e = 0; e < s; ) {
+            for (e = 0; e < s;) {
               if (r[e].id === a[i].id) {
                 r[e] = a[i];
                 break;
@@ -9912,71 +9934,71 @@
             for (s = t.assets.length, e = 0; e < s; e += 1)
               this.animationData.assets.push(t.assets[e]);
           this.animationData.__complete = false, dataManager.completeAnimation(this.animationData, this.onSegmentComplete);
-        }, AnimationItem.prototype.onSegmentComplete = function(t) {
+        }, AnimationItem.prototype.onSegmentComplete = function (t) {
           this.animationData = t;
           var e = getExpressionsPlugin();
           e && e.initExpressions(this), this.loadNextSegment();
-        }, AnimationItem.prototype.loadNextSegment = function() {
+        }, AnimationItem.prototype.loadNextSegment = function () {
           var t = this.animationData.segments;
           if (!t || 0 === t.length || !this.autoloadSegments)
             return this.trigger("data_ready"), void (this.timeCompleted = this.totalFrames);
           var e = t.shift();
           this.timeCompleted = e.time * this.frameRate;
           var i = this.path + this.fileName + "_" + this.segmentPos + ".json";
-          this.segmentPos += 1, dataManager.loadData(i, this.includeLayers.bind(this), function() {
+          this.segmentPos += 1, dataManager.loadData(i, this.includeLayers.bind(this), function () {
             this.trigger("data_failed");
           }.bind(this));
-        }, AnimationItem.prototype.loadSegments = function() {
+        }, AnimationItem.prototype.loadSegments = function () {
           this.animationData.segments || (this.timeCompleted = this.totalFrames), this.loadNextSegment();
-        }, AnimationItem.prototype.imagesLoaded = function() {
+        }, AnimationItem.prototype.imagesLoaded = function () {
           this.trigger("loaded_images"), this.checkLoaded();
-        }, AnimationItem.prototype.preloadImages = function() {
+        }, AnimationItem.prototype.preloadImages = function () {
           this.imagePreloader.setAssetsPath(this.assetsPath), this.imagePreloader.setPath(this.path), this.imagePreloader.loadAssets(this.animationData.assets, this.imagesLoaded.bind(this));
-        }, AnimationItem.prototype.configAnimation = function(t) {
+        }, AnimationItem.prototype.configAnimation = function (t) {
           if (this.renderer)
             try {
               this.animationData = t, this.initialSegment ? (this.totalFrames = Math.floor(this.initialSegment[1] - this.initialSegment[0]), this.firstFrame = Math.round(this.initialSegment[0])) : (this.totalFrames = Math.floor(this.animationData.op - this.animationData.ip), this.firstFrame = Math.round(this.animationData.ip)), this.renderer.configAnimation(t), t.assets || (t.assets = []), this.assets = this.animationData.assets, this.frameRate = this.animationData.fr, this.frameMult = this.animationData.fr / 1e3, this.renderer.searchExtraCompositions(t.assets), this.markers = markerParser(t.markers || []), this.trigger("config_ready"), this.preloadImages(), this.loadSegments(), this.updaFrameModifier(), this.waitForFontsLoaded(), this.isPaused && this.audioController.pause();
             } catch (t2) {
               this.triggerConfigError(t2);
             }
-        }, AnimationItem.prototype.waitForFontsLoaded = function() {
+        }, AnimationItem.prototype.waitForFontsLoaded = function () {
           this.renderer && (this.renderer.globalData.fontManager.isLoaded ? this.checkLoaded() : setTimeout(this.waitForFontsLoaded.bind(this), 20));
-        }, AnimationItem.prototype.checkLoaded = function() {
+        }, AnimationItem.prototype.checkLoaded = function () {
           if (!this.isLoaded && this.renderer.globalData.fontManager.isLoaded && (this.imagePreloader.loadedImages() || "canvas" !== this.renderer.rendererType) && this.imagePreloader.loadedFootages()) {
             this.isLoaded = true;
             var t = getExpressionsPlugin();
-            t && t.initExpressions(this), this.renderer.initItems(), setTimeout(function() {
+            t && t.initExpressions(this), this.renderer.initItems(), setTimeout(function () {
               this.trigger("DOMLoaded");
             }.bind(this), 0), this.gotoFrame(), this.autoplay && this.play();
           }
-        }, AnimationItem.prototype.resize = function(t, e) {
+        }, AnimationItem.prototype.resize = function (t, e) {
           var i = "number" == typeof t ? t : void 0, r = "number" == typeof e ? e : void 0;
           this.renderer.updateContainerSize(i, r);
-        }, AnimationItem.prototype.setSubframe = function(t) {
+        }, AnimationItem.prototype.setSubframe = function (t) {
           this.isSubframeEnabled = !!t;
-        }, AnimationItem.prototype.gotoFrame = function() {
+        }, AnimationItem.prototype.gotoFrame = function () {
           this.currentFrame = this.isSubframeEnabled ? this.currentRawFrame : ~~this.currentRawFrame, this.timeCompleted !== this.totalFrames && this.currentFrame > this.timeCompleted && (this.currentFrame = this.timeCompleted), this.trigger("enterFrame"), this.renderFrame(), this.trigger("drawnFrame");
-        }, AnimationItem.prototype.renderFrame = function() {
+        }, AnimationItem.prototype.renderFrame = function () {
           if (false !== this.isLoaded && this.renderer)
             try {
               this.expressionsPlugin && this.expressionsPlugin.resetFrame(), this.renderer.renderFrame(this.currentFrame + this.firstFrame);
             } catch (t) {
               this.triggerRenderFrameError(t);
             }
-        }, AnimationItem.prototype.play = function(t) {
+        }, AnimationItem.prototype.play = function (t) {
           t && this.name !== t || true === this.isPaused && (this.isPaused = false, this.trigger("_play"), this.audioController.resume(), this._idle && (this._idle = false, this.trigger("_active")));
-        }, AnimationItem.prototype.pause = function(t) {
+        }, AnimationItem.prototype.pause = function (t) {
           t && this.name !== t || false === this.isPaused && (this.isPaused = true, this.trigger("_pause"), this._idle = true, this.trigger("_idle"), this.audioController.pause());
-        }, AnimationItem.prototype.togglePause = function(t) {
+        }, AnimationItem.prototype.togglePause = function (t) {
           t && this.name !== t || (true === this.isPaused ? this.play() : this.pause());
-        }, AnimationItem.prototype.stop = function(t) {
+        }, AnimationItem.prototype.stop = function (t) {
           t && this.name !== t || (this.pause(), this.playCount = 0, this._completedLoop = false, this.setCurrentRawFrameValue(0));
-        }, AnimationItem.prototype.getMarkerData = function(t) {
+        }, AnimationItem.prototype.getMarkerData = function (t) {
           for (var e, i = 0; i < this.markers.length; i += 1)
             if ((e = this.markers[i]).payload && e.payload.name === t)
               return e;
           return null;
-        }, AnimationItem.prototype.goToAndStop = function(t, e, i) {
+        }, AnimationItem.prototype.goToAndStop = function (t, e, i) {
           if (!i || this.name === i) {
             var r = Number(t);
             if (isNaN(r)) {
@@ -9986,7 +10008,7 @@
               e ? this.setCurrentRawFrameValue(t) : this.setCurrentRawFrameValue(t * this.frameModifier);
             this.pause();
           }
-        }, AnimationItem.prototype.goToAndPlay = function(t, e, i) {
+        }, AnimationItem.prototype.goToAndPlay = function (t, e, i) {
           if (!i || this.name === i) {
             var r = Number(t);
             if (isNaN(r)) {
@@ -9996,17 +10018,17 @@
               this.goToAndStop(r, e, i);
             this.play();
           }
-        }, AnimationItem.prototype.advanceTime = function(t) {
+        }, AnimationItem.prototype.advanceTime = function (t) {
           if (true !== this.isPaused && false !== this.isLoaded) {
             var e = this.currentRawFrame + t * this.frameModifier, i = false;
             e >= this.totalFrames - 1 && this.frameModifier > 0 ? this.loop && this.playCount !== this.loop ? e >= this.totalFrames ? (this.playCount += 1, this.checkSegments(e % this.totalFrames) || (this.setCurrentRawFrameValue(e % this.totalFrames), this._completedLoop = true, this.trigger("loopComplete"))) : this.setCurrentRawFrameValue(e) : this.checkSegments(e > this.totalFrames ? e % this.totalFrames : 0) || (i = true, e = this.totalFrames - 1) : e < 0 ? this.checkSegments(e % this.totalFrames) || (!this.loop || this.playCount-- <= 0 && true !== this.loop ? (i = true, e = 0) : (this.setCurrentRawFrameValue(this.totalFrames + e % this.totalFrames), this._completedLoop ? this.trigger("loopComplete") : this._completedLoop = true)) : this.setCurrentRawFrameValue(e), i && (this.setCurrentRawFrameValue(e), this.pause(), this.trigger("complete"));
           }
-        }, AnimationItem.prototype.adjustSegment = function(t, e) {
+        }, AnimationItem.prototype.adjustSegment = function (t, e) {
           this.playCount = 0, t[1] < t[0] ? (this.frameModifier > 0 && (this.playSpeed < 0 ? this.setSpeed(-this.playSpeed) : this.setDirection(-1)), this.totalFrames = t[0] - t[1], this.timeCompleted = this.totalFrames, this.firstFrame = t[1], this.setCurrentRawFrameValue(this.totalFrames - 1e-3 - e)) : t[1] > t[0] && (this.frameModifier < 0 && (this.playSpeed < 0 ? this.setSpeed(-this.playSpeed) : this.setDirection(1)), this.totalFrames = t[1] - t[0], this.timeCompleted = this.totalFrames, this.firstFrame = t[0], this.setCurrentRawFrameValue(1e-3 + e)), this.trigger("segmentStart");
-        }, AnimationItem.prototype.setSegment = function(t, e) {
+        }, AnimationItem.prototype.setSegment = function (t, e) {
           var i = -1;
           this.isPaused && (this.currentRawFrame + this.firstFrame < t ? i = t : this.currentRawFrame + this.firstFrame > e && (i = e - t)), this.firstFrame = t, this.totalFrames = e - t, this.timeCompleted = this.totalFrames, -1 !== i && this.goToAndStop(i, true);
-        }, AnimationItem.prototype.playSegments = function(t, e) {
+        }, AnimationItem.prototype.playSegments = function (t, e) {
           if (e && (this.segments.length = 0), "object" === _typeof$4(t[0])) {
             var i, r = t.length;
             for (i = 0; i < r; i += 1)
@@ -10014,33 +10036,33 @@
           } else
             this.segments.push(t);
           this.segments.length && e && this.adjustSegment(this.segments.shift(), 0), this.isPaused && this.play();
-        }, AnimationItem.prototype.resetSegments = function(t) {
+        }, AnimationItem.prototype.resetSegments = function (t) {
           this.segments.length = 0, this.segments.push([this.animationData.ip, this.animationData.op]), t && this.checkSegments(0);
-        }, AnimationItem.prototype.checkSegments = function(t) {
+        }, AnimationItem.prototype.checkSegments = function (t) {
           return !!this.segments.length && (this.adjustSegment(this.segments.shift(), t), true);
-        }, AnimationItem.prototype.destroy = function(t) {
+        }, AnimationItem.prototype.destroy = function (t) {
           t && this.name !== t || !this.renderer || (this.renderer.destroy(), this.imagePreloader.destroy(), this.trigger("destroy"), this._cbs = null, this.onEnterFrame = null, this.onLoopComplete = null, this.onComplete = null, this.onSegmentStart = null, this.onDestroy = null, this.renderer = null, this.expressionsPlugin = null, this.imagePreloader = null, this.projectInterface = null);
-        }, AnimationItem.prototype.setCurrentRawFrameValue = function(t) {
+        }, AnimationItem.prototype.setCurrentRawFrameValue = function (t) {
           this.currentRawFrame = t, this.gotoFrame();
-        }, AnimationItem.prototype.setSpeed = function(t) {
+        }, AnimationItem.prototype.setSpeed = function (t) {
           this.playSpeed = t, this.updaFrameModifier();
-        }, AnimationItem.prototype.setDirection = function(t) {
+        }, AnimationItem.prototype.setDirection = function (t) {
           this.playDirection = t < 0 ? -1 : 1, this.updaFrameModifier();
-        }, AnimationItem.prototype.setLoop = function(t) {
+        }, AnimationItem.prototype.setLoop = function (t) {
           this.loop = t;
-        }, AnimationItem.prototype.setVolume = function(t, e) {
+        }, AnimationItem.prototype.setVolume = function (t, e) {
           e && this.name !== e || this.audioController.setVolume(t);
-        }, AnimationItem.prototype.getVolume = function() {
+        }, AnimationItem.prototype.getVolume = function () {
           return this.audioController.getVolume();
-        }, AnimationItem.prototype.mute = function(t) {
+        }, AnimationItem.prototype.mute = function (t) {
           t && this.name !== t || this.audioController.mute();
-        }, AnimationItem.prototype.unmute = function(t) {
+        }, AnimationItem.prototype.unmute = function (t) {
           t && this.name !== t || this.audioController.unmute();
-        }, AnimationItem.prototype.updaFrameModifier = function() {
+        }, AnimationItem.prototype.updaFrameModifier = function () {
           this.frameModifier = this.frameMult * this.playSpeed * this.playDirection, this.audioController.setRate(this.playSpeed * this.playDirection);
-        }, AnimationItem.prototype.getPath = function() {
+        }, AnimationItem.prototype.getPath = function () {
           return this.path;
-        }, AnimationItem.prototype.getAssetsPath = function(t) {
+        }, AnimationItem.prototype.getAssetsPath = function (t) {
           var e = "";
           if (t.e)
             e = t.p;
@@ -10050,25 +10072,25 @@
           } else
             e = this.path, e += t.u ? t.u : "", e += t.p;
           return e;
-        }, AnimationItem.prototype.getAssetData = function(t) {
-          for (var e = 0, i = this.assets.length; e < i; ) {
+        }, AnimationItem.prototype.getAssetData = function (t) {
+          for (var e = 0, i = this.assets.length; e < i;) {
             if (t === this.assets[e].id)
               return this.assets[e];
             e += 1;
           }
           return null;
-        }, AnimationItem.prototype.hide = function() {
+        }, AnimationItem.prototype.hide = function () {
           this.renderer.hide();
-        }, AnimationItem.prototype.show = function() {
+        }, AnimationItem.prototype.show = function () {
           this.renderer.show();
-        }, AnimationItem.prototype.getDuration = function(t) {
+        }, AnimationItem.prototype.getDuration = function (t) {
           return t ? this.totalFrames : this.totalFrames / this.frameRate;
-        }, AnimationItem.prototype.updateDocumentData = function(t, e, i) {
+        }, AnimationItem.prototype.updateDocumentData = function (t, e, i) {
           try {
             this.renderer.getElementByPath(t).updateDocumentData(e, i);
           } catch (t2) {
           }
-        }, AnimationItem.prototype.trigger = function(t) {
+        }, AnimationItem.prototype.trigger = function (t) {
           if (this._cbs && this._cbs[t])
             switch (t) {
               case "enterFrame":
@@ -10093,23 +10115,23 @@
                 this.triggerEvent(t);
             }
           "enterFrame" === t && this.onEnterFrame && this.onEnterFrame.call(this, new BMEnterFrameEvent(t, this.currentFrame, this.totalFrames, this.frameMult)), "loopComplete" === t && this.onLoopComplete && this.onLoopComplete.call(this, new BMCompleteLoopEvent(t, this.loop, this.playCount, this.frameMult)), "complete" === t && this.onComplete && this.onComplete.call(this, new BMCompleteEvent(t, this.frameMult)), "segmentStart" === t && this.onSegmentStart && this.onSegmentStart.call(this, new BMSegmentStartEvent(t, this.firstFrame, this.totalFrames)), "destroy" === t && this.onDestroy && this.onDestroy.call(this, new BMDestroyEvent(t, this));
-        }, AnimationItem.prototype.triggerRenderFrameError = function(t) {
+        }, AnimationItem.prototype.triggerRenderFrameError = function (t) {
           var e = new BMRenderFrameErrorEvent(t, this.currentFrame);
           this.triggerEvent("error", e), this.onError && this.onError.call(this, e);
-        }, AnimationItem.prototype.triggerConfigError = function(t) {
+        }, AnimationItem.prototype.triggerConfigError = function (t) {
           var e = new BMConfigErrorEvent(t, this.currentFrame);
           this.triggerEvent("error", e), this.onError && this.onError.call(this, e);
         };
-        var animationManager = function() {
+        var animationManager = function () {
           var t = {}, e = [], i = 0, r = 0, s = 0, a = true, n = false;
           function o(t2) {
-            for (var i2 = 0, s2 = t2.target; i2 < r; )
+            for (var i2 = 0, s2 = t2.target; i2 < r;)
               e[i2].animation === s2 && (e.splice(i2, 1), i2 -= 1, r -= 1, s2.isPaused || p()), i2 += 1;
           }
           function h(t2, i2) {
             if (!t2)
               return null;
-            for (var s2 = 0; s2 < r; ) {
+            for (var s2 = 0; s2 < r;) {
               if (e[s2].elem === t2 && null !== e[s2].elem)
                 return e[s2].animation;
               s2 += 1;
@@ -10138,34 +10160,34 @@
           function d() {
             !n && s && a && (window.requestAnimationFrame(c), a = false);
           }
-          return t.registerAnimation = h, t.loadAnimation = function(t2) {
+          return t.registerAnimation = h, t.loadAnimation = function (t2) {
             var e2 = new AnimationItem();
             return f(e2, null), e2.setParams(t2), e2;
-          }, t.setSpeed = function(t2, i2) {
+          }, t.setSpeed = function (t2, i2) {
             var s2;
             for (s2 = 0; s2 < r; s2 += 1)
               e[s2].animation.setSpeed(t2, i2);
-          }, t.setDirection = function(t2, i2) {
+          }, t.setDirection = function (t2, i2) {
             var s2;
             for (s2 = 0; s2 < r; s2 += 1)
               e[s2].animation.setDirection(t2, i2);
-          }, t.play = function(t2) {
+          }, t.play = function (t2) {
             var i2;
             for (i2 = 0; i2 < r; i2 += 1)
               e[i2].animation.play(t2);
-          }, t.pause = function(t2) {
+          }, t.pause = function (t2) {
             var i2;
             for (i2 = 0; i2 < r; i2 += 1)
               e[i2].animation.pause(t2);
-          }, t.stop = function(t2) {
+          }, t.stop = function (t2) {
             var i2;
             for (i2 = 0; i2 < r; i2 += 1)
               e[i2].animation.stop(t2);
-          }, t.togglePause = function(t2) {
+          }, t.togglePause = function (t2) {
             var i2;
             for (i2 = 0; i2 < r; i2 += 1)
               e[i2].animation.togglePause(t2);
-          }, t.searchAnimations = function(t2, e2, i2) {
+          }, t.searchAnimations = function (t2, e2, i2) {
             var r2, s2 = [].concat([].slice.call(document.getElementsByClassName("lottie")), [].slice.call(document.getElementsByClassName("bodymovin"))), a2 = s2.length;
             for (r2 = 0; r2 < a2; r2 += 1)
               i2 && s2[r2].setAttribute("data-bm-type", i2), h(s2[r2], t2);
@@ -10176,48 +10198,50 @@
               var o2 = createTag("div");
               o2.style.width = "100%", o2.style.height = "100%", o2.setAttribute("data-bm-type", i2), n2.appendChild(o2), h(o2, t2);
             }
-          }, t.resize = function() {
+          }, t.resize = function () {
             var t2;
             for (t2 = 0; t2 < r; t2 += 1)
               e[t2].animation.resize();
-          }, t.goToAndStop = function(t2, i2, s2) {
+          }, t.goToAndStop = function (t2, i2, s2) {
             var a2;
             for (a2 = 0; a2 < r; a2 += 1)
               e[a2].animation.goToAndStop(t2, i2, s2);
-          }, t.destroy = function(t2) {
+          }, t.destroy = function (t2) {
             var i2;
             for (i2 = r - 1; i2 >= 0; i2 -= 1)
               e[i2].animation.destroy(t2);
-          }, t.freeze = function() {
+          }, t.freeze = function () {
             n = true;
-          }, t.unfreeze = function() {
+          }, t.unfreeze = function () {
             n = false, d();
-          }, t.setVolume = function(t2, i2) {
+          }, t.setVolume = function (t2, i2) {
             var s2;
             for (s2 = 0; s2 < r; s2 += 1)
               e[s2].animation.setVolume(t2, i2);
-          }, t.mute = function(t2) {
+          }, t.mute = function (t2) {
             var i2;
             for (i2 = 0; i2 < r; i2 += 1)
               e[i2].animation.mute(t2);
-          }, t.unmute = function(t2) {
+          }, t.unmute = function (t2) {
             var i2;
             for (i2 = 0; i2 < r; i2 += 1)
               e[i2].animation.unmute(t2);
-          }, t.getRegisteredAnimations = function() {
+          }, t.getRegisteredAnimations = function () {
             var t2, i2 = e.length, r2 = [];
             for (t2 = 0; t2 < i2; t2 += 1)
               r2.push(e[t2].animation);
             return r2;
           }, t;
-        }(), BezierFactory = function() {
-          var t = { getBezierEasing: function(t2, i2, r2, s2, a2) {
-            var n2 = a2 || ("bez_" + t2 + "_" + i2 + "_" + r2 + "_" + s2).replace(/\./g, "p");
-            if (e[n2])
-              return e[n2];
-            var o2 = new l([t2, i2, r2, s2]);
-            return e[n2] = o2, o2;
-          } }, e = {};
+        }(), BezierFactory = function () {
+          var t = {
+            getBezierEasing: function (t2, i2, r2, s2, a2) {
+              var n2 = a2 || ("bez_" + t2 + "_" + i2 + "_" + r2 + "_" + s2).replace(/\./g, "p");
+              if (e[n2])
+                return e[n2];
+              var o2 = new l([t2, i2, r2, s2]);
+              return e[n2] = o2, o2;
+            }
+          }, e = {};
           var i = 0.1, r = "function" == typeof Float32Array;
           function s(t2, e2) {
             return 1 - 3 * e2 + 3 * t2;
@@ -10237,49 +10261,55 @@
           function l(t2) {
             this._p = t2, this._mSampleValues = r ? new Float32Array(11) : new Array(11), this._precomputed = false, this.get = this.get.bind(this);
           }
-          return l.prototype = { get: function(t2) {
-            var e2 = this._p[0], i2 = this._p[1], r2 = this._p[2], s2 = this._p[3];
-            return this._precomputed || this._precompute(), e2 === i2 && r2 === s2 ? t2 : 0 === t2 ? 0 : 1 === t2 ? 1 : o(this._getTForX(t2), i2, s2);
-          }, _precompute: function() {
-            var t2 = this._p[0], e2 = this._p[1], i2 = this._p[2], r2 = this._p[3];
-            this._precomputed = true, t2 === e2 && i2 === r2 || this._calcSampleValues();
-          }, _calcSampleValues: function() {
-            for (var t2 = this._p[0], e2 = this._p[2], r2 = 0; r2 < 11; ++r2)
-              this._mSampleValues[r2] = o(r2 * i, t2, e2);
-          }, _getTForX: function(t2) {
-            for (var e2 = this._p[0], r2 = this._p[2], s2 = this._mSampleValues, a2 = 0, n2 = 1; 10 !== n2 && s2[n2] <= t2; ++n2)
-              a2 += i;
-            var l2 = a2 + (t2 - s2[--n2]) / (s2[n2 + 1] - s2[n2]) * i, p = h(l2, e2, r2);
-            return p >= 1e-3 ? function(t3, e3, i2, r3) {
-              for (var s3 = 0; s3 < 4; ++s3) {
-                var a3 = h(e3, i2, r3);
-                if (0 === a3)
-                  return e3;
-                e3 -= (o(e3, i2, r3) - t3) / a3;
-              }
-              return e3;
-            }(t2, l2, e2, r2) : 0 === p ? l2 : function(t3, e3, i2, r3, s3) {
-              var a3, n3, h2 = 0;
-              do {
-                (a3 = o(n3 = e3 + (i2 - e3) / 2, r3, s3) - t3) > 0 ? i2 = n3 : e3 = n3;
-              } while (Math.abs(a3) > 1e-7 && ++h2 < 10);
-              return n3;
-            }(t2, a2, a2 + i, e2, r2);
-          } }, t;
-        }(), pooling = { double: function(t) {
-          return t.concat(createSizedArray(t.length));
-        } }, poolFactory = function(t, e, i) {
+          return l.prototype = {
+            get: function (t2) {
+              var e2 = this._p[0], i2 = this._p[1], r2 = this._p[2], s2 = this._p[3];
+              return this._precomputed || this._precompute(), e2 === i2 && r2 === s2 ? t2 : 0 === t2 ? 0 : 1 === t2 ? 1 : o(this._getTForX(t2), i2, s2);
+            }, _precompute: function () {
+              var t2 = this._p[0], e2 = this._p[1], i2 = this._p[2], r2 = this._p[3];
+              this._precomputed = true, t2 === e2 && i2 === r2 || this._calcSampleValues();
+            }, _calcSampleValues: function () {
+              for (var t2 = this._p[0], e2 = this._p[2], r2 = 0; r2 < 11; ++r2)
+                this._mSampleValues[r2] = o(r2 * i, t2, e2);
+            }, _getTForX: function (t2) {
+              for (var e2 = this._p[0], r2 = this._p[2], s2 = this._mSampleValues, a2 = 0, n2 = 1; 10 !== n2 && s2[n2] <= t2; ++n2)
+                a2 += i;
+              var l2 = a2 + (t2 - s2[--n2]) / (s2[n2 + 1] - s2[n2]) * i, p = h(l2, e2, r2);
+              return p >= 1e-3 ? function (t3, e3, i2, r3) {
+                for (var s3 = 0; s3 < 4; ++s3) {
+                  var a3 = h(e3, i2, r3);
+                  if (0 === a3)
+                    return e3;
+                  e3 -= (o(e3, i2, r3) - t3) / a3;
+                }
+                return e3;
+              }(t2, l2, e2, r2) : 0 === p ? l2 : function (t3, e3, i2, r3, s3) {
+                var a3, n3, h2 = 0;
+                do {
+                  (a3 = o(n3 = e3 + (i2 - e3) / 2, r3, s3) - t3) > 0 ? i2 = n3 : e3 = n3;
+                } while (Math.abs(a3) > 1e-7 && ++h2 < 10);
+                return n3;
+              }(t2, a2, a2 + i, e2, r2);
+            }
+          }, t;
+        }(), pooling = {
+          double: function (t) {
+            return t.concat(createSizedArray(t.length));
+          }
+        }, poolFactory = function (t, e, i) {
           var r = 0, s = t, a = createSizedArray(s);
-          return { newElement: function() {
-            return r ? a[r -= 1] : e();
-          }, release: function(t2) {
-            r === s && (a = pooling.double(a), s *= 2), i && i(t2), a[r] = t2, r += 1;
-          } };
-        }, bezierLengthPool = poolFactory(8, function() {
+          return {
+            newElement: function () {
+              return r ? a[r -= 1] : e();
+            }, release: function (t2) {
+              r === s && (a = pooling.double(a), s *= 2), i && i(t2), a[r] = t2, r += 1;
+            }
+          };
+        }, bezierLengthPool = poolFactory(8, function () {
           return { addedLength: 0, percents: createTypedArray("float32", getDefaultCurveSegments()), lengths: createTypedArray("float32", getDefaultCurveSegments()) };
-        }), segmentsLengthPool = poolFactory(8, function() {
+        }), segmentsLengthPool = poolFactory(8, function () {
           return { lengths: [], totalLength: 0 };
-        }, function(t) {
+        }, function (t) {
           var e, i = t.lengths.length;
           for (e = 0; e < i; e += 1)
             bezierLengthPool.release(t.lengths[e]);
@@ -10291,7 +10321,7 @@
             var n2 = t2 * r2 + e2 * s2 + i2 * a2 - s2 * r2 - a2 * t2 - i2 * e2;
             return n2 > -1e-3 && n2 < 1e-3;
           }
-          var i = function(t2, e2, i2, r2) {
+          var i = function (t2, e2, i2, r2) {
             var s2, a2, n2, o2, h2, l, p = getDefaultCurveSegments(), f = 0, m = [], c = [], d = bezierLengthPool.newElement();
             for (n2 = i2.length, s2 = 0; s2 < p; s2 += 1) {
               for (h2 = s2 / (p - 1), l = 0, a2 = 0; a2 < n2; a2 += 1)
@@ -10306,7 +10336,7 @@
           function s(t2, e2) {
             this.partialLength = t2, this.point = e2;
           }
-          var a, n = (a = {}, function(t2, i2, n2, o2) {
+          var a, n = (a = {}, function (t2, i2, n2, o2) {
             var h2 = (t2[0] + "_" + t2[1] + "_" + i2[0] + "_" + i2[1] + "_" + n2[0] + "_" + n2[1] + "_" + o2[0] + "_" + o2[1]).replace(/\./g, "p");
             if (!a[h2]) {
               var l, p, f, m, c, d, u, y = getDefaultCurveSegments(), g = 0, v = null;
@@ -10325,7 +10355,7 @@
             var i2 = e2.percents, r2 = e2.lengths, s2 = i2.length, a2 = bmFloor((s2 - 1) * t2), n2 = t2 * e2.addedLength, o2 = 0;
             if (a2 === s2 - 1 || 0 === a2 || n2 === r2[a2])
               return i2[a2];
-            for (var h2 = r2[a2] > n2 ? -1 : 1, l = true; l; )
+            for (var h2 = r2[a2] > n2 ? -1 : 1, l = true; l;)
               if (r2[a2] <= n2 && r2[a2 + 1] > n2 ? (o2 = (n2 - r2[a2]) / (r2[a2 + 1] - r2[a2]), l = false) : a2 += h2, a2 < 0 || a2 >= s2 - 1) {
                 if (a2 === s2 - 1)
                   return i2[a2];
@@ -10334,32 +10364,34 @@
             return i2[a2] + (i2[a2 + 1] - i2[a2]) * o2;
           }
           var h = createTypedArray("float32", 8);
-          return { getSegmentsLength: function(t2) {
-            var e2, r2 = segmentsLengthPool.newElement(), s2 = t2.c, a2 = t2.v, n2 = t2.o, o2 = t2.i, h2 = t2._length, l = r2.lengths, p = 0;
-            for (e2 = 0; e2 < h2 - 1; e2 += 1)
-              l[e2] = i(a2[e2], a2[e2 + 1], n2[e2], o2[e2 + 1]), p += l[e2].addedLength;
-            return s2 && h2 && (l[e2] = i(a2[e2], a2[0], n2[e2], o2[0]), p += l[e2].addedLength), r2.totalLength = p, r2;
-          }, getNewSegment: function(e2, i2, r2, s2, a2, n2, l) {
-            a2 < 0 ? a2 = 0 : a2 > 1 && (a2 = 1);
-            var p, f = o(a2, l), m = o(n2 = n2 > 1 ? 1 : n2, l), c = e2.length, d = 1 - f, u = 1 - m, y = d * d * d, g = f * d * d * 3, v = f * f * d * 3, b = f * f * f, x = d * d * u, P = f * d * u + d * f * u + d * d * m, E = f * f * u + d * f * m + f * d * m, S = f * f * m, C = d * u * u, _ = f * u * u + d * m * u + d * u * m, A = f * m * u + d * m * m + f * u * m, T = f * m * m, M = u * u * u, k = m * u * u + u * m * u + u * u * m, D = m * m * u + u * m * m + m * u * m, F = m * m * m;
-            for (p = 0; p < c; p += 1)
-              h[4 * p] = t.round(1e3 * (y * e2[p] + g * r2[p] + v * s2[p] + b * i2[p])) / 1e3, h[4 * p + 1] = t.round(1e3 * (x * e2[p] + P * r2[p] + E * s2[p] + S * i2[p])) / 1e3, h[4 * p + 2] = t.round(1e3 * (C * e2[p] + _ * r2[p] + A * s2[p] + T * i2[p])) / 1e3, h[4 * p + 3] = t.round(1e3 * (M * e2[p] + k * r2[p] + D * s2[p] + F * i2[p])) / 1e3;
-            return h;
-          }, getPointInSegment: function(e2, i2, r2, s2, a2, n2) {
-            var h2 = o(a2, n2), l = 1 - h2;
-            return [t.round(1e3 * (l * l * l * e2[0] + (h2 * l * l + l * h2 * l + l * l * h2) * r2[0] + (h2 * h2 * l + l * h2 * h2 + h2 * l * h2) * s2[0] + h2 * h2 * h2 * i2[0])) / 1e3, t.round(1e3 * (l * l * l * e2[1] + (h2 * l * l + l * h2 * l + l * l * h2) * r2[1] + (h2 * h2 * l + l * h2 * h2 + h2 * l * h2) * s2[1] + h2 * h2 * h2 * i2[1])) / 1e3];
-          }, buildBezierData: n, pointOnLine2D: e, pointOnLine3D: function(i2, r2, s2, a2, n2, o2, h2, l, p) {
-            if (0 === s2 && 0 === o2 && 0 === p)
-              return e(i2, r2, a2, n2, h2, l);
-            var f, m = t.sqrt(t.pow(a2 - i2, 2) + t.pow(n2 - r2, 2) + t.pow(o2 - s2, 2)), c = t.sqrt(t.pow(h2 - i2, 2) + t.pow(l - r2, 2) + t.pow(p - s2, 2)), d = t.sqrt(t.pow(h2 - a2, 2) + t.pow(l - n2, 2) + t.pow(p - o2, 2));
-            return (f = m > c ? m > d ? m - c - d : d - c - m : d > c ? d - c - m : c - m - d) > -1e-4 && f < 1e-4;
-          } };
+          return {
+            getSegmentsLength: function (t2) {
+              var e2, r2 = segmentsLengthPool.newElement(), s2 = t2.c, a2 = t2.v, n2 = t2.o, o2 = t2.i, h2 = t2._length, l = r2.lengths, p = 0;
+              for (e2 = 0; e2 < h2 - 1; e2 += 1)
+                l[e2] = i(a2[e2], a2[e2 + 1], n2[e2], o2[e2 + 1]), p += l[e2].addedLength;
+              return s2 && h2 && (l[e2] = i(a2[e2], a2[0], n2[e2], o2[0]), p += l[e2].addedLength), r2.totalLength = p, r2;
+            }, getNewSegment: function (e2, i2, r2, s2, a2, n2, l) {
+              a2 < 0 ? a2 = 0 : a2 > 1 && (a2 = 1);
+              var p, f = o(a2, l), m = o(n2 = n2 > 1 ? 1 : n2, l), c = e2.length, d = 1 - f, u = 1 - m, y = d * d * d, g = f * d * d * 3, v = f * f * d * 3, b = f * f * f, x = d * d * u, P = f * d * u + d * f * u + d * d * m, E = f * f * u + d * f * m + f * d * m, S = f * f * m, C = d * u * u, _ = f * u * u + d * m * u + d * u * m, A = f * m * u + d * m * m + f * u * m, T = f * m * m, M = u * u * u, k = m * u * u + u * m * u + u * u * m, D = m * m * u + u * m * m + m * u * m, F = m * m * m;
+              for (p = 0; p < c; p += 1)
+                h[4 * p] = t.round(1e3 * (y * e2[p] + g * r2[p] + v * s2[p] + b * i2[p])) / 1e3, h[4 * p + 1] = t.round(1e3 * (x * e2[p] + P * r2[p] + E * s2[p] + S * i2[p])) / 1e3, h[4 * p + 2] = t.round(1e3 * (C * e2[p] + _ * r2[p] + A * s2[p] + T * i2[p])) / 1e3, h[4 * p + 3] = t.round(1e3 * (M * e2[p] + k * r2[p] + D * s2[p] + F * i2[p])) / 1e3;
+              return h;
+            }, getPointInSegment: function (e2, i2, r2, s2, a2, n2) {
+              var h2 = o(a2, n2), l = 1 - h2;
+              return [t.round(1e3 * (l * l * l * e2[0] + (h2 * l * l + l * h2 * l + l * l * h2) * r2[0] + (h2 * h2 * l + l * h2 * h2 + h2 * l * h2) * s2[0] + h2 * h2 * h2 * i2[0])) / 1e3, t.round(1e3 * (l * l * l * e2[1] + (h2 * l * l + l * h2 * l + l * l * h2) * r2[1] + (h2 * h2 * l + l * h2 * h2 + h2 * l * h2) * s2[1] + h2 * h2 * h2 * i2[1])) / 1e3];
+            }, buildBezierData: n, pointOnLine2D: e, pointOnLine3D: function (i2, r2, s2, a2, n2, o2, h2, l, p) {
+              if (0 === s2 && 0 === o2 && 0 === p)
+                return e(i2, r2, a2, n2, h2, l);
+              var f, m = t.sqrt(t.pow(a2 - i2, 2) + t.pow(n2 - r2, 2) + t.pow(o2 - s2, 2)), c = t.sqrt(t.pow(h2 - i2, 2) + t.pow(l - r2, 2) + t.pow(p - s2, 2)), d = t.sqrt(t.pow(h2 - a2, 2) + t.pow(l - n2, 2) + t.pow(p - o2, 2));
+              return (f = m > c ? m > d ? m - c - d : d - c - m : d > c ? d - c - m : c - m - d) > -1e-4 && f < 1e-4;
+            }
+          };
         }
         var bez = bezFunction(), initFrame = initialDefaultFrame, mathAbs = Math.abs;
         function interpolateValue(t, e) {
           var i, r = this.offsetTime;
           "multidimensional" === this.propType && (i = createTypedArray("float32", this.pv.length));
-          for (var s, a, n, o, h, l, p, f, m, c = e.lastIndex, d = c, u = this.keyframes.length - 1, y = true; y; ) {
+          for (var s, a, n, o, h, l, p, f, m, c = e.lastIndex, d = c, u = this.keyframes.length - 1, y = true; y;) {
             if (s = this.keyframes[d], a = this.keyframes[d + 1], d === u - 1 && t >= a.t - r) {
               s.h && (s = a), c = 0;
               break;
@@ -10382,7 +10414,7 @@
             } else {
               n.__fnct ? m = n.__fnct : (m = BezierFactory.getBezierEasing(s.o.x, s.o.y, s.i.x, s.i.y, s.n).get, n.__fnct = m), l = m((t - b) / (v - b));
               var E, S = x.segmentLength * l, C = e.lastFrame < t && e._lastKeyframeIndex === d ? e._lastAddedLength : 0;
-              for (f = e.lastFrame < t && e._lastKeyframeIndex === d ? e._lastPoint : 0, y = true, p = x.points.length; y; ) {
+              for (f = e.lastFrame < t && e._lastKeyframeIndex === d ? e._lastPoint : 0, y = true, p = x.points.length; y;) {
                 if (C += x.points[f].partialLength, 0 === S || 0 === l || f === x.points.length - 1) {
                   for (h = x.points[f].point.length, o = 0; o < h; o += 1)
                     i[o] = x.points[f].point[o];
@@ -10439,7 +10471,7 @@
           if ("unidimensional" === this.propType)
             e = t * this.mult, mathAbs(this.v - e) > 1e-5 && (this.v = e, this._mdf = true);
           else
-            for (var i = 0, r = this.v.length; i < r; )
+            for (var i = 0, r = this.v.length; i < r;)
               e = t[i] * this.mult, mathAbs(this.v[i] - e) > 1e-5 && (this.v[i] = e, this._mdf = true), i += 1;
         }
         function processEffectsSequence() {
@@ -10484,53 +10516,57 @@
             this.v[s] = initFrame, this.pv[s] = initFrame;
           this._caching = { lastFrame: initFrame, lastIndex: 0, value: createTypedArray("float32", p) }, this.addEffect = addEffect;
         }
-        var PropertyFactory = { getProp: function(t, e, i, r, s) {
-          var a;
-          if (e.sid && (e = t.globalData.slotManager.getProp(e)), e.k.length)
-            if ("number" == typeof e.k[0])
-              a = new MultiDimensionalProperty(t, e, r, s);
+        var PropertyFactory = {
+          getProp: function (t, e, i, r, s) {
+            var a;
+            if (e.sid && (e = t.globalData.slotManager.getProp(e)), e.k.length)
+              if ("number" == typeof e.k[0])
+                a = new MultiDimensionalProperty(t, e, r, s);
+              else
+                switch (i) {
+                  case 0:
+                    a = new KeyframedValueProperty(t, e, r, s);
+                    break;
+                  case 1:
+                    a = new KeyframedMultidimensionalProperty(t, e, r, s);
+                }
             else
-              switch (i) {
-                case 0:
-                  a = new KeyframedValueProperty(t, e, r, s);
-                  break;
-                case 1:
-                  a = new KeyframedMultidimensionalProperty(t, e, r, s);
-              }
-          else
-            a = new ValueProperty(t, e, r, s);
-          return a.effectsSequence.length && s.addDynamicProperty(a), a;
-        } };
+              a = new ValueProperty(t, e, r, s);
+            return a.effectsSequence.length && s.addDynamicProperty(a), a;
+          }
+        };
         function DynamicPropertyContainer() {
         }
-        DynamicPropertyContainer.prototype = { addDynamicProperty: function(t) {
-          -1 === this.dynamicProperties.indexOf(t) && (this.dynamicProperties.push(t), this.container.addDynamicProperty(this), this._isAnimated = true);
-        }, iterateDynamicProperties: function() {
-          var t;
-          this._mdf = false;
-          var e = this.dynamicProperties.length;
-          for (t = 0; t < e; t += 1)
-            this.dynamicProperties[t].getValue(), this.dynamicProperties[t]._mdf && (this._mdf = true);
-        }, initDynamicPropertyContainer: function(t) {
-          this.container = t, this.dynamicProperties = [], this._mdf = false, this._isAnimated = false;
-        } };
-        var pointPool = poolFactory(8, function() {
+        DynamicPropertyContainer.prototype = {
+          addDynamicProperty: function (t) {
+            -1 === this.dynamicProperties.indexOf(t) && (this.dynamicProperties.push(t), this.container.addDynamicProperty(this), this._isAnimated = true);
+          }, iterateDynamicProperties: function () {
+            var t;
+            this._mdf = false;
+            var e = this.dynamicProperties.length;
+            for (t = 0; t < e; t += 1)
+              this.dynamicProperties[t].getValue(), this.dynamicProperties[t]._mdf && (this._mdf = true);
+          }, initDynamicPropertyContainer: function (t) {
+            this.container = t, this.dynamicProperties = [], this._mdf = false, this._isAnimated = false;
+          }
+        };
+        var pointPool = poolFactory(8, function () {
           return createTypedArray("float32", 2);
         });
         function ShapePath() {
           this.c = false, this._length = 0, this._maxLength = 8, this.v = createSizedArray(this._maxLength), this.o = createSizedArray(this._maxLength), this.i = createSizedArray(this._maxLength);
         }
-        ShapePath.prototype.setPathData = function(t, e) {
+        ShapePath.prototype.setPathData = function (t, e) {
           this.c = t, this.setLength(e);
-          for (var i = 0; i < e; )
+          for (var i = 0; i < e;)
             this.v[i] = pointPool.newElement(), this.o[i] = pointPool.newElement(), this.i[i] = pointPool.newElement(), i += 1;
-        }, ShapePath.prototype.setLength = function(t) {
-          for (; this._maxLength < t; )
+        }, ShapePath.prototype.setLength = function (t) {
+          for (; this._maxLength < t;)
             this.doubleArrayLength();
           this._length = t;
-        }, ShapePath.prototype.doubleArrayLength = function() {
+        }, ShapePath.prototype.doubleArrayLength = function () {
           this.v = this.v.concat(createSizedArray(this._maxLength)), this.i = this.i.concat(createSizedArray(this._maxLength)), this.o = this.o.concat(createSizedArray(this._maxLength)), this._maxLength *= 2;
-        }, ShapePath.prototype.setXYAt = function(t, e, i, r, s) {
+        }, ShapePath.prototype.setXYAt = function (t, e, i, r, s) {
           var a;
           switch (this._length = Math.max(this._length, r + 1), this._length >= this._maxLength && this.doubleArrayLength(), i) {
             case "v":
@@ -10546,9 +10582,9 @@
               a = [];
           }
           (!a[r] || a[r] && !s) && (a[r] = pointPool.newElement()), a[r][0] = t, a[r][1] = e;
-        }, ShapePath.prototype.setTripleAt = function(t, e, i, r, s, a, n, o) {
+        }, ShapePath.prototype.setTripleAt = function (t, e, i, r, s, a, n, o) {
           this.setXYAt(t, e, "v", n, o), this.setXYAt(i, r, "o", n, o), this.setXYAt(s, a, "i", n, o);
-        }, ShapePath.prototype.reverse = function() {
+        }, ShapePath.prototype.reverse = function () {
           var t = new ShapePath();
           t.setPathData(this.c, this._length);
           var e = this.v, i = this.o, r = this.i, s = 0;
@@ -10557,17 +10593,17 @@
           for (a = s; a < o; a += 1)
             t.setTripleAt(e[n][0], e[n][1], r[n][0], r[n][1], i[n][0], i[n][1], a, false), n -= 1;
           return t;
-        }, ShapePath.prototype.length = function() {
+        }, ShapePath.prototype.length = function () {
           return this._length;
         };
-        var shapePool = (factory = poolFactory(4, function() {
+        var shapePool = (factory = poolFactory(4, function () {
           return new ShapePath();
-        }, function(t) {
+        }, function (t) {
           var e, i = t._length;
           for (e = 0; e < i; e += 1)
             pointPool.release(t.v[e]), pointPool.release(t.i[e]), pointPool.release(t.o[e]), t.v[e] = null, t.i[e] = null, t.o[e] = null;
           t._length = 0, t.c = false;
-        }), factory.clone = function(t) {
+        }), factory.clone = function (t) {
           var e, i = factory.newElement(), r = void 0 === t._length ? t.v.length : t._length;
           for (i.setLength(r), i.c = t.c, e = 0; e < r; e += 1)
             i.setTripleAt(t.v[e][0], t.v[e][1], t.o[e][0], t.o[e][1], t.i[e][0], t.i[e][1], e);
@@ -10576,22 +10612,24 @@
         function ShapeCollection() {
           this._length = 0, this._maxLength = 4, this.shapes = createSizedArray(this._maxLength);
         }
-        ShapeCollection.prototype.addShape = function(t) {
+        ShapeCollection.prototype.addShape = function (t) {
           this._length === this._maxLength && (this.shapes = this.shapes.concat(createSizedArray(this._maxLength)), this._maxLength *= 2), this.shapes[this._length] = t, this._length += 1;
-        }, ShapeCollection.prototype.releaseShapes = function() {
+        }, ShapeCollection.prototype.releaseShapes = function () {
           var t;
           for (t = 0; t < this._length; t += 1)
             shapePool.release(this.shapes[t]);
           this._length = 0;
         };
-        var shapeCollectionPool = (ob = { newShapeCollection: function() {
-          return _length ? pool[_length -= 1] : new ShapeCollection();
-        }, release: function(t) {
-          var e, i = t._length;
-          for (e = 0; e < i; e += 1)
-            shapePool.release(t.shapes[e]);
-          t._length = 0, _length === _maxLength && (pool = pooling.double(pool), _maxLength *= 2), pool[_length] = t, _length += 1;
-        } }, _length = 0, _maxLength = 4, pool = createSizedArray(_maxLength), ob), ob, _length, _maxLength, pool, ShapePropertyFactory = function() {
+        var shapeCollectionPool = (ob = {
+          newShapeCollection: function () {
+            return _length ? pool[_length -= 1] : new ShapeCollection();
+          }, release: function (t) {
+            var e, i = t._length;
+            for (e = 0; e < i; e += 1)
+              shapePool.release(t.shapes[e]);
+            t._length = 0, _length === _maxLength && (pool = pooling.double(pool), _maxLength *= 2), pool[_length] = t, _length += 1;
+          }
+        }, _length = 0, _maxLength = 4, pool = createSizedArray(_maxLength), ob), ob, _length, _maxLength, pool, ShapePropertyFactory = function () {
           var t = -999999;
           function e(t2, e2, i2) {
             var r2, s2, a2, n2, o2, h2, l2, p2, f2, m2 = i2.lastIndex, c = this.keyframes;
@@ -10600,7 +10638,7 @@
             else if (t2 >= c[c.length - 1].t - this.offsetTime)
               r2 = c[c.length - 1].s ? c[c.length - 1].s[0] : c[c.length - 2].e[0], a2 = true;
             else {
-              for (var d, u, y, g = m2, v = c.length - 1, b = true; b && (d = c[g], !((u = c[g + 1]).t - this.offsetTime > t2)); )
+              for (var d, u, y, g = m2, v = c.length - 1, b = true; b && (d = c[g], !((u = c[g + 1]).t - this.offsetTime > t2));)
                 g < v - 1 ? g += 1 : b = false;
               if (y = this.keyframesMetadata[g] || {}, m2 = g, !(a2 = 1 === d.h)) {
                 if (t2 >= u.t - this.offsetTime)
@@ -10627,7 +10665,7 @@
             this.paths = this.localShapeCollection;
           }
           function s(t2) {
-            (function(t3, e2) {
+            (function (t3, e2) {
               if (t3._length !== e2._length || t3.c !== e2.c)
                 return false;
               var i2, r2 = t3._length;
@@ -10667,61 +10705,69 @@
             this.v = shapePool.newElement(), this.v.setPathData(this.keyframes[0].s[0].c, n2), this.pv = shapePool.clone(this.v), this.localShapeCollection = shapeCollectionPool.newShapeCollection(), this.paths = this.localShapeCollection, this.paths.addShape(this.v), this.lastFrame = t, this.reset = r, this._caching = { lastFrame: t, lastIndex: 0 }, this.effectsSequence = [i.bind(this)];
           }
           n.prototype.interpolateShape = e, n.prototype.getValue = a, n.prototype.setVValue = s, n.prototype.addEffect = o, h.prototype.getValue = a, h.prototype.interpolateShape = e, h.prototype.setVValue = s, h.prototype.addEffect = o;
-          var l = function() {
+          var l = function () {
             var t2 = roundCorner;
             function e2(t3, e3) {
               this.v = shapePool.newElement(), this.v.setPathData(true, 4), this.localShapeCollection = shapeCollectionPool.newShapeCollection(), this.paths = this.localShapeCollection, this.localShapeCollection.addShape(this.v), this.d = e3.d, this.elem = t3, this.comp = t3.comp, this.frameId = -1, this.initDynamicPropertyContainer(t3), this.p = PropertyFactory.getProp(t3, e3.p, 1, 0, this), this.s = PropertyFactory.getProp(t3, e3.s, 1, 0, this), this.dynamicProperties.length ? this.k = true : (this.k = false, this.convertEllToPath());
             }
-            return e2.prototype = { reset: r, getValue: function() {
-              this.elem.globalData.frameId !== this.frameId && (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf && this.convertEllToPath());
-            }, convertEllToPath: function() {
-              var e3 = this.p.v[0], i2 = this.p.v[1], r2 = this.s.v[0] / 2, s2 = this.s.v[1] / 2, a2 = 3 !== this.d, n2 = this.v;
-              n2.v[0][0] = e3, n2.v[0][1] = i2 - s2, n2.v[1][0] = a2 ? e3 + r2 : e3 - r2, n2.v[1][1] = i2, n2.v[2][0] = e3, n2.v[2][1] = i2 + s2, n2.v[3][0] = a2 ? e3 - r2 : e3 + r2, n2.v[3][1] = i2, n2.i[0][0] = a2 ? e3 - r2 * t2 : e3 + r2 * t2, n2.i[0][1] = i2 - s2, n2.i[1][0] = a2 ? e3 + r2 : e3 - r2, n2.i[1][1] = i2 - s2 * t2, n2.i[2][0] = a2 ? e3 + r2 * t2 : e3 - r2 * t2, n2.i[2][1] = i2 + s2, n2.i[3][0] = a2 ? e3 - r2 : e3 + r2, n2.i[3][1] = i2 + s2 * t2, n2.o[0][0] = a2 ? e3 + r2 * t2 : e3 - r2 * t2, n2.o[0][1] = i2 - s2, n2.o[1][0] = a2 ? e3 + r2 : e3 - r2, n2.o[1][1] = i2 + s2 * t2, n2.o[2][0] = a2 ? e3 - r2 * t2 : e3 + r2 * t2, n2.o[2][1] = i2 + s2, n2.o[3][0] = a2 ? e3 - r2 : e3 + r2, n2.o[3][1] = i2 - s2 * t2;
-            } }, extendPrototype([DynamicPropertyContainer], e2), e2;
-          }(), p = function() {
+            return e2.prototype = {
+              reset: r, getValue: function () {
+                this.elem.globalData.frameId !== this.frameId && (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf && this.convertEllToPath());
+              }, convertEllToPath: function () {
+                var e3 = this.p.v[0], i2 = this.p.v[1], r2 = this.s.v[0] / 2, s2 = this.s.v[1] / 2, a2 = 3 !== this.d, n2 = this.v;
+                n2.v[0][0] = e3, n2.v[0][1] = i2 - s2, n2.v[1][0] = a2 ? e3 + r2 : e3 - r2, n2.v[1][1] = i2, n2.v[2][0] = e3, n2.v[2][1] = i2 + s2, n2.v[3][0] = a2 ? e3 - r2 : e3 + r2, n2.v[3][1] = i2, n2.i[0][0] = a2 ? e3 - r2 * t2 : e3 + r2 * t2, n2.i[0][1] = i2 - s2, n2.i[1][0] = a2 ? e3 + r2 : e3 - r2, n2.i[1][1] = i2 - s2 * t2, n2.i[2][0] = a2 ? e3 + r2 * t2 : e3 - r2 * t2, n2.i[2][1] = i2 + s2, n2.i[3][0] = a2 ? e3 - r2 : e3 + r2, n2.i[3][1] = i2 + s2 * t2, n2.o[0][0] = a2 ? e3 + r2 * t2 : e3 - r2 * t2, n2.o[0][1] = i2 - s2, n2.o[1][0] = a2 ? e3 + r2 : e3 - r2, n2.o[1][1] = i2 + s2 * t2, n2.o[2][0] = a2 ? e3 - r2 * t2 : e3 + r2 * t2, n2.o[2][1] = i2 + s2, n2.o[3][0] = a2 ? e3 - r2 : e3 + r2, n2.o[3][1] = i2 - s2 * t2;
+              }
+            }, extendPrototype([DynamicPropertyContainer], e2), e2;
+          }(), p = function () {
             function t2(t3, e2) {
               this.v = shapePool.newElement(), this.v.setPathData(true, 0), this.elem = t3, this.comp = t3.comp, this.data = e2, this.frameId = -1, this.d = e2.d, this.initDynamicPropertyContainer(t3), 1 === e2.sy ? (this.ir = PropertyFactory.getProp(t3, e2.ir, 0, 0, this), this.is = PropertyFactory.getProp(t3, e2.is, 0, 0.01, this), this.convertToPath = this.convertStarToPath) : this.convertToPath = this.convertPolygonToPath, this.pt = PropertyFactory.getProp(t3, e2.pt, 0, 0, this), this.p = PropertyFactory.getProp(t3, e2.p, 1, 0, this), this.r = PropertyFactory.getProp(t3, e2.r, 0, degToRads, this), this.or = PropertyFactory.getProp(t3, e2.or, 0, 0, this), this.os = PropertyFactory.getProp(t3, e2.os, 0, 0.01, this), this.localShapeCollection = shapeCollectionPool.newShapeCollection(), this.localShapeCollection.addShape(this.v), this.paths = this.localShapeCollection, this.dynamicProperties.length ? this.k = true : (this.k = false, this.convertToPath());
             }
-            return t2.prototype = { reset: r, getValue: function() {
-              this.elem.globalData.frameId !== this.frameId && (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf && this.convertToPath());
-            }, convertStarToPath: function() {
-              var t3, e2, i2, r2, s2 = 2 * Math.floor(this.pt.v), a2 = 2 * Math.PI / s2, n2 = true, o2 = this.or.v, h2 = this.ir.v, l2 = this.os.v, p2 = this.is.v, f2 = 2 * Math.PI * o2 / (2 * s2), m2 = 2 * Math.PI * h2 / (2 * s2), c = -Math.PI / 2;
-              c += this.r.v;
-              var d = 3 === this.data.d ? -1 : 1;
-              for (this.v._length = 0, t3 = 0; t3 < s2; t3 += 1) {
-                i2 = n2 ? l2 : p2, r2 = n2 ? f2 : m2;
-                var u = (e2 = n2 ? o2 : h2) * Math.cos(c), y = e2 * Math.sin(c), g = 0 === u && 0 === y ? 0 : y / Math.sqrt(u * u + y * y), v = 0 === u && 0 === y ? 0 : -u / Math.sqrt(u * u + y * y);
-                u += +this.p.v[0], y += +this.p.v[1], this.v.setTripleAt(u, y, u - g * r2 * i2 * d, y - v * r2 * i2 * d, u + g * r2 * i2 * d, y + v * r2 * i2 * d, t3, true), n2 = !n2, c += a2 * d;
+            return t2.prototype = {
+              reset: r, getValue: function () {
+                this.elem.globalData.frameId !== this.frameId && (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf && this.convertToPath());
+              }, convertStarToPath: function () {
+                var t3, e2, i2, r2, s2 = 2 * Math.floor(this.pt.v), a2 = 2 * Math.PI / s2, n2 = true, o2 = this.or.v, h2 = this.ir.v, l2 = this.os.v, p2 = this.is.v, f2 = 2 * Math.PI * o2 / (2 * s2), m2 = 2 * Math.PI * h2 / (2 * s2), c = -Math.PI / 2;
+                c += this.r.v;
+                var d = 3 === this.data.d ? -1 : 1;
+                for (this.v._length = 0, t3 = 0; t3 < s2; t3 += 1) {
+                  i2 = n2 ? l2 : p2, r2 = n2 ? f2 : m2;
+                  var u = (e2 = n2 ? o2 : h2) * Math.cos(c), y = e2 * Math.sin(c), g = 0 === u && 0 === y ? 0 : y / Math.sqrt(u * u + y * y), v = 0 === u && 0 === y ? 0 : -u / Math.sqrt(u * u + y * y);
+                  u += +this.p.v[0], y += +this.p.v[1], this.v.setTripleAt(u, y, u - g * r2 * i2 * d, y - v * r2 * i2 * d, u + g * r2 * i2 * d, y + v * r2 * i2 * d, t3, true), n2 = !n2, c += a2 * d;
+                }
+              }, convertPolygonToPath: function () {
+                var t3, e2 = Math.floor(this.pt.v), i2 = 2 * Math.PI / e2, r2 = this.or.v, s2 = this.os.v, a2 = 2 * Math.PI * r2 / (4 * e2), n2 = 0.5 * -Math.PI, o2 = 3 === this.data.d ? -1 : 1;
+                for (n2 += this.r.v, this.v._length = 0, t3 = 0; t3 < e2; t3 += 1) {
+                  var h2 = r2 * Math.cos(n2), l2 = r2 * Math.sin(n2), p2 = 0 === h2 && 0 === l2 ? 0 : l2 / Math.sqrt(h2 * h2 + l2 * l2), f2 = 0 === h2 && 0 === l2 ? 0 : -h2 / Math.sqrt(h2 * h2 + l2 * l2);
+                  h2 += +this.p.v[0], l2 += +this.p.v[1], this.v.setTripleAt(h2, l2, h2 - p2 * a2 * s2 * o2, l2 - f2 * a2 * s2 * o2, h2 + p2 * a2 * s2 * o2, l2 + f2 * a2 * s2 * o2, t3, true), n2 += i2 * o2;
+                }
+                this.paths.length = 0, this.paths[0] = this.v;
               }
-            }, convertPolygonToPath: function() {
-              var t3, e2 = Math.floor(this.pt.v), i2 = 2 * Math.PI / e2, r2 = this.or.v, s2 = this.os.v, a2 = 2 * Math.PI * r2 / (4 * e2), n2 = 0.5 * -Math.PI, o2 = 3 === this.data.d ? -1 : 1;
-              for (n2 += this.r.v, this.v._length = 0, t3 = 0; t3 < e2; t3 += 1) {
-                var h2 = r2 * Math.cos(n2), l2 = r2 * Math.sin(n2), p2 = 0 === h2 && 0 === l2 ? 0 : l2 / Math.sqrt(h2 * h2 + l2 * l2), f2 = 0 === h2 && 0 === l2 ? 0 : -h2 / Math.sqrt(h2 * h2 + l2 * l2);
-                h2 += +this.p.v[0], l2 += +this.p.v[1], this.v.setTripleAt(h2, l2, h2 - p2 * a2 * s2 * o2, l2 - f2 * a2 * s2 * o2, h2 + p2 * a2 * s2 * o2, l2 + f2 * a2 * s2 * o2, t3, true), n2 += i2 * o2;
-              }
-              this.paths.length = 0, this.paths[0] = this.v;
-            } }, extendPrototype([DynamicPropertyContainer], t2), t2;
-          }(), f = function() {
+            }, extendPrototype([DynamicPropertyContainer], t2), t2;
+          }(), f = function () {
             function t2(t3, e2) {
               this.v = shapePool.newElement(), this.v.c = true, this.localShapeCollection = shapeCollectionPool.newShapeCollection(), this.localShapeCollection.addShape(this.v), this.paths = this.localShapeCollection, this.elem = t3, this.comp = t3.comp, this.frameId = -1, this.d = e2.d, this.initDynamicPropertyContainer(t3), this.p = PropertyFactory.getProp(t3, e2.p, 1, 0, this), this.s = PropertyFactory.getProp(t3, e2.s, 1, 0, this), this.r = PropertyFactory.getProp(t3, e2.r, 0, 0, this), this.dynamicProperties.length ? this.k = true : (this.k = false, this.convertRectToPath());
             }
-            return t2.prototype = { convertRectToPath: function() {
-              var t3 = this.p.v[0], e2 = this.p.v[1], i2 = this.s.v[0] / 2, r2 = this.s.v[1] / 2, s2 = bmMin(i2, r2, this.r.v), a2 = s2 * (1 - roundCorner);
-              this.v._length = 0, 2 === this.d || 1 === this.d ? (this.v.setTripleAt(t3 + i2, e2 - r2 + s2, t3 + i2, e2 - r2 + s2, t3 + i2, e2 - r2 + a2, 0, true), this.v.setTripleAt(t3 + i2, e2 + r2 - s2, t3 + i2, e2 + r2 - a2, t3 + i2, e2 + r2 - s2, 1, true), 0 !== s2 ? (this.v.setTripleAt(t3 + i2 - s2, e2 + r2, t3 + i2 - s2, e2 + r2, t3 + i2 - a2, e2 + r2, 2, true), this.v.setTripleAt(t3 - i2 + s2, e2 + r2, t3 - i2 + a2, e2 + r2, t3 - i2 + s2, e2 + r2, 3, true), this.v.setTripleAt(t3 - i2, e2 + r2 - s2, t3 - i2, e2 + r2 - s2, t3 - i2, e2 + r2 - a2, 4, true), this.v.setTripleAt(t3 - i2, e2 - r2 + s2, t3 - i2, e2 - r2 + a2, t3 - i2, e2 - r2 + s2, 5, true), this.v.setTripleAt(t3 - i2 + s2, e2 - r2, t3 - i2 + s2, e2 - r2, t3 - i2 + a2, e2 - r2, 6, true), this.v.setTripleAt(t3 + i2 - s2, e2 - r2, t3 + i2 - a2, e2 - r2, t3 + i2 - s2, e2 - r2, 7, true)) : (this.v.setTripleAt(t3 - i2, e2 + r2, t3 - i2 + a2, e2 + r2, t3 - i2, e2 + r2, 2), this.v.setTripleAt(t3 - i2, e2 - r2, t3 - i2, e2 - r2 + a2, t3 - i2, e2 - r2, 3))) : (this.v.setTripleAt(t3 + i2, e2 - r2 + s2, t3 + i2, e2 - r2 + a2, t3 + i2, e2 - r2 + s2, 0, true), 0 !== s2 ? (this.v.setTripleAt(t3 + i2 - s2, e2 - r2, t3 + i2 - s2, e2 - r2, t3 + i2 - a2, e2 - r2, 1, true), this.v.setTripleAt(t3 - i2 + s2, e2 - r2, t3 - i2 + a2, e2 - r2, t3 - i2 + s2, e2 - r2, 2, true), this.v.setTripleAt(t3 - i2, e2 - r2 + s2, t3 - i2, e2 - r2 + s2, t3 - i2, e2 - r2 + a2, 3, true), this.v.setTripleAt(t3 - i2, e2 + r2 - s2, t3 - i2, e2 + r2 - a2, t3 - i2, e2 + r2 - s2, 4, true), this.v.setTripleAt(t3 - i2 + s2, e2 + r2, t3 - i2 + s2, e2 + r2, t3 - i2 + a2, e2 + r2, 5, true), this.v.setTripleAt(t3 + i2 - s2, e2 + r2, t3 + i2 - a2, e2 + r2, t3 + i2 - s2, e2 + r2, 6, true), this.v.setTripleAt(t3 + i2, e2 + r2 - s2, t3 + i2, e2 + r2 - s2, t3 + i2, e2 + r2 - a2, 7, true)) : (this.v.setTripleAt(t3 - i2, e2 - r2, t3 - i2 + a2, e2 - r2, t3 - i2, e2 - r2, 1, true), this.v.setTripleAt(t3 - i2, e2 + r2, t3 - i2, e2 + r2 - a2, t3 - i2, e2 + r2, 2, true), this.v.setTripleAt(t3 + i2, e2 + r2, t3 + i2 - a2, e2 + r2, t3 + i2, e2 + r2, 3, true)));
-            }, getValue: function() {
-              this.elem.globalData.frameId !== this.frameId && (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf && this.convertRectToPath());
-            }, reset: r }, extendPrototype([DynamicPropertyContainer], t2), t2;
+            return t2.prototype = {
+              convertRectToPath: function () {
+                var t3 = this.p.v[0], e2 = this.p.v[1], i2 = this.s.v[0] / 2, r2 = this.s.v[1] / 2, s2 = bmMin(i2, r2, this.r.v), a2 = s2 * (1 - roundCorner);
+                this.v._length = 0, 2 === this.d || 1 === this.d ? (this.v.setTripleAt(t3 + i2, e2 - r2 + s2, t3 + i2, e2 - r2 + s2, t3 + i2, e2 - r2 + a2, 0, true), this.v.setTripleAt(t3 + i2, e2 + r2 - s2, t3 + i2, e2 + r2 - a2, t3 + i2, e2 + r2 - s2, 1, true), 0 !== s2 ? (this.v.setTripleAt(t3 + i2 - s2, e2 + r2, t3 + i2 - s2, e2 + r2, t3 + i2 - a2, e2 + r2, 2, true), this.v.setTripleAt(t3 - i2 + s2, e2 + r2, t3 - i2 + a2, e2 + r2, t3 - i2 + s2, e2 + r2, 3, true), this.v.setTripleAt(t3 - i2, e2 + r2 - s2, t3 - i2, e2 + r2 - s2, t3 - i2, e2 + r2 - a2, 4, true), this.v.setTripleAt(t3 - i2, e2 - r2 + s2, t3 - i2, e2 - r2 + a2, t3 - i2, e2 - r2 + s2, 5, true), this.v.setTripleAt(t3 - i2 + s2, e2 - r2, t3 - i2 + s2, e2 - r2, t3 - i2 + a2, e2 - r2, 6, true), this.v.setTripleAt(t3 + i2 - s2, e2 - r2, t3 + i2 - a2, e2 - r2, t3 + i2 - s2, e2 - r2, 7, true)) : (this.v.setTripleAt(t3 - i2, e2 + r2, t3 - i2 + a2, e2 + r2, t3 - i2, e2 + r2, 2), this.v.setTripleAt(t3 - i2, e2 - r2, t3 - i2, e2 - r2 + a2, t3 - i2, e2 - r2, 3))) : (this.v.setTripleAt(t3 + i2, e2 - r2 + s2, t3 + i2, e2 - r2 + a2, t3 + i2, e2 - r2 + s2, 0, true), 0 !== s2 ? (this.v.setTripleAt(t3 + i2 - s2, e2 - r2, t3 + i2 - s2, e2 - r2, t3 + i2 - a2, e2 - r2, 1, true), this.v.setTripleAt(t3 - i2 + s2, e2 - r2, t3 - i2 + a2, e2 - r2, t3 - i2 + s2, e2 - r2, 2, true), this.v.setTripleAt(t3 - i2, e2 - r2 + s2, t3 - i2, e2 - r2 + s2, t3 - i2, e2 - r2 + a2, 3, true), this.v.setTripleAt(t3 - i2, e2 + r2 - s2, t3 - i2, e2 + r2 - a2, t3 - i2, e2 + r2 - s2, 4, true), this.v.setTripleAt(t3 - i2 + s2, e2 + r2, t3 - i2 + s2, e2 + r2, t3 - i2 + a2, e2 + r2, 5, true), this.v.setTripleAt(t3 + i2 - s2, e2 + r2, t3 + i2 - a2, e2 + r2, t3 + i2 - s2, e2 + r2, 6, true), this.v.setTripleAt(t3 + i2, e2 + r2 - s2, t3 + i2, e2 + r2 - s2, t3 + i2, e2 + r2 - a2, 7, true)) : (this.v.setTripleAt(t3 - i2, e2 - r2, t3 - i2 + a2, e2 - r2, t3 - i2, e2 - r2, 1, true), this.v.setTripleAt(t3 - i2, e2 + r2, t3 - i2, e2 + r2 - a2, t3 - i2, e2 + r2, 2, true), this.v.setTripleAt(t3 + i2, e2 + r2, t3 + i2 - a2, e2 + r2, t3 + i2, e2 + r2, 3, true)));
+              }, getValue: function () {
+                this.elem.globalData.frameId !== this.frameId && (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf && this.convertRectToPath());
+              }, reset: r
+            }, extendPrototype([DynamicPropertyContainer], t2), t2;
           }();
-          var m = { getShapeProp: function(t2, e2, i2) {
-            var r2;
-            return 3 === i2 || 4 === i2 ? r2 = (3 === i2 ? e2.pt : e2.ks).k.length ? new h(t2, e2, i2) : new n(t2, e2, i2) : 5 === i2 ? r2 = new f(t2, e2) : 6 === i2 ? r2 = new l(t2, e2) : 7 === i2 && (r2 = new p(t2, e2)), r2.k && t2.addDynamicProperty(r2), r2;
-          }, getConstructorFunction: function() {
-            return n;
-          }, getKeyframedConstructorFunction: function() {
-            return h;
-          } };
+          var m = {
+            getShapeProp: function (t2, e2, i2) {
+              var r2;
+              return 3 === i2 || 4 === i2 ? r2 = (3 === i2 ? e2.pt : e2.ks).k.length ? new h(t2, e2, i2) : new n(t2, e2, i2) : 5 === i2 ? r2 = new f(t2, e2) : 6 === i2 ? r2 = new l(t2, e2) : 7 === i2 && (r2 = new p(t2, e2)), r2.k && t2.addDynamicProperty(r2), r2;
+            }, getConstructorFunction: function () {
+              return n;
+            }, getKeyframedConstructorFunction: function () {
+              return h;
+            }
+          };
           return m;
-        }(), Matrix = function() {
+        }(), Matrix = function () {
           var t = Math.cos, e = Math.sin, i = Math.tan, r = Math.round;
           function s() {
             return this.props[0] = 1, this.props[1] = 0, this.props[2] = 0, this.props[3] = 0, this.props[4] = 0, this.props[5] = 1, this.props[6] = 0, this.props[7] = 0, this.props[8] = 0, this.props[9] = 0, this.props[10] = 1, this.props[11] = 0, this.props[12] = 0, this.props[13] = 0, this.props[14] = 0, this.props[15] = 1, this;
@@ -10784,7 +10830,7 @@
             return this._identityCalculated || (this._identity = !(1 !== this.props[0] || 0 !== this.props[1] || 0 !== this.props[2] || 0 !== this.props[3] || 0 !== this.props[4] || 1 !== this.props[5] || 0 !== this.props[6] || 0 !== this.props[7] || 0 !== this.props[8] || 0 !== this.props[9] || 1 !== this.props[10] || 0 !== this.props[11] || 0 !== this.props[12] || 0 !== this.props[13] || 0 !== this.props[14] || 1 !== this.props[15]), this._identityCalculated = true), this._identity;
           }
           function v(t2) {
-            for (var e2 = 0; e2 < 16; ) {
+            for (var e2 = 0; e2 < 16;) {
               if (t2.props[e2] !== this.props[e2])
                 return false;
               e2 += 1;
@@ -10847,7 +10893,7 @@
             return Math.round(100 * (t2 * i2[0] + e2 * i2[4] + i2[12])) / 100 + "," + Math.round(100 * (t2 * i2[1] + e2 * i2[5] + i2[13])) / 100;
           }
           function F() {
-            for (var t2 = 0, e2 = this.props, i2 = "matrix3d("; t2 < 16; )
+            for (var t2 = 0, e2 = this.props, i2 = "matrix3d("; t2 < 16;)
               i2 += r(1e4 * e2[t2]) / 1e4, i2 += 15 === t2 ? ")" : ",", t2 += 1;
             return i2;
           }
@@ -10858,14 +10904,14 @@
             var t2 = this.props;
             return "matrix(" + w(t2[0]) + "," + w(t2[1]) + "," + w(t2[4]) + "," + w(t2[5]) + "," + w(t2[12]) + "," + w(t2[13]) + ")";
           }
-          return function() {
+          return function () {
             this.reset = s, this.rotate = a, this.rotateX = n, this.rotateY = o, this.rotateZ = h, this.skew = p, this.skewFromAxis = f, this.shear = l, this.scale = m, this.setTransform = c, this.translate = d, this.transform = u, this.multiply = y, this.applyToPoint = P, this.applyToX = E, this.applyToY = S, this.applyToZ = C, this.applyToPointArray = k, this.applyToTriplePoints = M, this.applyToPointStringified = D, this.toCSS = F, this.to2dCSS = I, this.clone = b, this.cloneFromProps = x, this.equals = v, this.inversePoints = T, this.inversePoint = A, this.getInverseMatrix = _, this._t = this.transform, this.isIdentity = g, this._identity = true, this._identityCalculated = false, this.props = createTypedArray("float32", 16), this.reset();
           };
         }();
         function _typeof$3(t) {
-          return _typeof$3 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t2) {
+          return _typeof$3 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (t2) {
             return typeof t2;
-          } : function(t2) {
+          } : function (t2) {
             return t2 && "function" == typeof Symbol && t2.constructor === Symbol && t2 !== Symbol.prototype ? "symbol" : typeof t2;
           }, _typeof$3(t);
         }
@@ -10942,11 +10988,11 @@
           "object" === ("undefined" == typeof exports ? "undefined" : _typeof$3(exports)) && "undefined" != typeof module || "function" == typeof define && define.amd || (window.bodymovin = lottie);
         } catch (t) {
         }
-        var ShapeModifiers = function() {
+        var ShapeModifiers = function () {
           var t = {}, e = {};
-          return t.registerModifier = function(t2, i) {
+          return t.registerModifier = function (t2, i) {
             e[t2] || (e[t2] = i);
-          }, t.getModifier = function(t2, i, r) {
+          }, t.getModifier = function (t2, i, r) {
             return new e[t2](i, r);
           }, t;
         }();
@@ -10956,23 +11002,23 @@
         }
         function PuckerAndBloatModifier() {
         }
-        ShapeModifier.prototype.initModifierProperties = function() {
-        }, ShapeModifier.prototype.addShapeToModifier = function() {
-        }, ShapeModifier.prototype.addShape = function(t) {
+        ShapeModifier.prototype.initModifierProperties = function () {
+        }, ShapeModifier.prototype.addShapeToModifier = function () {
+        }, ShapeModifier.prototype.addShape = function (t) {
           if (!this.closed) {
             t.sh.container.addDynamicProperty(t.sh);
             var e = { shape: t.sh, data: t, localShapeCollection: shapeCollectionPool.newShapeCollection() };
             this.shapes.push(e), this.addShapeToModifier(e), this._isAnimated && t.setAsAnimated();
           }
-        }, ShapeModifier.prototype.init = function(t, e) {
+        }, ShapeModifier.prototype.init = function (t, e) {
           this.shapes = [], this.elem = t, this.initDynamicPropertyContainer(t), this.initModifierProperties(t, e), this.frameId = initialDefaultFrame, this.closed = false, this.k = false, this.dynamicProperties.length ? this.k = true : this.getValue(true);
-        }, ShapeModifier.prototype.processKeys = function() {
+        }, ShapeModifier.prototype.processKeys = function () {
           this.elem.globalData.frameId !== this.frameId && (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties());
-        }, extendPrototype([DynamicPropertyContainer], ShapeModifier), extendPrototype([ShapeModifier], TrimModifier), TrimModifier.prototype.initModifierProperties = function(t, e) {
+        }, extendPrototype([DynamicPropertyContainer], ShapeModifier), extendPrototype([ShapeModifier], TrimModifier), TrimModifier.prototype.initModifierProperties = function (t, e) {
           this.s = PropertyFactory.getProp(t, e.s, 0, 0.01, this), this.e = PropertyFactory.getProp(t, e.e, 0, 0.01, this), this.o = PropertyFactory.getProp(t, e.o, 0, 0, this), this.sValue = 0, this.eValue = 0, this.getValue = this.processKeys, this.m = e.m, this._isAnimated = !!this.s.effectsSequence.length || !!this.e.effectsSequence.length || !!this.o.effectsSequence.length;
-        }, TrimModifier.prototype.addShapeToModifier = function(t) {
+        }, TrimModifier.prototype.addShapeToModifier = function (t) {
           t.pathsData = [];
-        }, TrimModifier.prototype.calculateShapeEdges = function(t, e, i, r, s) {
+        }, TrimModifier.prototype.calculateShapeEdges = function (t, e, i, r, s) {
           var a = [];
           e <= 1 ? a.push({ s: t, e }) : t >= 1 ? a.push({ s: t - 1, e: e - 1 }) : (a.push({ s: t, e: 1 }), a.push({ s: 0, e: e - 1 }));
           var n, o, h = [], l = a.length;
@@ -10982,12 +11028,12 @@
               p = o.s * s <= r ? 0 : (o.s * s - r) / i, f = o.e * s >= r + i ? 1 : (o.e * s - r) / i, h.push([p, f]);
           }
           return h.length || h.push([0, 0]), h;
-        }, TrimModifier.prototype.releasePathsData = function(t) {
+        }, TrimModifier.prototype.releasePathsData = function (t) {
           var e, i = t.length;
           for (e = 0; e < i; e += 1)
             segmentsLengthPool.release(t[e]);
           return t.length = 0, t;
-        }, TrimModifier.prototype.processShapes = function(t) {
+        }, TrimModifier.prototype.processShapes = function (t) {
           var e, i, r, s;
           if (this._mdf || t) {
             var a = this.o.v % 360 / 360;
@@ -11039,15 +11085,15 @@
                 d.shape.paths = u;
               }
           }
-        }, TrimModifier.prototype.addPaths = function(t, e) {
+        }, TrimModifier.prototype.addPaths = function (t, e) {
           var i, r = t.length;
           for (i = 0; i < r; i += 1)
             e.addShape(t[i]);
-        }, TrimModifier.prototype.addSegment = function(t, e, i, r, s, a, n) {
+        }, TrimModifier.prototype.addSegment = function (t, e, i, r, s, a, n) {
           s.setXYAt(e[0], e[1], "o", a), s.setXYAt(i[0], i[1], "i", a + 1), n && s.setXYAt(t[0], t[1], "v", a), s.setXYAt(r[0], r[1], "v", a + 1);
-        }, TrimModifier.prototype.addSegmentFromArray = function(t, e, i, r) {
+        }, TrimModifier.prototype.addSegmentFromArray = function (t, e, i, r) {
           e.setXYAt(t[1], t[5], "o", i), e.setXYAt(t[2], t[6], "i", i + 1), r && e.setXYAt(t[0], t[4], "v", i), e.setXYAt(t[3], t[7], "v", i + 1);
-        }, TrimModifier.prototype.addShapes = function(t, e, i) {
+        }, TrimModifier.prototype.addShapes = function (t, e, i) {
           var r, s, a, n, o, h, l, p, f = t.pathsData, m = t.shape.paths.shapes, c = t.shape.paths._length, d = 0, u = [], y = true;
           for (i ? (o = i._length, p = i._length) : (i = shapePool.newElement(), o = 0, p = 0), u.push(i), r = 0; r < c; r += 1) {
             for (h = f[r].lengths, i.c = m[r].c, a = m[r].c ? h.length : h.length + 1, s = 1; s < a; s += 1)
@@ -11073,9 +11119,9 @@
             r < c - 1 && (i = shapePool.newElement(), y = true, u.push(i), o = 0);
           }
           return u;
-        }, extendPrototype([ShapeModifier], PuckerAndBloatModifier), PuckerAndBloatModifier.prototype.initModifierProperties = function(t, e) {
+        }, extendPrototype([ShapeModifier], PuckerAndBloatModifier), PuckerAndBloatModifier.prototype.initModifierProperties = function (t, e) {
           this.getValue = this.processKeys, this.amount = PropertyFactory.getProp(t, e.a, 0, null, this), this._isAnimated = !!this.amount.effectsSequence.length;
-        }, PuckerAndBloatModifier.prototype.processPath = function(t, e) {
+        }, PuckerAndBloatModifier.prototype.processPath = function (t, e) {
           var i = e / 100, r = [0, 0], s = t._length, a = 0;
           for (a = 0; a < s; a += 1)
             r[0] += t.v[a][0], r[1] += t.v[a][1];
@@ -11084,7 +11130,7 @@
           for (m.c = t.c, a = 0; a < s; a += 1)
             n = t.v[a][0] + (r[0] - t.v[a][0]) * i, o = t.v[a][1] + (r[1] - t.v[a][1]) * i, h = t.o[a][0] + (r[0] - t.o[a][0]) * -i, l = t.o[a][1] + (r[1] - t.o[a][1]) * -i, p = t.i[a][0] + (r[0] - t.i[a][0]) * -i, f = t.i[a][1] + (r[1] - t.i[a][1]) * -i, m.setTripleAt(n, o, h, l, p, f, a);
           return m;
-        }, PuckerAndBloatModifier.prototype.processShapes = function(t) {
+        }, PuckerAndBloatModifier.prototype.processShapes = function (t) {
           var e, i, r, s, a, n, o = this.shapes.length, h = this.amount.v;
           if (0 !== h)
             for (i = 0; i < o; i += 1) {
@@ -11095,7 +11141,7 @@
             }
           this.dynamicProperties.length || (this._mdf = false);
         };
-        var TransformPropertyFactory = function() {
+        var TransformPropertyFactory = function () {
           var t = [0, 0];
           function e(t2, e2, i) {
             if (this.elem = t2, this.frameId = -1, this.propType = "transform", this.data = e2, this.v = new Matrix(), this.pre = new Matrix(), this.appliedTransformations = 0, this.initDynamicPropertyContainer(i || t2), e2.p && e2.p.s ? (this.px = PropertyFactory.getProp(t2, e2.p.x, 0, 0, this), this.py = PropertyFactory.getProp(t2, e2.p.y, 0, 0, this), e2.p.z && (this.pz = PropertyFactory.getProp(t2, e2.p.z, 0, 0, this))) : this.p = PropertyFactory.getProp(t2, e2.p || { k: [0, 0, 0] }, 1, 0, this), e2.rx) {
@@ -11109,44 +11155,48 @@
               this.r = PropertyFactory.getProp(t2, e2.r || { k: 0 }, 0, degToRads, this);
             e2.sk && (this.sk = PropertyFactory.getProp(t2, e2.sk, 0, degToRads, this), this.sa = PropertyFactory.getProp(t2, e2.sa, 0, degToRads, this)), this.a = PropertyFactory.getProp(t2, e2.a || { k: [0, 0, 0] }, 1, 0, this), this.s = PropertyFactory.getProp(t2, e2.s || { k: [100, 100, 100] }, 1, 0.01, this), e2.o ? this.o = PropertyFactory.getProp(t2, e2.o, 0, 0.01, t2) : this.o = { _mdf: false, v: 1 }, this._isDirty = true, this.dynamicProperties.length || this.getValue(true);
           }
-          return e.prototype = { applyToMatrix: function(t2) {
-            var e2 = this._mdf;
-            this.iterateDynamicProperties(), this._mdf = this._mdf || e2, this.a && t2.translate(-this.a.v[0], -this.a.v[1], this.a.v[2]), this.s && t2.scale(this.s.v[0], this.s.v[1], this.s.v[2]), this.sk && t2.skewFromAxis(-this.sk.v, this.sa.v), this.r ? t2.rotate(-this.r.v) : t2.rotateZ(-this.rz.v).rotateY(this.ry.v).rotateX(this.rx.v).rotateZ(-this.or.v[2]).rotateY(this.or.v[1]).rotateX(this.or.v[0]), this.data.p.s ? this.data.p.z ? t2.translate(this.px.v, this.py.v, -this.pz.v) : t2.translate(this.px.v, this.py.v, 0) : t2.translate(this.p.v[0], this.p.v[1], -this.p.v[2]);
-          }, getValue: function(e2) {
-            if (this.elem.globalData.frameId !== this.frameId) {
-              if (this._isDirty && (this.precalculateMatrix(), this._isDirty = false), this.iterateDynamicProperties(), this._mdf || e2) {
-                var i;
-                if (this.v.cloneFromProps(this.pre.props), this.appliedTransformations < 1 && this.v.translate(-this.a.v[0], -this.a.v[1], this.a.v[2]), this.appliedTransformations < 2 && this.v.scale(this.s.v[0], this.s.v[1], this.s.v[2]), this.sk && this.appliedTransformations < 3 && this.v.skewFromAxis(-this.sk.v, this.sa.v), this.r && this.appliedTransformations < 4 ? this.v.rotate(-this.r.v) : !this.r && this.appliedTransformations < 4 && this.v.rotateZ(-this.rz.v).rotateY(this.ry.v).rotateX(this.rx.v).rotateZ(-this.or.v[2]).rotateY(this.or.v[1]).rotateX(this.or.v[0]), this.autoOriented) {
-                  var r, s;
-                  if (i = this.elem.globalData.frameRate, this.p && this.p.keyframes && this.p.getValueAtTime)
-                    this.p._caching.lastFrame + this.p.offsetTime <= this.p.keyframes[0].t ? (r = this.p.getValueAtTime((this.p.keyframes[0].t + 0.01) / i, 0), s = this.p.getValueAtTime(this.p.keyframes[0].t / i, 0)) : this.p._caching.lastFrame + this.p.offsetTime >= this.p.keyframes[this.p.keyframes.length - 1].t ? (r = this.p.getValueAtTime(this.p.keyframes[this.p.keyframes.length - 1].t / i, 0), s = this.p.getValueAtTime((this.p.keyframes[this.p.keyframes.length - 1].t - 0.05) / i, 0)) : (r = this.p.pv, s = this.p.getValueAtTime((this.p._caching.lastFrame + this.p.offsetTime - 0.01) / i, this.p.offsetTime));
-                  else if (this.px && this.px.keyframes && this.py.keyframes && this.px.getValueAtTime && this.py.getValueAtTime) {
-                    r = [], s = [];
-                    var a = this.px, n = this.py;
-                    a._caching.lastFrame + a.offsetTime <= a.keyframes[0].t ? (r[0] = a.getValueAtTime((a.keyframes[0].t + 0.01) / i, 0), r[1] = n.getValueAtTime((n.keyframes[0].t + 0.01) / i, 0), s[0] = a.getValueAtTime(a.keyframes[0].t / i, 0), s[1] = n.getValueAtTime(n.keyframes[0].t / i, 0)) : a._caching.lastFrame + a.offsetTime >= a.keyframes[a.keyframes.length - 1].t ? (r[0] = a.getValueAtTime(a.keyframes[a.keyframes.length - 1].t / i, 0), r[1] = n.getValueAtTime(n.keyframes[n.keyframes.length - 1].t / i, 0), s[0] = a.getValueAtTime((a.keyframes[a.keyframes.length - 1].t - 0.01) / i, 0), s[1] = n.getValueAtTime((n.keyframes[n.keyframes.length - 1].t - 0.01) / i, 0)) : (r = [a.pv, n.pv], s[0] = a.getValueAtTime((a._caching.lastFrame + a.offsetTime - 0.01) / i, a.offsetTime), s[1] = n.getValueAtTime((n._caching.lastFrame + n.offsetTime - 0.01) / i, n.offsetTime));
-                  } else
-                    r = s = t;
-                  this.v.rotate(-Math.atan2(r[1] - s[1], r[0] - s[0]));
+          return e.prototype = {
+            applyToMatrix: function (t2) {
+              var e2 = this._mdf;
+              this.iterateDynamicProperties(), this._mdf = this._mdf || e2, this.a && t2.translate(-this.a.v[0], -this.a.v[1], this.a.v[2]), this.s && t2.scale(this.s.v[0], this.s.v[1], this.s.v[2]), this.sk && t2.skewFromAxis(-this.sk.v, this.sa.v), this.r ? t2.rotate(-this.r.v) : t2.rotateZ(-this.rz.v).rotateY(this.ry.v).rotateX(this.rx.v).rotateZ(-this.or.v[2]).rotateY(this.or.v[1]).rotateX(this.or.v[0]), this.data.p.s ? this.data.p.z ? t2.translate(this.px.v, this.py.v, -this.pz.v) : t2.translate(this.px.v, this.py.v, 0) : t2.translate(this.p.v[0], this.p.v[1], -this.p.v[2]);
+            }, getValue: function (e2) {
+              if (this.elem.globalData.frameId !== this.frameId) {
+                if (this._isDirty && (this.precalculateMatrix(), this._isDirty = false), this.iterateDynamicProperties(), this._mdf || e2) {
+                  var i;
+                  if (this.v.cloneFromProps(this.pre.props), this.appliedTransformations < 1 && this.v.translate(-this.a.v[0], -this.a.v[1], this.a.v[2]), this.appliedTransformations < 2 && this.v.scale(this.s.v[0], this.s.v[1], this.s.v[2]), this.sk && this.appliedTransformations < 3 && this.v.skewFromAxis(-this.sk.v, this.sa.v), this.r && this.appliedTransformations < 4 ? this.v.rotate(-this.r.v) : !this.r && this.appliedTransformations < 4 && this.v.rotateZ(-this.rz.v).rotateY(this.ry.v).rotateX(this.rx.v).rotateZ(-this.or.v[2]).rotateY(this.or.v[1]).rotateX(this.or.v[0]), this.autoOriented) {
+                    var r, s;
+                    if (i = this.elem.globalData.frameRate, this.p && this.p.keyframes && this.p.getValueAtTime)
+                      this.p._caching.lastFrame + this.p.offsetTime <= this.p.keyframes[0].t ? (r = this.p.getValueAtTime((this.p.keyframes[0].t + 0.01) / i, 0), s = this.p.getValueAtTime(this.p.keyframes[0].t / i, 0)) : this.p._caching.lastFrame + this.p.offsetTime >= this.p.keyframes[this.p.keyframes.length - 1].t ? (r = this.p.getValueAtTime(this.p.keyframes[this.p.keyframes.length - 1].t / i, 0), s = this.p.getValueAtTime((this.p.keyframes[this.p.keyframes.length - 1].t - 0.05) / i, 0)) : (r = this.p.pv, s = this.p.getValueAtTime((this.p._caching.lastFrame + this.p.offsetTime - 0.01) / i, this.p.offsetTime));
+                    else if (this.px && this.px.keyframes && this.py.keyframes && this.px.getValueAtTime && this.py.getValueAtTime) {
+                      r = [], s = [];
+                      var a = this.px, n = this.py;
+                      a._caching.lastFrame + a.offsetTime <= a.keyframes[0].t ? (r[0] = a.getValueAtTime((a.keyframes[0].t + 0.01) / i, 0), r[1] = n.getValueAtTime((n.keyframes[0].t + 0.01) / i, 0), s[0] = a.getValueAtTime(a.keyframes[0].t / i, 0), s[1] = n.getValueAtTime(n.keyframes[0].t / i, 0)) : a._caching.lastFrame + a.offsetTime >= a.keyframes[a.keyframes.length - 1].t ? (r[0] = a.getValueAtTime(a.keyframes[a.keyframes.length - 1].t / i, 0), r[1] = n.getValueAtTime(n.keyframes[n.keyframes.length - 1].t / i, 0), s[0] = a.getValueAtTime((a.keyframes[a.keyframes.length - 1].t - 0.01) / i, 0), s[1] = n.getValueAtTime((n.keyframes[n.keyframes.length - 1].t - 0.01) / i, 0)) : (r = [a.pv, n.pv], s[0] = a.getValueAtTime((a._caching.lastFrame + a.offsetTime - 0.01) / i, a.offsetTime), s[1] = n.getValueAtTime((n._caching.lastFrame + n.offsetTime - 0.01) / i, n.offsetTime));
+                    } else
+                      r = s = t;
+                    this.v.rotate(-Math.atan2(r[1] - s[1], r[0] - s[0]));
+                  }
+                  this.data.p && this.data.p.s ? this.data.p.z ? this.v.translate(this.px.v, this.py.v, -this.pz.v) : this.v.translate(this.px.v, this.py.v, 0) : this.v.translate(this.p.v[0], this.p.v[1], -this.p.v[2]);
                 }
-                this.data.p && this.data.p.s ? this.data.p.z ? this.v.translate(this.px.v, this.py.v, -this.pz.v) : this.v.translate(this.px.v, this.py.v, 0) : this.v.translate(this.p.v[0], this.p.v[1], -this.p.v[2]);
+                this.frameId = this.elem.globalData.frameId;
               }
-              this.frameId = this.elem.globalData.frameId;
-            }
-          }, precalculateMatrix: function() {
-            if (this.appliedTransformations = 0, this.pre.reset(), !this.a.effectsSequence.length && (this.pre.translate(-this.a.v[0], -this.a.v[1], this.a.v[2]), this.appliedTransformations = 1, !this.s.effectsSequence.length)) {
-              if (this.pre.scale(this.s.v[0], this.s.v[1], this.s.v[2]), this.appliedTransformations = 2, this.sk) {
-                if (this.sk.effectsSequence.length || this.sa.effectsSequence.length)
-                  return;
-                this.pre.skewFromAxis(-this.sk.v, this.sa.v), this.appliedTransformations = 3;
+            }, precalculateMatrix: function () {
+              if (this.appliedTransformations = 0, this.pre.reset(), !this.a.effectsSequence.length && (this.pre.translate(-this.a.v[0], -this.a.v[1], this.a.v[2]), this.appliedTransformations = 1, !this.s.effectsSequence.length)) {
+                if (this.pre.scale(this.s.v[0], this.s.v[1], this.s.v[2]), this.appliedTransformations = 2, this.sk) {
+                  if (this.sk.effectsSequence.length || this.sa.effectsSequence.length)
+                    return;
+                  this.pre.skewFromAxis(-this.sk.v, this.sa.v), this.appliedTransformations = 3;
+                }
+                this.r ? this.r.effectsSequence.length || (this.pre.rotate(-this.r.v), this.appliedTransformations = 4) : this.rz.effectsSequence.length || this.ry.effectsSequence.length || this.rx.effectsSequence.length || this.or.effectsSequence.length || (this.pre.rotateZ(-this.rz.v).rotateY(this.ry.v).rotateX(this.rx.v).rotateZ(-this.or.v[2]).rotateY(this.or.v[1]).rotateX(this.or.v[0]), this.appliedTransformations = 4);
               }
-              this.r ? this.r.effectsSequence.length || (this.pre.rotate(-this.r.v), this.appliedTransformations = 4) : this.rz.effectsSequence.length || this.ry.effectsSequence.length || this.rx.effectsSequence.length || this.or.effectsSequence.length || (this.pre.rotateZ(-this.rz.v).rotateY(this.ry.v).rotateX(this.rx.v).rotateZ(-this.or.v[2]).rotateY(this.or.v[1]).rotateX(this.or.v[0]), this.appliedTransformations = 4);
+            }, autoOrient: function () {
             }
-          }, autoOrient: function() {
-          } }, extendPrototype([DynamicPropertyContainer], e), e.prototype.addDynamicProperty = function(t2) {
+          }, extendPrototype([DynamicPropertyContainer], e), e.prototype.addDynamicProperty = function (t2) {
             this._addDynamicProperty(t2), this.elem.addDynamicProperty(t2), this._isDirty = true;
-          }, e.prototype._addDynamicProperty = DynamicPropertyContainer.prototype.addDynamicProperty, { getTransformProperty: function(t2, i, r) {
-            return new e(t2, i, r);
-          } };
+          }, e.prototype._addDynamicProperty = DynamicPropertyContainer.prototype.addDynamicProperty, {
+            getTransformProperty: function (t2, i, r) {
+              return new e(t2, i, r);
+            }
+          };
         }();
         function RepeaterModifier() {
         }
@@ -11336,32 +11386,32 @@
             }
           return { style: r, weight: t.fWeight || i };
         }
-        extendPrototype([ShapeModifier], RepeaterModifier), RepeaterModifier.prototype.initModifierProperties = function(t, e) {
+        extendPrototype([ShapeModifier], RepeaterModifier), RepeaterModifier.prototype.initModifierProperties = function (t, e) {
           this.getValue = this.processKeys, this.c = PropertyFactory.getProp(t, e.c, 0, null, this), this.o = PropertyFactory.getProp(t, e.o, 0, null, this), this.tr = TransformPropertyFactory.getTransformProperty(t, e.tr, this), this.so = PropertyFactory.getProp(t, e.tr.so, 0, 0.01, this), this.eo = PropertyFactory.getProp(t, e.tr.eo, 0, 0.01, this), this.data = e, this.dynamicProperties.length || this.getValue(true), this._isAnimated = !!this.dynamicProperties.length, this.pMatrix = new Matrix(), this.rMatrix = new Matrix(), this.sMatrix = new Matrix(), this.tMatrix = new Matrix(), this.matrix = new Matrix();
-        }, RepeaterModifier.prototype.applyTransforms = function(t, e, i, r, s, a) {
+        }, RepeaterModifier.prototype.applyTransforms = function (t, e, i, r, s, a) {
           var n = a ? -1 : 1, o = r.s.v[0] + (1 - r.s.v[0]) * (1 - s), h = r.s.v[1] + (1 - r.s.v[1]) * (1 - s);
           t.translate(r.p.v[0] * n * s, r.p.v[1] * n * s, r.p.v[2]), e.translate(-r.a.v[0], -r.a.v[1], r.a.v[2]), e.rotate(-r.r.v * n * s), e.translate(r.a.v[0], r.a.v[1], r.a.v[2]), i.translate(-r.a.v[0], -r.a.v[1], r.a.v[2]), i.scale(a ? 1 / o : o, a ? 1 / h : h), i.translate(r.a.v[0], r.a.v[1], r.a.v[2]);
-        }, RepeaterModifier.prototype.init = function(t, e, i, r) {
-          for (this.elem = t, this.arr = e, this.pos = i, this.elemsData = r, this._currentCopies = 0, this._elements = [], this._groups = [], this.frameId = -1, this.initDynamicPropertyContainer(t), this.initModifierProperties(t, e[i]); i > 0; )
+        }, RepeaterModifier.prototype.init = function (t, e, i, r) {
+          for (this.elem = t, this.arr = e, this.pos = i, this.elemsData = r, this._currentCopies = 0, this._elements = [], this._groups = [], this.frameId = -1, this.initDynamicPropertyContainer(t), this.initModifierProperties(t, e[i]); i > 0;)
             i -= 1, this._elements.unshift(e[i]);
           this.dynamicProperties.length ? this.k = true : this.getValue(true);
-        }, RepeaterModifier.prototype.resetElements = function(t) {
+        }, RepeaterModifier.prototype.resetElements = function (t) {
           var e, i = t.length;
           for (e = 0; e < i; e += 1)
             t[e]._processed = false, "gr" === t[e].ty && this.resetElements(t[e].it);
-        }, RepeaterModifier.prototype.cloneElements = function(t) {
+        }, RepeaterModifier.prototype.cloneElements = function (t) {
           var e = JSON.parse(JSON.stringify(t));
           return this.resetElements(e), e;
-        }, RepeaterModifier.prototype.changeGroupRender = function(t, e) {
+        }, RepeaterModifier.prototype.changeGroupRender = function (t, e) {
           var i, r = t.length;
           for (i = 0; i < r; i += 1)
             t[i]._render = e, "gr" === t[i].ty && this.changeGroupRender(t[i].it, e);
-        }, RepeaterModifier.prototype.processShapes = function(t) {
+        }, RepeaterModifier.prototype.processShapes = function (t) {
           var e, i, r, s, a, n = false;
           if (this._mdf || t) {
             var o, h = Math.ceil(this.c.v);
             if (this._groups.length < h) {
-              for (; this._groups.length < h; ) {
+              for (; this._groups.length < h;) {
                 var l = { it: this.cloneElements(this._elements), ty: "gr" };
                 l.it.push({ a: { a: 0, ix: 1, k: [0, 0] }, nm: "Transform", o: { a: 0, ix: 7, k: 100 }, p: { a: 0, ix: 2, k: [0, 0] }, r: { a: 1, ix: 6, k: [{ s: 0, e: 0, t: 0 }, { s: 0, e: 0, t: 1 }] }, s: { a: 0, ix: 3, k: [100, 100] }, sa: { a: 0, ix: 5, k: 0 }, sk: { a: 0, ix: 4, k: 0 }, ty: "tr" }), this.arr.splice(0, 0, l), this._groups.splice(0, 0, l), this._currentCopies += 1;
               }
@@ -11379,15 +11429,15 @@
             this.pMatrix.reset(), this.rMatrix.reset(), this.sMatrix.reset(), this.tMatrix.reset(), this.matrix.reset();
             var v, b, x = 0;
             if (m > 0) {
-              for (; x < d; )
+              for (; x < d;)
                 this.applyTransforms(this.pMatrix, this.rMatrix, this.sMatrix, this.tr, 1, false), x += 1;
               c && (this.applyTransforms(this.pMatrix, this.rMatrix, this.sMatrix, this.tr, c, false), x += c);
             } else if (m < 0) {
-              for (; x > d; )
+              for (; x > d;)
                 this.applyTransforms(this.pMatrix, this.rMatrix, this.sMatrix, this.tr, 1, true), x -= 1;
               c && (this.applyTransforms(this.pMatrix, this.rMatrix, this.sMatrix, this.tr, -c, true), x -= c);
             }
-            for (r = 1 === this.data.m ? 0 : this._currentCopies - 1, s = 1 === this.data.m ? 1 : -1, a = this._currentCopies; a; ) {
+            for (r = 1 === this.data.m ? 0 : this._currentCopies - 1, s = 1 === this.data.m ? 1 : -1, a = this._currentCopies; a;) {
               if (b = (i = (e = this.elemsData[r].it)[e.length - 1].transform.mProps.v.props).length, e[e.length - 1].transform.mProps._mdf = true, e[e.length - 1].transform.op._mdf = true, e[e.length - 1].transform.op.v = 1 === this._currentCopies ? this.so.v : this.so.v + (this.eo.v - this.so.v) * (r / (this._currentCopies - 1)), 0 !== x) {
                 for ((0 !== r && 1 === s || r !== this._currentCopies - 1 && -1 === s) && this.applyTransforms(this.pMatrix, this.rMatrix, this.sMatrix, this.tr, 1, false), this.matrix.transform(y[0], y[1], y[2], y[3], y[4], y[5], y[6], y[7], y[8], y[9], y[10], y[11], y[12], y[13], y[14], y[15]), this.matrix.transform(g[0], g[1], g[2], g[3], g[4], g[5], g[6], g[7], g[8], g[9], g[10], g[11], g[12], g[13], g[14], g[15]), this.matrix.transform(u[0], u[1], u[2], u[3], u[4], u[5], u[6], u[7], u[8], u[9], u[10], u[11], u[12], u[13], u[14], u[15]), v = 0; v < b; v += 1)
                   i[v] = this.matrix.props[v];
@@ -11398,20 +11448,20 @@
               x += 1, a -= 1, r += s;
             }
           } else
-            for (a = this._currentCopies, r = 0, s = 1; a; )
+            for (a = this._currentCopies, r = 0, s = 1; a;)
               i = (e = this.elemsData[r].it)[e.length - 1].transform.mProps.v.props, e[e.length - 1].transform.mProps._mdf = false, e[e.length - 1].transform.op._mdf = false, a -= 1, r += s;
           return n;
-        }, RepeaterModifier.prototype.addShape = function() {
-        }, extendPrototype([ShapeModifier], RoundCornersModifier), RoundCornersModifier.prototype.initModifierProperties = function(t, e) {
+        }, RepeaterModifier.prototype.addShape = function () {
+        }, extendPrototype([ShapeModifier], RoundCornersModifier), RoundCornersModifier.prototype.initModifierProperties = function (t, e) {
           this.getValue = this.processKeys, this.rd = PropertyFactory.getProp(t, e.r, 0, null, this), this._isAnimated = !!this.rd.effectsSequence.length;
-        }, RoundCornersModifier.prototype.processPath = function(t, e) {
+        }, RoundCornersModifier.prototype.processPath = function (t, e) {
           var i, r = shapePool.newElement();
           r.c = t.c;
           var s, a, n, o, h, l, p, f, m, c, d, u, y = t._length, g = 0;
           for (i = 0; i < y; i += 1)
             s = t.v[i], n = t.o[i], a = t.i[i], s[0] === n[0] && s[1] === n[1] && s[0] === a[0] && s[1] === a[1] ? 0 !== i && i !== y - 1 || t.c ? (o = 0 === i ? t.v[y - 1] : t.v[i - 1], l = (h = Math.sqrt(Math.pow(s[0] - o[0], 2) + Math.pow(s[1] - o[1], 2))) ? Math.min(h / 2, e) / h : 0, p = d = s[0] + (o[0] - s[0]) * l, f = u = s[1] - (s[1] - o[1]) * l, m = p - (p - s[0]) * roundCorner, c = f - (f - s[1]) * roundCorner, r.setTripleAt(p, f, m, c, d, u, g), g += 1, o = i === y - 1 ? t.v[0] : t.v[i + 1], l = (h = Math.sqrt(Math.pow(s[0] - o[0], 2) + Math.pow(s[1] - o[1], 2))) ? Math.min(h / 2, e) / h : 0, p = m = s[0] + (o[0] - s[0]) * l, f = c = s[1] + (o[1] - s[1]) * l, d = p - (p - s[0]) * roundCorner, u = f - (f - s[1]) * roundCorner, r.setTripleAt(p, f, m, c, d, u, g), g += 1) : (r.setTripleAt(s[0], s[1], n[0], n[1], a[0], a[1], g), g += 1) : (r.setTripleAt(t.v[i][0], t.v[i][1], t.o[i][0], t.o[i][1], t.i[i][0], t.i[i][1], g), g += 1);
           return r;
-        }, RoundCornersModifier.prototype.processShapes = function(t) {
+        }, RoundCornersModifier.prototype.processShapes = function (t) {
           var e, i, r, s, a, n, o = this.shapes.length, h = this.rd.v;
           if (0 !== h)
             for (i = 0; i < o; i += 1) {
@@ -11421,17 +11471,17 @@
               a.shape.paths = a.localShapeCollection;
             }
           this.dynamicProperties.length || (this._mdf = false);
-        }, PolynomialBezier.prototype.point = function(t) {
+        }, PolynomialBezier.prototype.point = function (t) {
           return [((this.a[0] * t + this.b[0]) * t + this.c[0]) * t + this.d[0], ((this.a[1] * t + this.b[1]) * t + this.c[1]) * t + this.d[1]];
-        }, PolynomialBezier.prototype.derivative = function(t) {
+        }, PolynomialBezier.prototype.derivative = function (t) {
           return [(3 * t * this.a[0] + 2 * this.b[0]) * t + this.c[0], (3 * t * this.a[1] + 2 * this.b[1]) * t + this.c[1]];
-        }, PolynomialBezier.prototype.tangentAngle = function(t) {
+        }, PolynomialBezier.prototype.tangentAngle = function (t) {
           var e = this.derivative(t);
           return Math.atan2(e[1], e[0]);
-        }, PolynomialBezier.prototype.normalAngle = function(t) {
+        }, PolynomialBezier.prototype.normalAngle = function (t) {
           var e = this.derivative(t);
           return Math.atan2(e[0], e[1]);
-        }, PolynomialBezier.prototype.inflectionPoints = function() {
+        }, PolynomialBezier.prototype.inflectionPoints = function () {
           var t = this.a[1] * this.b[0] - this.a[0] * this.b[1];
           if (floatZero(t))
             return [];
@@ -11439,34 +11489,34 @@
           if (i < 0)
             return [];
           var r = Math.sqrt(i);
-          return floatZero(r) ? r > 0 && r < 1 ? [e] : [] : [e - r, e + r].filter(function(t2) {
+          return floatZero(r) ? r > 0 && r < 1 ? [e] : [] : [e - r, e + r].filter(function (t2) {
             return t2 > 0 && t2 < 1;
           });
-        }, PolynomialBezier.prototype.split = function(t) {
+        }, PolynomialBezier.prototype.split = function (t) {
           if (t <= 0)
             return [singlePoint(this.points[0]), this];
           if (t >= 1)
             return [this, singlePoint(this.points[this.points.length - 1])];
           var e = lerpPoint(this.points[0], this.points[1], t), i = lerpPoint(this.points[1], this.points[2], t), r = lerpPoint(this.points[2], this.points[3], t), s = lerpPoint(e, i, t), a = lerpPoint(i, r, t), n = lerpPoint(s, a, t);
           return [new PolynomialBezier(this.points[0], e, s, n, true), new PolynomialBezier(n, a, r, this.points[3], true)];
-        }, PolynomialBezier.prototype.bounds = function() {
+        }, PolynomialBezier.prototype.bounds = function () {
           return { x: extrema(this, 0), y: extrema(this, 1) };
-        }, PolynomialBezier.prototype.boundingBox = function() {
+        }, PolynomialBezier.prototype.boundingBox = function () {
           var t = this.bounds();
           return { left: t.x.min, right: t.x.max, top: t.y.min, bottom: t.y.max, width: t.x.max - t.x.min, height: t.y.max - t.y.min, cx: (t.x.max + t.x.min) / 2, cy: (t.y.max + t.y.min) / 2 };
-        }, PolynomialBezier.prototype.intersections = function(t, e, i) {
+        }, PolynomialBezier.prototype.intersections = function (t, e, i) {
           void 0 === e && (e = 2), void 0 === i && (i = 7);
           var r = [];
           return intersectsImpl(intersectData(this, 0, 1), intersectData(t, 0, 1), 0, e, r, i), r;
-        }, PolynomialBezier.shapeSegment = function(t, e) {
+        }, PolynomialBezier.shapeSegment = function (t, e) {
           var i = (e + 1) % t.length();
           return new PolynomialBezier(t.v[e], t.o[e], t.i[i], t.v[i], true);
-        }, PolynomialBezier.shapeSegmentInverted = function(t, e) {
+        }, PolynomialBezier.shapeSegmentInverted = function (t, e) {
           var i = (e + 1) % t.length();
           return new PolynomialBezier(t.v[i], t.i[i], t.o[e], t.v[e], true);
-        }, extendPrototype([ShapeModifier], ZigZagModifier), ZigZagModifier.prototype.initModifierProperties = function(t, e) {
+        }, extendPrototype([ShapeModifier], ZigZagModifier), ZigZagModifier.prototype.initModifierProperties = function (t, e) {
           this.getValue = this.processKeys, this.amplitude = PropertyFactory.getProp(t, e.s, 0, null, this), this.frequency = PropertyFactory.getProp(t, e.r, 0, null, this), this.pointsType = PropertyFactory.getProp(t, e.pt, 0, null, this), this._isAnimated = 0 !== this.amplitude.effectsSequence.length || 0 !== this.frequency.effectsSequence.length || 0 !== this.pointsType.effectsSequence.length;
-        }, ZigZagModifier.prototype.processPath = function(t, e, i, r) {
+        }, ZigZagModifier.prototype.processPath = function (t, e, i, r) {
           var s = t._length, a = shapePool.newElement();
           if (a.c = t.c, t.c || (s -= 1), 0 === s)
             return a;
@@ -11475,7 +11525,7 @@
           for (var h = 0; h < s; h += 1)
             n = zigZagSegment(a, o, e, i, r, -n), o = h !== s - 1 || t.c ? PolynomialBezier.shapeSegment(t, (h + 1) % s) : null, zigZagCorner(a, t, h + 1, e, i, r, n);
           return a;
-        }, ZigZagModifier.prototype.processShapes = function(t) {
+        }, ZigZagModifier.prototype.processShapes = function (t) {
           var e, i, r, s, a, n, o = this.shapes.length, h = this.amplitude.v, l = Math.max(0, Math.round(this.frequency.v)), p = this.pointsType.v;
           if (0 !== h)
             for (i = 0; i < o; i += 1) {
@@ -11485,9 +11535,9 @@
               a.shape.paths = a.localShapeCollection;
             }
           this.dynamicProperties.length || (this._mdf = false);
-        }, extendPrototype([ShapeModifier], OffsetPathModifier), OffsetPathModifier.prototype.initModifierProperties = function(t, e) {
+        }, extendPrototype([ShapeModifier], OffsetPathModifier), OffsetPathModifier.prototype.initModifierProperties = function (t, e) {
           this.getValue = this.processKeys, this.amount = PropertyFactory.getProp(t, e.a, 0, null, this), this.miterLimit = PropertyFactory.getProp(t, e.ml, 0, null, this), this.lineJoin = e.lj, this._isAnimated = 0 !== this.amount.effectsSequence.length;
-        }, OffsetPathModifier.prototype.processPath = function(t, e, i, r) {
+        }, OffsetPathModifier.prototype.processPath = function (t, e, i, r) {
           var s = shapePool.newElement();
           s.c = t.c;
           var a, n, o, h = t.length();
@@ -11506,7 +11556,7 @@
               o = m[n], p && pointEqual(o.points[0], p) ? s.setXYAt(o.points[1][0], o.points[1][1], "o", s.length() - 1) : s.setTripleAt(o.points[0][0], o.points[0][1], o.points[1][0], o.points[1][1], o.points[0][0], o.points[0][1], s.length()), s.setTripleAt(o.points[3][0], o.points[3][1], o.points[3][0], o.points[3][1], o.points[2][0], o.points[2][1], s.length()), p = o.points[3];
           }
           return l.length && joinLines(s, f, l[0][0], i, r), s;
-        }, OffsetPathModifier.prototype.processShapes = function(t) {
+        }, OffsetPathModifier.prototype.processShapes = function (t) {
           var e, i, r, s, a, n, o = this.shapes.length, h = this.amount.v, l = this.miterLimit.v, p = this.lineJoin;
           if (0 !== h)
             for (i = 0; i < o; i += 1) {
@@ -11517,7 +11567,7 @@
             }
           this.dynamicProperties.length || (this._mdf = false);
         };
-        var FontManager = function() {
+        var FontManager = function () {
           var t = { w: 0, size: 0, shapes: [], data: { shapes: [] } }, e = [];
           e = e.concat([2304, 2305, 2306, 2307, 2362, 2363, 2364, 2364, 2366, 2367, 2368, 2369, 2370, 2371, 2372, 2373, 2374, 2375, 2376, 2377, 2378, 2379, 2380, 2381, 2382, 2383, 2387, 2388, 2389, 2390, 2391, 2402, 2403]);
           var i = 127988, r = ["d83cdffb", "d83cdffc", "d83cdffd", "d83cdffe", "d83cdfff"];
@@ -11527,7 +11577,7 @@
             var r2 = createTag("span");
             r2.innerText = "giItT1WQy@!-/#", i2.style.position = "absolute", i2.style.left = "-10000px", i2.style.top = "-10000px", i2.style.fontSize = "300px", i2.style.fontVariant = "normal", i2.style.fontStyle = "normal", i2.style.fontWeight = "normal", i2.style.letterSpacing = "0", i2.appendChild(r2), document.body.appendChild(i2);
             var s2 = r2.offsetWidth;
-            return r2.style.fontFamily = function(t3) {
+            return r2.style.fontFamily = function (t3) {
               var e3, i3 = t3.split(","), r3 = i3.length, s3 = [];
               for (e3 = 0; e3 < r3; e3 += 1)
                 "sans-serif" !== i3[e3] && "monospace" !== i3[e3] && s3.push(i3[e3]);
@@ -11543,9 +11593,11 @@
               var n2 = new OffscreenCanvas(500, 500).getContext("2d");
               n2.font = s2.style + " " + s2.weight + " 100px " + t2.fFamily, i2 = n2;
             }
-            return { measureText: function(t3) {
-              return "svg" === r2 ? (i2.textContent = t3, i2.getComputedTextLength()) : i2.measureText(t3).width;
-            } };
+            return {
+              measureText: function (t3) {
+                return "svg" === r2 ? (i2.textContent = t3, i2.getComputedTextLength()) : i2.measureText(t3).width;
+              }
+            };
           }
           function n(t2) {
             var e2 = 0, i2 = t2.charCodeAt(0);
@@ -11559,115 +11611,117 @@
             var e2 = n(t2);
             return e2 >= 127462 && e2 <= 127487;
           }
-          var h = function() {
+          var h = function () {
             this.fonts = [], this.chars = null, this.typekitLoaded = 0, this.isLoaded = false, this._warned = false, this.initTime = Date.now(), this.setIsLoadedBinded = this.setIsLoaded.bind(this), this.checkLoadedFontsBinded = this.checkLoadedFonts.bind(this);
           };
-          h.isModifier = function(t2, e2) {
+          h.isModifier = function (t2, e2) {
             var i2 = t2.toString(16) + e2.toString(16);
             return -1 !== r.indexOf(i2);
-          }, h.isZeroWidthJoiner = function(t2) {
+          }, h.isZeroWidthJoiner = function (t2) {
             return 8205 === t2;
-          }, h.isFlagEmoji = function(t2) {
+          }, h.isFlagEmoji = function (t2) {
             return o(t2.substr(0, 2)) && o(t2.substr(2, 2));
-          }, h.isRegionalCode = o, h.isCombinedCharacter = function(t2) {
+          }, h.isRegionalCode = o, h.isCombinedCharacter = function (t2) {
             return -1 !== e.indexOf(t2);
-          }, h.isRegionalFlag = function(t2, e2) {
+          }, h.isRegionalFlag = function (t2, e2) {
             var r2 = n(t2.substr(e2, 2));
             if (r2 !== i)
               return false;
             var s2 = 0;
-            for (e2 += 2; s2 < 5; ) {
+            for (e2 += 2; s2 < 5;) {
               if ((r2 = n(t2.substr(e2, 2))) < 917601 || r2 > 917626)
                 return false;
               s2 += 1, e2 += 2;
             }
             return 917631 === n(t2.substr(e2, 2));
-          }, h.isVariationSelector = function(t2) {
+          }, h.isVariationSelector = function (t2) {
             return 65039 === t2;
           }, h.BLACK_FLAG_CODE_POINT = i;
-          var l = { addChars: function(t2) {
-            if (t2) {
-              var e2;
-              this.chars || (this.chars = []);
-              var i2, r2, s2 = t2.length, a2 = this.chars.length;
-              for (e2 = 0; e2 < s2; e2 += 1) {
-                for (i2 = 0, r2 = false; i2 < a2; )
-                  this.chars[i2].style === t2[e2].style && this.chars[i2].fFamily === t2[e2].fFamily && this.chars[i2].ch === t2[e2].ch && (r2 = true), i2 += 1;
-                r2 || (this.chars.push(t2[e2]), a2 += 1);
+          var l = {
+            addChars: function (t2) {
+              if (t2) {
+                var e2;
+                this.chars || (this.chars = []);
+                var i2, r2, s2 = t2.length, a2 = this.chars.length;
+                for (e2 = 0; e2 < s2; e2 += 1) {
+                  for (i2 = 0, r2 = false; i2 < a2;)
+                    this.chars[i2].style === t2[e2].style && this.chars[i2].fFamily === t2[e2].fFamily && this.chars[i2].ch === t2[e2].ch && (r2 = true), i2 += 1;
+                  r2 || (this.chars.push(t2[e2]), a2 += 1);
+                }
               }
-            }
-          }, addFonts: function(t2, e2) {
-            if (t2) {
-              if (this.chars)
-                return this.isLoaded = true, void (this.fonts = t2.list);
-              if (!document.body)
-                return this.isLoaded = true, t2.list.forEach(function(t3) {
-                  t3.helper = a(t3), t3.cache = {};
-                }), void (this.fonts = t2.list);
-              var i2, r2 = t2.list, n2 = r2.length, o2 = n2;
-              for (i2 = 0; i2 < n2; i2 += 1) {
-                var h2, l2, p = true;
-                if (r2[i2].loaded = false, r2[i2].monoCase = s(r2[i2].fFamily, "monospace"), r2[i2].sansCase = s(r2[i2].fFamily, "sans-serif"), r2[i2].fPath) {
-                  if ("p" === r2[i2].fOrigin || 3 === r2[i2].origin) {
-                    if ((h2 = document.querySelectorAll('style[f-forigin="p"][f-family="' + r2[i2].fFamily + '"], style[f-origin="3"][f-family="' + r2[i2].fFamily + '"]')).length > 0 && (p = false), p) {
-                      var f = createTag("style");
-                      f.setAttribute("f-forigin", r2[i2].fOrigin), f.setAttribute("f-origin", r2[i2].origin), f.setAttribute("f-family", r2[i2].fFamily), f.type = "text/css", f.innerText = "@font-face {font-family: " + r2[i2].fFamily + "; font-style: normal; src: url('" + r2[i2].fPath + "');}", e2.appendChild(f);
+            }, addFonts: function (t2, e2) {
+              if (t2) {
+                if (this.chars)
+                  return this.isLoaded = true, void (this.fonts = t2.list);
+                if (!document.body)
+                  return this.isLoaded = true, t2.list.forEach(function (t3) {
+                    t3.helper = a(t3), t3.cache = {};
+                  }), void (this.fonts = t2.list);
+                var i2, r2 = t2.list, n2 = r2.length, o2 = n2;
+                for (i2 = 0; i2 < n2; i2 += 1) {
+                  var h2, l2, p = true;
+                  if (r2[i2].loaded = false, r2[i2].monoCase = s(r2[i2].fFamily, "monospace"), r2[i2].sansCase = s(r2[i2].fFamily, "sans-serif"), r2[i2].fPath) {
+                    if ("p" === r2[i2].fOrigin || 3 === r2[i2].origin) {
+                      if ((h2 = document.querySelectorAll('style[f-forigin="p"][f-family="' + r2[i2].fFamily + '"], style[f-origin="3"][f-family="' + r2[i2].fFamily + '"]')).length > 0 && (p = false), p) {
+                        var f = createTag("style");
+                        f.setAttribute("f-forigin", r2[i2].fOrigin), f.setAttribute("f-origin", r2[i2].origin), f.setAttribute("f-family", r2[i2].fFamily), f.type = "text/css", f.innerText = "@font-face {font-family: " + r2[i2].fFamily + "; font-style: normal; src: url('" + r2[i2].fPath + "');}", e2.appendChild(f);
+                      }
+                    } else if ("g" === r2[i2].fOrigin || 1 === r2[i2].origin) {
+                      for (h2 = document.querySelectorAll('link[f-forigin="g"], link[f-origin="1"]'), l2 = 0; l2 < h2.length; l2 += 1)
+                        -1 !== h2[l2].href.indexOf(r2[i2].fPath) && (p = false);
+                      if (p) {
+                        var m = createTag("link");
+                        m.setAttribute("f-forigin", r2[i2].fOrigin), m.setAttribute("f-origin", r2[i2].origin), m.type = "text/css", m.rel = "stylesheet", m.href = r2[i2].fPath, document.body.appendChild(m);
+                      }
+                    } else if ("t" === r2[i2].fOrigin || 2 === r2[i2].origin) {
+                      for (h2 = document.querySelectorAll('script[f-forigin="t"], script[f-origin="2"]'), l2 = 0; l2 < h2.length; l2 += 1)
+                        r2[i2].fPath === h2[l2].src && (p = false);
+                      if (p) {
+                        var c = createTag("link");
+                        c.setAttribute("f-forigin", r2[i2].fOrigin), c.setAttribute("f-origin", r2[i2].origin), c.setAttribute("rel", "stylesheet"), c.setAttribute("href", r2[i2].fPath), e2.appendChild(c);
+                      }
                     }
-                  } else if ("g" === r2[i2].fOrigin || 1 === r2[i2].origin) {
-                    for (h2 = document.querySelectorAll('link[f-forigin="g"], link[f-origin="1"]'), l2 = 0; l2 < h2.length; l2 += 1)
-                      -1 !== h2[l2].href.indexOf(r2[i2].fPath) && (p = false);
-                    if (p) {
-                      var m = createTag("link");
-                      m.setAttribute("f-forigin", r2[i2].fOrigin), m.setAttribute("f-origin", r2[i2].origin), m.type = "text/css", m.rel = "stylesheet", m.href = r2[i2].fPath, document.body.appendChild(m);
-                    }
-                  } else if ("t" === r2[i2].fOrigin || 2 === r2[i2].origin) {
-                    for (h2 = document.querySelectorAll('script[f-forigin="t"], script[f-origin="2"]'), l2 = 0; l2 < h2.length; l2 += 1)
-                      r2[i2].fPath === h2[l2].src && (p = false);
-                    if (p) {
-                      var c = createTag("link");
-                      c.setAttribute("f-forigin", r2[i2].fOrigin), c.setAttribute("f-origin", r2[i2].origin), c.setAttribute("rel", "stylesheet"), c.setAttribute("href", r2[i2].fPath), e2.appendChild(c);
-                    }
-                  }
-                } else
-                  r2[i2].loaded = true, o2 -= 1;
-                r2[i2].helper = a(r2[i2], e2), r2[i2].cache = {}, this.fonts.push(r2[i2]);
-              }
-              0 === o2 ? this.isLoaded = true : setTimeout(this.checkLoadedFonts.bind(this), 100);
-            } else
-              this.isLoaded = true;
-          }, getCharData: function(e2, i2, r2) {
-            for (var s2 = 0, a2 = this.chars.length; s2 < a2; ) {
-              if (this.chars[s2].ch === e2 && this.chars[s2].style === i2 && this.chars[s2].fFamily === r2)
-                return this.chars[s2];
-              s2 += 1;
-            }
-            return ("string" == typeof e2 && 13 !== e2.charCodeAt(0) || !e2) && console && console.warn && !this._warned && (this._warned = true, console.warn("Missing character from exported characters list: ", e2, i2, r2)), t;
-          }, getFontByName: function(t2) {
-            for (var e2 = 0, i2 = this.fonts.length; e2 < i2; ) {
-              if (this.fonts[e2].fName === t2)
-                return this.fonts[e2];
-              e2 += 1;
-            }
-            return this.fonts[0];
-          }, measureText: function(t2, e2, i2) {
-            var r2 = this.getFontByName(e2), s2 = t2;
-            if (!r2.cache[s2]) {
-              var a2 = r2.helper;
-              if (" " === t2) {
-                var n2 = a2.measureText("|" + t2 + "|"), o2 = a2.measureText("||");
-                r2.cache[s2] = (n2 - o2) / 100;
+                  } else
+                    r2[i2].loaded = true, o2 -= 1;
+                  r2[i2].helper = a(r2[i2], e2), r2[i2].cache = {}, this.fonts.push(r2[i2]);
+                }
+                0 === o2 ? this.isLoaded = true : setTimeout(this.checkLoadedFonts.bind(this), 100);
               } else
-                r2.cache[s2] = a2.measureText(t2) / 100;
+                this.isLoaded = true;
+            }, getCharData: function (e2, i2, r2) {
+              for (var s2 = 0, a2 = this.chars.length; s2 < a2;) {
+                if (this.chars[s2].ch === e2 && this.chars[s2].style === i2 && this.chars[s2].fFamily === r2)
+                  return this.chars[s2];
+                s2 += 1;
+              }
+              return ("string" == typeof e2 && 13 !== e2.charCodeAt(0) || !e2) && console && console.warn && !this._warned && (this._warned = true, console.warn("Missing character from exported characters list: ", e2, i2, r2)), t;
+            }, getFontByName: function (t2) {
+              for (var e2 = 0, i2 = this.fonts.length; e2 < i2;) {
+                if (this.fonts[e2].fName === t2)
+                  return this.fonts[e2];
+                e2 += 1;
+              }
+              return this.fonts[0];
+            }, measureText: function (t2, e2, i2) {
+              var r2 = this.getFontByName(e2), s2 = t2;
+              if (!r2.cache[s2]) {
+                var a2 = r2.helper;
+                if (" " === t2) {
+                  var n2 = a2.measureText("|" + t2 + "|"), o2 = a2.measureText("||");
+                  r2.cache[s2] = (n2 - o2) / 100;
+                } else
+                  r2.cache[s2] = a2.measureText(t2) / 100;
+              }
+              return r2.cache[s2] * i2;
+            }, checkLoadedFonts: function () {
+              var t2, e2, i2, r2 = this.fonts.length, s2 = r2;
+              for (t2 = 0; t2 < r2; t2 += 1)
+                this.fonts[t2].loaded ? s2 -= 1 : "n" === this.fonts[t2].fOrigin || 0 === this.fonts[t2].origin ? this.fonts[t2].loaded = true : (e2 = this.fonts[t2].monoCase.node, i2 = this.fonts[t2].monoCase.w, e2.offsetWidth !== i2 ? (s2 -= 1, this.fonts[t2].loaded = true) : (e2 = this.fonts[t2].sansCase.node, i2 = this.fonts[t2].sansCase.w, e2.offsetWidth !== i2 && (s2 -= 1, this.fonts[t2].loaded = true)), this.fonts[t2].loaded && (this.fonts[t2].sansCase.parent.parentNode.removeChild(this.fonts[t2].sansCase.parent), this.fonts[t2].monoCase.parent.parentNode.removeChild(this.fonts[t2].monoCase.parent)));
+              0 !== s2 && Date.now() - this.initTime < 5e3 ? setTimeout(this.checkLoadedFontsBinded, 20) : setTimeout(this.setIsLoadedBinded, 10);
+            }, setIsLoaded: function () {
+              this.isLoaded = true;
             }
-            return r2.cache[s2] * i2;
-          }, checkLoadedFonts: function() {
-            var t2, e2, i2, r2 = this.fonts.length, s2 = r2;
-            for (t2 = 0; t2 < r2; t2 += 1)
-              this.fonts[t2].loaded ? s2 -= 1 : "n" === this.fonts[t2].fOrigin || 0 === this.fonts[t2].origin ? this.fonts[t2].loaded = true : (e2 = this.fonts[t2].monoCase.node, i2 = this.fonts[t2].monoCase.w, e2.offsetWidth !== i2 ? (s2 -= 1, this.fonts[t2].loaded = true) : (e2 = this.fonts[t2].sansCase.node, i2 = this.fonts[t2].sansCase.w, e2.offsetWidth !== i2 && (s2 -= 1, this.fonts[t2].loaded = true)), this.fonts[t2].loaded && (this.fonts[t2].sansCase.parent.parentNode.removeChild(this.fonts[t2].sansCase.parent), this.fonts[t2].monoCase.parent.parentNode.removeChild(this.fonts[t2].monoCase.parent)));
-            0 !== s2 && Date.now() - this.initTime < 5e3 ? setTimeout(this.checkLoadedFontsBinded, 20) : setTimeout(this.setIsLoadedBinded, 10);
-          }, setIsLoaded: function() {
-            this.isLoaded = true;
-          } };
+          };
           return h.prototype = l, h;
         }();
         function SlotManager(t) {
@@ -11678,30 +11732,32 @@
         }
         function RenderableElement() {
         }
-        SlotManager.prototype.getProp = function(t) {
+        SlotManager.prototype.getProp = function (t) {
           return this.animationData.slots && this.animationData.slots[t.sid] ? Object.assign(t, this.animationData.slots[t.sid].p) : t;
-        }, RenderableElement.prototype = { initRenderable: function() {
-          this.isInRange = false, this.hidden = false, this.isTransparent = false, this.renderableComponents = [];
-        }, addRenderableComponent: function(t) {
-          -1 === this.renderableComponents.indexOf(t) && this.renderableComponents.push(t);
-        }, removeRenderableComponent: function(t) {
-          -1 !== this.renderableComponents.indexOf(t) && this.renderableComponents.splice(this.renderableComponents.indexOf(t), 1);
-        }, prepareRenderableFrame: function(t) {
-          this.checkLayerLimits(t);
-        }, checkTransparency: function() {
-          this.finalTransform.mProp.o.v <= 0 ? !this.isTransparent && this.globalData.renderConfig.hideOnTransparent && (this.isTransparent = true, this.hide()) : this.isTransparent && (this.isTransparent = false, this.show());
-        }, checkLayerLimits: function(t) {
-          this.data.ip - this.data.st <= t && this.data.op - this.data.st > t ? true !== this.isInRange && (this.globalData._mdf = true, this._mdf = true, this.isInRange = true, this.show()) : false !== this.isInRange && (this.globalData._mdf = true, this.isInRange = false, this.hide());
-        }, renderRenderable: function() {
-          var t, e = this.renderableComponents.length;
-          for (t = 0; t < e; t += 1)
-            this.renderableComponents[t].renderFrame(this._isFirstFrame);
-        }, sourceRectAtTime: function() {
-          return { top: 0, left: 0, width: 100, height: 100 };
-        }, getLayerSize: function() {
-          return 5 === this.data.ty ? { w: this.data.textData.width, h: this.data.textData.height } : { w: this.data.width, h: this.data.height };
-        } };
-        var getBlendMode = (blendModeEnums = { 0: "source-over", 1: "multiply", 2: "screen", 3: "overlay", 4: "darken", 5: "lighten", 6: "color-dodge", 7: "color-burn", 8: "hard-light", 9: "soft-light", 10: "difference", 11: "exclusion", 12: "hue", 13: "saturation", 14: "color", 15: "luminosity" }, function(t) {
+        }, RenderableElement.prototype = {
+          initRenderable: function () {
+            this.isInRange = false, this.hidden = false, this.isTransparent = false, this.renderableComponents = [];
+          }, addRenderableComponent: function (t) {
+            -1 === this.renderableComponents.indexOf(t) && this.renderableComponents.push(t);
+          }, removeRenderableComponent: function (t) {
+            -1 !== this.renderableComponents.indexOf(t) && this.renderableComponents.splice(this.renderableComponents.indexOf(t), 1);
+          }, prepareRenderableFrame: function (t) {
+            this.checkLayerLimits(t);
+          }, checkTransparency: function () {
+            this.finalTransform.mProp.o.v <= 0 ? !this.isTransparent && this.globalData.renderConfig.hideOnTransparent && (this.isTransparent = true, this.hide()) : this.isTransparent && (this.isTransparent = false, this.show());
+          }, checkLayerLimits: function (t) {
+            this.data.ip - this.data.st <= t && this.data.op - this.data.st > t ? true !== this.isInRange && (this.globalData._mdf = true, this._mdf = true, this.isInRange = true, this.show()) : false !== this.isInRange && (this.globalData._mdf = true, this.isInRange = false, this.hide());
+          }, renderRenderable: function () {
+            var t, e = this.renderableComponents.length;
+            for (t = 0; t < e; t += 1)
+              this.renderableComponents[t].renderFrame(this._isFirstFrame);
+          }, sourceRectAtTime: function () {
+            return { top: 0, left: 0, width: 100, height: 100 };
+          }, getLayerSize: function () {
+            return 5 === this.data.ty ? { w: this.data.textData.width, h: this.data.textData.height } : { w: this.data.width, h: this.data.height };
+          }
+        };
+        var getBlendMode = (blendModeEnums = { 0: "source-over", 1: "multiply", 2: "screen", 3: "overlay", 4: "darken", 5: "lighten", 6: "color-dodge", 7: "color-burn", 8: "hard-light", 9: "soft-light", 10: "difference", 11: "exclusion", 12: "hue", 13: "saturation", 14: "color", 15: "luminosity" }, function (t) {
           return blendModeEnums[t] || "";
         }), blendModeEnums;
         function SliderEffect(t, e, i) {
@@ -11752,7 +11808,7 @@
         }
         function BaseRenderer() {
         }
-        extendPrototype([DynamicPropertyContainer], GroupEffect), GroupEffect.prototype.getValue = GroupEffect.prototype.iterateDynamicProperties, GroupEffect.prototype.init = function(t, e) {
+        extendPrototype([DynamicPropertyContainer], GroupEffect), GroupEffect.prototype.getValue = GroupEffect.prototype.iterateDynamicProperties, GroupEffect.prototype.init = function (t, e) {
           var i;
           this.data = t, this.effectElements = [], this.initDynamicPropertyContainer(e);
           var r, s = this.data.ef.length, a = this.data.ef;
@@ -11788,53 +11844,57 @@
             }
             r && this.effectElements.push(r);
           }
-        }, BaseElement.prototype = { checkMasks: function() {
-          if (!this.data.hasMask)
+        }, BaseElement.prototype = {
+          checkMasks: function () {
+            if (!this.data.hasMask)
+              return false;
+            for (var t = 0, e = this.data.masksProperties.length; t < e;) {
+              if ("n" !== this.data.masksProperties[t].mode && false !== this.data.masksProperties[t].cl)
+                return true;
+              t += 1;
+            }
             return false;
-          for (var t = 0, e = this.data.masksProperties.length; t < e; ) {
-            if ("n" !== this.data.masksProperties[t].mode && false !== this.data.masksProperties[t].cl)
-              return true;
-            t += 1;
+          }, initExpressions: function () {
+            var t = getExpressionInterfaces();
+            if (t) {
+              var e = t("layer"), i = t("effects"), r = t("shape"), s = t("text"), a = t("comp");
+              this.layerInterface = e(this), this.data.hasMask && this.maskManager && this.layerInterface.registerMaskInterface(this.maskManager);
+              var n = i.createEffectsInterface(this, this.layerInterface);
+              this.layerInterface.registerEffectsInterface(n), 0 === this.data.ty || this.data.xt ? this.compInterface = a(this) : 4 === this.data.ty ? (this.layerInterface.shapeInterface = r(this.shapesData, this.itemsData, this.layerInterface), this.layerInterface.content = this.layerInterface.shapeInterface) : 5 === this.data.ty && (this.layerInterface.textInterface = s(this), this.layerInterface.text = this.layerInterface.textInterface);
+            }
+          }, setBlendMode: function () {
+            var t = getBlendMode(this.data.bm);
+            (this.baseElement || this.layerElement).style["mix-blend-mode"] = t;
+          }, initBaseData: function (t, e, i) {
+            this.globalData = e, this.comp = i, this.data = t, this.layerId = createElementID(), this.data.sr || (this.data.sr = 1), this.effectsManager = new EffectsManager(this.data, this, this.dynamicProperties);
+          }, getType: function () {
+            return this.type;
+          }, sourceRectAtTime: function () {
           }
-          return false;
-        }, initExpressions: function() {
-          var t = getExpressionInterfaces();
-          if (t) {
-            var e = t("layer"), i = t("effects"), r = t("shape"), s = t("text"), a = t("comp");
-            this.layerInterface = e(this), this.data.hasMask && this.maskManager && this.layerInterface.registerMaskInterface(this.maskManager);
-            var n = i.createEffectsInterface(this, this.layerInterface);
-            this.layerInterface.registerEffectsInterface(n), 0 === this.data.ty || this.data.xt ? this.compInterface = a(this) : 4 === this.data.ty ? (this.layerInterface.shapeInterface = r(this.shapesData, this.itemsData, this.layerInterface), this.layerInterface.content = this.layerInterface.shapeInterface) : 5 === this.data.ty && (this.layerInterface.textInterface = s(this), this.layerInterface.text = this.layerInterface.textInterface);
+        }, FrameElement.prototype = {
+          initFrame: function () {
+            this._isFirstFrame = false, this.dynamicProperties = [], this._mdf = false;
+          }, prepareProperties: function (t, e) {
+            var i, r = this.dynamicProperties.length;
+            for (i = 0; i < r; i += 1)
+              (e || this._isParent && "transform" === this.dynamicProperties[i].propType) && (this.dynamicProperties[i].getValue(), this.dynamicProperties[i]._mdf && (this.globalData._mdf = true, this._mdf = true));
+          }, addDynamicProperty: function (t) {
+            -1 === this.dynamicProperties.indexOf(t) && this.dynamicProperties.push(t);
           }
-        }, setBlendMode: function() {
-          var t = getBlendMode(this.data.bm);
-          (this.baseElement || this.layerElement).style["mix-blend-mode"] = t;
-        }, initBaseData: function(t, e, i) {
-          this.globalData = e, this.comp = i, this.data = t, this.layerId = createElementID(), this.data.sr || (this.data.sr = 1), this.effectsManager = new EffectsManager(this.data, this, this.dynamicProperties);
-        }, getType: function() {
-          return this.type;
-        }, sourceRectAtTime: function() {
-        } }, FrameElement.prototype = { initFrame: function() {
-          this._isFirstFrame = false, this.dynamicProperties = [], this._mdf = false;
-        }, prepareProperties: function(t, e) {
-          var i, r = this.dynamicProperties.length;
-          for (i = 0; i < r; i += 1)
-            (e || this._isParent && "transform" === this.dynamicProperties[i].propType) && (this.dynamicProperties[i].getValue(), this.dynamicProperties[i]._mdf && (this.globalData._mdf = true, this._mdf = true));
-        }, addDynamicProperty: function(t) {
-          -1 === this.dynamicProperties.indexOf(t) && this.dynamicProperties.push(t);
-        } }, FootageElement.prototype.prepareFrame = function() {
-        }, extendPrototype([RenderableElement, BaseElement, FrameElement], FootageElement), FootageElement.prototype.getBaseElement = function() {
+        }, FootageElement.prototype.prepareFrame = function () {
+        }, extendPrototype([RenderableElement, BaseElement, FrameElement], FootageElement), FootageElement.prototype.getBaseElement = function () {
           return null;
-        }, FootageElement.prototype.renderFrame = function() {
-        }, FootageElement.prototype.destroy = function() {
-        }, FootageElement.prototype.initExpressions = function() {
+        }, FootageElement.prototype.renderFrame = function () {
+        }, FootageElement.prototype.destroy = function () {
+        }, FootageElement.prototype.initExpressions = function () {
           var t = getExpressionInterfaces();
           if (t) {
             var e = t("footage");
             this.layerInterface = e(this);
           }
-        }, FootageElement.prototype.getFootageData = function() {
+        }, FootageElement.prototype.getFootageData = function () {
           return this.footageData;
-        }, AudioElement.prototype.prepareFrame = function(t) {
+        }, AudioElement.prototype.prepareFrame = function (t) {
           if (this.prepareRenderableFrame(t, true), this.prepareProperties(t, true), this.tm._placeholder)
             this._currentTime = t / this.data.sr;
           else {
@@ -11844,30 +11904,30 @@
           this._volume = this.lv.v[0];
           var i = this._volume * this._volumeMultiplier;
           this._previousVolume !== i && (this._previousVolume = i, this.audio.volume(i));
-        }, extendPrototype([RenderableElement, BaseElement, FrameElement], AudioElement), AudioElement.prototype.renderFrame = function() {
+        }, extendPrototype([RenderableElement, BaseElement, FrameElement], AudioElement), AudioElement.prototype.renderFrame = function () {
           this.isInRange && this._canPlay && (this._isPlaying ? (!this.audio.playing() || Math.abs(this._currentTime / this.globalData.frameRate - this.audio.seek()) > 0.1) && this.audio.seek(this._currentTime / this.globalData.frameRate) : (this.audio.play(), this.audio.seek(this._currentTime / this.globalData.frameRate), this._isPlaying = true));
-        }, AudioElement.prototype.show = function() {
-        }, AudioElement.prototype.hide = function() {
+        }, AudioElement.prototype.show = function () {
+        }, AudioElement.prototype.hide = function () {
           this.audio.pause(), this._isPlaying = false;
-        }, AudioElement.prototype.pause = function() {
+        }, AudioElement.prototype.pause = function () {
           this.audio.pause(), this._isPlaying = false, this._canPlay = false;
-        }, AudioElement.prototype.resume = function() {
+        }, AudioElement.prototype.resume = function () {
           this._canPlay = true;
-        }, AudioElement.prototype.setRate = function(t) {
+        }, AudioElement.prototype.setRate = function (t) {
           this.audio.rate(t);
-        }, AudioElement.prototype.volume = function(t) {
+        }, AudioElement.prototype.volume = function (t) {
           this._volumeMultiplier = t, this._previousVolume = t * this._volume, this.audio.volume(this._previousVolume);
-        }, AudioElement.prototype.getBaseElement = function() {
+        }, AudioElement.prototype.getBaseElement = function () {
           return null;
-        }, AudioElement.prototype.destroy = function() {
-        }, AudioElement.prototype.sourceRectAtTime = function() {
-        }, AudioElement.prototype.initExpressions = function() {
-        }, BaseRenderer.prototype.checkLayers = function(t) {
+        }, AudioElement.prototype.destroy = function () {
+        }, AudioElement.prototype.sourceRectAtTime = function () {
+        }, AudioElement.prototype.initExpressions = function () {
+        }, BaseRenderer.prototype.checkLayers = function (t) {
           var e, i, r = this.layers.length;
           for (this.completeLayers = true, e = r - 1; e >= 0; e -= 1)
             this.elements[e] || (i = this.layers[e]).ip - i.st <= t - this.layers[e].st && i.op - i.st > t - this.layers[e].st && this.buildItem(e), this.completeLayers = !!this.elements[e] && this.completeLayers;
           this.checkPendingElements();
-        }, BaseRenderer.prototype.createItem = function(t) {
+        }, BaseRenderer.prototype.createItem = function (t) {
           switch (t.ty) {
             case 2:
               return this.createImage(t);
@@ -11889,52 +11949,52 @@
             case 15:
               return this.createFootage(t);
           }
-        }, BaseRenderer.prototype.createCamera = function() {
+        }, BaseRenderer.prototype.createCamera = function () {
           throw new Error("You're using a 3d camera. Try the html renderer.");
-        }, BaseRenderer.prototype.createAudio = function(t) {
+        }, BaseRenderer.prototype.createAudio = function (t) {
           return new AudioElement(t, this.globalData, this);
-        }, BaseRenderer.prototype.createFootage = function(t) {
+        }, BaseRenderer.prototype.createFootage = function (t) {
           return new FootageElement(t, this.globalData, this);
-        }, BaseRenderer.prototype.buildAllItems = function() {
+        }, BaseRenderer.prototype.buildAllItems = function () {
           var t, e = this.layers.length;
           for (t = 0; t < e; t += 1)
             this.buildItem(t);
           this.checkPendingElements();
-        }, BaseRenderer.prototype.includeLayers = function(t) {
+        }, BaseRenderer.prototype.includeLayers = function (t) {
           var e;
           this.completeLayers = false;
           var i, r = t.length, s = this.layers.length;
           for (e = 0; e < r; e += 1)
-            for (i = 0; i < s; ) {
+            for (i = 0; i < s;) {
               if (this.layers[i].id === t[e].id) {
                 this.layers[i] = t[e];
                 break;
               }
               i += 1;
             }
-        }, BaseRenderer.prototype.setProjectInterface = function(t) {
+        }, BaseRenderer.prototype.setProjectInterface = function (t) {
           this.globalData.projectInterface = t;
-        }, BaseRenderer.prototype.initItems = function() {
+        }, BaseRenderer.prototype.initItems = function () {
           this.globalData.progressiveLoad || this.buildAllItems();
-        }, BaseRenderer.prototype.buildElementParenting = function(t, e, i) {
-          for (var r = this.elements, s = this.layers, a = 0, n = s.length; a < n; )
+        }, BaseRenderer.prototype.buildElementParenting = function (t, e, i) {
+          for (var r = this.elements, s = this.layers, a = 0, n = s.length; a < n;)
             s[a].ind == e && (r[a] && true !== r[a] ? (i.push(r[a]), r[a].setAsParent(), void 0 !== s[a].parent ? this.buildElementParenting(t, s[a].parent, i) : t.setHierarchy(i)) : (this.buildItem(a), this.addPendingElement(t))), a += 1;
-        }, BaseRenderer.prototype.addPendingElement = function(t) {
+        }, BaseRenderer.prototype.addPendingElement = function (t) {
           this.pendingElements.push(t);
-        }, BaseRenderer.prototype.searchExtraCompositions = function(t) {
+        }, BaseRenderer.prototype.searchExtraCompositions = function (t) {
           var e, i = t.length;
           for (e = 0; e < i; e += 1)
             if (t[e].xt) {
               var r = this.createComp(t[e]);
               r.initExpressions(), this.globalData.projectInterface.registerComposition(r);
             }
-        }, BaseRenderer.prototype.getElementById = function(t) {
+        }, BaseRenderer.prototype.getElementById = function (t) {
           var e, i = this.elements.length;
           for (e = 0; e < i; e += 1)
             if (this.elements[e].data.ind === t)
               return this.elements[e];
           return null;
-        }, BaseRenderer.prototype.getElementByPath = function(t) {
+        }, BaseRenderer.prototype.getElementByPath = function (t) {
           var e, i = t.shift();
           if ("number" == typeof i)
             e = this.elements[i];
@@ -11947,7 +12007,7 @@
               }
           }
           return 0 === t.length ? e : e.getElementByPath(t);
-        }, BaseRenderer.prototype.setupGlobalData = function(t, e) {
+        }, BaseRenderer.prototype.setupGlobalData = function (t, e) {
           this.globalData.fontManager = new FontManager(), this.globalData.slotManager = slotFactory(t), this.globalData.fontManager.addChars(t.chars), this.globalData.fontManager.addFonts(t.fonts, e), this.globalData.getAssetData = this.animationItem.getAssetData.bind(this.animationItem), this.globalData.getAssetsPath = this.animationItem.getAssetsPath.bind(this.animationItem), this.globalData.imageLoader = this.animationItem.imagePreloader, this.globalData.audioController = this.animationItem.audioController, this.globalData.frameId = 0, this.globalData.frameRate = t.fr, this.globalData.nm = t.nm, this.globalData.compSize = { w: t.w, h: t.h };
         };
         var effectTypes = { TRANSFORM_EFFECT: "transformEFfect" };
@@ -11978,80 +12038,82 @@
             this.maskElement.appendChild(u[r]);
           d > 0 && (this.maskElement.setAttribute("id", y), this.element.maskedElement.setAttribute(v, "url(" + getLocationHref() + "#" + y + ")"), a.appendChild(this.maskElement)), this.viewData.length && this.element.addRenderableComponent(this);
         }
-        TransformElement.prototype = { initTransform: function() {
-          var t = new Matrix();
-          this.finalTransform = { mProp: this.data.ks ? TransformPropertyFactory.getTransformProperty(this, this.data.ks, this) : { o: 0 }, _matMdf: false, _localMatMdf: false, _opMdf: false, mat: t, localMat: t, localOpacity: 1 }, this.data.ao && (this.finalTransform.mProp.autoOriented = true), this.data.ty;
-        }, renderTransform: function() {
-          if (this.finalTransform._opMdf = this.finalTransform.mProp.o._mdf || this._isFirstFrame, this.finalTransform._matMdf = this.finalTransform.mProp._mdf || this._isFirstFrame, this.hierarchy) {
-            var t, e = this.finalTransform.mat, i = 0, r = this.hierarchy.length;
-            if (!this.finalTransform._matMdf)
-              for (; i < r; ) {
-                if (this.hierarchy[i].finalTransform.mProp._mdf) {
-                  this.finalTransform._matMdf = true;
-                  break;
+        TransformElement.prototype = {
+          initTransform: function () {
+            var t = new Matrix();
+            this.finalTransform = { mProp: this.data.ks ? TransformPropertyFactory.getTransformProperty(this, this.data.ks, this) : { o: 0 }, _matMdf: false, _localMatMdf: false, _opMdf: false, mat: t, localMat: t, localOpacity: 1 }, this.data.ao && (this.finalTransform.mProp.autoOriented = true), this.data.ty;
+          }, renderTransform: function () {
+            if (this.finalTransform._opMdf = this.finalTransform.mProp.o._mdf || this._isFirstFrame, this.finalTransform._matMdf = this.finalTransform.mProp._mdf || this._isFirstFrame, this.hierarchy) {
+              var t, e = this.finalTransform.mat, i = 0, r = this.hierarchy.length;
+              if (!this.finalTransform._matMdf)
+                for (; i < r;) {
+                  if (this.hierarchy[i].finalTransform.mProp._mdf) {
+                    this.finalTransform._matMdf = true;
+                    break;
+                  }
+                  i += 1;
                 }
-                i += 1;
+              if (this.finalTransform._matMdf)
+                for (t = this.finalTransform.mProp.v.props, e.cloneFromProps(t), i = 0; i < r; i += 1)
+                  e.multiply(this.hierarchy[i].finalTransform.mProp.v);
+            }
+            this.finalTransform._matMdf && (this.finalTransform._localMatMdf = this.finalTransform._matMdf), this.finalTransform._opMdf && (this.finalTransform.localOpacity = this.finalTransform.mProp.o.v);
+          }, renderLocalTransform: function () {
+            if (this.localTransforms) {
+              var t = 0, e = this.localTransforms.length;
+              if (this.finalTransform._localMatMdf = this.finalTransform._matMdf, !this.finalTransform._localMatMdf || !this.finalTransform._opMdf)
+                for (; t < e;)
+                  this.localTransforms[t]._mdf && (this.finalTransform._localMatMdf = true), this.localTransforms[t]._opMdf && !this.finalTransform._opMdf && (this.finalTransform.localOpacity = this.finalTransform.mProp.o.v, this.finalTransform._opMdf = true), t += 1;
+              if (this.finalTransform._localMatMdf) {
+                var i = this.finalTransform.localMat;
+                for (this.localTransforms[0].matrix.clone(i), t = 1; t < e; t += 1) {
+                  var r = this.localTransforms[t].matrix;
+                  i.multiply(r);
+                }
+                i.multiply(this.finalTransform.mat);
               }
-            if (this.finalTransform._matMdf)
-              for (t = this.finalTransform.mProp.v.props, e.cloneFromProps(t), i = 0; i < r; i += 1)
-                e.multiply(this.hierarchy[i].finalTransform.mProp.v);
-          }
-          this.finalTransform._matMdf && (this.finalTransform._localMatMdf = this.finalTransform._matMdf), this.finalTransform._opMdf && (this.finalTransform.localOpacity = this.finalTransform.mProp.o.v);
-        }, renderLocalTransform: function() {
-          if (this.localTransforms) {
-            var t = 0, e = this.localTransforms.length;
-            if (this.finalTransform._localMatMdf = this.finalTransform._matMdf, !this.finalTransform._localMatMdf || !this.finalTransform._opMdf)
-              for (; t < e; )
-                this.localTransforms[t]._mdf && (this.finalTransform._localMatMdf = true), this.localTransforms[t]._opMdf && !this.finalTransform._opMdf && (this.finalTransform.localOpacity = this.finalTransform.mProp.o.v, this.finalTransform._opMdf = true), t += 1;
-            if (this.finalTransform._localMatMdf) {
-              var i = this.finalTransform.localMat;
-              for (this.localTransforms[0].matrix.clone(i), t = 1; t < e; t += 1) {
-                var r = this.localTransforms[t].matrix;
-                i.multiply(r);
+              if (this.finalTransform._opMdf) {
+                var s = this.finalTransform.localOpacity;
+                for (t = 0; t < e; t += 1)
+                  s *= 0.01 * this.localTransforms[t].opacity;
+                this.finalTransform.localOpacity = s;
               }
-              i.multiply(this.finalTransform.mat);
             }
-            if (this.finalTransform._opMdf) {
-              var s = this.finalTransform.localOpacity;
-              for (t = 0; t < e; t += 1)
-                s *= 0.01 * this.localTransforms[t].opacity;
-              this.finalTransform.localOpacity = s;
+          }, searchEffectTransforms: function () {
+            if (this.renderableEffectsManager) {
+              var t = this.renderableEffectsManager.getEffects(effectTypes.TRANSFORM_EFFECT);
+              if (t.length) {
+                this.localTransforms = [], this.finalTransform.localMat = new Matrix();
+                var e = 0, i = t.length;
+                for (e = 0; e < i; e += 1)
+                  this.localTransforms.push(t[e]);
+              }
             }
-          }
-        }, searchEffectTransforms: function() {
-          if (this.renderableEffectsManager) {
-            var t = this.renderableEffectsManager.getEffects(effectTypes.TRANSFORM_EFFECT);
-            if (t.length) {
-              this.localTransforms = [], this.finalTransform.localMat = new Matrix();
-              var e = 0, i = t.length;
-              for (e = 0; e < i; e += 1)
-                this.localTransforms.push(t[e]);
-            }
-          }
-        }, globalToLocal: function(t) {
-          var e = [];
-          e.push(this.finalTransform);
-          for (var i, r = true, s = this.comp; r; )
-            s.finalTransform ? (s.data.hasMask && e.splice(0, 0, s.finalTransform), s = s.comp) : r = false;
-          var a, n = e.length;
-          for (i = 0; i < n; i += 1)
-            a = e[i].mat.applyToPointArray(0, 0, 0), t = [t[0] - a[0], t[1] - a[1], 0];
-          return t;
-        }, mHelper: new Matrix() }, MaskElement.prototype.getMaskProperty = function(t) {
+          }, globalToLocal: function (t) {
+            var e = [];
+            e.push(this.finalTransform);
+            for (var i, r = true, s = this.comp; r;)
+              s.finalTransform ? (s.data.hasMask && e.splice(0, 0, s.finalTransform), s = s.comp) : r = false;
+            var a, n = e.length;
+            for (i = 0; i < n; i += 1)
+              a = e[i].mat.applyToPointArray(0, 0, 0), t = [t[0] - a[0], t[1] - a[1], 0];
+            return t;
+          }, mHelper: new Matrix()
+        }, MaskElement.prototype.getMaskProperty = function (t) {
           return this.viewData[t].prop;
-        }, MaskElement.prototype.renderFrame = function(t) {
+        }, MaskElement.prototype.renderFrame = function (t) {
           var e, i = this.element.finalTransform.mat, r = this.masksProperties.length;
           for (e = 0; e < r; e += 1)
             if ((this.viewData[e].prop._mdf || t) && this.drawPath(this.masksProperties[e], this.viewData[e].prop.v, this.viewData[e]), (this.viewData[e].op._mdf || t) && this.viewData[e].elem.setAttribute("fill-opacity", this.viewData[e].op.v), "n" !== this.masksProperties[e].mode && (this.viewData[e].invRect && (this.element.finalTransform.mProp._mdf || t) && this.viewData[e].invRect.setAttribute("transform", i.getInverseMatrix().to2dCSS()), this.storedData[e].x && (this.storedData[e].x._mdf || t))) {
               var s = this.storedData[e].expan;
               this.storedData[e].x.v < 0 ? ("erode" !== this.storedData[e].lastOperator && (this.storedData[e].lastOperator = "erode", this.storedData[e].elem.setAttribute("filter", "url(" + getLocationHref() + "#" + this.storedData[e].filterId + ")")), s.setAttribute("radius", -this.storedData[e].x.v)) : ("dilate" !== this.storedData[e].lastOperator && (this.storedData[e].lastOperator = "dilate", this.storedData[e].elem.setAttribute("filter", null)), this.storedData[e].elem.setAttribute("stroke-width", 2 * this.storedData[e].x.v));
             }
-        }, MaskElement.prototype.getMaskelement = function() {
+        }, MaskElement.prototype.getMaskelement = function () {
           return this.maskElement;
-        }, MaskElement.prototype.createLayerSolidPath = function() {
+        }, MaskElement.prototype.createLayerSolidPath = function () {
           var t = "M0,0 ";
           return t += " h" + this.globalData.compSize.w, t += " v" + this.globalData.compSize.h, t += " h-" + this.globalData.compSize.w, t += " v-" + this.globalData.compSize.h + " ";
-        }, MaskElement.prototype.drawPath = function(t, e, i) {
+        }, MaskElement.prototype.drawPath = function (t, e, i) {
           var r, s, a = " M" + e.v[0][0] + "," + e.v[0][1];
           for (s = e._length, r = 1; r < s; r += 1)
             a += " C" + e.o[r - 1][0] + "," + e.o[r - 1][1] + " " + e.i[r][0] + "," + e.i[r][1] + " " + e.v[r][0] + "," + e.v[r][1];
@@ -12059,20 +12121,20 @@
             var n = "";
             i.elem && (e.c && (n = t.inv ? this.solidPath + a : a), i.elem.setAttribute("d", n)), i.lastPath = a;
           }
-        }, MaskElement.prototype.destroy = function() {
+        }, MaskElement.prototype.destroy = function () {
           this.element = null, this.globalData = null, this.maskElement = null, this.data = null, this.masksProperties = null;
         };
-        var filtersFactory = function() {
+        var filtersFactory = function () {
           var t = {};
-          return t.createFilter = function(t2, e) {
+          return t.createFilter = function (t2, e) {
             var i = createNS("filter");
             i.setAttribute("id", t2), true !== e && (i.setAttribute("filterUnits", "objectBoundingBox"), i.setAttribute("x", "0%"), i.setAttribute("y", "0%"), i.setAttribute("width", "100%"), i.setAttribute("height", "100%"));
             return i;
-          }, t.createAlphaToLuminanceFilter = function() {
+          }, t.createAlphaToLuminanceFilter = function () {
             var t2 = createNS("feColorMatrix");
             return t2.setAttribute("type", "matrix"), t2.setAttribute("color-interpolation-filters", "sRGB"), t2.setAttribute("values", "0 0 0 1 0  0 0 0 1 0  0 0 0 1 0  0 0 0 1 1"), t2;
           }, t;
-        }(), featureSupport = function() {
+        }(), featureSupport = function () {
           var t = { maskType: true, svgLumaHidden: true, offscreenCanvas: "undefined" != typeof OffscreenCanvas };
           return (/MSIE 10/i.test(navigator.userAgent) || /MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent) || /Edge\/\d./i.test(navigator.userAgent)) && (t.maskType = false), /firefox/i.test(navigator.userAgent) && (t.svgLumaHidden = false), t;
         }(), registeredEffects$1 = {}, idPrefix = "filter_result_";
@@ -12104,130 +12166,138 @@
         }
         function IShapeElement() {
         }
-        SVGEffects.prototype.renderFrame = function(t) {
+        SVGEffects.prototype.renderFrame = function (t) {
           var e, i = this.filters.length;
           for (e = 0; e < i; e += 1)
             this.filters[e].renderFrame(t);
-        }, SVGEffects.prototype.getEffects = function(t) {
+        }, SVGEffects.prototype.getEffects = function (t) {
           var e, i = this.filters.length, r = [];
           for (e = 0; e < i; e += 1)
             this.filters[e].type === t && r.push(this.filters[e]);
           return r;
-        }, SVGBaseElement.prototype = { initRendererElement: function() {
-          this.layerElement = createNS("g");
-        }, createContainerElements: function() {
-          this.matteElement = createNS("g"), this.transformedElement = this.layerElement, this.maskedElement = this.layerElement, this._sizeChanged = false;
-          var t = null;
-          if (this.data.td) {
-            this.matteMasks = {};
-            var e = createNS("g");
-            e.setAttribute("id", this.layerId), e.appendChild(this.layerElement), t = e, this.globalData.defs.appendChild(e);
-          } else
-            this.data.tt ? (this.matteElement.appendChild(this.layerElement), t = this.matteElement, this.baseElement = this.matteElement) : this.baseElement = this.layerElement;
-          if (this.data.ln && this.layerElement.setAttribute("id", this.data.ln), this.data.cl && this.layerElement.setAttribute("class", this.data.cl), 0 === this.data.ty && !this.data.hd) {
-            var i = createNS("clipPath"), r = createNS("path");
-            r.setAttribute("d", "M0,0 L" + this.data.w + ",0 L" + this.data.w + "," + this.data.h + " L0," + this.data.h + "z");
-            var s = createElementID();
-            if (i.setAttribute("id", s), i.appendChild(r), this.globalData.defs.appendChild(i), this.checkMasks()) {
-              var a = createNS("g");
-              a.setAttribute("clip-path", "url(" + getLocationHref() + "#" + s + ")"), a.appendChild(this.layerElement), this.transformedElement = a, t ? t.appendChild(this.transformedElement) : this.baseElement = this.transformedElement;
+        }, SVGBaseElement.prototype = {
+          initRendererElement: function () {
+            this.layerElement = createNS("g");
+          }, createContainerElements: function () {
+            this.matteElement = createNS("g"), this.transformedElement = this.layerElement, this.maskedElement = this.layerElement, this._sizeChanged = false;
+            var t = null;
+            if (this.data.td) {
+              this.matteMasks = {};
+              var e = createNS("g");
+              e.setAttribute("id", this.layerId), e.appendChild(this.layerElement), t = e, this.globalData.defs.appendChild(e);
             } else
-              this.layerElement.setAttribute("clip-path", "url(" + getLocationHref() + "#" + s + ")");
-          }
-          0 !== this.data.bm && this.setBlendMode();
-        }, renderElement: function() {
-          this.finalTransform._localMatMdf && this.transformedElement.setAttribute("transform", this.finalTransform.localMat.to2dCSS()), this.finalTransform._opMdf && this.transformedElement.setAttribute("opacity", this.finalTransform.localOpacity);
-        }, destroyBaseElement: function() {
-          this.layerElement = null, this.matteElement = null, this.maskManager.destroy();
-        }, getBaseElement: function() {
-          return this.data.hd ? null : this.baseElement;
-        }, createRenderableComponents: function() {
-          this.maskManager = new MaskElement(this.data, this, this.globalData), this.renderableEffectsManager = new SVGEffects(this), this.searchEffectTransforms();
-        }, getMatte: function(t) {
-          if (this.matteMasks || (this.matteMasks = {}), !this.matteMasks[t]) {
-            var e, i, r, s, a = this.layerId + "_" + t;
-            if (1 === t || 3 === t) {
-              var n = createNS("mask");
-              n.setAttribute("id", a), n.setAttribute("mask-type", 3 === t ? "luminance" : "alpha"), (r = createNS("use")).setAttributeNS("http://www.w3.org/1999/xlink", "href", "#" + this.layerId), n.appendChild(r), this.globalData.defs.appendChild(n), featureSupport.maskType || 1 !== t || (n.setAttribute("mask-type", "luminance"), e = createElementID(), i = filtersFactory.createFilter(e), this.globalData.defs.appendChild(i), i.appendChild(filtersFactory.createAlphaToLuminanceFilter()), (s = createNS("g")).appendChild(r), n.appendChild(s), s.setAttribute("filter", "url(" + getLocationHref() + "#" + e + ")"));
-            } else if (2 === t) {
-              var o = createNS("mask");
-              o.setAttribute("id", a), o.setAttribute("mask-type", "alpha");
-              var h = createNS("g");
-              o.appendChild(h), e = createElementID(), i = filtersFactory.createFilter(e);
-              var l = createNS("feComponentTransfer");
-              l.setAttribute("in", "SourceGraphic"), i.appendChild(l);
-              var p = createNS("feFuncA");
-              p.setAttribute("type", "table"), p.setAttribute("tableValues", "1.0 0.0"), l.appendChild(p), this.globalData.defs.appendChild(i);
-              var f = createNS("rect");
-              f.setAttribute("width", this.comp.data.w), f.setAttribute("height", this.comp.data.h), f.setAttribute("x", "0"), f.setAttribute("y", "0"), f.setAttribute("fill", "#ffffff"), f.setAttribute("opacity", "0"), h.setAttribute("filter", "url(" + getLocationHref() + "#" + e + ")"), h.appendChild(f), (r = createNS("use")).setAttributeNS("http://www.w3.org/1999/xlink", "href", "#" + this.layerId), h.appendChild(r), featureSupport.maskType || (o.setAttribute("mask-type", "luminance"), i.appendChild(filtersFactory.createAlphaToLuminanceFilter()), s = createNS("g"), h.appendChild(f), s.appendChild(this.layerElement), h.appendChild(s)), this.globalData.defs.appendChild(o);
+              this.data.tt ? (this.matteElement.appendChild(this.layerElement), t = this.matteElement, this.baseElement = this.matteElement) : this.baseElement = this.layerElement;
+            if (this.data.ln && this.layerElement.setAttribute("id", this.data.ln), this.data.cl && this.layerElement.setAttribute("class", this.data.cl), 0 === this.data.ty && !this.data.hd) {
+              var i = createNS("clipPath"), r = createNS("path");
+              r.setAttribute("d", "M0,0 L" + this.data.w + ",0 L" + this.data.w + "," + this.data.h + " L0," + this.data.h + "z");
+              var s = createElementID();
+              if (i.setAttribute("id", s), i.appendChild(r), this.globalData.defs.appendChild(i), this.checkMasks()) {
+                var a = createNS("g");
+                a.setAttribute("clip-path", "url(" + getLocationHref() + "#" + s + ")"), a.appendChild(this.layerElement), this.transformedElement = a, t ? t.appendChild(this.transformedElement) : this.baseElement = this.transformedElement;
+              } else
+                this.layerElement.setAttribute("clip-path", "url(" + getLocationHref() + "#" + s + ")");
             }
-            this.matteMasks[t] = a;
+            0 !== this.data.bm && this.setBlendMode();
+          }, renderElement: function () {
+            this.finalTransform._localMatMdf && this.transformedElement.setAttribute("transform", this.finalTransform.localMat.to2dCSS()), this.finalTransform._opMdf && this.transformedElement.setAttribute("opacity", this.finalTransform.localOpacity);
+          }, destroyBaseElement: function () {
+            this.layerElement = null, this.matteElement = null, this.maskManager.destroy();
+          }, getBaseElement: function () {
+            return this.data.hd ? null : this.baseElement;
+          }, createRenderableComponents: function () {
+            this.maskManager = new MaskElement(this.data, this, this.globalData), this.renderableEffectsManager = new SVGEffects(this), this.searchEffectTransforms();
+          }, getMatte: function (t) {
+            if (this.matteMasks || (this.matteMasks = {}), !this.matteMasks[t]) {
+              var e, i, r, s, a = this.layerId + "_" + t;
+              if (1 === t || 3 === t) {
+                var n = createNS("mask");
+                n.setAttribute("id", a), n.setAttribute("mask-type", 3 === t ? "luminance" : "alpha"), (r = createNS("use")).setAttributeNS("http://www.w3.org/1999/xlink", "href", "#" + this.layerId), n.appendChild(r), this.globalData.defs.appendChild(n), featureSupport.maskType || 1 !== t || (n.setAttribute("mask-type", "luminance"), e = createElementID(), i = filtersFactory.createFilter(e), this.globalData.defs.appendChild(i), i.appendChild(filtersFactory.createAlphaToLuminanceFilter()), (s = createNS("g")).appendChild(r), n.appendChild(s), s.setAttribute("filter", "url(" + getLocationHref() + "#" + e + ")"));
+              } else if (2 === t) {
+                var o = createNS("mask");
+                o.setAttribute("id", a), o.setAttribute("mask-type", "alpha");
+                var h = createNS("g");
+                o.appendChild(h), e = createElementID(), i = filtersFactory.createFilter(e);
+                var l = createNS("feComponentTransfer");
+                l.setAttribute("in", "SourceGraphic"), i.appendChild(l);
+                var p = createNS("feFuncA");
+                p.setAttribute("type", "table"), p.setAttribute("tableValues", "1.0 0.0"), l.appendChild(p), this.globalData.defs.appendChild(i);
+                var f = createNS("rect");
+                f.setAttribute("width", this.comp.data.w), f.setAttribute("height", this.comp.data.h), f.setAttribute("x", "0"), f.setAttribute("y", "0"), f.setAttribute("fill", "#ffffff"), f.setAttribute("opacity", "0"), h.setAttribute("filter", "url(" + getLocationHref() + "#" + e + ")"), h.appendChild(f), (r = createNS("use")).setAttributeNS("http://www.w3.org/1999/xlink", "href", "#" + this.layerId), h.appendChild(r), featureSupport.maskType || (o.setAttribute("mask-type", "luminance"), i.appendChild(filtersFactory.createAlphaToLuminanceFilter()), s = createNS("g"), h.appendChild(f), s.appendChild(this.layerElement), h.appendChild(s)), this.globalData.defs.appendChild(o);
+              }
+              this.matteMasks[t] = a;
+            }
+            return this.matteMasks[t];
+          }, setMatte: function (t) {
+            this.matteElement && this.matteElement.setAttribute("mask", "url(" + getLocationHref() + "#" + t + ")");
           }
-          return this.matteMasks[t];
-        }, setMatte: function(t) {
-          this.matteElement && this.matteElement.setAttribute("mask", "url(" + getLocationHref() + "#" + t + ")");
-        } }, HierarchyElement.prototype = { initHierarchy: function() {
-          this.hierarchy = [], this._isParent = false, this.checkParenting();
-        }, setHierarchy: function(t) {
-          this.hierarchy = t;
-        }, setAsParent: function() {
-          this._isParent = true;
-        }, checkParenting: function() {
-          void 0 !== this.data.parent && this.comp.buildElementParenting(this, this.data.parent, []);
-        } }, extendPrototype([RenderableElement, createProxyFunction({ initElement: function(t, e, i) {
-          this.initFrame(), this.initBaseData(t, e, i), this.initTransform(t, e, i), this.initHierarchy(), this.initRenderable(), this.initRendererElement(), this.createContainerElements(), this.createRenderableComponents(), this.createContent(), this.hide();
-        }, hide: function() {
-          this.hidden || this.isInRange && !this.isTransparent || ((this.baseElement || this.layerElement).style.display = "none", this.hidden = true);
-        }, show: function() {
-          this.isInRange && !this.isTransparent && (this.data.hd || ((this.baseElement || this.layerElement).style.display = "block"), this.hidden = false, this._isFirstFrame = true);
-        }, renderFrame: function() {
-          this.data.hd || this.hidden || (this.renderTransform(), this.renderRenderable(), this.renderLocalTransform(), this.renderElement(), this.renderInnerContent(), this._isFirstFrame && (this._isFirstFrame = false));
-        }, renderInnerContent: function() {
-        }, prepareFrame: function(t) {
-          this._mdf = false, this.prepareRenderableFrame(t), this.prepareProperties(t, this.isInRange), this.checkTransparency();
-        }, destroy: function() {
-          this.innerElem = null, this.destroyBaseElement();
-        } })], RenderableDOMElement), extendPrototype([BaseElement, TransformElement, SVGBaseElement, HierarchyElement, FrameElement, RenderableDOMElement], IImageElement), IImageElement.prototype.createContent = function() {
+        }, HierarchyElement.prototype = {
+          initHierarchy: function () {
+            this.hierarchy = [], this._isParent = false, this.checkParenting();
+          }, setHierarchy: function (t) {
+            this.hierarchy = t;
+          }, setAsParent: function () {
+            this._isParent = true;
+          }, checkParenting: function () {
+            void 0 !== this.data.parent && this.comp.buildElementParenting(this, this.data.parent, []);
+          }
+        }, extendPrototype([RenderableElement, createProxyFunction({
+          initElement: function (t, e, i) {
+            this.initFrame(), this.initBaseData(t, e, i), this.initTransform(t, e, i), this.initHierarchy(), this.initRenderable(), this.initRendererElement(), this.createContainerElements(), this.createRenderableComponents(), this.createContent(), this.hide();
+          }, hide: function () {
+            this.hidden || this.isInRange && !this.isTransparent || ((this.baseElement || this.layerElement).style.display = "none", this.hidden = true);
+          }, show: function () {
+            this.isInRange && !this.isTransparent && (this.data.hd || ((this.baseElement || this.layerElement).style.display = "block"), this.hidden = false, this._isFirstFrame = true);
+          }, renderFrame: function () {
+            this.data.hd || this.hidden || (this.renderTransform(), this.renderRenderable(), this.renderLocalTransform(), this.renderElement(), this.renderInnerContent(), this._isFirstFrame && (this._isFirstFrame = false));
+          }, renderInnerContent: function () {
+          }, prepareFrame: function (t) {
+            this._mdf = false, this.prepareRenderableFrame(t), this.prepareProperties(t, this.isInRange), this.checkTransparency();
+          }, destroy: function () {
+            this.innerElem = null, this.destroyBaseElement();
+          }
+        })], RenderableDOMElement), extendPrototype([BaseElement, TransformElement, SVGBaseElement, HierarchyElement, FrameElement, RenderableDOMElement], IImageElement), IImageElement.prototype.createContent = function () {
           var t = this.globalData.getAssetsPath(this.assetData);
           this.innerElem = createNS("image"), this.innerElem.setAttribute("width", this.assetData.w + "px"), this.innerElem.setAttribute("height", this.assetData.h + "px"), this.innerElem.setAttribute("preserveAspectRatio", this.assetData.pr || this.globalData.renderConfig.imagePreserveAspectRatio), this.innerElem.setAttributeNS("http://www.w3.org/1999/xlink", "href", t), this.layerElement.appendChild(this.innerElem);
-        }, IImageElement.prototype.sourceRectAtTime = function() {
+        }, IImageElement.prototype.sourceRectAtTime = function () {
           return this.sourceRect;
-        }, IShapeElement.prototype = { addShapeToModifiers: function(t) {
-          var e, i = this.shapeModifiers.length;
-          for (e = 0; e < i; e += 1)
-            this.shapeModifiers[e].addShape(t);
-        }, isShapeInAnimatedModifiers: function(t) {
-          for (var e = this.shapeModifiers.length; 0 < e; )
-            if (this.shapeModifiers[0].isAnimatedWithShape(t))
-              return true;
-          return false;
-        }, renderModifiers: function() {
-          if (this.shapeModifiers.length) {
-            var t, e = this.shapes.length;
-            for (t = 0; t < e; t += 1)
-              this.shapes[t].sh.reset();
-            for (t = (e = this.shapeModifiers.length) - 1; t >= 0 && !this.shapeModifiers[t].processShapes(this._isFirstFrame); t -= 1)
-              ;
+        }, IShapeElement.prototype = {
+          addShapeToModifiers: function (t) {
+            var e, i = this.shapeModifiers.length;
+            for (e = 0; e < i; e += 1)
+              this.shapeModifiers[e].addShape(t);
+          }, isShapeInAnimatedModifiers: function (t) {
+            for (var e = this.shapeModifiers.length; 0 < e;)
+              if (this.shapeModifiers[0].isAnimatedWithShape(t))
+                return true;
+            return false;
+          }, renderModifiers: function () {
+            if (this.shapeModifiers.length) {
+              var t, e = this.shapes.length;
+              for (t = 0; t < e; t += 1)
+                this.shapes[t].sh.reset();
+              for (t = (e = this.shapeModifiers.length) - 1; t >= 0 && !this.shapeModifiers[t].processShapes(this._isFirstFrame); t -= 1)
+                ;
+            }
+          }, searchProcessedElement: function (t) {
+            for (var e = this.processedElements, i = 0, r = e.length; i < r;) {
+              if (e[i].elem === t)
+                return e[i].pos;
+              i += 1;
+            }
+            return 0;
+          }, addProcessedElement: function (t, e) {
+            for (var i = this.processedElements, r = i.length; r;)
+              if (i[r -= 1].elem === t)
+                return void (i[r].pos = e);
+            i.push(new ProcessedElement(t, e));
+          }, prepareFrame: function (t) {
+            this.prepareRenderableFrame(t), this.prepareProperties(t, this.isInRange);
           }
-        }, searchProcessedElement: function(t) {
-          for (var e = this.processedElements, i = 0, r = e.length; i < r; ) {
-            if (e[i].elem === t)
-              return e[i].pos;
-            i += 1;
-          }
-          return 0;
-        }, addProcessedElement: function(t, e) {
-          for (var i = this.processedElements, r = i.length; r; )
-            if (i[r -= 1].elem === t)
-              return void (i[r].pos = e);
-          i.push(new ProcessedElement(t, e));
-        }, prepareFrame: function(t) {
-          this.prepareRenderableFrame(t), this.prepareProperties(t, this.isInRange);
-        } };
+        };
         var lineCapEnum = { 1: "butt", 2: "round", 3: "square" }, lineJoinEnum = { 1: "miter", 2: "round", 3: "bevel" };
         function SVGShapeData(t, e, i) {
           this.caches = [], this.styles = [], this.transformers = t, this.lStr = "", this.sh = i, this.lvl = e, this._isAnimated = !!i.k;
-          for (var r = 0, s = t.length; r < s; ) {
+          for (var r = 0, s = t.length; r < s;) {
             if (t[r].mProps.dynamicProperties.length) {
               this._isAnimated = true;
               break;
@@ -12272,28 +12342,28 @@
         function SVGTransformData(t, e, i) {
           this.transform = { mProps: t, op: e, container: i }, this.elements = [], this._isAnimated = this.transform.mProps.dynamicProperties.length || this.transform.op.effectsSequence.length;
         }
-        SVGShapeData.prototype.setAsAnimated = function() {
+        SVGShapeData.prototype.setAsAnimated = function () {
           this._isAnimated = true;
-        }, SVGStyleData.prototype.reset = function() {
+        }, SVGStyleData.prototype.reset = function () {
           this.d = "", this._mdf = false;
-        }, DashProperty.prototype.getValue = function(t) {
+        }, DashProperty.prototype.getValue = function (t) {
           if ((this.elem.globalData.frameId !== this.frameId || t) && (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf = this._mdf || t, this._mdf)) {
             var e = 0, i = this.dataProps.length;
             for ("svg" === this.renderer && (this.dashStr = ""), e = 0; e < i; e += 1)
               "o" !== this.dataProps[e].n ? "svg" === this.renderer ? this.dashStr += " " + this.dataProps[e].p.v : this.dashArray[e] = this.dataProps[e].p.v : this.dashoffset[0] = this.dataProps[e].p.v;
           }
-        }, extendPrototype([DynamicPropertyContainer], DashProperty), extendPrototype([DynamicPropertyContainer], SVGStrokeStyleData), extendPrototype([DynamicPropertyContainer], SVGFillStyleData), extendPrototype([DynamicPropertyContainer], SVGNoStyleData), GradientProperty.prototype.comparePoints = function(t, e) {
-          for (var i = 0, r = this.o.length / 2; i < r; ) {
+        }, extendPrototype([DynamicPropertyContainer], DashProperty), extendPrototype([DynamicPropertyContainer], SVGStrokeStyleData), extendPrototype([DynamicPropertyContainer], SVGFillStyleData), extendPrototype([DynamicPropertyContainer], SVGNoStyleData), GradientProperty.prototype.comparePoints = function (t, e) {
+          for (var i = 0, r = this.o.length / 2; i < r;) {
             if (Math.abs(t[4 * i] - t[4 * e + 2 * i]) > 0.01)
               return false;
             i += 1;
           }
           return true;
-        }, GradientProperty.prototype.checkCollapsable = function() {
+        }, GradientProperty.prototype.checkCollapsable = function () {
           if (this.o.length / 2 != this.c.length / 4)
             return false;
           if (this.data.k.k[0].s)
-            for (var t = 0, e = this.data.k.k.length; t < e; ) {
+            for (var t = 0, e = this.data.k.k.length; t < e;) {
               if (!this.comparePoints(this.data.k.k[t].s, this.data.p))
                 return false;
               t += 1;
@@ -12301,7 +12371,7 @@
           else if (!this.comparePoints(this.data.k.k, this.data.p))
             return false;
           return true;
-        }, GradientProperty.prototype.getValue = function(t) {
+        }, GradientProperty.prototype.getValue = function (t) {
           if (this.prop.getValue(), this._mdf = false, this._cmdf = false, this._omdf = false, this.prop._mdf || t) {
             var e, i, r, s = 4 * this.data.p;
             for (e = 0; e < s; e += 1)
@@ -12311,16 +12381,16 @@
                 i = e % 2 == 0 ? 100 : 1, r = e % 2 == 0 ? Math.round(100 * this.prop.v[e]) : this.prop.v[e], this.o[e - 4 * this.data.p] !== r && (this.o[e - 4 * this.data.p] = r, this._omdf = !t);
             this._mdf = !t;
           }
-        }, extendPrototype([DynamicPropertyContainer], GradientProperty), SVGGradientFillStyleData.prototype.initGradientData = function(t, e, i) {
+        }, extendPrototype([DynamicPropertyContainer], GradientProperty), SVGGradientFillStyleData.prototype.initGradientData = function (t, e, i) {
           this.o = PropertyFactory.getProp(t, e.o, 0, 0.01, this), this.s = PropertyFactory.getProp(t, e.s, 1, null, this), this.e = PropertyFactory.getProp(t, e.e, 1, null, this), this.h = PropertyFactory.getProp(t, e.h || { k: 0 }, 0, 0.01, this), this.a = PropertyFactory.getProp(t, e.a || { k: 0 }, 0, degToRads, this), this.g = new GradientProperty(t, e.g, this), this.style = i, this.stops = [], this.setGradientData(i.pElem, e), this.setGradientOpacity(e, i), this._isAnimated = !!this._isAnimated;
-        }, SVGGradientFillStyleData.prototype.setGradientData = function(t, e) {
+        }, SVGGradientFillStyleData.prototype.setGradientData = function (t, e) {
           var i = createElementID(), r = createNS(1 === e.t ? "linearGradient" : "radialGradient");
           r.setAttribute("id", i), r.setAttribute("spreadMethod", "pad"), r.setAttribute("gradientUnits", "userSpaceOnUse");
           var s, a, n, o = [];
           for (n = 4 * e.g.p, a = 0; a < n; a += 4)
             s = createNS("stop"), r.appendChild(s), o.push(s);
           t.setAttribute("gf" === e.ty ? "fill" : "stroke", "url(" + getLocationHref() + "#" + i + ")"), this.gf = r, this.cst = o;
-        }, SVGGradientFillStyleData.prototype.setGradientOpacity = function(t, e) {
+        }, SVGGradientFillStyleData.prototype.setGradientOpacity = function (t, e) {
           if (this.g._hasOpacity && !this.g._collapsable) {
             var i, r, s, a = createNS("mask"), n = createNS("path");
             a.appendChild(n);
@@ -12334,14 +12404,14 @@
             n.setAttribute("gf" === t.ty ? "fill" : "stroke", "url(" + getLocationHref() + "#" + o + ")"), "gs" === t.ty && (n.setAttribute("stroke-linecap", lineCapEnum[t.lc || 2]), n.setAttribute("stroke-linejoin", lineJoinEnum[t.lj || 2]), 1 === t.lj && n.setAttribute("stroke-miterlimit", t.ml)), this.of = l, this.ms = a, this.ost = p, this.maskId = h, e.msElem = n;
           }
         }, extendPrototype([DynamicPropertyContainer], SVGGradientFillStyleData), extendPrototype([SVGGradientFillStyleData, DynamicPropertyContainer], SVGGradientStrokeStyleData);
-        var buildShapeString = function(t, e, i, r) {
+        var buildShapeString = function (t, e, i, r) {
           if (0 === e)
             return "";
           var s, a = t.o, n = t.i, o = t.v, h = " M" + r.applyToPointStringified(o[0][0], o[0][1]);
           for (s = 1; s < e; s += 1)
             h += " C" + r.applyToPointStringified(a[s - 1][0], a[s - 1][1]) + " " + r.applyToPointStringified(n[s][0], n[s][1]) + " " + r.applyToPointStringified(o[s][0], o[s][1]);
           return i && e && (h += " C" + r.applyToPointStringified(a[s - 1][0], a[s - 1][1]) + " " + r.applyToPointStringified(n[0][0], n[0][1]) + " " + r.applyToPointStringified(o[0][0], o[0][1]), h += "z"), h;
-        }, SVGElementsRenderer = function() {
+        }, SVGElementsRenderer = function () {
           var t = new Matrix(), e = new Matrix();
           function i(t2, e2, i2) {
             (i2 || e2.transform.op._mdf) && e2.transform.container.setAttribute("opacity", e2.transform.op.v), (i2 || e2.transform.mProps._mdf) && e2.transform.container.setAttribute("transform", e2.transform.mProps.v.to2dCSS());
@@ -12352,10 +12422,10 @@
             var a2, n2, o2, h2, l, p, f, m, c, d, u = r2.styles.length, y = r2.lvl;
             for (p = 0; p < u; p += 1) {
               if (h2 = r2.sh._mdf || s2, r2.styles[p].lvl < y) {
-                for (m = e.reset(), c = y - r2.styles[p].lvl, d = r2.transformers.length - 1; !h2 && c > 0; )
+                for (m = e.reset(), c = y - r2.styles[p].lvl, d = r2.transformers.length - 1; !h2 && c > 0;)
                   h2 = r2.transformers[d].mProps._mdf || h2, c -= 1, d -= 1;
                 if (h2)
-                  for (c = y - r2.styles[p].lvl, d = r2.transformers.length - 1; c > 0; )
+                  for (c = y - r2.styles[p].lvl, d = r2.transformers.length - 1; c > 0;)
                     m.multiply(r2.transformers[d].mProps.v), c -= 1, d -= 1;
               } else
                 m = t;
@@ -12410,29 +12480,31 @@
             var r2 = e2.style, s2 = e2.d;
             s2 && (s2._mdf || i2) && s2.dashStr && (r2.pElem.setAttribute("stroke-dasharray", s2.dashStr), r2.pElem.setAttribute("stroke-dashoffset", s2.dashoffset[0])), e2.c && (e2.c._mdf || i2) && r2.pElem.setAttribute("stroke", "rgb(" + bmFloor(e2.c.v[0]) + "," + bmFloor(e2.c.v[1]) + "," + bmFloor(e2.c.v[2]) + ")"), (e2.o._mdf || i2) && r2.pElem.setAttribute("stroke-opacity", e2.o.v), (e2.w._mdf || i2) && (r2.pElem.setAttribute("stroke-width", e2.w.v), r2.msElem && r2.msElem.setAttribute("stroke-width", e2.w.v));
           }
-          return { createRenderFunction: function(t2) {
-            switch (t2.ty) {
-              case "fl":
-                return a;
-              case "gf":
-                return o;
-              case "gs":
-                return n;
-              case "st":
-                return h;
-              case "sh":
-              case "el":
-              case "rc":
-              case "sr":
-                return s;
-              case "tr":
-                return i;
-              case "no":
-                return r;
-              default:
-                return null;
+          return {
+            createRenderFunction: function (t2) {
+              switch (t2.ty) {
+                case "fl":
+                  return a;
+                case "gf":
+                  return o;
+                case "gs":
+                  return n;
+                case "st":
+                  return h;
+                case "sh":
+                case "el":
+                case "rc":
+                case "sr":
+                  return s;
+                case "tr":
+                  return i;
+                case "no":
+                  return r;
+                default:
+                  return null;
+              }
             }
-          } };
+          };
         }();
         function SVGShapeElement(t, e, i) {
           this.shapes = [], this.shapesData = t.shapes, this.stylesList = [], this.shapeModifiers = [], this.itemsData = [], this.processedElements = [], this.animatedContents = [], this.initElement(t, e, i), this.prevViewData = [];
@@ -12443,22 +12515,22 @@
         function TextProperty(t, e) {
           this._frameId = initialDefaultFrame, this.pv = "", this.v = "", this.kf = false, this._isFirstFrame = true, this._mdf = false, e.d && e.d.sid && (e.d = t.globalData.slotManager.getProp(e.d)), this.data = e, this.elem = t, this.comp = this.elem.comp, this.keysIndex = 0, this.canResize = false, this.minimumFontSize = 1, this.effectsSequence = [], this.currentData = { ascent: 0, boxWidth: this.defaultBoxWidth, f: "", fStyle: "", fWeight: "", fc: "", j: "", justifyOffset: "", l: [], lh: 0, lineWidths: [], ls: "", of: "", s: "", sc: "", sw: 0, t: 0, tr: 0, sz: 0, ps: null, fillColorAnim: false, strokeColorAnim: false, strokeWidthAnim: false, yOffset: 0, finalSize: 0, finalText: [], finalLineHeight: 0, __complete: false }, this.copyData(this.currentData, this.data.d.k[0].s), this.searchProperty() || this.completeTextData(this.currentData);
         }
-        extendPrototype([BaseElement, TransformElement, SVGBaseElement, IShapeElement, HierarchyElement, FrameElement, RenderableDOMElement], SVGShapeElement), SVGShapeElement.prototype.initSecondaryElement = function() {
-        }, SVGShapeElement.prototype.identityMatrix = new Matrix(), SVGShapeElement.prototype.buildExpressionInterface = function() {
-        }, SVGShapeElement.prototype.createContent = function() {
+        extendPrototype([BaseElement, TransformElement, SVGBaseElement, IShapeElement, HierarchyElement, FrameElement, RenderableDOMElement], SVGShapeElement), SVGShapeElement.prototype.initSecondaryElement = function () {
+        }, SVGShapeElement.prototype.identityMatrix = new Matrix(), SVGShapeElement.prototype.buildExpressionInterface = function () {
+        }, SVGShapeElement.prototype.createContent = function () {
           this.searchShapes(this.shapesData, this.itemsData, this.prevViewData, this.layerElement, 0, [], true), this.filterUniqueShapes();
-        }, SVGShapeElement.prototype.filterUniqueShapes = function() {
+        }, SVGShapeElement.prototype.filterUniqueShapes = function () {
           var t, e, i, r, s = this.shapes.length, a = this.stylesList.length, n = [], o = false;
           for (i = 0; i < a; i += 1) {
             for (r = this.stylesList[i], o = false, n.length = 0, t = 0; t < s; t += 1)
               -1 !== (e = this.shapes[t]).styles.indexOf(r) && (n.push(e), o = e._isAnimated || o);
             n.length > 1 && o && this.setShapesAsAnimated(n);
           }
-        }, SVGShapeElement.prototype.setShapesAsAnimated = function(t) {
+        }, SVGShapeElement.prototype.setShapesAsAnimated = function (t) {
           var e, i = t.length;
           for (e = 0; e < i; e += 1)
             t[e].setAsAnimated();
-        }, SVGShapeElement.prototype.createStyleElement = function(t, e) {
+        }, SVGShapeElement.prototype.createStyleElement = function (t, e) {
           var i, r = new SVGStyleData(t, e), s = r.pElem;
           if ("st" === t.ty)
             i = new SVGStrokeStyleData(this, t, r);
@@ -12469,29 +12541,29 @@
           } else
             "no" === t.ty && (i = new SVGNoStyleData(this, t, r));
           return "st" !== t.ty && "gs" !== t.ty || (s.setAttribute("stroke-linecap", lineCapEnum[t.lc || 2]), s.setAttribute("stroke-linejoin", lineJoinEnum[t.lj || 2]), s.setAttribute("fill-opacity", "0"), 1 === t.lj && s.setAttribute("stroke-miterlimit", t.ml)), 2 === t.r && s.setAttribute("fill-rule", "evenodd"), t.ln && s.setAttribute("id", t.ln), t.cl && s.setAttribute("class", t.cl), t.bm && (s.style["mix-blend-mode"] = getBlendMode(t.bm)), this.stylesList.push(r), this.addToAnimatedContents(t, i), i;
-        }, SVGShapeElement.prototype.createGroupElement = function(t) {
+        }, SVGShapeElement.prototype.createGroupElement = function (t) {
           var e = new ShapeGroupData();
           return t.ln && e.gr.setAttribute("id", t.ln), t.cl && e.gr.setAttribute("class", t.cl), t.bm && (e.gr.style["mix-blend-mode"] = getBlendMode(t.bm)), e;
-        }, SVGShapeElement.prototype.createTransformElement = function(t, e) {
+        }, SVGShapeElement.prototype.createTransformElement = function (t, e) {
           var i = TransformPropertyFactory.getTransformProperty(this, t, this), r = new SVGTransformData(i, i.o, e);
           return this.addToAnimatedContents(t, r), r;
-        }, SVGShapeElement.prototype.createShapeElement = function(t, e, i) {
+        }, SVGShapeElement.prototype.createShapeElement = function (t, e, i) {
           var r = 4;
           "rc" === t.ty ? r = 5 : "el" === t.ty ? r = 6 : "sr" === t.ty && (r = 7);
           var s = new SVGShapeData(e, i, ShapePropertyFactory.getShapeProp(this, t, r, this));
           return this.shapes.push(s), this.addShapeToModifiers(s), this.addToAnimatedContents(t, s), s;
-        }, SVGShapeElement.prototype.addToAnimatedContents = function(t, e) {
-          for (var i = 0, r = this.animatedContents.length; i < r; ) {
+        }, SVGShapeElement.prototype.addToAnimatedContents = function (t, e) {
+          for (var i = 0, r = this.animatedContents.length; i < r;) {
             if (this.animatedContents[i].element === e)
               return;
             i += 1;
           }
           this.animatedContents.push({ fn: SVGElementsRenderer.createRenderFunction(t), element: e, data: t });
-        }, SVGShapeElement.prototype.setElementStyles = function(t) {
+        }, SVGShapeElement.prototype.setElementStyles = function (t) {
           var e, i = t.styles, r = this.stylesList.length;
           for (e = 0; e < r; e += 1)
             this.stylesList[e].closed || i.push(this.stylesList[e]);
-        }, SVGShapeElement.prototype.reloadShapes = function() {
+        }, SVGShapeElement.prototype.reloadShapes = function () {
           var t;
           this._isFirstFrame = true;
           var e = this.itemsData.length;
@@ -12500,7 +12572,7 @@
           for (this.searchShapes(this.shapesData, this.itemsData, this.prevViewData, this.layerElement, 0, [], true), this.filterUniqueShapes(), e = this.dynamicProperties.length, t = 0; t < e; t += 1)
             this.dynamicProperties[t].getValue();
           this.renderModifiers();
-        }, SVGShapeElement.prototype.searchShapes = function(t, e, i, r, s, a, n) {
+        }, SVGShapeElement.prototype.searchShapes = function (t, e, i, r, s, a, n) {
           var o, h, l, p, f, m, c = [].concat(a), d = t.length - 1, u = [], y = [];
           for (o = d; o >= 0; o -= 1) {
             if ((m = this.searchProcessedElement(t[o])) ? e[o] = i[m - 1] : t[o]._render = n, "fl" === t[o].ty || "st" === t[o].ty || "gf" === t[o].ty || "gs" === t[o].ty || "no" === t[o].ty)
@@ -12520,7 +12592,7 @@
             u[o].closed = true;
           for (d = y.length, o = 0; o < d; o += 1)
             y[o].closed = true;
-        }, SVGShapeElement.prototype.renderInnerContent = function() {
+        }, SVGShapeElement.prototype.renderInnerContent = function () {
           var t;
           this.renderModifiers();
           var e = this.stylesList.length;
@@ -12528,29 +12600,29 @@
             this.stylesList[t].reset();
           for (this.renderShape(), t = 0; t < e; t += 1)
             (this.stylesList[t]._mdf || this._isFirstFrame) && (this.stylesList[t].msElem && (this.stylesList[t].msElem.setAttribute("d", this.stylesList[t].d), this.stylesList[t].d = "M0 0" + this.stylesList[t].d), this.stylesList[t].pElem.setAttribute("d", this.stylesList[t].d || "M0 0"));
-        }, SVGShapeElement.prototype.renderShape = function() {
+        }, SVGShapeElement.prototype.renderShape = function () {
           var t, e, i = this.animatedContents.length;
           for (t = 0; t < i; t += 1)
             e = this.animatedContents[t], (this._isFirstFrame || e.element._isAnimated) && true !== e.data && e.fn(e.data, e.element, this._isFirstFrame);
-        }, SVGShapeElement.prototype.destroy = function() {
+        }, SVGShapeElement.prototype.destroy = function () {
           this.destroyBaseElement(), this.shapesData = null, this.itemsData = null;
-        }, LetterProps.prototype.update = function(t, e, i, r, s, a) {
+        }, LetterProps.prototype.update = function (t, e, i, r, s, a) {
           this._mdf.o = false, this._mdf.sw = false, this._mdf.sc = false, this._mdf.fc = false, this._mdf.m = false, this._mdf.p = false;
           var n = false;
           return this.o !== t && (this.o = t, this._mdf.o = true, n = true), this.sw !== e && (this.sw = e, this._mdf.sw = true, n = true), this.sc !== i && (this.sc = i, this._mdf.sc = true, n = true), this.fc !== r && (this.fc = r, this._mdf.fc = true, n = true), this.m !== s && (this.m = s, this._mdf.m = true, n = true), !a.length || this.p[0] === a[0] && this.p[1] === a[1] && this.p[4] === a[4] && this.p[5] === a[5] && this.p[12] === a[12] && this.p[13] === a[13] || (this.p = a, this._mdf.p = true, n = true), n;
-        }, TextProperty.prototype.defaultBoxWidth = [0, 0], TextProperty.prototype.copyData = function(t, e) {
+        }, TextProperty.prototype.defaultBoxWidth = [0, 0], TextProperty.prototype.copyData = function (t, e) {
           for (var i in e)
             Object.prototype.hasOwnProperty.call(e, i) && (t[i] = e[i]);
           return t;
-        }, TextProperty.prototype.setCurrentData = function(t) {
+        }, TextProperty.prototype.setCurrentData = function (t) {
           t.__complete || this.completeTextData(t), this.currentData = t, this.currentData.boxWidth = this.currentData.boxWidth || this.defaultBoxWidth, this._mdf = true;
-        }, TextProperty.prototype.searchProperty = function() {
+        }, TextProperty.prototype.searchProperty = function () {
           return this.searchKeyframes();
-        }, TextProperty.prototype.searchKeyframes = function() {
+        }, TextProperty.prototype.searchKeyframes = function () {
           return this.kf = this.data.d.k.length > 1, this.kf && this.addEffect(this.getKeyframeValue.bind(this)), this.kf;
-        }, TextProperty.prototype.addEffect = function(t) {
+        }, TextProperty.prototype.addEffect = function (t) {
           this.effectsSequence.push(t), this.elem.addDynamicProperty(this);
-        }, TextProperty.prototype.getValue = function(t) {
+        }, TextProperty.prototype.getValue = function (t) {
           if (this.elem.globalData.frameId !== this.frameId && this.effectsSequence.length || t) {
             this.currentData.t = this.data.d.k[this.keysIndex].s.t;
             var e = this.currentData, i = this.keysIndex;
@@ -12565,21 +12637,21 @@
               e !== a && this.setCurrentData(a), this.v = this.currentData, this.pv = this.v, this.lock = false, this.frameId = this.elem.globalData.frameId;
             }
           }
-        }, TextProperty.prototype.getKeyframeValue = function() {
-          for (var t = this.data.d.k, e = this.elem.comp.renderedFrame, i = 0, r = t.length; i <= r - 1 && !(i === r - 1 || t[i + 1].t > e); )
+        }, TextProperty.prototype.getKeyframeValue = function () {
+          for (var t = this.data.d.k, e = this.elem.comp.renderedFrame, i = 0, r = t.length; i <= r - 1 && !(i === r - 1 || t[i + 1].t > e);)
             i += 1;
           return this.keysIndex !== i && (this.keysIndex = i), this.data.d.k[this.keysIndex].s;
-        }, TextProperty.prototype.buildFinalText = function(t) {
-          for (var e, i, r = [], s = 0, a = t.length, n = false, o = false, h = ""; s < a; )
+        }, TextProperty.prototype.buildFinalText = function (t) {
+          for (var e, i, r = [], s = 0, a = t.length, n = false, o = false, h = ""; s < a;)
             n = o, o = false, e = t.charCodeAt(s), h = t.charAt(s), FontManager.isCombinedCharacter(e) ? n = true : e >= 55296 && e <= 56319 ? FontManager.isRegionalFlag(t, s) ? h = t.substr(s, 14) : (i = t.charCodeAt(s + 1)) >= 56320 && i <= 57343 && (FontManager.isModifier(e, i) ? (h = t.substr(s, 2), n = true) : h = FontManager.isFlagEmoji(t.substr(s, 4)) ? t.substr(s, 4) : t.substr(s, 2)) : e > 56319 ? (i = t.charCodeAt(s + 1), FontManager.isVariationSelector(e) && (n = true)) : FontManager.isZeroWidthJoiner(e) && (n = true, o = true), n ? (r[r.length - 1] += h, n = false) : r.push(h), s += h.length;
           return r;
-        }, TextProperty.prototype.completeTextData = function(t) {
+        }, TextProperty.prototype.completeTextData = function (t) {
           t.__complete = true;
           var e, i, r, s, a, n, o, h = this.elem.globalData.fontManager, l = this.data, p = [], f = 0, m = l.m.g, c = 0, d = 0, u = 0, y = [], g = 0, v = 0, b = h.getFontByName(t.f), x = 0, P = getFontProperties(b);
           t.fWeight = P.weight, t.fStyle = P.style, t.finalSize = t.s, t.finalText = this.buildFinalText(t.t), i = t.finalText.length, t.finalLineHeight = t.lh;
           var E, S = t.tr / 1e3 * t.finalSize;
           if (t.sz)
-            for (var C, _, A = true, T = t.sz[0], M = t.sz[1]; A; ) {
+            for (var C, _, A = true, T = t.sz[0], M = t.sz[1]; A;) {
               C = 0, g = 0, i = (_ = this.buildFinalText(t.t)).length, S = t.tr / 1e3 * t.finalSize;
               var k = -1;
               for (e = 0; e < i; e += 1)
@@ -12591,13 +12663,13 @@
           for (e = 0; e < i; e += 1)
             if (r = false, 13 === (E = (D = t.finalText[e]).charCodeAt(0)) || 3 === E ? (F = 0, y.push(g), v = g > v ? g : v, g = -2 * S, s = "", r = true, u += 1) : s = D, h.chars ? (o = h.getCharData(D, b.fStyle, h.getFontByName(t.f).fFamily), x = r ? 0 : o.w * t.finalSize / 100) : x = h.measureText(s, t.f, t.finalSize), " " === D ? F += x + S : (g += x + S + F, F = 0), p.push({ l: x, an: x, add: c, n: r, anIndexes: [], val: s, line: u, animatorJustifyOffset: 0 }), 2 == m) {
               if (c += x, "" === s || " " === s || e === i - 1) {
-                for ("" !== s && " " !== s || (c -= x); d <= e; )
+                for ("" !== s && " " !== s || (c -= x); d <= e;)
                   p[d].an = c, p[d].ind = f, p[d].extra = x, d += 1;
                 f += 1, c = 0;
               }
             } else if (3 == m) {
               if (c += x, "" === s || e === i - 1) {
-                for ("" === s && (c -= x); d <= e; )
+                for ("" === s && (c -= x); d <= e;)
                   p[d].an = c, p[d].ind = f, p[d].extra = x, d += 1;
                 c = 0, f += 1;
               }
@@ -12630,62 +12702,66 @@
                 z != (I = p[e]).anIndexes[a] && (z = I.anIndexes[a], G = L.splice(Math.floor(Math.random() * L.length), 1)[0]), I.anIndexes[a] = G;
           }
           t.yOffset = t.finalLineHeight || 1.2 * t.finalSize, t.ls = t.ls || 0, t.ascent = b.ascent * t.finalSize / 100;
-        }, TextProperty.prototype.updateDocumentData = function(t, e) {
+        }, TextProperty.prototype.updateDocumentData = function (t, e) {
           e = void 0 === e ? this.keysIndex : e;
           var i = this.copyData({}, this.data.d.k[e].s);
           i = this.copyData(i, t), this.data.d.k[e].s = i, this.recalculate(e), this.setCurrentData(i), this.elem.addDynamicProperty(this);
-        }, TextProperty.prototype.recalculate = function(t) {
+        }, TextProperty.prototype.recalculate = function (t) {
           var e = this.data.d.k[t].s;
           e.__complete = false, this.keysIndex = 0, this._isFirstFrame = true, this.getValue(e);
-        }, TextProperty.prototype.canResizeFont = function(t) {
+        }, TextProperty.prototype.canResizeFont = function (t) {
           this.canResize = t, this.recalculate(this.keysIndex), this.elem.addDynamicProperty(this);
-        }, TextProperty.prototype.setMinimumFontSize = function(t) {
+        }, TextProperty.prototype.setMinimumFontSize = function (t) {
           this.minimumFontSize = Math.floor(t) || 1, this.recalculate(this.keysIndex), this.elem.addDynamicProperty(this);
         };
-        var TextSelectorProp = function() {
+        var TextSelectorProp = function () {
           var t = Math.max, e = Math.min, i = Math.floor;
           function r(t2, e2) {
             this._currentTextLength = -1, this.k = false, this.data = e2, this.elem = t2, this.comp = t2.comp, this.finalS = 0, this.finalE = 0, this.initDynamicPropertyContainer(t2), this.s = PropertyFactory.getProp(t2, e2.s || { k: 0 }, 0, 0, this), this.e = "e" in e2 ? PropertyFactory.getProp(t2, e2.e, 0, 0, this) : { v: 100 }, this.o = PropertyFactory.getProp(t2, e2.o || { k: 0 }, 0, 0, this), this.xe = PropertyFactory.getProp(t2, e2.xe || { k: 0 }, 0, 0, this), this.ne = PropertyFactory.getProp(t2, e2.ne || { k: 0 }, 0, 0, this), this.sm = PropertyFactory.getProp(t2, e2.sm || { k: 100 }, 0, 0, this), this.a = PropertyFactory.getProp(t2, e2.a, 0, 0.01, this), this.dynamicProperties.length || this.getValue();
           }
-          return r.prototype = { getMult: function(r2) {
-            this._currentTextLength !== this.elem.textProperty.currentData.l.length && this.getValue();
-            var s = 0, a = 0, n = 1, o = 1;
-            this.ne.v > 0 ? s = this.ne.v / 100 : a = -this.ne.v / 100, this.xe.v > 0 ? n = 1 - this.xe.v / 100 : o = 1 + this.xe.v / 100;
-            var h = BezierFactory.getBezierEasing(s, a, n, o).get, l = 0, p = this.finalS, f = this.finalE, m = this.data.sh;
-            if (2 === m)
-              l = h(l = f === p ? r2 >= f ? 1 : 0 : t(0, e(0.5 / (f - p) + (r2 - p) / (f - p), 1)));
-            else if (3 === m)
-              l = h(l = f === p ? r2 >= f ? 0 : 1 : 1 - t(0, e(0.5 / (f - p) + (r2 - p) / (f - p), 1)));
-            else if (4 === m)
-              f === p ? l = 0 : (l = t(0, e(0.5 / (f - p) + (r2 - p) / (f - p), 1))) < 0.5 ? l *= 2 : l = 1 - 2 * (l - 0.5), l = h(l);
-            else if (5 === m) {
-              if (f === p)
-                l = 0;
-              else {
-                var c = f - p, d = -c / 2 + (r2 = e(t(0, r2 + 0.5 - p), f - p)), u = c / 2;
-                l = Math.sqrt(1 - d * d / (u * u));
+          return r.prototype = {
+            getMult: function (r2) {
+              this._currentTextLength !== this.elem.textProperty.currentData.l.length && this.getValue();
+              var s = 0, a = 0, n = 1, o = 1;
+              this.ne.v > 0 ? s = this.ne.v / 100 : a = -this.ne.v / 100, this.xe.v > 0 ? n = 1 - this.xe.v / 100 : o = 1 + this.xe.v / 100;
+              var h = BezierFactory.getBezierEasing(s, a, n, o).get, l = 0, p = this.finalS, f = this.finalE, m = this.data.sh;
+              if (2 === m)
+                l = h(l = f === p ? r2 >= f ? 1 : 0 : t(0, e(0.5 / (f - p) + (r2 - p) / (f - p), 1)));
+              else if (3 === m)
+                l = h(l = f === p ? r2 >= f ? 0 : 1 : 1 - t(0, e(0.5 / (f - p) + (r2 - p) / (f - p), 1)));
+              else if (4 === m)
+                f === p ? l = 0 : (l = t(0, e(0.5 / (f - p) + (r2 - p) / (f - p), 1))) < 0.5 ? l *= 2 : l = 1 - 2 * (l - 0.5), l = h(l);
+              else if (5 === m) {
+                if (f === p)
+                  l = 0;
+                else {
+                  var c = f - p, d = -c / 2 + (r2 = e(t(0, r2 + 0.5 - p), f - p)), u = c / 2;
+                  l = Math.sqrt(1 - d * d / (u * u));
+                }
+                l = h(l);
+              } else
+                6 === m ? (f === p ? l = 0 : (r2 = e(t(0, r2 + 0.5 - p), f - p), l = (1 + Math.cos(Math.PI + 2 * Math.PI * r2 / (f - p))) / 2), l = h(l)) : (r2 >= i(p) && (l = t(0, e(r2 - p < 0 ? e(f, 1) - (p - r2) : f - r2, 1))), l = h(l));
+              if (100 !== this.sm.v) {
+                var y = 0.01 * this.sm.v;
+                0 === y && (y = 1e-8);
+                var g = 0.5 - 0.5 * y;
+                l < g ? l = 0 : (l = (l - g) / y) > 1 && (l = 1);
               }
-              l = h(l);
-            } else
-              6 === m ? (f === p ? l = 0 : (r2 = e(t(0, r2 + 0.5 - p), f - p), l = (1 + Math.cos(Math.PI + 2 * Math.PI * r2 / (f - p))) / 2), l = h(l)) : (r2 >= i(p) && (l = t(0, e(r2 - p < 0 ? e(f, 1) - (p - r2) : f - r2, 1))), l = h(l));
-            if (100 !== this.sm.v) {
-              var y = 0.01 * this.sm.v;
-              0 === y && (y = 1e-8);
-              var g = 0.5 - 0.5 * y;
-              l < g ? l = 0 : (l = (l - g) / y) > 1 && (l = 1);
+              return l * this.a.v;
+            }, getValue: function (t2) {
+              this.iterateDynamicProperties(), this._mdf = t2 || this._mdf, this._currentTextLength = this.elem.textProperty.currentData.l.length || 0, t2 && 2 === this.data.r && (this.e.v = this._currentTextLength);
+              var e2 = 2 === this.data.r ? 1 : 100 / this.data.totalChars, i2 = this.o.v / e2, r2 = this.s.v / e2 + i2, s = this.e.v / e2 + i2;
+              if (r2 > s) {
+                var a = r2;
+                r2 = s, s = a;
+              }
+              this.finalS = r2, this.finalE = s;
             }
-            return l * this.a.v;
-          }, getValue: function(t2) {
-            this.iterateDynamicProperties(), this._mdf = t2 || this._mdf, this._currentTextLength = this.elem.textProperty.currentData.l.length || 0, t2 && 2 === this.data.r && (this.e.v = this._currentTextLength);
-            var e2 = 2 === this.data.r ? 1 : 100 / this.data.totalChars, i2 = this.o.v / e2, r2 = this.s.v / e2 + i2, s = this.e.v / e2 + i2;
-            if (r2 > s) {
-              var a = r2;
-              r2 = s, s = a;
+          }, extendPrototype([DynamicPropertyContainer], r), {
+            getTextSelectorProp: function (t2, e2, i2) {
+              return new r(t2, e2, i2);
             }
-            this.finalS = r2, this.finalE = s;
-          } }, extendPrototype([DynamicPropertyContainer], r), { getTextSelectorProp: function(t2, e2, i2) {
-            return new r(t2, e2, i2);
-          } };
+          };
         }();
         function TextAnimatorDataProperty(t, e, i) {
           var r = { propType: false }, s = PropertyFactory.getProp, a = e.a;
@@ -12696,12 +12772,12 @@
         }
         function ITextElement() {
         }
-        TextAnimatorProperty.prototype.searchProperties = function() {
+        TextAnimatorProperty.prototype.searchProperties = function () {
           var t, e, i = this._textData.a.length, r = PropertyFactory.getProp;
           for (t = 0; t < i; t += 1)
             e = this._textData.a[t], this._animatorsData[t] = new TextAnimatorDataProperty(this._elem, e, this);
           this._textData.p && "m" in this._textData.p ? (this._pathData = { a: r(this._elem, this._textData.p.a, 0, 0, this), f: r(this._elem, this._textData.p.f, 0, 0, this), l: r(this._elem, this._textData.p.l, 0, 0, this), r: r(this._elem, this._textData.p.r, 0, 0, this), p: r(this._elem, this._textData.p.p, 0, 0, this), m: this._elem.maskManager.getMaskProperty(this._textData.p.m) }, this._hasMaskedPath = true) : this._hasMaskedPath = false, this._moreOptions.alignment = r(this._elem, this._textData.m.a, 1, 0, this);
-        }, TextAnimatorProperty.prototype.getMeasures = function(t, e) {
+        }, TextAnimatorProperty.prototype.getMeasures = function (t, e) {
           if (this.lettersChangedFlag = e, this._mdf || this._isFirstFrame || e || this._hasMaskedPath && this._pathData.m._mdf) {
             this._isFirstFrame = false;
             var i, r, s, a, n, o, h, l, p, f, m, c, d, u, y, g, v, b, x, P = this._moreOptions.alignment.v, E = this._animatorsData, S = this._textData, C = this.mHelper, _ = this._renderType, A = this.renderedLetters.length, T = t.l;
@@ -12713,7 +12789,7 @@
                 s = a, x.v.c && (M = bez.buildBezierData(k.v[s], k.v[0], [k.o[s][0] - k.v[s][0], k.o[s][1] - k.v[s][1]], [k.i[0][0] - k.v[0][0], k.i[0][1] - k.v[0][1]]), n.tLength += M.segmentLength, n.segments.push(M), g += M.segmentLength), this._pathData.pi = n;
               }
               if (n = this._pathData.pi, o = this._pathData.f.v, m = 0, f = 1, l = 0, p = true, u = n.segments, o < 0 && x.v.c)
-                for (n.tLength < Math.abs(o) && (o = -Math.abs(o) % n.tLength), f = (d = u[m = u.length - 1].points).length - 1; o < 0; )
+                for (n.tLength < Math.abs(o) && (o = -Math.abs(o) % n.tLength), f = (d = u[m = u.length - 1].points).length - 1; o < 0;)
                   o += d[f].partialLength, (f -= 1) < 0 && (f = (d = u[m -= 1].points).length - 1);
               c = (d = u[m].points)[f - 1], y = (h = d[f]).partialLength;
             }
@@ -12725,7 +12801,7 @@
               var it = 0, rt = 0, st = 2 === t.j ? -0.5 : -1, at = 0, nt = true;
               for (s = 0; s < a; s += 1)
                 if (T[s].n) {
-                  for (it && (it += rt); at < s; )
+                  for (it && (it += rt); at < s;)
                     T[at].animatorJustifyOffset = it, at += 1;
                   it = 0, nt = true;
                 } else {
@@ -12733,7 +12809,7 @@
                     (D = E[F].a).t.propType && (nt && 2 === t.j && (rt += D.t.v * st), (V = E[F].s.getMult(T[s].anIndexes[F], S.a[F].s.totalChars)).length ? it += D.t.v * V[0] * st : it += D.t.v * V * st);
                   nt = false;
                 }
-              for (it && (it += rt); at < s; )
+              for (it && (it += rt); at < s;)
                 T[at].animatorJustifyOffset = it, at += 1;
             }
             for (s = 0; s < a; s += 1) {
@@ -12755,7 +12831,7 @@
                   var ot = 0;
                   for (F = 0; F < w; F += 1)
                     (D = E[F].a).p.propType && ((V = E[F].s.getMult(T[s].anIndexes[F], S.a[F].s.totalChars)).length ? ot += D.p.v[0] * V[0] : ot += D.p.v[0] * V), D.a.propType && ((V = E[F].s.getMult(T[s].anIndexes[F], S.a[F].s.totalChars)).length ? ot += D.a.v[0] * V[0] : ot += D.a.v[0] * V);
-                  for (p = true, this._pathData.a.v && (o = 0.5 * T[0].an + (g - this._pathData.f.v - 0.5 * T[0].an - 0.5 * T[T.length - 1].an) * X / (a - 1), o += this._pathData.f.v); p; )
+                  for (p = true, this._pathData.a.v && (o = 0.5 * T[0].an + (g - this._pathData.f.v - 0.5 * T[0].an - 0.5 * T[T.length - 1].an) * X / (a - 1), o += this._pathData.f.v); p;)
                     l + y >= o + ot || !d ? (v = (o + ot - l) / h.partialLength, G = c.point[0] + (h.point[0] - c.point[0]) * v, z = c.point[1] + (h.point[1] - c.point[1]) * v, C.translate(-P[0] * T[s].an * 5e-3, -P[1] * B * 0.01), p = false) : d && (l += h.partialLength, (f += 1) >= d.length && (f = 0, u[m += 1] ? d = u[m].points : x.v.c ? (f = 0, d = u[m = 0].points) : (l -= h.partialLength, d = null)), d && (c = h, y = (h = d[f]).partialLength));
                   L = T[s].an / 2 - T[s].add, C.translate(-L, 0, 0);
                 } else
@@ -12801,24 +12877,24 @@
               A <= s ? (I = new LetterProps(J, W, $2, Y, tt, et), this.renderedLetters.push(I), A += 1, this.lettersChangedFlag = true) : (I = this.renderedLetters[s], this.lettersChangedFlag = I.update(J, W, $2, Y, tt, et) || this.lettersChangedFlag);
             }
           }
-        }, TextAnimatorProperty.prototype.getValue = function() {
+        }, TextAnimatorProperty.prototype.getValue = function () {
           this._elem.globalData.frameId !== this._frameId && (this._frameId = this._elem.globalData.frameId, this.iterateDynamicProperties());
-        }, TextAnimatorProperty.prototype.mHelper = new Matrix(), TextAnimatorProperty.prototype.defaultPropsArray = [], extendPrototype([DynamicPropertyContainer], TextAnimatorProperty), ITextElement.prototype.initElement = function(t, e, i) {
+        }, TextAnimatorProperty.prototype.mHelper = new Matrix(), TextAnimatorProperty.prototype.defaultPropsArray = [], extendPrototype([DynamicPropertyContainer], TextAnimatorProperty), ITextElement.prototype.initElement = function (t, e, i) {
           this.lettersChangedFlag = true, this.initFrame(), this.initBaseData(t, e, i), this.textProperty = new TextProperty(this, t.t, this.dynamicProperties), this.textAnimator = new TextAnimatorProperty(t.t, this.renderType, this), this.initTransform(t, e, i), this.initHierarchy(), this.initRenderable(), this.initRendererElement(), this.createContainerElements(), this.createRenderableComponents(), this.createContent(), this.hide(), this.textAnimator.searchProperties(this.dynamicProperties);
-        }, ITextElement.prototype.prepareFrame = function(t) {
+        }, ITextElement.prototype.prepareFrame = function (t) {
           this._mdf = false, this.prepareRenderableFrame(t), this.prepareProperties(t, this.isInRange);
-        }, ITextElement.prototype.createPathShape = function(t, e) {
+        }, ITextElement.prototype.createPathShape = function (t, e) {
           var i, r, s = e.length, a = "";
           for (i = 0; i < s; i += 1)
             "sh" === e[i].ty && (r = e[i].ks.k, a += buildShapeString(r, r.i.length, true, t));
           return a;
-        }, ITextElement.prototype.updateDocumentData = function(t, e) {
+        }, ITextElement.prototype.updateDocumentData = function (t, e) {
           this.textProperty.updateDocumentData(t, e);
-        }, ITextElement.prototype.canResizeFont = function(t) {
+        }, ITextElement.prototype.canResizeFont = function (t) {
           this.textProperty.canResizeFont(t);
-        }, ITextElement.prototype.setMinimumFontSize = function(t) {
+        }, ITextElement.prototype.setMinimumFontSize = function (t) {
           this.textProperty.setMinimumFontSize(t);
-        }, ITextElement.prototype.applyTextPropertiesToMatrix = function(t, e, i, r, s) {
+        }, ITextElement.prototype.applyTextPropertiesToMatrix = function (t, e, i, r, s) {
           switch (t.ps && e.translate(t.ps[0], t.ps[1] + t.ascent, 0), e.translate(0, -t.ls, 0), t.j) {
             case 1:
               e.translate(t.justifyOffset + (t.boxWidth - t.lineWidths[i]), 0, 0);
@@ -12827,10 +12903,10 @@
               e.translate(t.justifyOffset + (t.boxWidth - t.lineWidths[i]) / 2, 0, 0);
           }
           e.translate(r, s, 0);
-        }, ITextElement.prototype.buildColor = function(t) {
+        }, ITextElement.prototype.buildColor = function (t) {
           return "rgb(" + Math.round(255 * t[0]) + "," + Math.round(255 * t[1]) + "," + Math.round(255 * t[2]) + ")";
-        }, ITextElement.prototype.emptyProp = new LetterProps(), ITextElement.prototype.destroy = function() {
-        }, ITextElement.prototype.validateText = function() {
+        }, ITextElement.prototype.emptyProp = new LetterProps(), ITextElement.prototype.destroy = function () {
+        }, ITextElement.prototype.validateText = function () {
           (this.textProperty._mdf || this.textProperty._isFirstFrame) && (this.buildNewText(), this.textProperty._isFirstFrame = false, this.textProperty._mdf = false);
         };
         var emptyShapeData = { shapes: [] };
@@ -12870,13 +12946,13 @@
         function ShapeTransformManager() {
           this.sequences = {}, this.sequenceList = [], this.transform_key_count = 0;
         }
-        extendPrototype([BaseElement, TransformElement, SVGBaseElement, HierarchyElement, FrameElement, RenderableDOMElement, ITextElement], SVGTextLottieElement), SVGTextLottieElement.prototype.createContent = function() {
+        extendPrototype([BaseElement, TransformElement, SVGBaseElement, HierarchyElement, FrameElement, RenderableDOMElement, ITextElement], SVGTextLottieElement), SVGTextLottieElement.prototype.createContent = function () {
           this.data.singleShape && !this.globalData.fontManager.chars && (this.textContainer = createNS("text"));
-        }, SVGTextLottieElement.prototype.buildTextContents = function(t) {
-          for (var e = 0, i = t.length, r = [], s = ""; e < i; )
+        }, SVGTextLottieElement.prototype.buildTextContents = function (t) {
+          for (var e = 0, i = t.length, r = [], s = ""; e < i;)
             t[e] === String.fromCharCode(13) || t[e] === String.fromCharCode(3) ? (r.push(s), s = "") : s += t[e], e += 1;
           return r.push(s), r;
-        }, SVGTextLottieElement.prototype.buildShapeData = function(t, e) {
+        }, SVGTextLottieElement.prototype.buildShapeData = function (t, e) {
           if (t.shapes && t.shapes.length) {
             var i = t.shapes[0];
             if (i.it) {
@@ -12885,7 +12961,7 @@
             }
           }
           return t;
-        }, SVGTextLottieElement.prototype.buildNewText = function() {
+        }, SVGTextLottieElement.prototype.buildNewText = function () {
           var t, e;
           this.addDynamicProperty(this);
           var i = this.textProperty.currentData;
@@ -12950,21 +13026,21 @@
               (n = this.textSpans[t].span || createNS("tspan")).textContent = S[t], n.setAttribute("x", 0), n.setAttribute("y", m), n.style.display = "inherit", P.appendChild(n), this.textSpans[t] || (this.textSpans[t] = { span: null, glyph: null }), this.textSpans[t].span = n, m += i.finalLineHeight;
             this.layerElement.appendChild(P);
           }
-          for (; t < this.textSpans.length; )
+          for (; t < this.textSpans.length;)
             this.textSpans[t].span.style.display = "none", t += 1;
           this._sizeChanged = true;
-        }, SVGTextLottieElement.prototype.sourceRectAtTime = function() {
+        }, SVGTextLottieElement.prototype.sourceRectAtTime = function () {
           if (this.prepareFrame(this.comp.renderedFrame - this.data.st), this.renderInnerContent(), this._sizeChanged) {
             this._sizeChanged = false;
             var t = this.layerElement.getBBox();
             this.bbox = { top: t.y, left: t.x, width: t.width, height: t.height };
           }
           return this.bbox;
-        }, SVGTextLottieElement.prototype.getValue = function() {
+        }, SVGTextLottieElement.prototype.getValue = function () {
           var t, e, i = this.textSpans.length;
           for (this.renderedFrame = this.comp.renderedFrame, t = 0; t < i; t += 1)
             (e = this.textSpans[t].glyph) && (e.prepareFrame(this.comp.renderedFrame - this.data.st), e._mdf && (this._mdf = true));
-        }, SVGTextLottieElement.prototype.renderInnerContent = function() {
+        }, SVGTextLottieElement.prototype.renderInnerContent = function () {
           if (this.validateText(), (!this.data.singleShape || this._mdf) && (this.textAnimator.getMeasures(this.textProperty.currentData, this.lettersChangedFlag), this.lettersChangedFlag || this.textAnimator.lettersChangedFlag)) {
             var t, e;
             this._sizeChanged = true;
@@ -12972,28 +13048,28 @@
             for (e = n.length, t = 0; t < e; t += 1)
               n[t].n || (i = a[t], r = this.textSpans[t].span, (s = this.textSpans[t].glyph) && s.renderFrame(), i._mdf.m && r.setAttribute("transform", i.m), i._mdf.o && r.setAttribute("opacity", i.o), i._mdf.sw && r.setAttribute("stroke-width", i.sw), i._mdf.sc && r.setAttribute("stroke", i.sc), i._mdf.fc && r.setAttribute("fill", i.fc));
           }
-        }, extendPrototype([IImageElement], ISolidElement), ISolidElement.prototype.createContent = function() {
+        }, extendPrototype([IImageElement], ISolidElement), ISolidElement.prototype.createContent = function () {
           var t = createNS("rect");
           t.setAttribute("width", this.data.sw), t.setAttribute("height", this.data.sh), t.setAttribute("fill", this.data.sc), this.layerElement.appendChild(t);
-        }, NullElement.prototype.prepareFrame = function(t) {
+        }, NullElement.prototype.prepareFrame = function (t) {
           this.prepareProperties(t, true);
-        }, NullElement.prototype.renderFrame = function() {
-        }, NullElement.prototype.getBaseElement = function() {
+        }, NullElement.prototype.renderFrame = function () {
+        }, NullElement.prototype.getBaseElement = function () {
           return null;
-        }, NullElement.prototype.destroy = function() {
-        }, NullElement.prototype.sourceRectAtTime = function() {
-        }, NullElement.prototype.hide = function() {
-        }, extendPrototype([BaseElement, TransformElement, HierarchyElement, FrameElement], NullElement), extendPrototype([BaseRenderer], SVGRendererBase), SVGRendererBase.prototype.createNull = function(t) {
+        }, NullElement.prototype.destroy = function () {
+        }, NullElement.prototype.sourceRectAtTime = function () {
+        }, NullElement.prototype.hide = function () {
+        }, extendPrototype([BaseElement, TransformElement, HierarchyElement, FrameElement], NullElement), extendPrototype([BaseRenderer], SVGRendererBase), SVGRendererBase.prototype.createNull = function (t) {
           return new NullElement(t, this.globalData, this);
-        }, SVGRendererBase.prototype.createShape = function(t) {
+        }, SVGRendererBase.prototype.createShape = function (t) {
           return new SVGShapeElement(t, this.globalData, this);
-        }, SVGRendererBase.prototype.createText = function(t) {
+        }, SVGRendererBase.prototype.createText = function (t) {
           return new SVGTextLottieElement(t, this.globalData, this);
-        }, SVGRendererBase.prototype.createImage = function(t) {
+        }, SVGRendererBase.prototype.createImage = function (t) {
           return new IImageElement(t, this.globalData, this);
-        }, SVGRendererBase.prototype.createSolid = function(t) {
+        }, SVGRendererBase.prototype.createSolid = function (t) {
           return new ISolidElement(t, this.globalData, this);
-        }, SVGRendererBase.prototype.configAnimation = function(t) {
+        }, SVGRendererBase.prototype.configAnimation = function (t) {
           this.svgElement.setAttribute("xmlns", "http://www.w3.org/2000/svg"), this.svgElement.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink"), this.renderConfig.viewBoxSize ? this.svgElement.setAttribute("viewBox", this.renderConfig.viewBoxSize) : this.svgElement.setAttribute("viewBox", "0 0 " + t.w + " " + t.h), this.renderConfig.viewBoxOnly || (this.svgElement.setAttribute("width", t.w), this.svgElement.setAttribute("height", t.h), this.svgElement.style.width = "100%", this.svgElement.style.height = "100%", this.svgElement.style.transform = "translate3d(0,0,0)", this.svgElement.style.contentVisibility = this.renderConfig.contentVisibility), this.renderConfig.width && this.svgElement.setAttribute("width", this.renderConfig.width), this.renderConfig.height && this.svgElement.setAttribute("height", this.renderConfig.height), this.renderConfig.className && this.svgElement.setAttribute("class", this.renderConfig.className), this.renderConfig.id && this.svgElement.setAttribute("id", this.renderConfig.id), void 0 !== this.renderConfig.focusable && this.svgElement.setAttribute("focusable", this.renderConfig.focusable), this.svgElement.setAttribute("preserveAspectRatio", this.renderConfig.preserveAspectRatio), this.animationItem.wrapper.appendChild(this.svgElement);
           var e = this.globalData.defs;
           this.setupGlobalData(t, e), this.globalData.progressiveLoad = this.renderConfig.progressiveLoad, this.data = t;
@@ -13001,21 +13077,21 @@
           r.setAttribute("width", t.w), r.setAttribute("height", t.h), r.setAttribute("x", 0), r.setAttribute("y", 0);
           var s = createElementID();
           i.setAttribute("id", s), i.appendChild(r), this.layerElement.setAttribute("clip-path", "url(" + getLocationHref() + "#" + s + ")"), e.appendChild(i), this.layers = t.layers, this.elements = createSizedArray(t.layers.length);
-        }, SVGRendererBase.prototype.destroy = function() {
+        }, SVGRendererBase.prototype.destroy = function () {
           var t;
           this.animationItem.wrapper && (this.animationItem.wrapper.innerText = ""), this.layerElement = null, this.globalData.defs = null;
           var e = this.layers ? this.layers.length : 0;
           for (t = 0; t < e; t += 1)
             this.elements[t] && this.elements[t].destroy && this.elements[t].destroy();
           this.elements.length = 0, this.destroyed = true, this.animationItem = null;
-        }, SVGRendererBase.prototype.updateContainerSize = function() {
-        }, SVGRendererBase.prototype.findIndexByInd = function(t) {
+        }, SVGRendererBase.prototype.updateContainerSize = function () {
+        }, SVGRendererBase.prototype.findIndexByInd = function (t) {
           var e = 0, i = this.layers.length;
           for (e = 0; e < i; e += 1)
             if (this.layers[e].ind === t)
               return e;
           return -1;
-        }, SVGRendererBase.prototype.buildItem = function(t) {
+        }, SVGRendererBase.prototype.buildItem = function (t) {
           var e = this.elements;
           if (!e[t] && 99 !== this.layers[t].ty) {
             e[t] = true;
@@ -13031,11 +13107,11 @@
                 this.buildItem(r), this.addPendingElement(i);
             }
           }
-        }, SVGRendererBase.prototype.checkPendingElements = function() {
-          for (; this.pendingElements.length; ) {
+        }, SVGRendererBase.prototype.checkPendingElements = function () {
+          for (; this.pendingElements.length;) {
             var t = this.pendingElements.pop();
             if (t.checkParenting(), t.data.tt)
-              for (var e = 0, i = this.elements.length; e < i; ) {
+              for (var e = 0, i = this.elements.length; e < i;) {
                 if (this.elements[e] === t) {
                   var r = "tp" in t.data ? this.findIndexByInd(t.data.tp) : e - 1, s = this.elements[r].getMatte(this.layers[e].tt);
                   t.setMatte(s);
@@ -13044,7 +13120,7 @@
                 e += 1;
               }
           }
-        }, SVGRendererBase.prototype.renderFrame = function(t) {
+        }, SVGRendererBase.prototype.renderFrame = function (t) {
           if (this.renderedFrame !== t && !this.destroyed) {
             var e;
             null === t ? t = this.renderedFrame : this.renderedFrame = t, this.globalData.frameNum = t, this.globalData.frameId += 1, this.globalData.projectInterface.currentFrame = t, this.globalData._mdf = false;
@@ -13055,20 +13131,20 @@
               for (e = 0; e < i; e += 1)
                 (this.completeLayers || this.elements[e]) && this.elements[e].renderFrame();
           }
-        }, SVGRendererBase.prototype.appendElementInPos = function(t, e) {
+        }, SVGRendererBase.prototype.appendElementInPos = function (t, e) {
           var i = t.getBaseElement();
           if (i) {
-            for (var r, s = 0; s < e; )
+            for (var r, s = 0; s < e;)
               this.elements[s] && true !== this.elements[s] && this.elements[s].getBaseElement() && (r = this.elements[s].getBaseElement()), s += 1;
             r ? this.layerElement.insertBefore(i, r) : this.layerElement.appendChild(i);
           }
-        }, SVGRendererBase.prototype.hide = function() {
+        }, SVGRendererBase.prototype.hide = function () {
           this.layerElement.style.display = "none";
-        }, SVGRendererBase.prototype.show = function() {
+        }, SVGRendererBase.prototype.show = function () {
           this.layerElement.style.display = "block";
-        }, extendPrototype([BaseElement, TransformElement, HierarchyElement, FrameElement, RenderableDOMElement], ICompElement), ICompElement.prototype.initElement = function(t, e, i) {
+        }, extendPrototype([BaseElement, TransformElement, HierarchyElement, FrameElement, RenderableDOMElement], ICompElement), ICompElement.prototype.initElement = function (t, e, i) {
           this.initFrame(), this.initBaseData(t, e, i), this.initTransform(t, e, i), this.initRenderable(), this.initHierarchy(), this.initRendererElement(), this.createContainerElements(), this.createRenderableComponents(), !this.data.xt && e.progressiveLoad || this.buildAllItems(), this.hide();
-        }, ICompElement.prototype.prepareFrame = function(t) {
+        }, ICompElement.prototype.prepareFrame = function (t) {
           if (this._mdf = false, this.prepareRenderableFrame(t), this.prepareProperties(t, this.isInRange), this.isInRange || this.data.xt) {
             if (this.tm._placeholder)
               this.renderedFrame = t / this.data.sr;
@@ -13080,58 +13156,62 @@
             for (this.completeLayers || this.checkLayers(this.renderedFrame), i = r - 1; i >= 0; i -= 1)
               (this.completeLayers || this.elements[i]) && (this.elements[i].prepareFrame(this.renderedFrame - this.layers[i].st), this.elements[i]._mdf && (this._mdf = true));
           }
-        }, ICompElement.prototype.renderInnerContent = function() {
+        }, ICompElement.prototype.renderInnerContent = function () {
           var t, e = this.layers.length;
           for (t = 0; t < e; t += 1)
             (this.completeLayers || this.elements[t]) && this.elements[t].renderFrame();
-        }, ICompElement.prototype.setElements = function(t) {
+        }, ICompElement.prototype.setElements = function (t) {
           this.elements = t;
-        }, ICompElement.prototype.getElements = function() {
+        }, ICompElement.prototype.getElements = function () {
           return this.elements;
-        }, ICompElement.prototype.destroyElements = function() {
+        }, ICompElement.prototype.destroyElements = function () {
           var t, e = this.layers.length;
           for (t = 0; t < e; t += 1)
             this.elements[t] && this.elements[t].destroy();
-        }, ICompElement.prototype.destroy = function() {
+        }, ICompElement.prototype.destroy = function () {
           this.destroyElements(), this.destroyBaseElement();
-        }, extendPrototype([SVGRendererBase, ICompElement, SVGBaseElement], SVGCompElement), SVGCompElement.prototype.createComp = function(t) {
+        }, extendPrototype([SVGRendererBase, ICompElement, SVGBaseElement], SVGCompElement), SVGCompElement.prototype.createComp = function (t) {
           return new SVGCompElement(t, this.globalData, this);
-        }, extendPrototype([SVGRendererBase], SVGRenderer), SVGRenderer.prototype.createComp = function(t) {
+        }, extendPrototype([SVGRendererBase], SVGRenderer), SVGRenderer.prototype.createComp = function (t) {
           return new SVGCompElement(t, this.globalData, this);
-        }, ShapeTransformManager.prototype = { addTransformSequence: function(t) {
-          var e, i = t.length, r = "_";
-          for (e = 0; e < i; e += 1)
-            r += t[e].transform.key + "_";
-          var s = this.sequences[r];
-          return s || (s = { transforms: [].concat(t), finalTransform: new Matrix(), _mdf: false }, this.sequences[r] = s, this.sequenceList.push(s)), s;
-        }, processSequence: function(t, e) {
-          for (var i = 0, r = t.transforms.length, s = e; i < r && !e; ) {
-            if (t.transforms[i].transform.mProps._mdf) {
-              s = true;
-              break;
+        }, ShapeTransformManager.prototype = {
+          addTransformSequence: function (t) {
+            var e, i = t.length, r = "_";
+            for (e = 0; e < i; e += 1)
+              r += t[e].transform.key + "_";
+            var s = this.sequences[r];
+            return s || (s = { transforms: [].concat(t), finalTransform: new Matrix(), _mdf: false }, this.sequences[r] = s, this.sequenceList.push(s)), s;
+          }, processSequence: function (t, e) {
+            for (var i = 0, r = t.transforms.length, s = e; i < r && !e;) {
+              if (t.transforms[i].transform.mProps._mdf) {
+                s = true;
+                break;
+              }
+              i += 1;
             }
-            i += 1;
+            if (s)
+              for (t.finalTransform.reset(), i = r - 1; i >= 0; i -= 1)
+                t.finalTransform.multiply(t.transforms[i].transform.mProps.v);
+            t._mdf = s;
+          }, processSequences: function (t) {
+            var e, i = this.sequenceList.length;
+            for (e = 0; e < i; e += 1)
+              this.processSequence(this.sequenceList[e], t);
+          }, getNewKey: function () {
+            return this.transform_key_count += 1, "_" + this.transform_key_count;
           }
-          if (s)
-            for (t.finalTransform.reset(), i = r - 1; i >= 0; i -= 1)
-              t.finalTransform.multiply(t.transforms[i].transform.mProps.v);
-          t._mdf = s;
-        }, processSequences: function(t) {
-          var e, i = this.sequenceList.length;
-          for (e = 0; e < i; e += 1)
-            this.processSequence(this.sequenceList[e], t);
-        }, getNewKey: function() {
-          return this.transform_key_count += 1, "_" + this.transform_key_count;
-        } };
-        var lumaLoader = function() {
+        };
+        var lumaLoader = function () {
           var t = "__lottie_element_luma_buffer", e = null, i = null, r = null;
           function s() {
             var s2, a, n;
             e || (s2 = createNS("svg"), a = createNS("filter"), n = createNS("feColorMatrix"), a.setAttribute("id", t), n.setAttribute("type", "matrix"), n.setAttribute("color-interpolation-filters", "sRGB"), n.setAttribute("values", "0.3, 0.3, 0.3, 0, 0, 0.3, 0.3, 0.3, 0, 0, 0.3, 0.3, 0.3, 0, 0, 0.3, 0.3, 0.3, 0, 0"), a.appendChild(n), s2.appendChild(a), s2.setAttribute("id", t + "_svg"), featureSupport.svgLumaHidden && (s2.style.display = "none"), r = s2, document.body.appendChild(r), e = createTag("canvas"), (i = e.getContext("2d")).filter = "url(#" + t + ")", i.fillStyle = "rgba(0,0,0,0)", i.fillRect(0, 0, 1, 1));
           }
-          return { load: s, get: function(r2) {
-            return e || s(), e.width = r2.width, e.height = r2.height, i.filter = "url(#" + t + ")", e;
-          } };
+          return {
+            load: s, get: function (r2) {
+              return e || s(), e.width = r2.width, e.height = r2.height, i.filter = "url(#" + t + ")", e;
+            }
+          };
         };
         function createCanvas(t, e) {
           if (featureSupport.offscreenCanvas)
@@ -13164,16 +13244,16 @@
         }
         function CVBaseElement() {
         }
-        CVEffects.prototype.renderFrame = function(t) {
+        CVEffects.prototype.renderFrame = function (t) {
           var e, i = this.filters.length;
           for (e = 0; e < i; e += 1)
             this.filters[e].renderFrame(t);
-        }, CVEffects.prototype.getEffects = function(t) {
+        }, CVEffects.prototype.getEffects = function (t) {
           var e, i = this.filters.length, r = [];
           for (e = 0; e < i; e += 1)
             this.filters[e].type === t && r.push(this.filters[e]);
           return r;
-        }, CVMaskElement.prototype.renderFrame = function() {
+        }, CVMaskElement.prototype.renderFrame = function () {
           if (this.hasMasks) {
             var t, e, i, r, s = this.element.finalTransform.mat, a = this.element.canvasContext, n = this.masksProperties.length;
             for (a.beginPath(), t = 0; t < n; t += 1)
@@ -13187,7 +13267,7 @@
               }
             this.element.globalData.renderer.save(true), a.clip();
           }
-        }, CVMaskElement.prototype.getMaskProperty = MaskElement.prototype.getMaskProperty, CVMaskElement.prototype.destroy = function() {
+        }, CVMaskElement.prototype.getMaskProperty = MaskElement.prototype.getMaskProperty, CVMaskElement.prototype.destroy = function () {
           this.element = null;
         };
         var operationsMap = { 1: "source-in", 2: "source-out", 3: "source-in", 4: "source-out" };
@@ -13264,58 +13344,60 @@
         function HybridRenderer(t, e) {
           this.animationItem = t, this.layers = null, this.renderedFrame = -1, this.renderConfig = { className: e && e.className || "", imagePreserveAspectRatio: e && e.imagePreserveAspectRatio || "xMidYMid slice", hideOnTransparent: !(e && false === e.hideOnTransparent), filterSize: { width: e && e.filterSize && e.filterSize.width || "400%", height: e && e.filterSize && e.filterSize.height || "400%", x: e && e.filterSize && e.filterSize.x || "-100%", y: e && e.filterSize && e.filterSize.y || "-100%" }, runExpressions: !e || void 0 === e.runExpressions || e.runExpressions }, this.globalData = { _mdf: false, frameNum: -1, renderConfig: this.renderConfig }, this.pendingElements = [], this.elements = [], this.threeDElements = [], this.destroyed = false, this.camera = null, this.supports3d = true, this.rendererType = "html";
         }
-        CVBaseElement.prototype = { createElements: function() {
-        }, initRendererElement: function() {
-        }, createContainerElements: function() {
-          if (this.data.tt >= 1) {
-            this.buffers = [];
-            var t = this.globalData.canvasContext, e = assetLoader.createCanvas(t.canvas.width, t.canvas.height);
-            this.buffers.push(e);
-            var i = assetLoader.createCanvas(t.canvas.width, t.canvas.height);
-            this.buffers.push(i), this.data.tt >= 3 && !document._isProxy && assetLoader.loadLumaCanvas();
-          }
-          this.canvasContext = this.globalData.canvasContext, this.transformCanvas = this.globalData.transformCanvas, this.renderableEffectsManager = new CVEffects(this), this.searchEffectTransforms();
-        }, createContent: function() {
-        }, setBlendMode: function() {
-          var t = this.globalData;
-          if (t.blendMode !== this.data.bm) {
-            t.blendMode = this.data.bm;
-            var e = getBlendMode(this.data.bm);
-            t.canvasContext.globalCompositeOperation = e;
-          }
-        }, createRenderableComponents: function() {
-          this.maskManager = new CVMaskElement(this.data, this), this.transformEffects = this.renderableEffectsManager.getEffects(effectTypes.TRANSFORM_EFFECT);
-        }, hideElement: function() {
-          this.hidden || this.isInRange && !this.isTransparent || (this.hidden = true);
-        }, showElement: function() {
-          this.isInRange && !this.isTransparent && (this.hidden = false, this._isFirstFrame = true, this.maskManager._isFirstFrame = true);
-        }, clearCanvas: function(t) {
-          t.clearRect(this.transformCanvas.tx, this.transformCanvas.ty, this.transformCanvas.w * this.transformCanvas.sx, this.transformCanvas.h * this.transformCanvas.sy);
-        }, prepareLayer: function() {
-          if (this.data.tt >= 1) {
-            var t = this.buffers[0].getContext("2d");
-            this.clearCanvas(t), t.drawImage(this.canvasContext.canvas, 0, 0), this.currentTransform = this.canvasContext.getTransform(), this.canvasContext.setTransform(1, 0, 0, 1, 0, 0), this.clearCanvas(this.canvasContext), this.canvasContext.setTransform(this.currentTransform);
-          }
-        }, exitLayer: function() {
-          if (this.data.tt >= 1) {
-            var t = this.buffers[1], e = t.getContext("2d");
-            if (this.clearCanvas(e), e.drawImage(this.canvasContext.canvas, 0, 0), this.canvasContext.setTransform(1, 0, 0, 1, 0, 0), this.clearCanvas(this.canvasContext), this.canvasContext.setTransform(this.currentTransform), this.comp.getElementById("tp" in this.data ? this.data.tp : this.data.ind - 1).renderFrame(true), this.canvasContext.setTransform(1, 0, 0, 1, 0, 0), this.data.tt >= 3 && !document._isProxy) {
-              var i = assetLoader.getLumaCanvas(this.canvasContext.canvas);
-              i.getContext("2d").drawImage(this.canvasContext.canvas, 0, 0), this.clearCanvas(this.canvasContext), this.canvasContext.drawImage(i, 0, 0);
+        CVBaseElement.prototype = {
+          createElements: function () {
+          }, initRendererElement: function () {
+          }, createContainerElements: function () {
+            if (this.data.tt >= 1) {
+              this.buffers = [];
+              var t = this.globalData.canvasContext, e = assetLoader.createCanvas(t.canvas.width, t.canvas.height);
+              this.buffers.push(e);
+              var i = assetLoader.createCanvas(t.canvas.width, t.canvas.height);
+              this.buffers.push(i), this.data.tt >= 3 && !document._isProxy && assetLoader.loadLumaCanvas();
             }
-            this.canvasContext.globalCompositeOperation = operationsMap[this.data.tt], this.canvasContext.drawImage(t, 0, 0), this.canvasContext.globalCompositeOperation = "destination-over", this.canvasContext.drawImage(this.buffers[0], 0, 0), this.canvasContext.setTransform(this.currentTransform), this.canvasContext.globalCompositeOperation = "source-over";
-          }
-        }, renderFrame: function(t) {
-          if (!this.hidden && !this.data.hd && (1 !== this.data.td || t)) {
-            this.renderTransform(), this.renderRenderable(), this.renderLocalTransform(), this.setBlendMode();
-            var e = 0 === this.data.ty;
-            this.prepareLayer(), this.globalData.renderer.save(e), this.globalData.renderer.ctxTransform(this.finalTransform.localMat.props), this.globalData.renderer.ctxOpacity(this.finalTransform.localOpacity), this.renderInnerContent(), this.globalData.renderer.restore(e), this.exitLayer(), this.maskManager.hasMasks && this.globalData.renderer.restore(true), this._isFirstFrame && (this._isFirstFrame = false);
-          }
-        }, destroy: function() {
-          this.canvasContext = null, this.data = null, this.globalData = null, this.maskManager.destroy();
-        }, mHelper: new Matrix() }, CVBaseElement.prototype.hide = CVBaseElement.prototype.hideElement, CVBaseElement.prototype.show = CVBaseElement.prototype.showElement, CVShapeData.prototype.setAsAnimated = SVGShapeData.prototype.setAsAnimated, extendPrototype([BaseElement, TransformElement, CVBaseElement, IShapeElement, HierarchyElement, FrameElement, RenderableElement], CVShapeElement), CVShapeElement.prototype.initElement = RenderableDOMElement.prototype.initElement, CVShapeElement.prototype.transformHelper = { opacity: 1, _opMdf: false }, CVShapeElement.prototype.dashResetter = [], CVShapeElement.prototype.createContent = function() {
+            this.canvasContext = this.globalData.canvasContext, this.transformCanvas = this.globalData.transformCanvas, this.renderableEffectsManager = new CVEffects(this), this.searchEffectTransforms();
+          }, createContent: function () {
+          }, setBlendMode: function () {
+            var t = this.globalData;
+            if (t.blendMode !== this.data.bm) {
+              t.blendMode = this.data.bm;
+              var e = getBlendMode(this.data.bm);
+              t.canvasContext.globalCompositeOperation = e;
+            }
+          }, createRenderableComponents: function () {
+            this.maskManager = new CVMaskElement(this.data, this), this.transformEffects = this.renderableEffectsManager.getEffects(effectTypes.TRANSFORM_EFFECT);
+          }, hideElement: function () {
+            this.hidden || this.isInRange && !this.isTransparent || (this.hidden = true);
+          }, showElement: function () {
+            this.isInRange && !this.isTransparent && (this.hidden = false, this._isFirstFrame = true, this.maskManager._isFirstFrame = true);
+          }, clearCanvas: function (t) {
+            t.clearRect(this.transformCanvas.tx, this.transformCanvas.ty, this.transformCanvas.w * this.transformCanvas.sx, this.transformCanvas.h * this.transformCanvas.sy);
+          }, prepareLayer: function () {
+            if (this.data.tt >= 1) {
+              var t = this.buffers[0].getContext("2d");
+              this.clearCanvas(t), t.drawImage(this.canvasContext.canvas, 0, 0), this.currentTransform = this.canvasContext.getTransform(), this.canvasContext.setTransform(1, 0, 0, 1, 0, 0), this.clearCanvas(this.canvasContext), this.canvasContext.setTransform(this.currentTransform);
+            }
+          }, exitLayer: function () {
+            if (this.data.tt >= 1) {
+              var t = this.buffers[1], e = t.getContext("2d");
+              if (this.clearCanvas(e), e.drawImage(this.canvasContext.canvas, 0, 0), this.canvasContext.setTransform(1, 0, 0, 1, 0, 0), this.clearCanvas(this.canvasContext), this.canvasContext.setTransform(this.currentTransform), this.comp.getElementById("tp" in this.data ? this.data.tp : this.data.ind - 1).renderFrame(true), this.canvasContext.setTransform(1, 0, 0, 1, 0, 0), this.data.tt >= 3 && !document._isProxy) {
+                var i = assetLoader.getLumaCanvas(this.canvasContext.canvas);
+                i.getContext("2d").drawImage(this.canvasContext.canvas, 0, 0), this.clearCanvas(this.canvasContext), this.canvasContext.drawImage(i, 0, 0);
+              }
+              this.canvasContext.globalCompositeOperation = operationsMap[this.data.tt], this.canvasContext.drawImage(t, 0, 0), this.canvasContext.globalCompositeOperation = "destination-over", this.canvasContext.drawImage(this.buffers[0], 0, 0), this.canvasContext.setTransform(this.currentTransform), this.canvasContext.globalCompositeOperation = "source-over";
+            }
+          }, renderFrame: function (t) {
+            if (!this.hidden && !this.data.hd && (1 !== this.data.td || t)) {
+              this.renderTransform(), this.renderRenderable(), this.renderLocalTransform(), this.setBlendMode();
+              var e = 0 === this.data.ty;
+              this.prepareLayer(), this.globalData.renderer.save(e), this.globalData.renderer.ctxTransform(this.finalTransform.localMat.props), this.globalData.renderer.ctxOpacity(this.finalTransform.localOpacity), this.renderInnerContent(), this.globalData.renderer.restore(e), this.exitLayer(), this.maskManager.hasMasks && this.globalData.renderer.restore(true), this._isFirstFrame && (this._isFirstFrame = false);
+            }
+          }, destroy: function () {
+            this.canvasContext = null, this.data = null, this.globalData = null, this.maskManager.destroy();
+          }, mHelper: new Matrix()
+        }, CVBaseElement.prototype.hide = CVBaseElement.prototype.hideElement, CVBaseElement.prototype.show = CVBaseElement.prototype.showElement, CVShapeData.prototype.setAsAnimated = SVGShapeData.prototype.setAsAnimated, extendPrototype([BaseElement, TransformElement, CVBaseElement, IShapeElement, HierarchyElement, FrameElement, RenderableElement], CVShapeElement), CVShapeElement.prototype.initElement = RenderableDOMElement.prototype.initElement, CVShapeElement.prototype.transformHelper = { opacity: 1, _opMdf: false }, CVShapeElement.prototype.dashResetter = [], CVShapeElement.prototype.createContent = function () {
           this.searchShapes(this.shapesData, this.itemsData, this.prevViewData, true, []);
-        }, CVShapeElement.prototype.createStyleElement = function(t, e) {
+        }, CVShapeElement.prototype.createStyleElement = function (t, e) {
           var i = { data: t, type: t.ty, preTransforms: this.transformsManager.addTransformSequence(e), transforms: [], elements: [], closed: true === t.hd }, r = {};
           if ("fl" === t.ty || "st" === t.ty ? (r.c = PropertyFactory.getProp(this, t.c, 1, 255, this), r.c.k || (i.co = "rgb(" + bmFloor(r.c.v[0]) + "," + bmFloor(r.c.v[1]) + "," + bmFloor(r.c.v[2]) + ")")) : "gf" !== t.ty && "gs" !== t.ty || (r.s = PropertyFactory.getProp(this, t.s, 1, null, this), r.e = PropertyFactory.getProp(this, t.e, 1, null, this), r.h = PropertyFactory.getProp(this, t.h || { k: 0 }, 0, 0.01, this), r.a = PropertyFactory.getProp(this, t.a || { k: 0 }, 0, degToRads, this), r.g = new GradientProperty(this, t.g, this)), r.o = PropertyFactory.getProp(this, t.o, 0, 0.01, this), "st" === t.ty || "gs" === t.ty) {
             if (i.lc = lineCapEnum[t.lc || 2], i.lj = lineJoinEnum[t.lj || 2], 1 == t.lj && (i.ml = t.ml), r.w = PropertyFactory.getProp(this, t.w, 0, null, this), r.w.k || (i.wi = r.w.v), t.d) {
@@ -13325,14 +13407,14 @@
           } else
             i.r = 2 === t.r ? "evenodd" : "nonzero";
           return this.stylesList.push(i), r.style = i, r;
-        }, CVShapeElement.prototype.createGroupElement = function() {
+        }, CVShapeElement.prototype.createGroupElement = function () {
           return { it: [], prevViewData: [] };
-        }, CVShapeElement.prototype.createTransformElement = function(t) {
+        }, CVShapeElement.prototype.createTransformElement = function (t) {
           return { transform: { opacity: 1, _opMdf: false, key: this.transformsManager.getNewKey(), op: PropertyFactory.getProp(this, t.o, 0, 0.01, this), mProps: TransformPropertyFactory.getTransformProperty(this, t, this) } };
-        }, CVShapeElement.prototype.createShapeElement = function(t) {
+        }, CVShapeElement.prototype.createShapeElement = function (t) {
           var e = new CVShapeData(this, t, this.stylesList, this.transformsManager);
           return this.shapes.push(e), this.addShapeToModifiers(e), e;
-        }, CVShapeElement.prototype.reloadShapes = function() {
+        }, CVShapeElement.prototype.reloadShapes = function () {
           var t;
           this._isFirstFrame = true;
           var e = this.itemsData.length;
@@ -13341,19 +13423,19 @@
           for (this.searchShapes(this.shapesData, this.itemsData, this.prevViewData, true, []), e = this.dynamicProperties.length, t = 0; t < e; t += 1)
             this.dynamicProperties[t].getValue();
           this.renderModifiers(), this.transformsManager.processSequences(this._isFirstFrame);
-        }, CVShapeElement.prototype.addTransformToStyleList = function(t) {
+        }, CVShapeElement.prototype.addTransformToStyleList = function (t) {
           var e, i = this.stylesList.length;
           for (e = 0; e < i; e += 1)
             this.stylesList[e].closed || this.stylesList[e].transforms.push(t);
-        }, CVShapeElement.prototype.removeTransformFromStyleList = function() {
+        }, CVShapeElement.prototype.removeTransformFromStyleList = function () {
           var t, e = this.stylesList.length;
           for (t = 0; t < e; t += 1)
             this.stylesList[t].closed || this.stylesList[t].transforms.pop();
-        }, CVShapeElement.prototype.closeStyles = function(t) {
+        }, CVShapeElement.prototype.closeStyles = function (t) {
           var e, i = t.length;
           for (e = 0; e < i; e += 1)
             t[e].closed = true;
-        }, CVShapeElement.prototype.searchShapes = function(t, e, i, r, s) {
+        }, CVShapeElement.prototype.searchShapes = function (t, e, i, r, s) {
           var a, n, o, h, l, p, f = t.length - 1, m = [], c = [], d = [].concat(s);
           for (a = f; a >= 0; a -= 1) {
             if ((h = this.searchProcessedElement(t[a])) ? e[a] = i[h - 1] : t[a]._shouldRender = r, "fl" === t[a].ty || "st" === t[a].ty || "gf" === t[a].ty || "gs" === t[a].ty)
@@ -13371,11 +13453,11 @@
           }
           for (this.removeTransformFromStyleList(), this.closeStyles(m), f = c.length, a = 0; a < f; a += 1)
             c[a].closed = true;
-        }, CVShapeElement.prototype.renderInnerContent = function() {
+        }, CVShapeElement.prototype.renderInnerContent = function () {
           this.transformHelper.opacity = 1, this.transformHelper._opMdf = false, this.renderModifiers(), this.transformsManager.processSequences(this._isFirstFrame), this.renderShape(this.transformHelper, this.shapesData, this.itemsData, true);
-        }, CVShapeElement.prototype.renderShapeTransform = function(t, e) {
+        }, CVShapeElement.prototype.renderShapeTransform = function (t, e) {
           (t._opMdf || e.op._mdf || this._isFirstFrame) && (e.opacity = t.opacity, e.opacity *= e.op.v, e._opMdf = true);
-        }, CVShapeElement.prototype.drawLayer = function() {
+        }, CVShapeElement.prototype.drawLayer = function () {
           var t, e, i, r, s, a, n, o, h, l = this.stylesList.length, p = this.globalData.renderer, f = this.globalData.canvasContext;
           for (t = 0; t < l; t += 1)
             if (("st" !== (o = (h = this.stylesList[t]).type) && "gs" !== o || 0 !== h.wi) && h.data._shouldRender && 0 !== h.coOp && 0 !== this.globalData.currentGlobalAlpha) {
@@ -13386,12 +13468,12 @@
               }
               "st" !== o && "gs" !== o && this.globalData.renderer.ctxFill(h.r), p.restore();
             }
-        }, CVShapeElement.prototype.renderShape = function(t, e, i, r) {
+        }, CVShapeElement.prototype.renderShape = function (t, e, i, r) {
           var s, a;
           for (a = t, s = e.length - 1; s >= 0; s -= 1)
             "tr" === e[s].ty ? (a = i[s].transform, this.renderShapeTransform(t, a)) : "sh" === e[s].ty || "el" === e[s].ty || "rc" === e[s].ty || "sr" === e[s].ty ? this.renderPath(e[s], i[s]) : "fl" === e[s].ty ? this.renderFill(e[s], i[s], a) : "st" === e[s].ty ? this.renderStroke(e[s], i[s], a) : "gf" === e[s].ty || "gs" === e[s].ty ? this.renderGradientFill(e[s], i[s], a) : "gr" === e[s].ty ? this.renderShape(a, e[s].it, i[s].it) : e[s].ty;
           r && this.drawLayer();
-        }, CVShapeElement.prototype.renderStyledShape = function(t, e) {
+        }, CVShapeElement.prototype.renderStyledShape = function (t, e) {
           if (this._isFirstFrame || e._mdf || t.transforms._mdf) {
             var i, r, s, a = t.trNodes, n = e.paths, o = n._length;
             a.length = 0;
@@ -13406,16 +13488,16 @@
             }
             t.trNodes = a;
           }
-        }, CVShapeElement.prototype.renderPath = function(t, e) {
+        }, CVShapeElement.prototype.renderPath = function (t, e) {
           if (true !== t.hd && t._shouldRender) {
             var i, r = e.styledShapes.length;
             for (i = 0; i < r; i += 1)
               this.renderStyledShape(e.styledShapes[i], e.sh);
           }
-        }, CVShapeElement.prototype.renderFill = function(t, e, i) {
+        }, CVShapeElement.prototype.renderFill = function (t, e, i) {
           var r = e.style;
           (e.c._mdf || this._isFirstFrame) && (r.co = "rgb(" + bmFloor(e.c.v[0]) + "," + bmFloor(e.c.v[1]) + "," + bmFloor(e.c.v[2]) + ")"), (e.o._mdf || i._opMdf || this._isFirstFrame) && (r.coOp = e.o.v * i.opacity);
-        }, CVShapeElement.prototype.renderGradientFill = function(t, e, i) {
+        }, CVShapeElement.prototype.renderGradientFill = function (t, e, i) {
           var r, s = e.style;
           if (!s.grd || e.g._mdf || e.s._mdf || e.e._mdf || 1 !== t.t && (e.h._mdf || e.a._mdf)) {
             var a, n = this.globalData.canvasContext, o = e.s.v, h = e.e.v;
@@ -13433,12 +13515,12 @@
             s.grd = r;
           }
           s.coOp = e.o.v * i.opacity;
-        }, CVShapeElement.prototype.renderStroke = function(t, e, i) {
+        }, CVShapeElement.prototype.renderStroke = function (t, e, i) {
           var r = e.style, s = e.d;
           s && (s._mdf || this._isFirstFrame) && (r.da = s.dashArray, r.do = s.dashoffset[0]), (e.c._mdf || this._isFirstFrame) && (r.co = "rgb(" + bmFloor(e.c.v[0]) + "," + bmFloor(e.c.v[1]) + "," + bmFloor(e.c.v[2]) + ")"), (e.o._mdf || i._opMdf || this._isFirstFrame) && (r.coOp = e.o.v * i.opacity), (e.w._mdf || this._isFirstFrame) && (r.wi = e.w.v);
-        }, CVShapeElement.prototype.destroy = function() {
+        }, CVShapeElement.prototype.destroy = function () {
           this.shapesData = null, this.globalData = null, this.canvasContext = null, this.stylesList.length = 0, this.itemsData.length = 0;
-        }, extendPrototype([BaseElement, TransformElement, CVBaseElement, HierarchyElement, FrameElement, RenderableElement, ITextElement], CVTextElement), CVTextElement.prototype.tHelper = createTag("canvas").getContext("2d"), CVTextElement.prototype.buildNewText = function() {
+        }, extendPrototype([BaseElement, TransformElement, CVBaseElement, HierarchyElement, FrameElement, RenderableElement, ITextElement], CVTextElement), CVTextElement.prototype.tHelper = createTag("canvas").getContext("2d"), CVTextElement.prototype.buildNewText = function () {
           var t = this.textProperty.currentData;
           this.renderedLetters = createSizedArray(t.l ? t.l.length : 0);
           var e = false;
@@ -13459,7 +13541,7 @@
               }
             v && (x += y[r].l, x += b), this.textSpans[S] ? this.textSpans[S].elem = c : this.textSpans[S] = { elem: c }, S += 1;
           }
-        }, CVTextElement.prototype.renderInnerContent = function() {
+        }, CVTextElement.prototype.renderInnerContent = function () {
           var t, e, i, r, s, a;
           this.validateText(), this.canvasContext.font = this.values.fValue, this.globalData.renderer.ctxLineCap("butt"), this.globalData.renderer.ctxLineJoin("miter"), this.globalData.renderer.ctxMiterLimit(4), this.data.singleShape || this.textAnimator.getMeasures(this.textProperty.currentData, this.lettersChangedFlag);
           var n, o = this.textAnimator.renderedLetters, h = this.textProperty.currentData.l;
@@ -13481,56 +13563,56 @@
               }
               n && this.globalData.renderer.restore();
             }
-        }, extendPrototype([BaseElement, TransformElement, CVBaseElement, HierarchyElement, FrameElement, RenderableElement], CVImageElement), CVImageElement.prototype.initElement = SVGShapeElement.prototype.initElement, CVImageElement.prototype.prepareFrame = IImageElement.prototype.prepareFrame, CVImageElement.prototype.createContent = function() {
+        }, extendPrototype([BaseElement, TransformElement, CVBaseElement, HierarchyElement, FrameElement, RenderableElement], CVImageElement), CVImageElement.prototype.initElement = SVGShapeElement.prototype.initElement, CVImageElement.prototype.prepareFrame = IImageElement.prototype.prepareFrame, CVImageElement.prototype.createContent = function () {
           if (this.img.width && (this.assetData.w !== this.img.width || this.assetData.h !== this.img.height)) {
             var t = createTag("canvas");
             t.width = this.assetData.w, t.height = this.assetData.h;
             var e, i, r = t.getContext("2d"), s = this.img.width, a = this.img.height, n = s / a, o = this.assetData.w / this.assetData.h, h = this.assetData.pr || this.globalData.renderConfig.imagePreserveAspectRatio;
             n > o && "xMidYMid slice" === h || n < o && "xMidYMid slice" !== h ? e = (i = a) * o : i = (e = s) / o, r.drawImage(this.img, (s - e) / 2, (a - i) / 2, e, i, 0, 0, this.assetData.w, this.assetData.h), this.img = t;
           }
-        }, CVImageElement.prototype.renderInnerContent = function() {
+        }, CVImageElement.prototype.renderInnerContent = function () {
           this.canvasContext.drawImage(this.img, 0, 0);
-        }, CVImageElement.prototype.destroy = function() {
+        }, CVImageElement.prototype.destroy = function () {
           this.img = null;
-        }, extendPrototype([BaseElement, TransformElement, CVBaseElement, HierarchyElement, FrameElement, RenderableElement], CVSolidElement), CVSolidElement.prototype.initElement = SVGShapeElement.prototype.initElement, CVSolidElement.prototype.prepareFrame = IImageElement.prototype.prepareFrame, CVSolidElement.prototype.renderInnerContent = function() {
+        }, extendPrototype([BaseElement, TransformElement, CVBaseElement, HierarchyElement, FrameElement, RenderableElement], CVSolidElement), CVSolidElement.prototype.initElement = SVGShapeElement.prototype.initElement, CVSolidElement.prototype.prepareFrame = IImageElement.prototype.prepareFrame, CVSolidElement.prototype.renderInnerContent = function () {
           this.globalData.renderer.ctxFillStyle(this.data.sc), this.globalData.renderer.ctxFillRect(0, 0, this.data.sw, this.data.sh);
-        }, extendPrototype([BaseRenderer], CanvasRendererBase), CanvasRendererBase.prototype.createShape = function(t) {
+        }, extendPrototype([BaseRenderer], CanvasRendererBase), CanvasRendererBase.prototype.createShape = function (t) {
           return new CVShapeElement(t, this.globalData, this);
-        }, CanvasRendererBase.prototype.createText = function(t) {
+        }, CanvasRendererBase.prototype.createText = function (t) {
           return new CVTextElement(t, this.globalData, this);
-        }, CanvasRendererBase.prototype.createImage = function(t) {
+        }, CanvasRendererBase.prototype.createImage = function (t) {
           return new CVImageElement(t, this.globalData, this);
-        }, CanvasRendererBase.prototype.createSolid = function(t) {
+        }, CanvasRendererBase.prototype.createSolid = function (t) {
           return new CVSolidElement(t, this.globalData, this);
-        }, CanvasRendererBase.prototype.createNull = SVGRenderer.prototype.createNull, CanvasRendererBase.prototype.ctxTransform = function(t) {
+        }, CanvasRendererBase.prototype.createNull = SVGRenderer.prototype.createNull, CanvasRendererBase.prototype.ctxTransform = function (t) {
           1 === t[0] && 0 === t[1] && 0 === t[4] && 1 === t[5] && 0 === t[12] && 0 === t[13] || this.canvasContext.transform(t[0], t[1], t[4], t[5], t[12], t[13]);
-        }, CanvasRendererBase.prototype.ctxOpacity = function(t) {
+        }, CanvasRendererBase.prototype.ctxOpacity = function (t) {
           this.canvasContext.globalAlpha *= t < 0 ? 0 : t;
-        }, CanvasRendererBase.prototype.ctxFillStyle = function(t) {
+        }, CanvasRendererBase.prototype.ctxFillStyle = function (t) {
           this.canvasContext.fillStyle = t;
-        }, CanvasRendererBase.prototype.ctxStrokeStyle = function(t) {
+        }, CanvasRendererBase.prototype.ctxStrokeStyle = function (t) {
           this.canvasContext.strokeStyle = t;
-        }, CanvasRendererBase.prototype.ctxLineWidth = function(t) {
+        }, CanvasRendererBase.prototype.ctxLineWidth = function (t) {
           this.canvasContext.lineWidth = t;
-        }, CanvasRendererBase.prototype.ctxLineCap = function(t) {
+        }, CanvasRendererBase.prototype.ctxLineCap = function (t) {
           this.canvasContext.lineCap = t;
-        }, CanvasRendererBase.prototype.ctxLineJoin = function(t) {
+        }, CanvasRendererBase.prototype.ctxLineJoin = function (t) {
           this.canvasContext.lineJoin = t;
-        }, CanvasRendererBase.prototype.ctxMiterLimit = function(t) {
+        }, CanvasRendererBase.prototype.ctxMiterLimit = function (t) {
           this.canvasContext.miterLimit = t;
-        }, CanvasRendererBase.prototype.ctxFill = function(t) {
+        }, CanvasRendererBase.prototype.ctxFill = function (t) {
           this.canvasContext.fill(t);
-        }, CanvasRendererBase.prototype.ctxFillRect = function(t, e, i, r) {
+        }, CanvasRendererBase.prototype.ctxFillRect = function (t, e, i, r) {
           this.canvasContext.fillRect(t, e, i, r);
-        }, CanvasRendererBase.prototype.ctxStroke = function() {
+        }, CanvasRendererBase.prototype.ctxStroke = function () {
           this.canvasContext.stroke();
-        }, CanvasRendererBase.prototype.reset = function() {
+        }, CanvasRendererBase.prototype.reset = function () {
           this.renderConfig.clearCanvas ? this.contextData.reset() : this.canvasContext.restore();
-        }, CanvasRendererBase.prototype.save = function() {
+        }, CanvasRendererBase.prototype.save = function () {
           this.canvasContext.save();
-        }, CanvasRendererBase.prototype.restore = function(t) {
+        }, CanvasRendererBase.prototype.restore = function (t) {
           this.renderConfig.clearCanvas ? (t && (this.globalData.blendMode = "source-over"), this.contextData.restore(t)) : this.canvasContext.restore();
-        }, CanvasRendererBase.prototype.configAnimation = function(t) {
+        }, CanvasRendererBase.prototype.configAnimation = function (t) {
           if (this.animationItem.wrapper) {
             this.animationItem.container = createTag("canvas");
             var e = this.animationItem.container.style;
@@ -13540,7 +13622,7 @@
           } else
             this.canvasContext = this.renderConfig.context;
           this.contextData.setContext(this.canvasContext), this.data = t, this.layers = t.layers, this.transformCanvas = { w: t.w, h: t.h, sx: 0, sy: 0, tx: 0, ty: 0 }, this.setupGlobalData(t, document.body), this.globalData.canvasContext = this.canvasContext, this.globalData.renderer = this, this.globalData.isDashed = false, this.globalData.progressiveLoad = this.renderConfig.progressiveLoad, this.globalData.transformCanvas = this.transformCanvas, this.elements = createSizedArray(t.layers.length), this.updateContainerSize();
-        }, CanvasRendererBase.prototype.updateContainerSize = function(t, e) {
+        }, CanvasRendererBase.prototype.updateContainerSize = function (t, e) {
           var i, r, s, a;
           if (this.reset(), t ? (i = t, r = e, this.canvasContext.canvas.width = i, this.canvasContext.canvas.height = r) : (this.animationItem.wrapper && this.animationItem.container ? (i = this.animationItem.wrapper.offsetWidth, r = this.animationItem.wrapper.offsetHeight) : (i = this.canvasContext.canvas.width, r = this.canvasContext.canvas.height), this.canvasContext.canvas.width = i * this.renderConfig.dpr, this.canvasContext.canvas.height = r * this.renderConfig.dpr), -1 !== this.renderConfig.preserveAspectRatio.indexOf("meet") || -1 !== this.renderConfig.preserveAspectRatio.indexOf("slice")) {
             var n = this.renderConfig.preserveAspectRatio.split(" "), o = n[1] || "meet", h = n[0] || "xMidYMid", l = h.substr(0, 4), p = h.substr(4);
@@ -13548,12 +13630,12 @@
           } else
             "none" === this.renderConfig.preserveAspectRatio ? (this.transformCanvas.sx = i / (this.transformCanvas.w / this.renderConfig.dpr), this.transformCanvas.sy = r / (this.transformCanvas.h / this.renderConfig.dpr), this.transformCanvas.tx = 0, this.transformCanvas.ty = 0) : (this.transformCanvas.sx = this.renderConfig.dpr, this.transformCanvas.sy = this.renderConfig.dpr, this.transformCanvas.tx = 0, this.transformCanvas.ty = 0);
           this.transformCanvas.props = [this.transformCanvas.sx, 0, 0, 0, 0, this.transformCanvas.sy, 0, 0, 0, 0, 1, 0, this.transformCanvas.tx, this.transformCanvas.ty, 0, 1], this.ctxTransform(this.transformCanvas.props), this.canvasContext.beginPath(), this.canvasContext.rect(0, 0, this.transformCanvas.w, this.transformCanvas.h), this.canvasContext.closePath(), this.canvasContext.clip(), this.renderFrame(this.renderedFrame, true);
-        }, CanvasRendererBase.prototype.destroy = function() {
+        }, CanvasRendererBase.prototype.destroy = function () {
           var t;
           for (this.renderConfig.clearCanvas && this.animationItem.wrapper && (this.animationItem.wrapper.innerText = ""), t = (this.layers ? this.layers.length : 0) - 1; t >= 0; t -= 1)
             this.elements[t] && this.elements[t].destroy && this.elements[t].destroy();
           this.elements.length = 0, this.globalData.canvasContext = null, this.animationItem.container = null, this.destroyed = true;
-        }, CanvasRendererBase.prototype.renderFrame = function(t, e) {
+        }, CanvasRendererBase.prototype.renderFrame = function (t, e) {
           if ((this.renderedFrame !== t || true !== this.renderConfig.clearCanvas || e) && !this.destroyed && -1 !== t) {
             var i;
             this.renderedFrame = t, this.globalData.frameNum = t - this.animationItem._isFirstFrame, this.globalData.frameId += 1, this.globalData._mdf = !this.renderConfig.clearCanvas || e, this.globalData.projectInterface.currentFrame = t;
@@ -13566,28 +13648,28 @@
               true !== this.renderConfig.clearCanvas && this.restore();
             }
           }
-        }, CanvasRendererBase.prototype.buildItem = function(t) {
+        }, CanvasRendererBase.prototype.buildItem = function (t) {
           var e = this.elements;
           if (!e[t] && 99 !== this.layers[t].ty) {
             var i = this.createItem(this.layers[t], this, this.globalData);
             e[t] = i, i.initExpressions();
           }
-        }, CanvasRendererBase.prototype.checkPendingElements = function() {
-          for (; this.pendingElements.length; ) {
+        }, CanvasRendererBase.prototype.checkPendingElements = function () {
+          for (; this.pendingElements.length;) {
             this.pendingElements.pop().checkParenting();
           }
-        }, CanvasRendererBase.prototype.hide = function() {
+        }, CanvasRendererBase.prototype.hide = function () {
           this.animationItem.container.style.display = "none";
-        }, CanvasRendererBase.prototype.show = function() {
+        }, CanvasRendererBase.prototype.show = function () {
           this.animationItem.container.style.display = "block";
-        }, CVContextData.prototype.duplicate = function() {
+        }, CVContextData.prototype.duplicate = function () {
           var t = 2 * this._length, e = 0;
           for (e = this._length; e < t; e += 1)
             this.stack[e] = new CanvasContext();
           this._length = t;
-        }, CVContextData.prototype.reset = function() {
+        }, CVContextData.prototype.reset = function () {
           this.cArrPos = 0, this.cTr.reset(), this.stack[this.cArrPos].opacity = 1;
-        }, CVContextData.prototype.restore = function(t) {
+        }, CVContextData.prototype.restore = function (t) {
           this.cArrPos -= 1;
           var e, i = this.stack[this.cArrPos], r = i.transform, s = this.cTr.props;
           for (e = 0; e < 16; e += 1)
@@ -13598,7 +13680,7 @@
             this.appliedFillStyle = a.fillStyle, this.appliedStrokeStyle = a.strokeStyle, this.appliedLineWidth = a.lineWidth, this.appliedLineCap = a.lineCap, this.appliedLineJoin = a.lineJoin, this.appliedMiterLimit = a.miterLimit;
           }
           this.nativeContext.setTransform(r[0], r[1], r[4], r[5], r[12], r[13]), (t || -1 !== i.opacity && this.currentOpacity !== i.opacity) && (this.nativeContext.globalAlpha = i.opacity, this.currentOpacity = i.opacity), this.currentFillStyle = i.fillStyle, this.currentStrokeStyle = i.strokeStyle, this.currentLineWidth = i.lineWidth, this.currentLineCap = i.lineCap, this.currentLineJoin = i.lineJoin, this.currentMiterLimit = i.miterLimit;
-        }, CVContextData.prototype.save = function(t) {
+        }, CVContextData.prototype.save = function (t) {
           t && this.nativeContext.save();
           var e = this.cTr.props;
           this._length <= this.cArrPos && this.duplicate();
@@ -13608,74 +13690,76 @@
           this.cArrPos += 1;
           var s = this.stack[this.cArrPos];
           s.opacity = r.opacity, s.fillStyle = r.fillStyle, s.strokeStyle = r.strokeStyle, s.lineWidth = r.lineWidth, s.lineCap = r.lineCap, s.lineJoin = r.lineJoin, s.miterLimit = r.miterLimit;
-        }, CVContextData.prototype.setOpacity = function(t) {
+        }, CVContextData.prototype.setOpacity = function (t) {
           this.stack[this.cArrPos].opacity = t;
-        }, CVContextData.prototype.setContext = function(t) {
+        }, CVContextData.prototype.setContext = function (t) {
           this.nativeContext = t;
-        }, CVContextData.prototype.fillStyle = function(t) {
+        }, CVContextData.prototype.fillStyle = function (t) {
           this.stack[this.cArrPos].fillStyle !== t && (this.currentFillStyle = t, this.stack[this.cArrPos].fillStyle = t);
-        }, CVContextData.prototype.strokeStyle = function(t) {
+        }, CVContextData.prototype.strokeStyle = function (t) {
           this.stack[this.cArrPos].strokeStyle !== t && (this.currentStrokeStyle = t, this.stack[this.cArrPos].strokeStyle = t);
-        }, CVContextData.prototype.lineWidth = function(t) {
+        }, CVContextData.prototype.lineWidth = function (t) {
           this.stack[this.cArrPos].lineWidth !== t && (this.currentLineWidth = t, this.stack[this.cArrPos].lineWidth = t);
-        }, CVContextData.prototype.lineCap = function(t) {
+        }, CVContextData.prototype.lineCap = function (t) {
           this.stack[this.cArrPos].lineCap !== t && (this.currentLineCap = t, this.stack[this.cArrPos].lineCap = t);
-        }, CVContextData.prototype.lineJoin = function(t) {
+        }, CVContextData.prototype.lineJoin = function (t) {
           this.stack[this.cArrPos].lineJoin !== t && (this.currentLineJoin = t, this.stack[this.cArrPos].lineJoin = t);
-        }, CVContextData.prototype.miterLimit = function(t) {
+        }, CVContextData.prototype.miterLimit = function (t) {
           this.stack[this.cArrPos].miterLimit !== t && (this.currentMiterLimit = t, this.stack[this.cArrPos].miterLimit = t);
-        }, CVContextData.prototype.transform = function(t) {
+        }, CVContextData.prototype.transform = function (t) {
           this.transformMat.cloneFromProps(t);
           var e = this.cTr;
           this.transformMat.multiply(e), e.cloneFromProps(this.transformMat.props);
           var i = e.props;
           this.nativeContext.setTransform(i[0], i[1], i[4], i[5], i[12], i[13]);
-        }, CVContextData.prototype.opacity = function(t) {
+        }, CVContextData.prototype.opacity = function (t) {
           var e = this.stack[this.cArrPos].opacity;
           e *= t < 0 ? 0 : t, this.stack[this.cArrPos].opacity !== e && (this.currentOpacity !== t && (this.nativeContext.globalAlpha = t, this.currentOpacity = t), this.stack[this.cArrPos].opacity = e);
-        }, CVContextData.prototype.fill = function(t) {
+        }, CVContextData.prototype.fill = function (t) {
           this.appliedFillStyle !== this.currentFillStyle && (this.appliedFillStyle = this.currentFillStyle, this.nativeContext.fillStyle = this.appliedFillStyle), this.nativeContext.fill(t);
-        }, CVContextData.prototype.fillRect = function(t, e, i, r) {
+        }, CVContextData.prototype.fillRect = function (t, e, i, r) {
           this.appliedFillStyle !== this.currentFillStyle && (this.appliedFillStyle = this.currentFillStyle, this.nativeContext.fillStyle = this.appliedFillStyle), this.nativeContext.fillRect(t, e, i, r);
-        }, CVContextData.prototype.stroke = function() {
+        }, CVContextData.prototype.stroke = function () {
           this.appliedStrokeStyle !== this.currentStrokeStyle && (this.appliedStrokeStyle = this.currentStrokeStyle, this.nativeContext.strokeStyle = this.appliedStrokeStyle), this.appliedLineWidth !== this.currentLineWidth && (this.appliedLineWidth = this.currentLineWidth, this.nativeContext.lineWidth = this.appliedLineWidth), this.appliedLineCap !== this.currentLineCap && (this.appliedLineCap = this.currentLineCap, this.nativeContext.lineCap = this.appliedLineCap), this.appliedLineJoin !== this.currentLineJoin && (this.appliedLineJoin = this.currentLineJoin, this.nativeContext.lineJoin = this.appliedLineJoin), this.appliedMiterLimit !== this.currentMiterLimit && (this.appliedMiterLimit = this.currentMiterLimit, this.nativeContext.miterLimit = this.appliedMiterLimit), this.nativeContext.stroke();
-        }, extendPrototype([CanvasRendererBase, ICompElement, CVBaseElement], CVCompElement), CVCompElement.prototype.renderInnerContent = function() {
+        }, extendPrototype([CanvasRendererBase, ICompElement, CVBaseElement], CVCompElement), CVCompElement.prototype.renderInnerContent = function () {
           var t, e = this.canvasContext;
           for (e.beginPath(), e.moveTo(0, 0), e.lineTo(this.data.w, 0), e.lineTo(this.data.w, this.data.h), e.lineTo(0, this.data.h), e.lineTo(0, 0), e.clip(), t = this.layers.length - 1; t >= 0; t -= 1)
             (this.completeLayers || this.elements[t]) && this.elements[t].renderFrame();
-        }, CVCompElement.prototype.destroy = function() {
+        }, CVCompElement.prototype.destroy = function () {
           var t;
           for (t = this.layers.length - 1; t >= 0; t -= 1)
             this.elements[t] && this.elements[t].destroy();
           this.layers = null, this.elements = null;
-        }, CVCompElement.prototype.createComp = function(t) {
+        }, CVCompElement.prototype.createComp = function (t) {
           return new CVCompElement(t, this.globalData, this);
-        }, extendPrototype([CanvasRendererBase], CanvasRenderer), CanvasRenderer.prototype.createComp = function(t) {
+        }, extendPrototype([CanvasRendererBase], CanvasRenderer), CanvasRenderer.prototype.createComp = function (t) {
           return new CVCompElement(t, this.globalData, this);
-        }, HBaseElement.prototype = { checkBlendMode: function() {
-        }, initRendererElement: function() {
-          this.baseElement = createTag(this.data.tg || "div"), this.data.hasMask ? (this.svgElement = createNS("svg"), this.layerElement = createNS("g"), this.maskedElement = this.layerElement, this.svgElement.appendChild(this.layerElement), this.baseElement.appendChild(this.svgElement)) : this.layerElement = this.baseElement, styleDiv(this.baseElement);
-        }, createContainerElements: function() {
-          this.renderableEffectsManager = new CVEffects(this), this.transformedElement = this.baseElement, this.maskedElement = this.layerElement, this.data.ln && this.layerElement.setAttribute("id", this.data.ln), this.data.cl && this.layerElement.setAttribute("class", this.data.cl), 0 !== this.data.bm && this.setBlendMode();
-        }, renderElement: function() {
-          var t = this.transformedElement ? this.transformedElement.style : {};
-          if (this.finalTransform._matMdf) {
-            var e = this.finalTransform.mat.toCSS();
-            t.transform = e, t.webkitTransform = e;
+        }, HBaseElement.prototype = {
+          checkBlendMode: function () {
+          }, initRendererElement: function () {
+            this.baseElement = createTag(this.data.tg || "div"), this.data.hasMask ? (this.svgElement = createNS("svg"), this.layerElement = createNS("g"), this.maskedElement = this.layerElement, this.svgElement.appendChild(this.layerElement), this.baseElement.appendChild(this.svgElement)) : this.layerElement = this.baseElement, styleDiv(this.baseElement);
+          }, createContainerElements: function () {
+            this.renderableEffectsManager = new CVEffects(this), this.transformedElement = this.baseElement, this.maskedElement = this.layerElement, this.data.ln && this.layerElement.setAttribute("id", this.data.ln), this.data.cl && this.layerElement.setAttribute("class", this.data.cl), 0 !== this.data.bm && this.setBlendMode();
+          }, renderElement: function () {
+            var t = this.transformedElement ? this.transformedElement.style : {};
+            if (this.finalTransform._matMdf) {
+              var e = this.finalTransform.mat.toCSS();
+              t.transform = e, t.webkitTransform = e;
+            }
+            this.finalTransform._opMdf && (t.opacity = this.finalTransform.mProp.o.v);
+          }, renderFrame: function () {
+            this.data.hd || this.hidden || (this.renderTransform(), this.renderRenderable(), this.renderElement(), this.renderInnerContent(), this._isFirstFrame && (this._isFirstFrame = false));
+          }, destroy: function () {
+            this.layerElement = null, this.transformedElement = null, this.matteElement && (this.matteElement = null), this.maskManager && (this.maskManager.destroy(), this.maskManager = null);
+          }, createRenderableComponents: function () {
+            this.maskManager = new MaskElement(this.data, this, this.globalData);
+          }, addEffects: function () {
+          }, setMatte: function () {
           }
-          this.finalTransform._opMdf && (t.opacity = this.finalTransform.mProp.o.v);
-        }, renderFrame: function() {
-          this.data.hd || this.hidden || (this.renderTransform(), this.renderRenderable(), this.renderElement(), this.renderInnerContent(), this._isFirstFrame && (this._isFirstFrame = false));
-        }, destroy: function() {
-          this.layerElement = null, this.transformedElement = null, this.matteElement && (this.matteElement = null), this.maskManager && (this.maskManager.destroy(), this.maskManager = null);
-        }, createRenderableComponents: function() {
-          this.maskManager = new MaskElement(this.data, this, this.globalData);
-        }, addEffects: function() {
-        }, setMatte: function() {
-        } }, HBaseElement.prototype.getBaseElement = SVGBaseElement.prototype.getBaseElement, HBaseElement.prototype.destroyBaseElement = HBaseElement.prototype.destroy, HBaseElement.prototype.buildElementParenting = BaseRenderer.prototype.buildElementParenting, extendPrototype([BaseElement, TransformElement, HBaseElement, HierarchyElement, FrameElement, RenderableDOMElement], HSolidElement), HSolidElement.prototype.createContent = function() {
+        }, HBaseElement.prototype.getBaseElement = SVGBaseElement.prototype.getBaseElement, HBaseElement.prototype.destroyBaseElement = HBaseElement.prototype.destroy, HBaseElement.prototype.buildElementParenting = BaseRenderer.prototype.buildElementParenting, extendPrototype([BaseElement, TransformElement, HBaseElement, HierarchyElement, FrameElement, RenderableDOMElement], HSolidElement), HSolidElement.prototype.createContent = function () {
           var t;
           this.data.hasMask ? ((t = createNS("rect")).setAttribute("width", this.data.sw), t.setAttribute("height", this.data.sh), t.setAttribute("fill", this.data.sc), this.svgElement.setAttribute("width", this.data.sw), this.svgElement.setAttribute("height", this.data.sh)) : ((t = createTag("div")).style.width = this.data.sw + "px", t.style.height = this.data.sh + "px", t.style.backgroundColor = this.data.sc), this.layerElement.appendChild(t);
-        }, extendPrototype([BaseElement, TransformElement, HSolidElement, SVGShapeElement, HBaseElement, HierarchyElement, FrameElement, RenderableElement], HShapeElement), HShapeElement.prototype._renderShapeFrame = HShapeElement.prototype.renderInnerContent, HShapeElement.prototype.createContent = function() {
+        }, extendPrototype([BaseElement, TransformElement, HSolidElement, SVGShapeElement, HBaseElement, HierarchyElement, FrameElement, RenderableElement], HShapeElement), HShapeElement.prototype._renderShapeFrame = HShapeElement.prototype.renderInnerContent, HShapeElement.prototype.createContent = function () {
           var t;
           if (this.baseElement.style.fontSize = 0, this.data.hasMask)
             this.layerElement.appendChild(this.shapesContainer), t = this.svgElement;
@@ -13685,33 +13769,33 @@
             t.setAttribute("width", e.w), t.setAttribute("height", e.h), t.appendChild(this.shapesContainer), this.layerElement.appendChild(t);
           }
           this.searchShapes(this.shapesData, this.itemsData, this.prevViewData, this.shapesContainer, 0, [], true), this.filterUniqueShapes(), this.shapeCont = t;
-        }, HShapeElement.prototype.getTransformedPoint = function(t, e) {
+        }, HShapeElement.prototype.getTransformedPoint = function (t, e) {
           var i, r = t.length;
           for (i = 0; i < r; i += 1)
             e = t[i].mProps.v.applyToPointArray(e[0], e[1], 0);
           return e;
-        }, HShapeElement.prototype.calculateShapeBoundingBox = function(t, e) {
+        }, HShapeElement.prototype.calculateShapeBoundingBox = function (t, e) {
           var i, r, s, a, n, o = t.sh.v, h = t.transformers, l = o._length;
           if (!(l <= 1)) {
             for (i = 0; i < l - 1; i += 1)
               r = this.getTransformedPoint(h, o.v[i]), s = this.getTransformedPoint(h, o.o[i]), a = this.getTransformedPoint(h, o.i[i + 1]), n = this.getTransformedPoint(h, o.v[i + 1]), this.checkBounds(r, s, a, n, e);
             o.c && (r = this.getTransformedPoint(h, o.v[i]), s = this.getTransformedPoint(h, o.o[i]), a = this.getTransformedPoint(h, o.i[0]), n = this.getTransformedPoint(h, o.v[0]), this.checkBounds(r, s, a, n, e));
           }
-        }, HShapeElement.prototype.checkBounds = function(t, e, i, r, s) {
+        }, HShapeElement.prototype.checkBounds = function (t, e, i, r, s) {
           this.getBoundsOfCurve(t, e, i, r);
           var a = this.shapeBoundingBox;
           s.x = bmMin(a.left, s.x), s.xMax = bmMax(a.right, s.xMax), s.y = bmMin(a.top, s.y), s.yMax = bmMax(a.bottom, s.yMax);
-        }, HShapeElement.prototype.shapeBoundingBox = { left: 0, right: 0, top: 0, bottom: 0 }, HShapeElement.prototype.tempBoundingBox = { x: 0, xMax: 0, y: 0, yMax: 0, width: 0, height: 0 }, HShapeElement.prototype.getBoundsOfCurve = function(t, e, i, r) {
+        }, HShapeElement.prototype.shapeBoundingBox = { left: 0, right: 0, top: 0, bottom: 0 }, HShapeElement.prototype.tempBoundingBox = { x: 0, xMax: 0, y: 0, yMax: 0, width: 0, height: 0 }, HShapeElement.prototype.getBoundsOfCurve = function (t, e, i, r) {
           for (var s, a, n, o, h, l, p, f = [[t[0], r[0]], [t[1], r[1]]], m = 0; m < 2; ++m)
             a = 6 * t[m] - 12 * e[m] + 6 * i[m], s = -3 * t[m] + 9 * e[m] - 9 * i[m] + 3 * r[m], n = 3 * e[m] - 3 * t[m], a |= 0, n |= 0, 0 === (s |= 0) && 0 === a || (0 === s ? (o = -n / a) > 0 && o < 1 && f[m].push(this.calculateF(o, t, e, i, r, m)) : (h = a * a - 4 * n * s) >= 0 && ((l = (-a + bmSqrt(h)) / (2 * s)) > 0 && l < 1 && f[m].push(this.calculateF(l, t, e, i, r, m)), (p = (-a - bmSqrt(h)) / (2 * s)) > 0 && p < 1 && f[m].push(this.calculateF(p, t, e, i, r, m))));
           this.shapeBoundingBox.left = bmMin.apply(null, f[0]), this.shapeBoundingBox.top = bmMin.apply(null, f[1]), this.shapeBoundingBox.right = bmMax.apply(null, f[0]), this.shapeBoundingBox.bottom = bmMax.apply(null, f[1]);
-        }, HShapeElement.prototype.calculateF = function(t, e, i, r, s, a) {
+        }, HShapeElement.prototype.calculateF = function (t, e, i, r, s, a) {
           return bmPow(1 - t, 3) * e[a] + 3 * bmPow(1 - t, 2) * t * i[a] + 3 * (1 - t) * bmPow(t, 2) * r[a] + bmPow(t, 3) * s[a];
-        }, HShapeElement.prototype.calculateBoundingBox = function(t, e) {
+        }, HShapeElement.prototype.calculateBoundingBox = function (t, e) {
           var i, r = t.length;
           for (i = 0; i < r; i += 1)
             t[i] && t[i].sh ? this.calculateShapeBoundingBox(t[i], e) : t[i] && t[i].it ? this.calculateBoundingBox(t[i].it, e) : t[i] && t[i].style && t[i].w && this.expandStrokeBoundingBox(t[i].w, e);
-        }, HShapeElement.prototype.expandStrokeBoundingBox = function(t, e) {
+        }, HShapeElement.prototype.expandStrokeBoundingBox = function (t, e) {
           var i = 0;
           if (t.keyframes) {
             for (var r = 0; r < t.keyframes.length; r += 1) {
@@ -13722,9 +13806,9 @@
           } else
             i = t.v * t.mult;
           e.x -= i, e.xMax += i, e.y -= i, e.yMax += i;
-        }, HShapeElement.prototype.currentBoxContains = function(t) {
+        }, HShapeElement.prototype.currentBoxContains = function (t) {
           return this.currentBBox.x <= t.x && this.currentBBox.y <= t.y && this.currentBBox.width + this.currentBBox.x >= t.x + t.width && this.currentBBox.height + this.currentBBox.y >= t.y + t.height;
-        }, HShapeElement.prototype.renderInnerContent = function() {
+        }, HShapeElement.prototype.renderInnerContent = function () {
           if (this._renderShapeFrame(), !this.hidden && (this._isFirstFrame || this._mdf)) {
             var t = this.tempBoundingBox, e = 999999;
             if (t.x = e, t.xMax = -e, t.y = e, t.yMax = -e, this.calculateBoundingBox(this.itemsData, t), t.width = t.xMax < t.x ? 0 : t.xMax - t.x, t.height = t.yMax < t.y ? 0 : t.yMax - t.y, this.currentBoxContains(t))
@@ -13736,7 +13820,7 @@
               r.transform = s, r.webkitTransform = s;
             }
           }
-        }, extendPrototype([BaseElement, TransformElement, HBaseElement, HierarchyElement, FrameElement, RenderableDOMElement, ITextElement], HTextElement), HTextElement.prototype.createContent = function() {
+        }, extendPrototype([BaseElement, TransformElement, HBaseElement, HierarchyElement, FrameElement, RenderableDOMElement, ITextElement], HTextElement), HTextElement.prototype.createContent = function () {
           if (this.isMasked = this.checkMasks(), this.isMasked) {
             this.renderType = "svg", this.compW = this.comp.data.w, this.compH = this.comp.data.h, this.svgElement.setAttribute("width", this.compW), this.svgElement.setAttribute("height", this.compH);
             var t = createNS("g");
@@ -13744,7 +13828,7 @@
           } else
             this.renderType = "html", this.innerElem = this.layerElement;
           this.checkParenting();
-        }, HTextElement.prototype.buildNewText = function() {
+        }, HTextElement.prototype.buildNewText = function () {
           var t = this.textProperty.currentData;
           this.renderedLetters = createSizedArray(t.l ? t.l.length : 0);
           var e = this.innerElem.style, i = t.fc ? this.buildColor(t.fc) : "rgba(0,0,0,0)";
@@ -13786,9 +13870,9 @@
             }
             this.isMasked ? this.textSpans[u] = h : this.textSpans[u] = l, this.textSpans[u].style.display = "block", this.textPaths[u] = h, u += 1;
           }
-          for (; u < this.textSpans.length; )
+          for (; u < this.textSpans.length;)
             this.textSpans[u].style.display = "none", u += 1;
-        }, HTextElement.prototype.renderInnerContent = function() {
+        }, HTextElement.prototype.renderInnerContent = function () {
           var t;
           if (this.validateText(), this.data.singleShape) {
             if (!this._isFirstFrame && !this.lettersChangedFlag)
@@ -13813,7 +13897,7 @@
               }
             }
           }
-        }, extendPrototype([BaseElement, FrameElement, HierarchyElement], HCameraElement), HCameraElement.prototype.setup = function() {
+        }, extendPrototype([BaseElement, FrameElement, HierarchyElement], HCameraElement), HCameraElement.prototype.setup = function () {
           var t, e, i, r, s = this.comp.threeDElements.length;
           for (t = 0; t < s; t += 1)
             if ("3d" === (e = this.comp.threeDElements[t]).type) {
@@ -13821,9 +13905,9 @@
               var a = this.pe.v + "px", n = "0px 0px 0px", o = "matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)";
               i.perspective = a, i.webkitPerspective = a, r.transformOrigin = n, r.mozTransformOrigin = n, r.webkitTransformOrigin = n, i.transform = o, i.webkitTransform = o;
             }
-        }, HCameraElement.prototype.createElements = function() {
-        }, HCameraElement.prototype.hide = function() {
-        }, HCameraElement.prototype.renderFrame = function() {
+        }, HCameraElement.prototype.createElements = function () {
+        }, HCameraElement.prototype.hide = function () {
+        }, HCameraElement.prototype.renderFrame = function () {
           var t, e, i = this._isFirstFrame;
           if (this.hierarchy)
             for (e = this.hierarchy.length, t = 0; t < e; t += 1)
@@ -13856,19 +13940,19 @@
             }
           }
           this._isFirstFrame = false;
-        }, HCameraElement.prototype.prepareFrame = function(t) {
+        }, HCameraElement.prototype.prepareFrame = function (t) {
           this.prepareProperties(t, true);
-        }, HCameraElement.prototype.destroy = function() {
-        }, HCameraElement.prototype.getBaseElement = function() {
+        }, HCameraElement.prototype.destroy = function () {
+        }, HCameraElement.prototype.getBaseElement = function () {
           return null;
-        }, extendPrototype([BaseElement, TransformElement, HBaseElement, HSolidElement, HierarchyElement, FrameElement, RenderableElement], HImageElement), HImageElement.prototype.createContent = function() {
+        }, extendPrototype([BaseElement, TransformElement, HBaseElement, HSolidElement, HierarchyElement, FrameElement, RenderableElement], HImageElement), HImageElement.prototype.createContent = function () {
           var t = this.globalData.getAssetsPath(this.assetData), e = new Image();
           this.data.hasMask ? (this.imageElem = createNS("image"), this.imageElem.setAttribute("width", this.assetData.w + "px"), this.imageElem.setAttribute("height", this.assetData.h + "px"), this.imageElem.setAttributeNS("http://www.w3.org/1999/xlink", "href", t), this.layerElement.appendChild(this.imageElem), this.baseElement.setAttribute("width", this.assetData.w), this.baseElement.setAttribute("height", this.assetData.h)) : this.layerElement.appendChild(e), e.crossOrigin = "anonymous", e.src = t, this.data.ln && this.baseElement.setAttribute("id", this.data.ln);
-        }, extendPrototype([BaseRenderer], HybridRendererBase), HybridRendererBase.prototype.buildItem = SVGRenderer.prototype.buildItem, HybridRendererBase.prototype.checkPendingElements = function() {
-          for (; this.pendingElements.length; ) {
+        }, extendPrototype([BaseRenderer], HybridRendererBase), HybridRendererBase.prototype.buildItem = SVGRenderer.prototype.buildItem, HybridRendererBase.prototype.checkPendingElements = function () {
+          for (; this.pendingElements.length;) {
             this.pendingElements.pop().checkParenting();
           }
-        }, HybridRendererBase.prototype.appendElementInPos = function(t, e) {
+        }, HybridRendererBase.prototype.appendElementInPos = function (t, e) {
           var i = t.getBaseElement();
           if (i) {
             var r = this.layers[e];
@@ -13877,29 +13961,29 @@
             else if (this.threeDElements)
               this.addTo3dContainer(i, e);
             else {
-              for (var s, a, n = 0; n < e; )
+              for (var s, a, n = 0; n < e;)
                 this.elements[n] && true !== this.elements[n] && this.elements[n].getBaseElement && (a = this.elements[n], s = (this.layers[n].ddd ? this.getThreeDContainerByPos(n) : a.getBaseElement()) || s), n += 1;
               s ? r.ddd && this.supports3d || this.layerElement.insertBefore(i, s) : r.ddd && this.supports3d || this.layerElement.appendChild(i);
             }
           }
-        }, HybridRendererBase.prototype.createShape = function(t) {
+        }, HybridRendererBase.prototype.createShape = function (t) {
           return this.supports3d ? new HShapeElement(t, this.globalData, this) : new SVGShapeElement(t, this.globalData, this);
-        }, HybridRendererBase.prototype.createText = function(t) {
+        }, HybridRendererBase.prototype.createText = function (t) {
           return this.supports3d ? new HTextElement(t, this.globalData, this) : new SVGTextLottieElement(t, this.globalData, this);
-        }, HybridRendererBase.prototype.createCamera = function(t) {
+        }, HybridRendererBase.prototype.createCamera = function (t) {
           return this.camera = new HCameraElement(t, this.globalData, this), this.camera;
-        }, HybridRendererBase.prototype.createImage = function(t) {
+        }, HybridRendererBase.prototype.createImage = function (t) {
           return this.supports3d ? new HImageElement(t, this.globalData, this) : new IImageElement(t, this.globalData, this);
-        }, HybridRendererBase.prototype.createSolid = function(t) {
+        }, HybridRendererBase.prototype.createSolid = function (t) {
           return this.supports3d ? new HSolidElement(t, this.globalData, this) : new ISolidElement(t, this.globalData, this);
-        }, HybridRendererBase.prototype.createNull = SVGRenderer.prototype.createNull, HybridRendererBase.prototype.getThreeDContainerByPos = function(t) {
-          for (var e = 0, i = this.threeDElements.length; e < i; ) {
+        }, HybridRendererBase.prototype.createNull = SVGRenderer.prototype.createNull, HybridRendererBase.prototype.getThreeDContainerByPos = function (t) {
+          for (var e = 0, i = this.threeDElements.length; e < i;) {
             if (this.threeDElements[e].startPos <= t && this.threeDElements[e].endPos >= t)
               return this.threeDElements[e].perspectiveElem;
             e += 1;
           }
           return null;
-        }, HybridRendererBase.prototype.createThreeDContainer = function(t, e) {
+        }, HybridRendererBase.prototype.createThreeDContainer = function (t, e) {
           var i, r, s = createTag("div");
           styleDiv(s);
           var a = createTag("div");
@@ -13913,46 +13997,46 @@
           s.appendChild(a);
           var h = { container: a, perspectiveElem: s, startPos: t, endPos: t, type: e };
           return this.threeDElements.push(h), h;
-        }, HybridRendererBase.prototype.build3dContainers = function() {
+        }, HybridRendererBase.prototype.build3dContainers = function () {
           var t, e, i = this.layers.length, r = "";
           for (t = 0; t < i; t += 1)
             this.layers[t].ddd && 3 !== this.layers[t].ty ? ("3d" !== r && (r = "3d", e = this.createThreeDContainer(t, "3d")), e.endPos = Math.max(e.endPos, t)) : ("2d" !== r && (r = "2d", e = this.createThreeDContainer(t, "2d")), e.endPos = Math.max(e.endPos, t));
           for (t = (i = this.threeDElements.length) - 1; t >= 0; t -= 1)
             this.resizerElem.appendChild(this.threeDElements[t].perspectiveElem);
-        }, HybridRendererBase.prototype.addTo3dContainer = function(t, e) {
-          for (var i = 0, r = this.threeDElements.length; i < r; ) {
+        }, HybridRendererBase.prototype.addTo3dContainer = function (t, e) {
+          for (var i = 0, r = this.threeDElements.length; i < r;) {
             if (e <= this.threeDElements[i].endPos) {
-              for (var s, a = this.threeDElements[i].startPos; a < e; )
+              for (var s, a = this.threeDElements[i].startPos; a < e;)
                 this.elements[a] && this.elements[a].getBaseElement && (s = this.elements[a].getBaseElement()), a += 1;
               s ? this.threeDElements[i].container.insertBefore(t, s) : this.threeDElements[i].container.appendChild(t);
               break;
             }
             i += 1;
           }
-        }, HybridRendererBase.prototype.configAnimation = function(t) {
+        }, HybridRendererBase.prototype.configAnimation = function (t) {
           var e = createTag("div"), i = this.animationItem.wrapper, r = e.style;
           r.width = t.w + "px", r.height = t.h + "px", this.resizerElem = e, styleDiv(e), r.transformStyle = "flat", r.mozTransformStyle = "flat", r.webkitTransformStyle = "flat", this.renderConfig.className && e.setAttribute("class", this.renderConfig.className), i.appendChild(e), r.overflow = "hidden";
           var s = createNS("svg");
           s.setAttribute("width", "1"), s.setAttribute("height", "1"), styleDiv(s), this.resizerElem.appendChild(s);
           var a = createNS("defs");
           s.appendChild(a), this.data = t, this.setupGlobalData(t, s), this.globalData.defs = a, this.layers = t.layers, this.layerElement = this.resizerElem, this.build3dContainers(), this.updateContainerSize();
-        }, HybridRendererBase.prototype.destroy = function() {
+        }, HybridRendererBase.prototype.destroy = function () {
           var t;
           this.animationItem.wrapper && (this.animationItem.wrapper.innerText = ""), this.animationItem.container = null, this.globalData.defs = null;
           var e = this.layers ? this.layers.length : 0;
           for (t = 0; t < e; t += 1)
             this.elements[t] && this.elements[t].destroy && this.elements[t].destroy();
           this.elements.length = 0, this.destroyed = true, this.animationItem = null;
-        }, HybridRendererBase.prototype.updateContainerSize = function() {
+        }, HybridRendererBase.prototype.updateContainerSize = function () {
           var t, e, i, r, s = this.animationItem.wrapper.offsetWidth, a = this.animationItem.wrapper.offsetHeight, n = s / a;
           this.globalData.compSize.w / this.globalData.compSize.h > n ? (t = s / this.globalData.compSize.w, e = s / this.globalData.compSize.w, i = 0, r = (a - this.globalData.compSize.h * (s / this.globalData.compSize.w)) / 2) : (t = a / this.globalData.compSize.h, e = a / this.globalData.compSize.h, i = (s - this.globalData.compSize.w * (a / this.globalData.compSize.h)) / 2, r = 0);
           var o = this.resizerElem.style;
           o.webkitTransform = "matrix3d(" + t + ",0,0,0,0," + e + ",0,0,0,0,1,0," + i + "," + r + ",0,1)", o.transform = o.webkitTransform;
-        }, HybridRendererBase.prototype.renderFrame = SVGRenderer.prototype.renderFrame, HybridRendererBase.prototype.hide = function() {
+        }, HybridRendererBase.prototype.renderFrame = SVGRenderer.prototype.renderFrame, HybridRendererBase.prototype.hide = function () {
           this.resizerElem.style.display = "none";
-        }, HybridRendererBase.prototype.show = function() {
+        }, HybridRendererBase.prototype.show = function () {
           this.resizerElem.style.display = "block";
-        }, HybridRendererBase.prototype.initItems = function() {
+        }, HybridRendererBase.prototype.initItems = function () {
           if (this.buildAllItems(), this.camera)
             this.camera.setup();
           else {
@@ -13962,27 +14046,27 @@
               s.webkitPerspective = Math.sqrt(Math.pow(e, 2) + Math.pow(i, 2)) + "px", s.perspective = s.webkitPerspective;
             }
           }
-        }, HybridRendererBase.prototype.searchExtraCompositions = function(t) {
+        }, HybridRendererBase.prototype.searchExtraCompositions = function (t) {
           var e, i = t.length, r = createTag("div");
           for (e = 0; e < i; e += 1)
             if (t[e].xt) {
               var s = this.createComp(t[e], r, this.globalData.comp, null);
               s.initExpressions(), this.globalData.projectInterface.registerComposition(s);
             }
-        }, extendPrototype([HybridRendererBase, ICompElement, HBaseElement], HCompElement), HCompElement.prototype._createBaseContainerElements = HCompElement.prototype.createContainerElements, HCompElement.prototype.createContainerElements = function() {
+        }, extendPrototype([HybridRendererBase, ICompElement, HBaseElement], HCompElement), HCompElement.prototype._createBaseContainerElements = HCompElement.prototype.createContainerElements, HCompElement.prototype.createContainerElements = function () {
           this._createBaseContainerElements(), this.data.hasMask ? (this.svgElement.setAttribute("width", this.data.w), this.svgElement.setAttribute("height", this.data.h), this.transformedElement = this.baseElement) : this.transformedElement = this.layerElement;
-        }, HCompElement.prototype.addTo3dContainer = function(t, e) {
-          for (var i, r = 0; r < e; )
+        }, HCompElement.prototype.addTo3dContainer = function (t, e) {
+          for (var i, r = 0; r < e;)
             this.elements[r] && this.elements[r].getBaseElement && (i = this.elements[r].getBaseElement()), r += 1;
           i ? this.layerElement.insertBefore(t, i) : this.layerElement.appendChild(t);
-        }, HCompElement.prototype.createComp = function(t) {
+        }, HCompElement.prototype.createComp = function (t) {
           return this.supports3d ? new HCompElement(t, this.globalData, this) : new SVGCompElement(t, this.globalData, this);
-        }, extendPrototype([HybridRendererBase], HybridRenderer), HybridRenderer.prototype.createComp = function(t) {
+        }, extendPrototype([HybridRendererBase], HybridRenderer), HybridRenderer.prototype.createComp = function (t) {
           return this.supports3d ? new HCompElement(t, this.globalData, this) : new SVGCompElement(t, this.globalData, this);
         };
-        var CompExpressionInterface = function(t) {
+        var CompExpressionInterface = function (t) {
           function e(e2) {
-            for (var i = 0, r = t.layers.length; i < r; ) {
+            for (var i = 0, r = t.layers.length; i < r;) {
               if (t.layers[i].nm === e2 || t.layers[i].ind === e2)
                 return t.elements[i].layerInterface;
               i += 1;
@@ -13992,9 +14076,9 @@
           return Object.defineProperty(e, "_name", { value: t.data.nm }), e.layer = e, e.pixelAspect = 1, e.height = t.data.h || t.globalData.compSize.h, e.width = t.data.w || t.globalData.compSize.w, e.pixelAspect = 1, e.frameDuration = 1 / t.globalData.frameRate, e.displayStartTime = 0, e.numLayers = t.layers.length, e;
         };
         function _typeof$2(t) {
-          return _typeof$2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t2) {
+          return _typeof$2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (t2) {
             return typeof t2;
-          } : function(t2) {
+          } : function (t2) {
             return t2 && "function" == typeof Symbol && t2.constructor === Symbol && t2 !== Symbol.prototype ? "symbol" : typeof t2;
           }, _typeof$2(t);
         }
@@ -14002,12 +14086,12 @@
           var i, r = this, s = 256, a = e.pow(s, 6), n = e.pow(2, 52), o = 2 * n, h = 255;
           function l(t2) {
             var e2, i2 = t2.length, r2 = this, a2 = 0, n2 = r2.i = r2.j = 0, o2 = r2.S = [];
-            for (i2 || (t2 = [i2++]); a2 < s; )
+            for (i2 || (t2 = [i2++]); a2 < s;)
               o2[a2] = a2++;
             for (a2 = 0; a2 < s; a2++)
               o2[a2] = o2[n2 = h & n2 + t2[a2 % i2] + (e2 = o2[a2])], o2[n2] = e2;
-            r2.g = function(t3) {
-              for (var e3, i3 = 0, a3 = r2.i, n3 = r2.j, o3 = r2.S; t3--; )
+            r2.g = function (t3) {
+              for (var e3, i3 = 0, a3 = r2.i, n3 = r2.j, o3 = r2.S; t3--;)
                 e3 = o3[a3 = h & a3 + 1], i3 = i3 * s + o3[h & (o3[a3] = o3[n3 = h & n3 + e3]) + (o3[n3] = e3)];
               return r2.i = a3, r2.j = n3, i3;
             };
@@ -14026,15 +14110,15 @@
             return r2.length ? r2 : "string" == s2 ? t2 : t2 + "\0";
           }
           function m(t2, e2) {
-            for (var i2, r2 = t2 + "", s2 = 0; s2 < r2.length; )
+            for (var i2, r2 = t2 + "", s2 = 0; s2 < r2.length;)
               e2[h & s2] = h & (i2 ^= 19 * e2[h & s2]) + r2.charCodeAt(s2++);
             return c(e2);
           }
           function c(t2) {
             return String.fromCharCode.apply(0, t2);
           }
-          e.seedrandom = function(h2, d, u) {
-            var y = [], g = m(f((d = true === d ? { entropy: true } : d || {}).entropy ? [h2, c(t)] : null === h2 ? function() {
+          e.seedrandom = function (h2, d, u) {
+            var y = [], g = m(f((d = true === d ? { entropy: true } : d || {}).entropy ? [h2, c(t)] : null === h2 ? function () {
               try {
                 i;
                 var e2 = new Uint8Array(s);
@@ -14043,19 +14127,19 @@
                 var a2 = r.navigator, n2 = a2 && a2.plugins;
                 return [+/* @__PURE__ */ new Date(), r, n2, r.screen, c(t)];
               }
-            }() : h2, 3), y), v = new l(y), b = function() {
-              for (var t2 = v.g(6), e2 = a, i2 = 0; t2 < n; )
+            }() : h2, 3), y), v = new l(y), b = function () {
+              for (var t2 = v.g(6), e2 = a, i2 = 0; t2 < n;)
                 t2 = (t2 + i2) * s, e2 *= s, i2 = v.g(1);
-              for (; t2 >= o; )
+              for (; t2 >= o;)
                 t2 /= 2, e2 /= 2, i2 >>>= 1;
               return (t2 + i2) / e2;
             };
-            return b.int32 = function() {
+            return b.int32 = function () {
               return 0 | v.g(4);
-            }, b.quick = function() {
+            }, b.quick = function () {
               return v.g(4) / 4294967296;
-            }, b.double = b, m(c(v.S), t), (d.pass || u || function(t2, i2, r2, s2) {
-              return s2 && (s2.S && p(s2, v), t2.state = function() {
+            }, b.double = b, m(c(v.S), t), (d.pass || u || function (t2, i2, r2, s2) {
+              return s2 && (s2.S && p(s2, v), t2.state = function () {
                 return p(v, {});
               }), r2 ? (e.random = t2, i2) : t2;
             })(b, g, "global" in d ? d.global : this == e, d.state);
@@ -14066,13 +14150,13 @@
         }
         var propTypes = { SHAPE: "shape" };
         function _typeof$1(t) {
-          return _typeof$1 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t2) {
+          return _typeof$1 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (t2) {
             return typeof t2;
-          } : function(t2) {
+          } : function (t2) {
             return t2 && "function" == typeof Symbol && t2.constructor === Symbol && t2 !== Symbol.prototype ? "symbol" : typeof t2;
           }, _typeof$1(t);
         }
-        var ExpressionManager = function() {
+        var ExpressionManager = function () {
           var ob = {}, Math = BMMath, window = null, document = null, XMLHttpRequest = null, fetch = null, frames = null, _lottieGlobal = {};
           function resetFrame() {
             _lottieGlobal = {};
@@ -14106,7 +14190,7 @@
             if (isNumerable(i, t) && $bm_isInstanceOfArray(e))
               return (e = e.slice(0))[0] = t + e[0], e;
             if ($bm_isInstanceOfArray(t) && $bm_isInstanceOfArray(e)) {
-              for (var s = 0, a = t.length, n = e.length, o = []; s < a || s < n; )
+              for (var s = 0, a = t.length, n = e.length, o = []; s < a || s < n;)
                 ("number" == typeof t[s] || t[s] instanceof Number) && ("number" == typeof e[s] || e[s] instanceof Number) ? o[s] = t[s] + e[s] : o[s] = void 0 === e[s] ? t[s] : t[s] || e[s], s += 1;
               return o;
             }
@@ -14122,7 +14206,7 @@
             if (isNumerable(i, t) && $bm_isInstanceOfArray(e))
               return (e = e.slice(0))[0] = t - e[0], e;
             if ($bm_isInstanceOfArray(t) && $bm_isInstanceOfArray(e)) {
-              for (var s = 0, a = t.length, n = e.length, o = []; s < a || s < n; )
+              for (var s = 0, a = t.length, n = e.length, o = []; s < a || s < n;)
                 ("number" == typeof t[s] || t[s] instanceof Number) && ("number" == typeof e[s] || e[s] instanceof Number) ? o[s] = t[s] - e[s] : o[s] = void 0 === e[s] ? t[s] : t[s] || e[s], s += 1;
               return o;
             }
@@ -14268,13 +14352,15 @@
             if (!elem.globalData.renderConfig.runExpressions)
               return noOp;
             var val = data.x, needsVelocity = /velocity(?![\w\d])/.test(val), _needsRandom = -1 !== val.indexOf("random"), elemType = elem.data.ty, transform, $bm_transform, content, effect, thisProperty = property;
-            thisProperty.valueAtTime = thisProperty.getValueAtTime, Object.defineProperty(thisProperty, "value", { get: function() {
-              return thisProperty.v;
-            } }), elem.comp.frameDuration = 1 / elem.comp.globalData.frameRate, elem.comp.displayStartTime = 0;
-            var inPoint = elem.data.ip / elem.comp.globalData.frameRate, outPoint = elem.data.op / elem.comp.globalData.frameRate, width = elem.data.sw ? elem.data.sw : 0, height = elem.data.sh ? elem.data.sh : 0, name = elem.data.nm, loopIn, loop_in, loopOut, loop_out, smooth, toWorld, fromWorld, fromComp, toComp, fromCompToSurface, position, rotation, anchorPoint, scale, thisLayer, thisComp, mask, valueAtTime, velocityAtTime, scoped_bm_rt, expression_function = eval("[function _expression_function(){" + val + ";scoped_bm_rt=$bm_rt}]")[0], numKeys = property.kf ? data.k.length : 0, active = !this.data || true !== this.data.hd, wiggle = function(t, e) {
+            thisProperty.valueAtTime = thisProperty.getValueAtTime, Object.defineProperty(thisProperty, "value", {
+              get: function () {
+                return thisProperty.v;
+              }
+            }), elem.comp.frameDuration = 1 / elem.comp.globalData.frameRate, elem.comp.displayStartTime = 0;
+            var inPoint = elem.data.ip / elem.comp.globalData.frameRate, outPoint = elem.data.op / elem.comp.globalData.frameRate, width = elem.data.sw ? elem.data.sw : 0, height = elem.data.sh ? elem.data.sh : 0, name = elem.data.nm, loopIn, loop_in, loopOut, loop_out, smooth, toWorld, fromWorld, fromComp, toComp, fromCompToSurface, position, rotation, anchorPoint, scale, thisLayer, thisComp, mask, valueAtTime, velocityAtTime, scoped_bm_rt, expression_function = eval("[function _expression_function(){" + val + ";scoped_bm_rt=$bm_rt}]")[0], numKeys = property.kf ? data.k.length : 0, active = !this.data || true !== this.data.hd, wiggle = function (t, e) {
               var i, r, s = this.pv.length ? this.pv.length : 1, a = createTypedArray("float32", s);
               var n = Math.floor(5 * time);
-              for (i = 0, r = 0; i < n; ) {
+              for (i = 0, r = 0; i < n;) {
                 for (r = 0; r < s; r += 1)
                   a[r] += -e + 2 * e * BMMath.random();
                 i += 1;
@@ -14380,38 +14466,42 @@
             return executeExpression.__preventDeadCodeRemoval = [$bm_transform, anchorPoint, time, velocity, inPoint, outPoint, width, height, name, loop_in, loop_out, smooth, toComp, fromCompToSurface, toWorld, fromWorld, mask, position, rotation, scale, thisComp, numKeys, active, wiggle, loopInDuration, loopOutDuration, comp, lookAt, easeOut, easeIn, ease, nearestKey, key, text, textIndex, textTotal, selectorValue, framesToTime, timeToFrames, sourceRectAtTime, substring, substr, posterizeTime, index, globalData], executeExpression;
           }
           return ob.initiateExpression = initiateExpression, ob.__preventDeadCodeRemoval = [window, document, XMLHttpRequest, fetch, frames, $bm_neg, add, $bm_sum, $bm_sub, $bm_mul, $bm_div, $bm_mod, clamp, radians_to_degrees, degreesToRadians, degrees_to_radians, normalize, rgbToHsl, hslToRgb, linear, random, createPath, _lottieGlobal], ob.resetFrame = resetFrame, ob;
-        }(), Expressions = function() {
+        }(), Expressions = function () {
           var t = {};
-          return t.initExpressions = function(t2) {
+          return t.initExpressions = function (t2) {
             var e = 0, i = [];
-            t2.renderer.compInterface = CompExpressionInterface(t2.renderer), t2.renderer.globalData.projectInterface.registerComposition(t2.renderer), t2.renderer.globalData.pushExpression = function() {
+            t2.renderer.compInterface = CompExpressionInterface(t2.renderer), t2.renderer.globalData.projectInterface.registerComposition(t2.renderer), t2.renderer.globalData.pushExpression = function () {
               e += 1;
-            }, t2.renderer.globalData.popExpression = function() {
-              0 == (e -= 1) && function() {
+            }, t2.renderer.globalData.popExpression = function () {
+              0 == (e -= 1) && function () {
                 var t3, e2 = i.length;
                 for (t3 = 0; t3 < e2; t3 += 1)
                   i[t3].release();
                 i.length = 0;
               }();
-            }, t2.renderer.globalData.registerExpressionProperty = function(t3) {
+            }, t2.renderer.globalData.registerExpressionProperty = function (t3) {
               -1 === i.indexOf(t3) && i.push(t3);
             };
           }, t.resetFrame = ExpressionManager.resetFrame, t;
-        }(), MaskManagerInterface = function() {
+        }(), MaskManagerInterface = function () {
           function t(t2, e) {
             this._mask = t2, this._data = e;
           }
-          Object.defineProperty(t.prototype, "maskPath", { get: function() {
-            return this._mask.prop.k && this._mask.prop.getValue(), this._mask.prop;
-          } }), Object.defineProperty(t.prototype, "maskOpacity", { get: function() {
-            return this._mask.op.k && this._mask.op.getValue(), 100 * this._mask.op.v;
-          } });
-          return function(e) {
+          Object.defineProperty(t.prototype, "maskPath", {
+            get: function () {
+              return this._mask.prop.k && this._mask.prop.getValue(), this._mask.prop;
+            }
+          }), Object.defineProperty(t.prototype, "maskOpacity", {
+            get: function () {
+              return this._mask.op.k && this._mask.op.getValue(), 100 * this._mask.op.v;
+            }
+          });
+          return function (e) {
             var i, r = createSizedArray(e.viewData.length), s = e.viewData.length;
             for (i = 0; i < s; i += 1)
               r[i] = new t(e.viewData[i], e.masksProperties[i]);
-            return function(t2) {
-              for (i = 0; i < s; ) {
+            return function (t2) {
+              for (i = 0; i < s;) {
                 if (e.masksProperties[i].nm === t2)
                   return r[i];
                 i += 1;
@@ -14419,12 +14509,14 @@
               return null;
             };
           };
-        }(), ExpressionPropertyInterface = function() {
+        }(), ExpressionPropertyInterface = function () {
           var t = { pv: 0, v: 0, mult: 1 }, e = { pv: [0, 0, 0], v: [0, 0, 0], mult: 1 };
           function i(t2, e2, i2) {
-            Object.defineProperty(t2, "velocity", { get: function() {
-              return e2.getVelocityAtTime(e2.comp.currentFrame);
-            } }), t2.numKeys = e2.keyframes ? e2.keyframes.length : 0, t2.key = function(r2) {
+            Object.defineProperty(t2, "velocity", {
+              get: function () {
+                return e2.getVelocityAtTime(e2.comp.currentFrame);
+              }
+            }), t2.numKeys = e2.keyframes ? e2.keyframes.length : 0, t2.key = function (r2) {
               if (!t2.numKeys)
                 return 0;
               var s = "";
@@ -14436,17 +14528,17 @@
           function r() {
             return t;
           }
-          return function(s) {
-            return s ? "unidimensional" === s.propType ? function(e2) {
+          return function (s) {
+            return s ? "unidimensional" === s.propType ? function (e2) {
               e2 && "pv" in e2 || (e2 = t);
               var r2 = 1 / e2.mult, s2 = e2.pv * r2, a = new Number(s2);
-              return a.value = s2, i(a, e2, "unidimensional"), function() {
+              return a.value = s2, i(a, e2, "unidimensional"), function () {
                 return e2.k && e2.getValue(), s2 = e2.v * r2, a.value !== s2 && ((a = new Number(s2)).value = s2, i(a, e2, "unidimensional")), a;
               };
-            }(s) : function(t2) {
+            }(s) : function (t2) {
               t2 && "pv" in t2 || (t2 = e);
               var r2 = 1 / t2.mult, s2 = t2.data && t2.data.l || t2.pv.length, a = createTypedArray("float32", s2), n = createTypedArray("float32", s2);
-              return a.value = n, i(a, t2, "multidimensional"), function() {
+              return a.value = n, i(a, t2, "multidimensional"), function () {
                 t2.k && t2.getValue();
                 for (var e2 = 0; e2 < s2; e2 += 1)
                   n[e2] = t2.v[e2] * r2, a[e2] = n[e2];
@@ -14454,7 +14546,7 @@
               };
             }(s) : r;
           };
-        }(), TransformExpressionInterface = function(t) {
+        }(), TransformExpressionInterface = function (t) {
           function e(t2) {
             switch (t2) {
               case "scale":
@@ -14498,10 +14590,12 @@
             }
           }
           var i, r, s, a;
-          return Object.defineProperty(e, "rotation", { get: ExpressionPropertyInterface(t.r || t.rz) }), Object.defineProperty(e, "zRotation", { get: ExpressionPropertyInterface(t.rz || t.r) }), Object.defineProperty(e, "xRotation", { get: ExpressionPropertyInterface(t.rx) }), Object.defineProperty(e, "yRotation", { get: ExpressionPropertyInterface(t.ry) }), Object.defineProperty(e, "scale", { get: ExpressionPropertyInterface(t.s) }), t.p ? a = ExpressionPropertyInterface(t.p) : (i = ExpressionPropertyInterface(t.px), r = ExpressionPropertyInterface(t.py), t.pz && (s = ExpressionPropertyInterface(t.pz))), Object.defineProperty(e, "position", { get: function() {
-            return t.p ? a() : [i(), r(), s ? s() : 0];
-          } }), Object.defineProperty(e, "xPosition", { get: ExpressionPropertyInterface(t.px) }), Object.defineProperty(e, "yPosition", { get: ExpressionPropertyInterface(t.py) }), Object.defineProperty(e, "zPosition", { get: ExpressionPropertyInterface(t.pz) }), Object.defineProperty(e, "anchorPoint", { get: ExpressionPropertyInterface(t.a) }), Object.defineProperty(e, "opacity", { get: ExpressionPropertyInterface(t.o) }), Object.defineProperty(e, "skew", { get: ExpressionPropertyInterface(t.sk) }), Object.defineProperty(e, "skewAxis", { get: ExpressionPropertyInterface(t.sa) }), Object.defineProperty(e, "orientation", { get: ExpressionPropertyInterface(t.or) }), e;
-        }, LayerExpressionInterface = function() {
+          return Object.defineProperty(e, "rotation", { get: ExpressionPropertyInterface(t.r || t.rz) }), Object.defineProperty(e, "zRotation", { get: ExpressionPropertyInterface(t.rz || t.r) }), Object.defineProperty(e, "xRotation", { get: ExpressionPropertyInterface(t.rx) }), Object.defineProperty(e, "yRotation", { get: ExpressionPropertyInterface(t.ry) }), Object.defineProperty(e, "scale", { get: ExpressionPropertyInterface(t.s) }), t.p ? a = ExpressionPropertyInterface(t.p) : (i = ExpressionPropertyInterface(t.px), r = ExpressionPropertyInterface(t.py), t.pz && (s = ExpressionPropertyInterface(t.pz))), Object.defineProperty(e, "position", {
+            get: function () {
+              return t.p ? a() : [i(), r(), s ? s() : 0];
+            }
+          }), Object.defineProperty(e, "xPosition", { get: ExpressionPropertyInterface(t.px) }), Object.defineProperty(e, "yPosition", { get: ExpressionPropertyInterface(t.py) }), Object.defineProperty(e, "zPosition", { get: ExpressionPropertyInterface(t.pz) }), Object.defineProperty(e, "anchorPoint", { get: ExpressionPropertyInterface(t.a) }), Object.defineProperty(e, "opacity", { get: ExpressionPropertyInterface(t.o) }), Object.defineProperty(e, "skew", { get: ExpressionPropertyInterface(t.sk) }), Object.defineProperty(e, "skewAxis", { get: ExpressionPropertyInterface(t.sa) }), Object.defineProperty(e, "orientation", { get: ExpressionPropertyInterface(t.or) }), e;
+        }, LayerExpressionInterface = function () {
           function t(t2) {
             var e2 = new Matrix();
             void 0 !== t2 ? this._elem.finalTransform.mProp.getValueAtTime(t2).clone(e2) : this._elem.finalTransform.mProp.applyToMatrix(e2);
@@ -14552,7 +14646,7 @@
           function h() {
             return [1, 1, 1, 1];
           }
-          return function(l) {
+          return function (l) {
             var p;
             function f(t2) {
               switch (t2) {
@@ -14579,33 +14673,43 @@
             }
             f.getMatrix = t, f.invertPoint = n, f.applyPoint = a, f.toWorld = i, f.toWorldVec = e, f.fromWorld = s, f.fromWorldVec = r, f.toComp = i, f.fromComp = o, f.sampleImage = h, f.sourceRectAtTime = l.sourceRectAtTime.bind(l), f._elem = l;
             var m = getDescriptor(p = TransformExpressionInterface(l.finalTransform.mProp), "anchorPoint");
-            return Object.defineProperties(f, { hasParent: { get: function() {
-              return l.hierarchy.length;
-            } }, parent: { get: function() {
-              return l.hierarchy[0].layerInterface;
-            } }, rotation: getDescriptor(p, "rotation"), scale: getDescriptor(p, "scale"), position: getDescriptor(p, "position"), opacity: getDescriptor(p, "opacity"), anchorPoint: m, anchor_point: m, transform: { get: function() {
-              return p;
-            } }, active: { get: function() {
-              return l.isInRange;
-            } } }), f.startTime = l.data.st, f.index = l.data.ind, f.source = l.data.refId, f.height = 0 === l.data.ty ? l.data.h : 100, f.width = 0 === l.data.ty ? l.data.w : 100, f.inPoint = l.data.ip / l.comp.globalData.frameRate, f.outPoint = l.data.op / l.comp.globalData.frameRate, f._name = l.data.nm, f.registerMaskInterface = function(t2) {
+            return Object.defineProperties(f, {
+              hasParent: {
+                get: function () {
+                  return l.hierarchy.length;
+                }
+              }, parent: {
+                get: function () {
+                  return l.hierarchy[0].layerInterface;
+                }
+              }, rotation: getDescriptor(p, "rotation"), scale: getDescriptor(p, "scale"), position: getDescriptor(p, "position"), opacity: getDescriptor(p, "opacity"), anchorPoint: m, anchor_point: m, transform: {
+                get: function () {
+                  return p;
+                }
+              }, active: {
+                get: function () {
+                  return l.isInRange;
+                }
+              }
+            }), f.startTime = l.data.st, f.index = l.data.ind, f.source = l.data.refId, f.height = 0 === l.data.ty ? l.data.h : 100, f.width = 0 === l.data.ty ? l.data.w : 100, f.inPoint = l.data.ip / l.comp.globalData.frameRate, f.outPoint = l.data.op / l.comp.globalData.frameRate, f._name = l.data.nm, f.registerMaskInterface = function (t2) {
               f.mask = new MaskManagerInterface(t2, l);
-            }, f.registerEffectsInterface = function(t2) {
+            }, f.registerEffectsInterface = function (t2) {
               f.effect = t2;
             }, f;
           };
-        }(), propertyGroupFactory = function(t, e) {
-          return function(i) {
+        }(), propertyGroupFactory = function (t, e) {
+          return function (i) {
             return (i = void 0 === i ? 1 : i) <= 0 ? t : e(i - 1);
           };
-        }, PropertyInterface = function(t, e) {
+        }, PropertyInterface = function (t, e) {
           var i = { _name: t };
-          return function(t2) {
+          return function (t2) {
             return (t2 = void 0 === t2 ? 1 : t2) <= 0 ? i : e(t2 - 1);
           };
-        }, EffectsExpressionInterface = function() {
+        }, EffectsExpressionInterface = function () {
           function t(i, r, s, a) {
             function n(t2) {
-              for (var e2 = i.ef, r2 = 0, s2 = e2.length; r2 < s2; ) {
+              for (var e2 = i.ef, r2 = 0, s2 = e2.length; r2 < s2;) {
                 if (t2 === e2[r2].nm || t2 === e2[r2].mn || t2 === e2[r2].ix)
                   return 5 === e2[r2].ty ? l[r2] : l[r2]();
                 r2 += 1;
@@ -14615,49 +14719,65 @@
             var o, h = propertyGroupFactory(n, s), l = [], p = i.ef.length;
             for (o = 0; o < p; o += 1)
               5 === i.ef[o].ty ? l.push(t(i.ef[o], r.effectElements[o], r.effectElements[o].propertyGroup, a)) : l.push(e(r.effectElements[o], i.ef[o].ty, a, h));
-            return "ADBE Color Control" === i.mn && Object.defineProperty(n, "color", { get: function() {
-              return l[0]();
-            } }), Object.defineProperties(n, { numProperties: { get: function() {
-              return i.np;
-            } }, _name: { value: i.nm }, propertyGroup: { value: h } }), n.enabled = 0 !== i.en, n.active = n.enabled, n;
+            return "ADBE Color Control" === i.mn && Object.defineProperty(n, "color", {
+              get: function () {
+                return l[0]();
+              }
+            }), Object.defineProperties(n, {
+              numProperties: {
+                get: function () {
+                  return i.np;
+                }
+              }, _name: { value: i.nm }, propertyGroup: { value: h }
+            }), n.enabled = 0 !== i.en, n.active = n.enabled, n;
           }
           function e(t2, e2, i, r) {
             var s = ExpressionPropertyInterface(t2.p);
-            return t2.p.setGroupProperty && t2.p.setGroupProperty(PropertyInterface("", r)), function() {
+            return t2.p.setGroupProperty && t2.p.setGroupProperty(PropertyInterface("", r)), function () {
               return 10 === e2 ? i.comp.compInterface(t2.p.v) : s();
             };
           }
-          return { createEffectsInterface: function(e2, i) {
-            if (e2.effectsManager) {
-              var r, s = [], a = e2.data.ef, n = e2.effectsManager.effectElements.length;
-              for (r = 0; r < n; r += 1)
-                s.push(t(a[r], e2.effectsManager.effectElements[r], i, e2));
-              var o = e2.data.ef || [], h = function(t2) {
-                for (r = 0, n = o.length; r < n; ) {
-                  if (t2 === o[r].nm || t2 === o[r].mn || t2 === o[r].ix)
-                    return s[r];
-                  r += 1;
-                }
-                return null;
-              };
-              return Object.defineProperty(h, "numProperties", { get: function() {
-                return o.length;
-              } }), h;
+          return {
+            createEffectsInterface: function (e2, i) {
+              if (e2.effectsManager) {
+                var r, s = [], a = e2.data.ef, n = e2.effectsManager.effectElements.length;
+                for (r = 0; r < n; r += 1)
+                  s.push(t(a[r], e2.effectsManager.effectElements[r], i, e2));
+                var o = e2.data.ef || [], h = function (t2) {
+                  for (r = 0, n = o.length; r < n;) {
+                    if (t2 === o[r].nm || t2 === o[r].mn || t2 === o[r].ix)
+                      return s[r];
+                    r += 1;
+                  }
+                  return null;
+                };
+                return Object.defineProperty(h, "numProperties", {
+                  get: function () {
+                    return o.length;
+                  }
+                }), h;
+              }
+              return null;
             }
-            return null;
-          } };
-        }(), ShapePathInterface = function(t, e, i) {
+          };
+        }(), ShapePathInterface = function (t, e, i) {
           var r = e.sh;
           function s(t2) {
             return "Shape" === t2 || "shape" === t2 || "Path" === t2 || "path" === t2 || "ADBE Vector Shape" === t2 || 2 === t2 ? s.path : null;
           }
           var a = propertyGroupFactory(s, i);
-          return r.setGroupProperty(PropertyInterface("Path", a)), Object.defineProperties(s, { path: { get: function() {
-            return r.k && r.getValue(), r;
-          } }, shape: { get: function() {
-            return r.k && r.getValue(), r;
-          } }, _name: { value: t.nm }, ix: { value: t.ix }, propertyIndex: { value: t.ix }, mn: { value: t.mn }, propertyGroup: { value: i } }), s;
-        }, ShapeExpressionInterface = function() {
+          return r.setGroupProperty(PropertyInterface("Path", a)), Object.defineProperties(s, {
+            path: {
+              get: function () {
+                return r.k && r.getValue(), r;
+              }
+            }, shape: {
+              get: function () {
+                return r.k && r.getValue(), r;
+              }
+            }, _name: { value: t.nm }, ix: { value: t.ix }, propertyIndex: { value: t.ix }, mn: { value: t.mn }, propertyGroup: { value: i }
+          }), s;
+        }, ShapeExpressionInterface = function () {
           function t(t2, o2, c) {
             var d, u = [], y = t2 ? t2.length : 0;
             for (d = 0; d < y; d += 1)
@@ -14665,7 +14785,7 @@
             return u;
           }
           function e(e2, i2, r2) {
-            var s2 = function(t2) {
+            var s2 = function (t2) {
               switch (t2) {
                 case "ADBE Vectors Group":
                 case "Contents":
@@ -14676,9 +14796,9 @@
               }
             };
             s2.propertyGroup = propertyGroupFactory(s2, r2);
-            var a2 = function(e3, i3, r3) {
-              var s3, a3 = function(t2) {
-                for (var e4 = 0, i4 = s3.length; e4 < i4; ) {
+            var a2 = function (e3, i3, r3) {
+              var s3, a3 = function (t2) {
+                for (var e4 = 0, i4 = s3.length; e4 < i4;) {
                   if (s3[e4]._name === t2 || s3[e4].mn === t2 || s3[e4].propertyIndex === t2 || s3[e4].ix === t2 || s3[e4].ind === t2)
                     return s3[e4];
                   e4 += 1;
@@ -14689,9 +14809,11 @@
               var n3 = o(e3.it[e3.it.length - 1], i3.it[i3.it.length - 1], a3.propertyGroup);
               return a3.transform = n3, a3.propertyIndex = e3.cix, a3._name = e3.nm, a3;
             }(e2, i2, s2.propertyGroup), n2 = o(e2.it[e2.it.length - 1], i2.it[i2.it.length - 1], s2.propertyGroup);
-            return s2.content = a2, s2.transform = n2, Object.defineProperty(s2, "_name", { get: function() {
-              return e2.nm;
-            } }), s2.numProperties = e2.np, s2.propertyIndex = e2.ix, s2.nm = e2.nm, s2.mn = e2.mn, s2;
+            return s2.content = a2, s2.transform = n2, Object.defineProperty(s2, "_name", {
+              get: function () {
+                return e2.nm;
+              }
+            }), s2.numProperties = e2.np, s2.propertyIndex = e2.ix, s2.nm = e2.nm, s2.mn = e2.mn, s2;
           }
           function i(t2, e2, i2) {
             function r2(t3) {
@@ -14703,12 +14825,16 @@
             function r2(t3) {
               return "Start Point" === t3 || "start point" === t3 ? r2.startPoint : "End Point" === t3 || "end point" === t3 ? r2.endPoint : "Opacity" === t3 || "opacity" === t3 ? r2.opacity : null;
             }
-            return Object.defineProperties(r2, { startPoint: { get: ExpressionPropertyInterface(e2.s) }, endPoint: { get: ExpressionPropertyInterface(e2.e) }, opacity: { get: ExpressionPropertyInterface(e2.o) }, type: { get: function() {
-              return "a";
-            } }, _name: { value: t2.nm }, mn: { value: t2.mn } }), e2.s.setGroupProperty(PropertyInterface("Start Point", i2)), e2.e.setGroupProperty(PropertyInterface("End Point", i2)), e2.o.setGroupProperty(PropertyInterface("Opacity", i2)), r2;
+            return Object.defineProperties(r2, {
+              startPoint: { get: ExpressionPropertyInterface(e2.s) }, endPoint: { get: ExpressionPropertyInterface(e2.e) }, opacity: { get: ExpressionPropertyInterface(e2.o) }, type: {
+                get: function () {
+                  return "a";
+                }
+              }, _name: { value: t2.nm }, mn: { value: t2.mn }
+            }), e2.s.setGroupProperty(PropertyInterface("Start Point", i2)), e2.e.setGroupProperty(PropertyInterface("End Point", i2)), e2.o.setGroupProperty(PropertyInterface("Opacity", i2)), r2;
           }
           function s() {
-            return function() {
+            return function () {
               return null;
             };
           }
@@ -14723,9 +14849,13 @@
             function l2(t3) {
               return "Color" === t3 || "color" === t3 ? l2.color : "Opacity" === t3 || "opacity" === t3 ? l2.opacity : "Stroke Width" === t3 || "stroke width" === t3 ? l2.strokeWidth : null;
             }
-            return Object.defineProperties(l2, { color: { get: ExpressionPropertyInterface(e2.c) }, opacity: { get: ExpressionPropertyInterface(e2.o) }, strokeWidth: { get: ExpressionPropertyInterface(e2.w) }, dash: { get: function() {
-              return h2;
-            } }, _name: { value: t2.nm }, mn: { value: t2.mn } }), e2.c.setGroupProperty(PropertyInterface("Color", s2)), e2.o.setGroupProperty(PropertyInterface("Opacity", s2)), e2.w.setGroupProperty(PropertyInterface("Stroke Width", s2)), l2;
+            return Object.defineProperties(l2, {
+              color: { get: ExpressionPropertyInterface(e2.c) }, opacity: { get: ExpressionPropertyInterface(e2.o) }, strokeWidth: { get: ExpressionPropertyInterface(e2.w) }, dash: {
+                get: function () {
+                  return h2;
+                }
+              }, _name: { value: t2.nm }, mn: { value: t2.mn }
+            }), e2.c.setGroupProperty(PropertyInterface("Color", s2)), e2.o.setGroupProperty(PropertyInterface("Opacity", s2)), e2.w.setGroupProperty(PropertyInterface("Stroke Width", s2)), l2;
           }
           function n(t2, e2, i2) {
             function r2(e3) {
@@ -14778,47 +14908,51 @@
             var s2 = propertyGroupFactory(r2, i2), a2 = e2;
             return r2.propertyIndex = t2.ix, a2.c.setGroupProperty(PropertyInterface("Copies", s2)), a2.o.setGroupProperty(PropertyInterface("Offset", s2)), Object.defineProperties(r2, { copies: { get: ExpressionPropertyInterface(a2.c) }, offset: { get: ExpressionPropertyInterface(a2.o) }, _name: { value: t2.nm } }), r2.mn = t2.mn, r2;
           }
-          return function(e2, i2, r2) {
+          return function (e2, i2, r2) {
             var s2;
             function a2(t2) {
               if ("number" == typeof t2)
                 return 0 === (t2 = void 0 === t2 ? 1 : t2) ? r2 : s2[t2 - 1];
-              for (var e3 = 0, i3 = s2.length; e3 < i3; ) {
+              for (var e3 = 0, i3 = s2.length; e3 < i3;) {
                 if (s2[e3]._name === t2)
                   return s2[e3];
                 e3 += 1;
               }
               return null;
             }
-            return a2.propertyGroup = propertyGroupFactory(a2, function() {
+            return a2.propertyGroup = propertyGroupFactory(a2, function () {
               return r2;
             }), s2 = t(e2, i2, a2.propertyGroup), a2.numProperties = s2.length, a2._name = "Contents", a2;
           };
-        }(), TextExpressionInterface = function(t) {
+        }(), TextExpressionInterface = function (t) {
           var e;
           function i(t2) {
             return "ADBE Text Document" === t2 ? i.sourceText : null;
           }
-          return Object.defineProperty(i, "sourceText", { get: function() {
-            t.textProperty.getValue();
-            var i2 = t.textProperty.currentData.t;
-            return e && i2 === e.value || ((e = new String(i2)).value = i2 || new String(i2), Object.defineProperty(e, "style", { get: function() {
-              return { fillColor: t.textProperty.currentData.fc };
-            } })), e;
-          } }), i;
+          return Object.defineProperty(i, "sourceText", {
+            get: function () {
+              t.textProperty.getValue();
+              var i2 = t.textProperty.currentData.t;
+              return e && i2 === e.value || ((e = new String(i2)).value = i2 || new String(i2), Object.defineProperty(e, "style", {
+                get: function () {
+                  return { fillColor: t.textProperty.currentData.fc };
+                }
+              })), e;
+            }
+          }), i;
         };
         function _typeof(t) {
-          return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t2) {
+          return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (t2) {
             return typeof t2;
-          } : function(t2) {
+          } : function (t2) {
             return t2 && "function" == typeof Symbol && t2.constructor === Symbol && t2 !== Symbol.prototype ? "symbol" : typeof t2;
           }, _typeof(t);
         }
-        var FootageInterface = (dataInterfaceFactory = function(t) {
+        var FootageInterface = (dataInterfaceFactory = function (t) {
           function e(t2) {
             return "Outline" === t2 ? e.outlineInterface() : null;
           }
-          return e._name = "Outline", e.outlineInterface = function(t2) {
+          return e._name = "Outline", e.outlineInterface = function (t2) {
             var e2 = "", i = t2.getFootageData();
             function r(t3) {
               if (i[t3])
@@ -14830,11 +14964,11 @@
               }
               return "";
             }
-            return function() {
+            return function () {
               return e2 = "", i = t2.getFootageData(), r;
             };
           }(t), e;
-        }, function(t) {
+        }, function (t) {
           function e(t2) {
             return "Data" === t2 ? e.dataInterface : null;
           }
@@ -14843,35 +14977,37 @@
         function getInterface(t) {
           return interfaces[t] || null;
         }
-        var expressionHelpers = { searchExpressions: function(t, e, i) {
-          e.x && (i.k = true, i.x = true, i.initiateExpression = ExpressionManager.initiateExpression, i.effectsSequence.push(i.initiateExpression(t, e, i).bind(i)));
-        }, getSpeedAtTime: function(t) {
-          var e = this.getValueAtTime(t), i = this.getValueAtTime(t + -0.01), r = 0;
-          if (e.length) {
-            var s;
-            for (s = 0; s < e.length; s += 1)
-              r += Math.pow(i[s] - e[s], 2);
-            r = 100 * Math.sqrt(r);
-          } else
-            r = 0;
-          return r;
-        }, getVelocityAtTime: function(t) {
-          if (void 0 !== this.vel)
-            return this.vel;
-          var e, i, r = -1e-3, s = this.getValueAtTime(t), a = this.getValueAtTime(t + r);
-          if (s.length)
-            for (e = createTypedArray("float32", s.length), i = 0; i < s.length; i += 1)
-              e[i] = (a[i] - s[i]) / r;
-          else
-            e = (a - s) / r;
-          return e;
-        }, getValueAtTime: function(t) {
-          return t *= this.elem.globalData.frameRate, (t -= this.offsetTime) !== this._cachingAtTime.lastFrame && (this._cachingAtTime.lastIndex = this._cachingAtTime.lastFrame < t ? this._cachingAtTime.lastIndex : 0, this._cachingAtTime.value = this.interpolateValue(t, this._cachingAtTime), this._cachingAtTime.lastFrame = t), this._cachingAtTime.value;
-        }, getStaticValueAtTime: function() {
-          return this.pv;
-        }, setGroupProperty: function(t) {
-          this.propertyGroup = t;
-        } };
+        var expressionHelpers = {
+          searchExpressions: function (t, e, i) {
+            e.x && (i.k = true, i.x = true, i.initiateExpression = ExpressionManager.initiateExpression, i.effectsSequence.push(i.initiateExpression(t, e, i).bind(i)));
+          }, getSpeedAtTime: function (t) {
+            var e = this.getValueAtTime(t), i = this.getValueAtTime(t + -0.01), r = 0;
+            if (e.length) {
+              var s;
+              for (s = 0; s < e.length; s += 1)
+                r += Math.pow(i[s] - e[s], 2);
+              r = 100 * Math.sqrt(r);
+            } else
+              r = 0;
+            return r;
+          }, getVelocityAtTime: function (t) {
+            if (void 0 !== this.vel)
+              return this.vel;
+            var e, i, r = -1e-3, s = this.getValueAtTime(t), a = this.getValueAtTime(t + r);
+            if (s.length)
+              for (e = createTypedArray("float32", s.length), i = 0; i < s.length; i += 1)
+                e[i] = (a[i] - s[i]) / r;
+            else
+              e = (a - s) / r;
+            return e;
+          }, getValueAtTime: function (t) {
+            return t *= this.elem.globalData.frameRate, (t -= this.offsetTime) !== this._cachingAtTime.lastFrame && (this._cachingAtTime.lastIndex = this._cachingAtTime.lastFrame < t ? this._cachingAtTime.lastIndex : 0, this._cachingAtTime.value = this.interpolateValue(t, this._cachingAtTime), this._cachingAtTime.lastFrame = t), this._cachingAtTime.value;
+          }, getStaticValueAtTime: function () {
+            return this.pv;
+          }, setGroupProperty: function (t) {
+            this.propertyGroup = t;
+          }
+        };
         function addPropertyDecorator() {
           function t(t2, e2, i2) {
             if (!this.k || !this.keyframes)
@@ -14943,7 +15079,7 @@
             if (t2 = 0.5 * (t2 || 0.4), (e2 = Math.floor(e2 || 5)) <= 1)
               return this.pv;
             var i2, r2, s2 = this.comp.renderedFrame / this.comp.globalData.frameRate, a2 = s2 - t2, n2 = e2 > 1 ? (s2 + t2 - a2) / (e2 - 1) : 1, o2 = 0, h2 = 0;
-            for (i2 = this.pv.length ? createTypedArray("float32", this.pv.length) : 0; o2 < e2; ) {
+            for (i2 = this.pv.length ? createTypedArray("float32", this.pv.length) : 0; o2 < e2;) {
               if (r2 = this.getValueAtTime(a2 + o2 * n2), this.pv.length)
                 for (h2 = 0; h2 < this.pv.length; h2 += 1)
                   i2[h2] += r2[h2];
@@ -14997,12 +15133,12 @@
             return this.v.clone(new Matrix());
           }
           var a = TransformPropertyFactory.getTransformProperty;
-          TransformPropertyFactory.getTransformProperty = function(t2, e2, i2) {
+          TransformPropertyFactory.getTransformProperty = function (t2, e2, i2) {
             var n2 = a(t2, e2, i2);
             return n2.dynamicProperties.length ? n2.getValueAtTime = r.bind(n2) : n2.getValueAtTime = s.bind(n2), n2.setGroupProperty = expressionHelpers.setGroupProperty, n2;
           };
           var n = PropertyFactory.getProp;
-          PropertyFactory.getProp = function(r2, s2, a2, o2, h2) {
+          PropertyFactory.getProp = function (r2, s2, a2, o2, h2) {
             var l2 = n(r2, s2, a2, o2, h2);
             l2.kf ? l2.getValueAtTime = expressionHelpers.getValueAtTime.bind(l2) : l2.getValueAtTime = expressionHelpers.getStaticValueAtTime.bind(l2), l2.setGroupProperty = expressionHelpers.setGroupProperty, l2.loopOut = t, l2.loopIn = e, l2.smooth = i, l2.getVelocityAtTime = expressionHelpers.getVelocityAtTime.bind(l2), l2.getSpeedAtTime = expressionHelpers.getSpeedAtTime.bind(l2), l2.numKeys = 1 === s2.a ? s2.k.length : 0, l2.propertyIndex = s2.ix;
             var p2 = 0;
@@ -15011,47 +15147,49 @@
           var o = ShapePropertyFactory.getConstructorFunction(), h = ShapePropertyFactory.getKeyframedConstructorFunction();
           function l() {
           }
-          l.prototype = { vertices: function(t2, e2) {
-            this.k && this.getValue();
-            var i2, r2 = this.v;
-            void 0 !== e2 && (r2 = this.getValueAtTime(e2, 0));
-            var s2 = r2._length, a2 = r2[t2], n2 = r2.v, o2 = createSizedArray(s2);
-            for (i2 = 0; i2 < s2; i2 += 1)
-              o2[i2] = "i" === t2 || "o" === t2 ? [a2[i2][0] - n2[i2][0], a2[i2][1] - n2[i2][1]] : [a2[i2][0], a2[i2][1]];
-            return o2;
-          }, points: function(t2) {
-            return this.vertices("v", t2);
-          }, inTangents: function(t2) {
-            return this.vertices("i", t2);
-          }, outTangents: function(t2) {
-            return this.vertices("o", t2);
-          }, isClosed: function() {
-            return this.v.c;
-          }, pointOnPath: function(t2, e2) {
-            var i2 = this.v;
-            void 0 !== e2 && (i2 = this.getValueAtTime(e2, 0)), this._segmentsLength || (this._segmentsLength = bez.getSegmentsLength(i2));
-            for (var r2, s2 = this._segmentsLength, a2 = s2.lengths, n2 = s2.totalLength * t2, o2 = 0, h2 = a2.length, l2 = 0; o2 < h2; ) {
-              if (l2 + a2[o2].addedLength > n2) {
-                var p2 = o2, f = i2.c && o2 === h2 - 1 ? 0 : o2 + 1, m = (n2 - l2) / a2[o2].addedLength;
-                r2 = bez.getPointInSegment(i2.v[p2], i2.v[f], i2.o[p2], i2.i[f], m, a2[o2]);
-                break;
+          l.prototype = {
+            vertices: function (t2, e2) {
+              this.k && this.getValue();
+              var i2, r2 = this.v;
+              void 0 !== e2 && (r2 = this.getValueAtTime(e2, 0));
+              var s2 = r2._length, a2 = r2[t2], n2 = r2.v, o2 = createSizedArray(s2);
+              for (i2 = 0; i2 < s2; i2 += 1)
+                o2[i2] = "i" === t2 || "o" === t2 ? [a2[i2][0] - n2[i2][0], a2[i2][1] - n2[i2][1]] : [a2[i2][0], a2[i2][1]];
+              return o2;
+            }, points: function (t2) {
+              return this.vertices("v", t2);
+            }, inTangents: function (t2) {
+              return this.vertices("i", t2);
+            }, outTangents: function (t2) {
+              return this.vertices("o", t2);
+            }, isClosed: function () {
+              return this.v.c;
+            }, pointOnPath: function (t2, e2) {
+              var i2 = this.v;
+              void 0 !== e2 && (i2 = this.getValueAtTime(e2, 0)), this._segmentsLength || (this._segmentsLength = bez.getSegmentsLength(i2));
+              for (var r2, s2 = this._segmentsLength, a2 = s2.lengths, n2 = s2.totalLength * t2, o2 = 0, h2 = a2.length, l2 = 0; o2 < h2;) {
+                if (l2 + a2[o2].addedLength > n2) {
+                  var p2 = o2, f = i2.c && o2 === h2 - 1 ? 0 : o2 + 1, m = (n2 - l2) / a2[o2].addedLength;
+                  r2 = bez.getPointInSegment(i2.v[p2], i2.v[f], i2.o[p2], i2.i[f], m, a2[o2]);
+                  break;
+                }
+                l2 += a2[o2].addedLength, o2 += 1;
               }
-              l2 += a2[o2].addedLength, o2 += 1;
-            }
-            return r2 || (r2 = i2.c ? [i2.v[0][0], i2.v[0][1]] : [i2.v[i2._length - 1][0], i2.v[i2._length - 1][1]]), r2;
-          }, vectorOnPath: function(t2, e2, i2) {
-            1 == t2 ? t2 = this.v.c : 0 == t2 && (t2 = 0.999);
-            var r2 = this.pointOnPath(t2, e2), s2 = this.pointOnPath(t2 + 1e-3, e2), a2 = s2[0] - r2[0], n2 = s2[1] - r2[1], o2 = Math.sqrt(Math.pow(a2, 2) + Math.pow(n2, 2));
-            return 0 === o2 ? [0, 0] : "tangent" === i2 ? [a2 / o2, n2 / o2] : [-n2 / o2, a2 / o2];
-          }, tangentOnPath: function(t2, e2) {
-            return this.vectorOnPath(t2, e2, "tangent");
-          }, normalOnPath: function(t2, e2) {
-            return this.vectorOnPath(t2, e2, "normal");
-          }, setGroupProperty: expressionHelpers.setGroupProperty, getValueAtTime: expressionHelpers.getStaticValueAtTime }, extendPrototype([l], o), extendPrototype([l], h), h.prototype.getValueAtTime = function(t2) {
+              return r2 || (r2 = i2.c ? [i2.v[0][0], i2.v[0][1]] : [i2.v[i2._length - 1][0], i2.v[i2._length - 1][1]]), r2;
+            }, vectorOnPath: function (t2, e2, i2) {
+              1 == t2 ? t2 = this.v.c : 0 == t2 && (t2 = 0.999);
+              var r2 = this.pointOnPath(t2, e2), s2 = this.pointOnPath(t2 + 1e-3, e2), a2 = s2[0] - r2[0], n2 = s2[1] - r2[1], o2 = Math.sqrt(Math.pow(a2, 2) + Math.pow(n2, 2));
+              return 0 === o2 ? [0, 0] : "tangent" === i2 ? [a2 / o2, n2 / o2] : [-n2 / o2, a2 / o2];
+            }, tangentOnPath: function (t2, e2) {
+              return this.vectorOnPath(t2, e2, "tangent");
+            }, normalOnPath: function (t2, e2) {
+              return this.vectorOnPath(t2, e2, "normal");
+            }, setGroupProperty: expressionHelpers.setGroupProperty, getValueAtTime: expressionHelpers.getStaticValueAtTime
+          }, extendPrototype([l], o), extendPrototype([l], h), h.prototype.getValueAtTime = function (t2) {
             return this._cachingAtTime || (this._cachingAtTime = { shapeValue: shapePool.clone(this.pv), lastIndex: 0, lastTime: initialDefaultFrame }), t2 *= this.elem.globalData.frameRate, (t2 -= this.offsetTime) !== this._cachingAtTime.lastTime && (this._cachingAtTime.lastIndex = this._cachingAtTime.lastTime < t2 ? this._caching.lastIndex : 0, this._cachingAtTime.lastTime = t2, this.interpolateShape(t2, this._cachingAtTime.shapeValue, this._cachingAtTime)), this._cachingAtTime.shapeValue;
           }, h.prototype.initiateExpression = ExpressionManager.initiateExpression;
           var p = ShapePropertyFactory.getShapeProp;
-          ShapePropertyFactory.getShapeProp = function(t2, e2, i2, r2, s2) {
+          ShapePropertyFactory.getShapeProp = function (t2, e2, i2, r2, s2) {
             var a2 = p(t2, e2, i2, r2, s2);
             return a2.propertyIndex = e2.ix, a2.lock = false, 3 === i2 ? expressionHelpers.searchExpressions(t2, e2.pt, a2) : 4 === i2 && expressionHelpers.searchExpressions(t2, e2.ks, a2), a2.k && t2.addDynamicProperty(a2), a2;
           };
@@ -15060,17 +15198,17 @@
           addPropertyDecorator();
         }
         function addDecorator() {
-          TextProperty.prototype.getExpressionValue = function(t, e) {
+          TextProperty.prototype.getExpressionValue = function (t, e) {
             var i = this.calculateExpression(e);
             if (t.t !== i) {
               var r = {};
               return this.copyData(r, t), r.t = i.toString(), r.__complete = false, r;
             }
             return t;
-          }, TextProperty.prototype.searchProperty = function() {
+          }, TextProperty.prototype.searchProperty = function () {
             var t = this.searchKeyframes(), e = this.searchExpressions();
             return this.kf = t || e, this.kf;
-          }, TextProperty.prototype.searchExpressions = function() {
+          }, TextProperty.prototype.searchExpressions = function () {
             return this.data.d.x ? (this.calculateExpression = ExpressionManager.initiateExpression.bind(this)(this.elem, this.data.d, this), this.addEffect(this.getExpressionValue.bind(this)), true) : null;
           };
         }
@@ -15079,12 +15217,14 @@
         }
         function SVGComposableEffect() {
         }
-        SVGComposableEffect.prototype = { createMergeNode: function(t, e) {
-          var i, r, s = createNS("feMerge");
-          for (s.setAttribute("result", t), r = 0; r < e.length; r += 1)
-            (i = createNS("feMergeNode")).setAttribute("in", e[r]), s.appendChild(i), s.appendChild(i);
-          return s;
-        } };
+        SVGComposableEffect.prototype = {
+          createMergeNode: function (t, e) {
+            var i, r, s = createNS("feMerge");
+            for (s.setAttribute("result", t), r = 0; r < e.length; r += 1)
+              (i = createNS("feMergeNode")).setAttribute("in", e[r]), s.appendChild(i), s.appendChild(i);
+            return s;
+          }
+        };
         var linearFilterValue = "0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0";
         function SVGTintFilter(t, e, i, r, s) {
           this.filterManager = e;
@@ -15133,17 +15273,17 @@
           var f = this.createMergeNode(r, [r + "_drop_shadow_4", s]);
           t.appendChild(f);
         }
-        extendPrototype([SVGComposableEffect], SVGTintFilter), SVGTintFilter.prototype.renderFrame = function(t) {
+        extendPrototype([SVGComposableEffect], SVGTintFilter), SVGTintFilter.prototype.renderFrame = function (t) {
           if (t || this.filterManager._mdf) {
             var e = this.filterManager.effectElements[0].p.v, i = this.filterManager.effectElements[1].p.v, r = this.filterManager.effectElements[2].p.v / 100;
             this.linearFilter.setAttribute("values", linearFilterValue + " " + r + " 0"), this.matrixFilter.setAttribute("values", i[0] - e[0] + " 0 0 0 " + e[0] + " " + (i[1] - e[1]) + " 0 0 0 " + e[1] + " " + (i[2] - e[2]) + " 0 0 0 " + e[2] + " 0 0 0 1 0");
           }
-        }, SVGFillFilter.prototype.renderFrame = function(t) {
+        }, SVGFillFilter.prototype.renderFrame = function (t) {
           if (t || this.filterManager._mdf) {
             var e = this.filterManager.effectElements[2].p.v, i = this.filterManager.effectElements[6].p.v;
             this.matrixFilter.setAttribute("values", "0 0 0 0 " + e[0] + " 0 0 0 0 " + e[1] + " 0 0 0 0 " + e[2] + " 0 0 0 " + i + " 0");
           }
-        }, SVGStrokeEffect.prototype.initialize = function() {
+        }, SVGStrokeEffect.prototype.initialize = function () {
           var t, e, i, r, s = this.elem.layerElement.children || this.elem.layerElement.childNodes;
           for (1 === this.filterManager.effectElements[1].p.v ? (r = this.elem.maskManager.masksProperties.length, i = 0) : r = (i = this.filterManager.effectElements[0].p.v - 1) + 1, (e = createNS("g")).setAttribute("fill", "none"), e.setAttribute("stroke-linecap", "round"), e.setAttribute("stroke-dashoffset", 1); i < r; i += 1)
             t = createNS("path"), e.appendChild(t), this.paths.push({ p: t, m: i });
@@ -15151,17 +15291,17 @@
             var a = createNS("mask"), n = createElementID();
             a.setAttribute("id", n), a.setAttribute("mask-type", "alpha"), a.appendChild(e), this.elem.globalData.defs.appendChild(a);
             var o = createNS("g");
-            for (o.setAttribute("mask", "url(" + getLocationHref() + "#" + n + ")"); s[0]; )
+            for (o.setAttribute("mask", "url(" + getLocationHref() + "#" + n + ")"); s[0];)
               o.appendChild(s[0]);
             this.elem.layerElement.appendChild(o), this.masker = a, e.setAttribute("stroke", "#fff");
           } else if (1 === this.filterManager.effectElements[10].p.v || 2 === this.filterManager.effectElements[10].p.v) {
             if (2 === this.filterManager.effectElements[10].p.v)
-              for (s = this.elem.layerElement.children || this.elem.layerElement.childNodes; s.length; )
+              for (s = this.elem.layerElement.children || this.elem.layerElement.childNodes; s.length;)
                 this.elem.layerElement.removeChild(s[0]);
             this.elem.layerElement.appendChild(e), this.elem.layerElement.removeAttribute("mask"), e.setAttribute("stroke", "#fff");
           }
           this.initialized = true, this.pathMasker = e;
-        }, SVGStrokeEffect.prototype.renderFrame = function(t) {
+        }, SVGStrokeEffect.prototype.renderFrame = function (t) {
           var e;
           this.initialized || this.initialize();
           var i, r, s = this.paths.length;
@@ -15183,24 +15323,24 @@
             var c = this.filterManager.effectElements[3].p.v;
             this.pathMasker.setAttribute("stroke", "rgb(" + bmFloor(255 * c[0]) + "," + bmFloor(255 * c[1]) + "," + bmFloor(255 * c[2]) + ")");
           }
-        }, SVGTritoneFilter.prototype.renderFrame = function(t) {
+        }, SVGTritoneFilter.prototype.renderFrame = function (t) {
           if (t || this.filterManager._mdf) {
             var e = this.filterManager.effectElements[0].p.v, i = this.filterManager.effectElements[1].p.v, r = this.filterManager.effectElements[2].p.v, s = r[0] + " " + i[0] + " " + e[0], a = r[1] + " " + i[1] + " " + e[1], n = r[2] + " " + i[2] + " " + e[2];
             this.feFuncR.setAttribute("tableValues", s), this.feFuncG.setAttribute("tableValues", a), this.feFuncB.setAttribute("tableValues", n);
           }
-        }, SVGProLevelsFilter.prototype.createFeFunc = function(t, e) {
+        }, SVGProLevelsFilter.prototype.createFeFunc = function (t, e) {
           var i = createNS(t);
           return i.setAttribute("type", "table"), e.appendChild(i), i;
-        }, SVGProLevelsFilter.prototype.getTableValue = function(t, e, i, r, s) {
-          for (var a, n, o = 0, h = Math.min(t, e), l = Math.max(t, e), p = Array.call(null, { length: 256 }), f = 0, m = s - r, c = e - t; o <= 256; )
+        }, SVGProLevelsFilter.prototype.getTableValue = function (t, e, i, r, s) {
+          for (var a, n, o = 0, h = Math.min(t, e), l = Math.max(t, e), p = Array.call(null, { length: 256 }), f = 0, m = s - r, c = e - t; o <= 256;)
             n = (a = o / 256) <= h ? c < 0 ? s : r : a >= l ? c < 0 ? r : s : r + m * Math.pow((a - t) / c, 1 / i), p[f] = n, f += 1, o += 256 / 255;
           return p.join(" ");
-        }, SVGProLevelsFilter.prototype.renderFrame = function(t) {
+        }, SVGProLevelsFilter.prototype.renderFrame = function (t) {
           if (t || this.filterManager._mdf) {
             var e, i = this.filterManager.effectElements;
             this.feFuncRComposed && (t || i[3].p._mdf || i[4].p._mdf || i[5].p._mdf || i[6].p._mdf || i[7].p._mdf) && (e = this.getTableValue(i[3].p.v, i[4].p.v, i[5].p.v, i[6].p.v, i[7].p.v), this.feFuncRComposed.setAttribute("tableValues", e), this.feFuncGComposed.setAttribute("tableValues", e), this.feFuncBComposed.setAttribute("tableValues", e)), this.feFuncR && (t || i[10].p._mdf || i[11].p._mdf || i[12].p._mdf || i[13].p._mdf || i[14].p._mdf) && (e = this.getTableValue(i[10].p.v, i[11].p.v, i[12].p.v, i[13].p.v, i[14].p.v), this.feFuncR.setAttribute("tableValues", e)), this.feFuncG && (t || i[17].p._mdf || i[18].p._mdf || i[19].p._mdf || i[20].p._mdf || i[21].p._mdf) && (e = this.getTableValue(i[17].p.v, i[18].p.v, i[19].p.v, i[20].p.v, i[21].p.v), this.feFuncG.setAttribute("tableValues", e)), this.feFuncB && (t || i[24].p._mdf || i[25].p._mdf || i[26].p._mdf || i[27].p._mdf || i[28].p._mdf) && (e = this.getTableValue(i[24].p.v, i[25].p.v, i[26].p.v, i[27].p.v, i[28].p.v), this.feFuncB.setAttribute("tableValues", e)), this.feFuncA && (t || i[31].p._mdf || i[32].p._mdf || i[33].p._mdf || i[34].p._mdf || i[35].p._mdf) && (e = this.getTableValue(i[31].p.v, i[32].p.v, i[33].p.v, i[34].p.v, i[35].p.v), this.feFuncA.setAttribute("tableValues", e));
           }
-        }, extendPrototype([SVGComposableEffect], SVGDropShadowEffect), SVGDropShadowEffect.prototype.renderFrame = function(t) {
+        }, extendPrototype([SVGComposableEffect], SVGDropShadowEffect), SVGDropShadowEffect.prototype.renderFrame = function (t) {
           if (t || this.filterManager._mdf) {
             if ((t || this.filterManager.effectElements[4].p._mdf) && this.feGaussianBlur.setAttribute("stdDeviation", this.filterManager.effectElements[4].p.v / 4), t || this.filterManager.effectElements[0].p._mdf) {
               var e = this.filterManager.effectElements[0].p.v;
@@ -15229,23 +15369,23 @@
         function CVTransformEffect(t) {
           this.init(t);
         }
-        return SVGMatte3Effect.prototype.findSymbol = function(t) {
-          for (var e = 0, i = _svgMatteSymbols.length; e < i; ) {
+        return SVGMatte3Effect.prototype.findSymbol = function (t) {
+          for (var e = 0, i = _svgMatteSymbols.length; e < i;) {
             if (_svgMatteSymbols[e] === t)
               return _svgMatteSymbols[e];
             e += 1;
           }
           return null;
-        }, SVGMatte3Effect.prototype.replaceInParent = function(t, e) {
+        }, SVGMatte3Effect.prototype.replaceInParent = function (t, e) {
           var i = t.layerElement.parentNode;
           if (i) {
-            for (var r, s = i.children, a = 0, n = s.length; a < n && s[a] !== t.layerElement; )
+            for (var r, s = i.children, a = 0, n = s.length; a < n && s[a] !== t.layerElement;)
               a += 1;
             a <= n - 2 && (r = s[a + 1]);
             var o = createNS("use");
             o.setAttribute("href", "#" + e), r ? i.insertBefore(o, r) : i.appendChild(o);
           }
-        }, SVGMatte3Effect.prototype.setElementAsMask = function(t, e) {
+        }, SVGMatte3Effect.prototype.setElementAsMask = function (t, e) {
           if (!this.findSymbol(e)) {
             var i = createElementID(), r = createNS("mask");
             r.setAttribute("id", e.layerId), r.setAttribute("mask-type", "alpha"), _svgMatteSymbols.push(e);
@@ -15257,22 +15397,22 @@
             n.setAttribute("href", "#" + i), r.appendChild(n), e.data.hd = false, e.show();
           }
           t.setMatte(e.layerId);
-        }, SVGMatte3Effect.prototype.initialize = function() {
-          for (var t = this.filterManager.effectElements[0].p.v, e = this.elem.comp.elements, i = 0, r = e.length; i < r; )
+        }, SVGMatte3Effect.prototype.initialize = function () {
+          for (var t = this.filterManager.effectElements[0].p.v, e = this.elem.comp.elements, i = 0, r = e.length; i < r;)
             e[i] && e[i].data.ind === t && this.setElementAsMask(this.elem, e[i]), i += 1;
           this.initialized = true;
-        }, SVGMatte3Effect.prototype.renderFrame = function() {
+        }, SVGMatte3Effect.prototype.renderFrame = function () {
           this.initialized || this.initialize();
-        }, SVGGaussianBlurEffect.prototype.renderFrame = function(t) {
+        }, SVGGaussianBlurEffect.prototype.renderFrame = function (t) {
           if (t || this.filterManager._mdf) {
             var e = 0.3 * this.filterManager.effectElements[0].p.v, i = this.filterManager.effectElements[1].p.v, r = 3 == i ? 0 : e, s = 2 == i ? 0 : e;
             this.feGaussianBlur.setAttribute("stdDeviation", r + " " + s);
             var a = 1 == this.filterManager.effectElements[2].p.v ? "wrap" : "duplicate";
             this.feGaussianBlur.setAttribute("edgeMode", a);
           }
-        }, TransformEffect.prototype.init = function(t) {
+        }, TransformEffect.prototype.init = function (t) {
           this.effectsManager = t, this.type = effectTypes.TRANSFORM_EFFECT, this.matrix = new Matrix(), this.opacity = -1, this._mdf = false, this._opMdf = false;
-        }, TransformEffect.prototype.renderFrame = function(t) {
+        }, TransformEffect.prototype.renderFrame = function (t) {
           if (this._opMdf = false, this._mdf = false, t || this.effectsManager._mdf) {
             var e = this.effectsManager.effectElements, i = e[0].p.v, r = e[1].p.v, s = 1 === e[2].p.v, a = e[3].p.v, n = s ? a : e[4].p.v, o = e[5].p.v, h = e[6].p.v, l = e[7].p.v;
             this.matrix.reset(), this.matrix.translate(-i[0], -i[1], i[2]), this.matrix.scale(0.01 * n, 0.01 * a, 1), this.matrix.rotate(-l * degToRads), this.matrix.skewFromAxis(-o * degToRads, (h + 90) * degToRads), this.matrix.translate(r[0], r[1], 0), this._mdf = true, this.opacity !== e[8].p.v && (this.opacity = e[8].p.v, this._opMdf = true);
@@ -15289,7 +15429,7 @@
       var Webflow2 = require_webflow_lib();
       var lottieSiteModule = (init_LottieSiteModule(), __toCommonJS(LottieSiteModule_exports));
       var lottie2 = require_lottie_min();
-      Webflow2.define("lottie", module2.exports = function() {
+      Webflow2.define("lottie", module2.exports = function () {
         return {
           lottie: lottie2,
           createInstance: lottieSiteModule.createInstance,
@@ -15306,19 +15446,19 @@
   var require_objectFitPolyfill_basic = __commonJS({
     "packages/shared/render/plugins/BackgroundVideo/objectFitPolyfill.basic.js"() {
       "use strict";
-      (function() {
+      (function () {
         if (typeof window === "undefined")
           return;
         const edgeVersion = window.navigator.userAgent.match(/Edge\/(\d{2})\./);
         const edgePartialSupport = edgeVersion ? parseInt(edgeVersion[1], 10) >= 16 : false;
         const hasSupport = "objectFit" in document.documentElement.style !== false;
         if (hasSupport && !edgePartialSupport) {
-          window.objectFitPolyfill = function() {
+          window.objectFitPolyfill = function () {
             return false;
           };
           return;
         }
-        const checkParentContainer = function($container) {
+        const checkParentContainer = function ($container) {
           const styles = window.getComputedStyle($container, null);
           const position2 = styles.getPropertyValue("position");
           const overflow = styles.getPropertyValue("overflow");
@@ -15339,7 +15479,7 @@
             $container.className += " object-fit-polyfill";
           }
         };
-        const checkMediaProperties = function($media) {
+        const checkMediaProperties = function ($media) {
           const styles = window.getComputedStyle($media, null);
           const constraints = {
             "max-width": "none",
@@ -15362,7 +15502,7 @@
             }
           }
         };
-        const objectFit = function($media) {
+        const objectFit = function ($media) {
           const $container = $media.parentNode;
           checkParentContainer($container);
           checkMediaProperties($media);
@@ -15383,7 +15523,7 @@
             $media.style.marginTop = $media.clientHeight / -2 + "px";
           }
         };
-        const objectFitPolyfill = function(media) {
+        const objectFitPolyfill = function (media) {
           if (typeof media === "undefined" || media instanceof Event) {
             media = document.querySelectorAll("[data-object-fit]");
           } else if (media && media.nodeName) {
@@ -15403,7 +15543,7 @@
               if (media[i].complete) {
                 objectFit(media[i]);
               } else {
-                media[i].addEventListener("load", function() {
+                media[i].addEventListener("load", function () {
                   objectFit(this);
                 });
               }
@@ -15411,7 +15551,7 @@
               if (media[i].readyState > 0) {
                 objectFit(media[i]);
               } else {
-                media[i].addEventListener("loadedmetadata", function() {
+                media[i].addEventListener("loadedmetadata", function () {
                   objectFit(this);
                 });
               }
@@ -15436,17 +15576,17 @@
   var require_webflow_bgvideo = __commonJS({
     "packages/shared/render/plugins/BackgroundVideo/webflow-bgvideo.js"() {
       "use strict";
-      (function() {
+      (function () {
         if (typeof window === "undefined")
           return;
         function setAllBackgroundVideoStates(shouldPlay) {
           if (Webflow.env("design")) {
             return;
           }
-          $("video").each(function() {
+          $("video").each(function () {
             shouldPlay && $(this).prop("autoplay") ? this.play() : this.pause();
           });
-          $(".w-background-video--control").each(function() {
+          $(".w-background-video--control").each(function () {
             if (shouldPlay) {
               showPauseButton($(this));
             } else {
@@ -15455,12 +15595,12 @@
           });
         }
         function showPlayButton($btn) {
-          $btn.find("> span").each(function(i) {
+          $btn.find("> span").each(function (i) {
             $(this).prop("hidden", () => i === 0);
           });
         }
         function showPauseButton($btn) {
-          $btn.find("> span").each(function(i) {
+          $btn.find("> span").each(function (i) {
             $(this).prop("hidden", () => i === 1);
           });
         }
@@ -15472,12 +15612,12 @@
           if (watcher.matches) {
             setAllBackgroundVideoStates(false);
           }
-          $("video:not([autoplay])").each(function() {
-            $(this).parent().find(".w-background-video--control").each(function() {
+          $("video:not([autoplay])").each(function () {
+            $(this).parent().find(".w-background-video--control").each(function () {
               showPlayButton($(this));
             });
           });
-          $(document).on("click", ".w-background-video--control", function(e) {
+          $(document).on("click", ".w-background-video--control", function (e) {
             if (Webflow.env("design"))
               return;
             const btn = $(e.currentTarget);
@@ -15507,7 +15647,7 @@
     "packages/shared/render/plugins/BaseSiteModules/webflow-brand.js"(exports2, module2) {
       "use strict";
       var Webflow2 = require_webflow_lib();
-      Webflow2.define("brand", module2.exports = function($2) {
+      Webflow2.define("brand", module2.exports = function ($2) {
         var api = {};
         var doc = document;
         var $html = $2("html");
@@ -15517,7 +15657,7 @@
         var isPhantom = /PhantomJS/i.test(navigator.userAgent);
         var fullScreenEvents = "fullscreenchange webkitfullscreenchange mozfullscreenchange msfullscreenchange";
         var brandElement;
-        api.ready = function() {
+        api.ready = function () {
           var shouldBrand = $html.attr("data-wf-status");
           var publishedDomain = $html.attr("data-wf-domain") || "";
           if (/\.webflow\.io$/i.test(publishedDomain) && location.hostname !== publishedDomain) {
@@ -15572,7 +15712,7 @@
     "packages/shared/render/plugins/BaseSiteModules/webflow-edit.js"(exports2, module2) {
       "use strict";
       var Webflow2 = require_webflow_lib();
-      Webflow2.define("edit", module2.exports = function($2, _, options) {
+      Webflow2.define("edit", module2.exports = function ($2, _, options) {
         options = options || {};
         if (Webflow2.env("test") || Webflow2.env("frame")) {
           if (!options.fixture && !inCypress()) {
@@ -15614,7 +15754,7 @@
           loaded = true;
           window.WebflowEditor = true;
           $win.off(hashchange, checkHash);
-          checkThirdPartyCookieSupport(function(thirdPartyCookiesSupported) {
+          checkThirdPartyCookieSupport(function (thirdPartyCookiesSupported) {
             $2.ajax({
               url: cleanSlashes("https://editor-api.webflow.com/api/editor/view"),
               data: {
@@ -15630,14 +15770,14 @@
           });
         }
         function success(thirdPartyCookiesSupported) {
-          return function(data2) {
+          return function (data2) {
             if (!data2) {
               console.error("Could not load editor data");
               return;
             }
             data2.thirdPartyCookiesSupported = thirdPartyCookiesSupported;
-            getScript(prefix(data2.bugReporterScriptPath), function() {
-              getScript(prefix(data2.scriptPath), function() {
+            getScript(prefix(data2.bugReporterScriptPath), function () {
+              getScript(prefix(data2.scriptPath), function () {
                 window.WebflowEditor(data2);
               });
             });
@@ -15666,7 +15806,7 @@
           iframe.src = "https://webflow.com/site/third-party-cookie-check.html";
           iframe.style.display = "none";
           iframe.sandbox = "allow-scripts allow-same-origin";
-          var handleMessage = function(event) {
+          var handleMessage = function (event) {
             if (event.data === "WF_third_party_cookies_unsupported") {
               cleanUpCookieCheckerIframe(iframe, handleMessage);
               callback(false);
@@ -15675,7 +15815,7 @@
               callback(true);
             }
           };
-          iframe.onerror = function() {
+          iframe.onerror = function () {
             cleanUpCookieCheckerIframe(iframe, handleMessage);
             callback(false);
           };
@@ -15703,7 +15843,7 @@
     "packages/shared/render/plugins/BaseSiteModules/webflow-focus-visible.js"(exports2, module2) {
       "use strict";
       var Webflow2 = require_webflow_lib();
-      Webflow2.define("focus-visible", module2.exports = function() {
+      Webflow2.define("focus-visible", module2.exports = function () {
         function applyFocusVisiblePolyfill(scope) {
           var hadKeyboardEvent = true;
           var hadFocusVisibleRecently = false;
@@ -15782,7 +15922,7 @@
             if (e.target.hasAttribute("data-wf-focus-visible")) {
               hadFocusVisibleRecently = true;
               window.clearTimeout(hadFocusVisibleRecentlyTimeout);
-              hadFocusVisibleRecentlyTimeout = window.setTimeout(function() {
+              hadFocusVisibleRecentlyTimeout = window.setTimeout(function () {
                 hadFocusVisibleRecently = false;
               }, 100);
               removeFocusVisibleAttribute(e.target);
@@ -15855,7 +15995,7 @@
     "packages/shared/render/plugins/BaseSiteModules/webflow-focus.js"(exports2, module2) {
       "use strict";
       var Webflow2 = require_webflow_lib();
-      Webflow2.define("focus", module2.exports = function() {
+      Webflow2.define("focus", module2.exports = function () {
         var capturedEvents = [];
         var capturing = false;
         function captureEvent(e) {
@@ -15870,11 +16010,11 @@
           var el = e.target;
           var tag = el.tagName;
           return /^a$/i.test(tag) && el.href != null || // (A)
-          /^(button|textarea)$/i.test(tag) && el.disabled !== true || // (B) (C)
-          /^input$/i.test(tag) && /^(button|reset|submit|radio|checkbox)$/i.test(el.type) && !el.disabled || // (D)
-          !/^(button|input|textarea|select|a)$/i.test(tag) && !Number.isNaN(Number.parseFloat(el.tabIndex)) || // (E)
-          /^audio$/i.test(tag) || // (F)
-          /^video$/i.test(tag) && el.controls === true;
+            /^(button|textarea)$/i.test(tag) && el.disabled !== true || // (B) (C)
+            /^input$/i.test(tag) && /^(button|reset|submit|radio|checkbox)$/i.test(el.type) && !el.disabled || // (D)
+            !/^(button|input|textarea|select|a)$/i.test(tag) && !Number.isNaN(Number.parseFloat(el.tabIndex)) || // (E)
+            /^audio$/i.test(tag) || // (F)
+            /^video$/i.test(tag) && el.controls === true;
         }
         function handler(e) {
           if (isPolyfilledFocusEvent(e)) {
@@ -15912,17 +16052,17 @@
       var eventQueue = [];
       var namespace = ".w-ix";
       var eventTriggers = {
-        reset: function(i, el) {
+        reset: function (i, el) {
           el.__wf_intro = null;
         },
-        intro: function(i, el) {
+        intro: function (i, el) {
           if (el.__wf_intro) {
             return;
           }
           el.__wf_intro = true;
           $2(el).triggerHandler(api.types.INTRO);
         },
-        outro: function(i, el) {
+        outro: function (i, el) {
           if (!el.__wf_intro) {
             return;
           }
@@ -15935,7 +16075,7 @@
         INTRO: "w-ix-intro" + namespace,
         OUTRO: "w-ix-outro" + namespace
       };
-      api.init = function() {
+      api.init = function () {
         var count = eventQueue.length;
         for (var i = 0; i < count; i++) {
           var memo = eventQueue[i];
@@ -15944,13 +16084,13 @@
         eventQueue = [];
         $2.extend(api.triggers, eventTriggers);
       };
-      api.async = function() {
+      api.async = function () {
         for (var key2 in eventTriggers) {
           var func = eventTriggers[key2];
           if (!eventTriggers.hasOwnProperty(key2)) {
             continue;
           }
-          api.triggers[key2] = function(i, el) {
+          api.triggers[key2] = function (i, el) {
             eventQueue.push([func, el]);
           };
         }
@@ -15974,14 +16114,14 @@
       var api = {};
       var namespace = ".w-ix";
       var eventTriggers = {
-        reset: function(i, el) {
+        reset: function (i, el) {
           IXEvents.triggers.reset(i, el);
         },
-        intro: function(i, el) {
+        intro: function (i, el) {
           IXEvents.triggers.intro(i, el);
           dispatchCustomEvent2(el, "COMPONENT_ACTIVE");
         },
-        outro: function(i, el) {
+        outro: function (i, el) {
           IXEvents.triggers.outro(i, el);
           dispatchCustomEvent2(el, "COMPONENT_INACTIVE");
         }
@@ -16001,9 +16141,9 @@
     "node_modules/@babel/runtime/helpers/typeof.js"(exports2, module2) {
       function _typeof2(obj) {
         "@babel/helpers - typeof";
-        return module2.exports = _typeof2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(obj2) {
+        return module2.exports = _typeof2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj2) {
           return typeof obj2;
-        } : function(obj2) {
+        } : function (obj2) {
           return obj2 && "function" == typeof Symbol && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
         }, module2.exports.__esModule = true, module2.exports["default"] = module2.exports, _typeof2(obj);
       }
@@ -16076,7 +16216,7 @@
     "node_modules/core-js/internals/entry-unbind.js"(exports2, module2) {
       var global2 = require_global();
       var uncurryThis = require_function_uncurry_this();
-      module2.exports = function(CONSTRUCTOR, METHOD) {
+      module2.exports = function (CONSTRUCTOR, METHOD) {
         return uncurryThis(global2[CONSTRUCTOR].prototype[METHOD]);
       };
     }
@@ -16314,7 +16454,7 @@
               var unsubscribe = outerSubscribe(observeState);
               return { unsubscribe };
             }
-          }, _ref[_symbolObservable2["default"]] = function() {
+          }, _ref[_symbolObservable2["default"]] = function () {
             return this;
           }, _ref;
         }
@@ -16367,7 +16507,7 @@
         return "Given action " + actionName + ', reducer "' + key2 + '" returned undefined. To ignore an action, you must explicitly return the previous state.';
       }
       function assertReducerSanity(reducers) {
-        Object.keys(reducers).forEach(function(key2) {
+        Object.keys(reducers).forEach(function (key2) {
           var reducer = reducers[key2];
           var initialState4 = reducer(void 0, { type: _createStore.ActionTypes.INIT });
           if (typeof initialState4 === "undefined") {
@@ -16442,7 +16582,7 @@
       exports2.__esModule = true;
       exports2["default"] = bindActionCreators;
       function bindActionCreator(actionCreator, dispatch) {
-        return function() {
+        return function () {
           return dispatch(actionCreator.apply(void 0, arguments));
         };
       }
@@ -16478,7 +16618,7 @@
           funcs[_key] = arguments[_key];
         }
         if (funcs.length === 0) {
-          return function(arg) {
+          return function (arg) {
             return arg;
           };
         }
@@ -16487,8 +16627,8 @@
         }
         var last = funcs[funcs.length - 1];
         var rest = funcs.slice(0, -1);
-        return function() {
-          return rest.reduceRight(function(composed, f) {
+        return function () {
+          return rest.reduceRight(function (composed, f) {
             return f(composed);
           }, last.apply(void 0, arguments));
         };
@@ -16501,7 +16641,7 @@
     "node_modules/redux/lib/applyMiddleware.js"(exports2) {
       "use strict";
       exports2.__esModule = true;
-      var _extends = Object.assign || function(target) {
+      var _extends = Object.assign || function (target) {
         for (var i = 1; i < arguments.length; i++) {
           var source = arguments[i];
           for (var key2 in source) {
@@ -16522,8 +16662,8 @@
         for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
           middlewares[_key] = arguments[_key];
         }
-        return function(createStore) {
-          return function(reducer, preloadedState, enhancer) {
+        return function (createStore) {
+          return function (reducer, preloadedState, enhancer) {
             var store = createStore(reducer, preloadedState, enhancer);
             var _dispatch = store.dispatch;
             var chain = [];
@@ -16533,7 +16673,7 @@
                 return _dispatch(action);
               }
             };
-            chain = middlewares.map(function(middleware) {
+            chain = middlewares.map(function (middleware) {
               return middleware(middlewareAPI);
             });
             _dispatch = _compose2["default"].apply(void 0, chain)(store.dispatch);
@@ -16987,9 +17127,9 @@
       Object.defineProperty(exports2, "__esModule", {
         value: true
       });
-      var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function(obj) {
+      var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
         return typeof obj;
-      } : function(obj) {
+      } : function (obj) {
         return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
       };
       exports2.clone = clone;
@@ -17377,12 +17517,12 @@
       var isArrayLike = require_isArrayLike();
       var keys = require_keys();
       function createFind(findIndexFunc) {
-        return function(collection, predicate, fromIndex) {
+        return function (collection, predicate, fromIndex) {
           var iterable = Object(collection);
           if (!isArrayLike(collection)) {
             var iteratee = baseIteratee(predicate, 3);
             collection = keys(collection);
-            predicate = function(key2) {
+            predicate = function (key2) {
               return iteratee(iterable[key2], key2, iterable);
             };
           }
@@ -18464,7 +18604,7 @@
   var require_createBaseFor = __commonJS({
     "node_modules/lodash/_createBaseFor.js"(exports2, module2) {
       function createBaseFor(fromRight) {
-        return function(object, iteratee, keysFunc) {
+        return function (object, iteratee, keysFunc) {
           var index2 = -1, iterable = Object(object), props = keysFunc(object), length2 = props.length;
           while (length2--) {
             var key2 = props[fromRight ? length2 : ++index2];
@@ -18505,7 +18645,7 @@
     "node_modules/lodash/_createBaseEach.js"(exports2, module2) {
       var isArrayLike = require_isArrayLike();
       function createBaseEach(eachFunc, fromRight) {
-        return function(collection, iteratee) {
+        return function (collection, iteratee) {
           if (collection == null) {
             return collection;
           }
@@ -18539,7 +18679,7 @@
   var require_baseReduce = __commonJS({
     "node_modules/lodash/_baseReduce.js"(exports2, module2) {
       function baseReduce(collection, iteratee, accumulator, initAccum, eachFunc) {
-        eachFunc(collection, function(value2, index2, collection2) {
+        eachFunc(collection, function (value2, index2, collection2) {
           accumulator = initAccum ? (initAccum = false, value2) : iteratee(accumulator, value2, index2, collection2);
         });
         return accumulator;
@@ -19135,8 +19275,8 @@
   }
   function hasDefined3dTransform({ actionTypeId }, { xValue, yValue, zValue }) {
     return actionTypeId === TRANSFORM_MOVE2 && zValue !== void 0 || // SCALE_Z
-    actionTypeId === TRANSFORM_SCALE2 && zValue !== void 0 || // ROTATE_X or ROTATE_Y
-    actionTypeId === TRANSFORM_ROTATE2 && (xValue !== void 0 || yValue !== void 0);
+      actionTypeId === TRANSFORM_SCALE2 && zValue !== void 0 || // ROTATE_X or ROTATE_Y
+      actionTypeId === TRANSFORM_ROTATE2 && (xValue !== void 0 || yValue !== void 0);
   }
   function getFirstMatch(regex, value2) {
     const match = regex.exec(value2);
@@ -19287,16 +19427,16 @@
   function clearActionListStyles({ actionList = {}, event, elementApi }) {
     const { actionItemGroups, continuousParameterGroups } = actionList;
     actionItemGroups && // @ts-expect-error - TS7006 - Parameter 'actionGroup' implicitly has an 'any' type.
-    actionItemGroups.forEach((actionGroup) => {
-      clearActionGroupStyles({ actionGroup, event, elementApi });
-    });
-    continuousParameterGroups && // @ts-expect-error - TS7006 - Parameter 'paramGroup' implicitly has an 'any' type.
-    continuousParameterGroups.forEach((paramGroup) => {
-      const { continuousActionGroups } = paramGroup;
-      continuousActionGroups.forEach((actionGroup) => {
+      actionItemGroups.forEach((actionGroup) => {
         clearActionGroupStyles({ actionGroup, event, elementApi });
       });
-    });
+    continuousParameterGroups && // @ts-expect-error - TS7006 - Parameter 'paramGroup' implicitly has an 'any' type.
+      continuousParameterGroups.forEach((paramGroup) => {
+        const { continuousActionGroups } = paramGroup;
+        continuousActionGroups.forEach((actionGroup) => {
+          clearActionGroupStyles({ actionGroup, event, elementApi });
+        });
+      });
   }
   function clearActionGroupStyles({ actionGroup, event, elementApi }) {
     const { actionItems } = actionGroup;
@@ -19387,16 +19527,16 @@
       return actionItem.id === actionItemId;
     };
     actionItemGroups && // @ts-expect-error - TS7031 - Binding element 'actionItems' implicitly has an 'any' type.
-    actionItemGroups.some(({ actionItems }) => {
-      return actionItems.some(takeItemUntilMatch);
-    });
-    continuousParameterGroups && // @ts-expect-error - TS7006 - Parameter 'paramGroup' implicitly has an 'any' type.
-    continuousParameterGroups.some((paramGroup) => {
-      const { continuousActionGroups } = paramGroup;
-      return continuousActionGroups.some(({ actionItems }) => {
+      actionItemGroups.some(({ actionItems }) => {
         return actionItems.some(takeItemUntilMatch);
       });
-    });
+    continuousParameterGroups && // @ts-expect-error - TS7006 - Parameter 'paramGroup' implicitly has an 'any' type.
+      continuousParameterGroups.some((paramGroup) => {
+        const { continuousActionGroups } = paramGroup;
+        return continuousActionGroups.some(({ actionItems }) => {
+          return actionItems.some(takeItemUntilMatch);
+        });
+      });
     return (0, import_timm4.setIn)(rawData, ["actionLists"], {
       [actionList.id]: {
         id: actionList.id,
@@ -19524,7 +19664,7 @@
         filters.reduce((result, filter) => {
           if (result[filter.type] == null) {
             result[filter.type] = // @ts-expect-error - TS7053 - Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Readonly<{ blur: 0; 'hue-rotate': 0; invert: 0; grayscale: 0; saturate: 100; sepia: 0; contrast: 100; brightness: 100; }>'.
-            filterDefaults[filter.type];
+              filterDefaults[filter.type];
           }
           return result;
         }, actionState || {})
@@ -19532,8 +19672,8 @@
       getFontVariationDefaults = (actionState, fontVariations) => fontVariations.reduce((result, fontVariation) => {
         if (result[fontVariation.type] == null) {
           result[fontVariation.type] = // @ts-expect-error - TS7053 - Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<{ wght: 0; opsz: 0; wdth: 0; slnt: 0; }>'.
-          fontVariationDefaults[fontVariation.type] || // @ts-expect-error - TS2339 - Property 'defaultValue' does not exist on type 'FontVariationItemConfigType'.
-          fontVariation.defaultValue || 0;
+            fontVariationDefaults[fontVariation.type] || // @ts-expect-error - TS2339 - Property 'defaultValue' does not exist on type 'FontVariationItemConfigType'.
+            fontVariation.defaultValue || 0;
         }
         return result;
       }, actionState || {});
@@ -20172,7 +20312,7 @@
         if (typeof predicate != "function") {
           throw new TypeError(FUNC_ERROR_TEXT);
         }
-        return function() {
+        return function () {
           var args = arguments;
           switch (args.length) {
             case 0:
@@ -20195,7 +20335,7 @@
   var require_defineProperty = __commonJS({
     "node_modules/lodash/_defineProperty.js"(exports2, module2) {
       var getNative = require_getNative();
-      var defineProperty = function() {
+      var defineProperty = function () {
         try {
           var func = getNative(Object, "defineProperty");
           func({}, "", {});
@@ -20307,7 +20447,7 @@
       var getSymbols = require_getSymbols();
       var stubArray = require_stubArray();
       var nativeGetSymbols = Object.getOwnPropertySymbols;
-      var getSymbolsIn = !nativeGetSymbols ? stubArray : function(object) {
+      var getSymbolsIn = !nativeGetSymbols ? stubArray : function (object) {
         var result = [];
         while (object) {
           arrayPush(result, getSymbols(object));
@@ -20396,11 +20536,11 @@
         if (object == null) {
           return {};
         }
-        var props = arrayMap(getAllKeysIn(object), function(prop) {
+        var props = arrayMap(getAllKeysIn(object), function (prop) {
           return [prop];
         });
         predicate = baseIteratee(predicate);
-        return basePickBy(object, props, function(value2, path) {
+        return basePickBy(object, props, function (value2, path) {
           return predicate(value2, path[0]);
         });
       }
@@ -20470,7 +20610,7 @@
       function mapValues2(object, iteratee) {
         var result = {};
         iteratee = baseIteratee(iteratee, 3);
-        baseForOwn(object, function(value2, key2, object2) {
+        baseForOwn(object, function (value2, key2, object2) {
           baseAssignValue(result, key2, iteratee(value2, key2, object2));
         });
         return result;
@@ -20525,7 +20665,7 @@
   var require_now = __commonJS({
     "node_modules/lodash/now.js"(exports2, module2) {
       var root = require_root();
-      var now = function() {
+      var now = function () {
         return root.Date.now();
       };
       module2.exports = now;
@@ -20999,10 +21139,10 @@
     "node_modules/lodash/_baseCreate.js"(exports2, module2) {
       var isObject = require_isObject();
       var objectCreate = Object.create;
-      var baseCreate = function() {
+      var baseCreate = function () {
         function object() {
         }
-        return function(proto) {
+        return function (proto) {
           if (!isObject(proto)) {
             return {};
           }
@@ -21126,7 +21266,7 @@
       var nativeMax = Math.max;
       function overRest(func, start, transform2) {
         start = nativeMax(start === void 0 ? func.length - 1 : start, 0);
-        return function() {
+        return function () {
           var args = arguments, index2 = -1, length2 = nativeMax(args.length - start, 0), array = Array(length2);
           while (++index2 < length2) {
             array[index2] = args[start + index2];
@@ -21148,7 +21288,7 @@
   var require_constant = __commonJS({
     "node_modules/lodash/constant.js"(exports2, module2) {
       function constant(value2) {
-        return function() {
+        return function () {
           return value2;
         };
       }
@@ -21162,7 +21302,7 @@
       var constant = require_constant();
       var defineProperty = require_defineProperty();
       var identity = require_identity();
-      var baseSetToString = !defineProperty ? identity : function(func, string) {
+      var baseSetToString = !defineProperty ? identity : function (func, string) {
         return defineProperty(func, "toString", {
           "configurable": true,
           "enumerable": false,
@@ -21182,7 +21322,7 @@
       var nativeNow = Date.now;
       function shortOut(func) {
         var count = 0, lastCalled = 0;
-        return function() {
+        return function () {
           var stamp = nativeNow(), remaining = HOT_SPAN - (stamp - lastCalled);
           lastCalled = stamp;
           if (remaining > 0) {
@@ -21245,7 +21385,7 @@
     "node_modules/lodash/_getData.js"(exports2, module2) {
       var metaMap = require_metaMap();
       var noop = require_noop();
-      var getData = !metaMap ? noop : function(func) {
+      var getData = !metaMap ? noop : function (func) {
         return metaMap.get(func);
       };
       module2.exports = getData;
@@ -21401,7 +21541,7 @@
       var WRAP_ARY_FLAG = 128;
       var WRAP_REARG_FLAG = 256;
       function createFlow(fromRight) {
-        return flatRest(function(funcs) {
+        return flatRest(function (funcs) {
           var length2 = funcs.length, index2 = length2, prereq = LodashWrapper.prototype.thru;
           if (fromRight) {
             funcs.reverse();
@@ -21425,7 +21565,7 @@
               wrapper = func.length == 1 && isLaziable(func) ? wrapper[funcName]() : wrapper.thru(func);
             }
           }
-          return function() {
+          return function () {
             var args = arguments, value2 = args[0];
             if (wrapper && args.length == 1 && isArray(value2)) {
               return wrapper.plant(value2).value();
@@ -21670,18 +21810,18 @@
         });
       };
       whenComponentActiveChange = // @ts-expect-error - TS7006 - Parameter 'handler' implicitly has an 'any' type.
-      (handler) => (options, oldState) => {
-        const { type } = options.nativeEvent;
-        const isActive = [COMPONENT_ACTIVE, COMPONENT_INACTIVE].indexOf(type) !== -1 ? type === COMPONENT_ACTIVE : oldState.isActive;
-        const newState = {
-          ...oldState,
-          isActive
+        (handler) => (options, oldState) => {
+          const { type } = options.nativeEvent;
+          const isActive = [COMPONENT_ACTIVE, COMPONENT_INACTIVE].indexOf(type) !== -1 ? type === COMPONENT_ACTIVE : oldState.isActive;
+          const newState = {
+            ...oldState,
+            isActive
+          };
+          if (!oldState || newState.isActive !== oldState.isActive) {
+            return handler(options, newState) || newState;
+          }
+          return newState;
         };
-        if (!oldState || newState.isActive !== oldState.isActive) {
-          return handler(options, newState) || newState;
-        }
-        return newState;
-      };
       whenElementHoverChange = (handler) => (options, oldState) => {
         const newState = {
           elementHovered: isElementHovered(options)
@@ -21702,45 +21842,45 @@
         return newState;
       };
       whenScrollDirectionChange = // @ts-expect-error - TS7006 - Parameter 'handler' implicitly has an 'any' type.
-      (handler) => (options, oldState = {}) => {
-        const {
-          stiffScrollTop: scrollTop,
-          scrollHeight,
-          innerHeight
-        } = getDocumentState();
-        const {
-          event: { config, eventTypeId }
-        } = options;
-        const { scrollOffsetValue, scrollOffsetUnit } = config;
-        const isPX = scrollOffsetUnit === "PX";
-        const scrollHeightBounds = scrollHeight - innerHeight;
-        const percentTop = Number((scrollTop / scrollHeightBounds).toFixed(2));
-        if (oldState && oldState.percentTop === percentTop) {
-          return oldState;
-        }
-        const scrollTopPadding = (isPX ? scrollOffsetValue : innerHeight * (scrollOffsetValue || 0) / 100) / scrollHeightBounds;
-        let scrollingDown;
-        let scrollDirectionChanged;
-        let anchorTop = 0;
-        if (oldState) {
-          scrollingDown = percentTop > oldState.percentTop;
-          scrollDirectionChanged = oldState.scrollingDown !== scrollingDown;
-          anchorTop = scrollDirectionChanged ? percentTop : oldState.anchorTop;
-        }
-        const inBounds = eventTypeId === PAGE_SCROLL_DOWN ? percentTop >= anchorTop + scrollTopPadding : percentTop <= anchorTop - scrollTopPadding;
-        const newState = {
-          ...oldState,
-          percentTop,
-          inBounds,
-          anchorTop,
-          scrollingDown
+        (handler) => (options, oldState = {}) => {
+          const {
+            stiffScrollTop: scrollTop,
+            scrollHeight,
+            innerHeight
+          } = getDocumentState();
+          const {
+            event: { config, eventTypeId }
+          } = options;
+          const { scrollOffsetValue, scrollOffsetUnit } = config;
+          const isPX = scrollOffsetUnit === "PX";
+          const scrollHeightBounds = scrollHeight - innerHeight;
+          const percentTop = Number((scrollTop / scrollHeightBounds).toFixed(2));
+          if (oldState && oldState.percentTop === percentTop) {
+            return oldState;
+          }
+          const scrollTopPadding = (isPX ? scrollOffsetValue : innerHeight * (scrollOffsetValue || 0) / 100) / scrollHeightBounds;
+          let scrollingDown;
+          let scrollDirectionChanged;
+          let anchorTop = 0;
+          if (oldState) {
+            scrollingDown = percentTop > oldState.percentTop;
+            scrollDirectionChanged = oldState.scrollingDown !== scrollingDown;
+            anchorTop = scrollDirectionChanged ? percentTop : oldState.anchorTop;
+          }
+          const inBounds = eventTypeId === PAGE_SCROLL_DOWN ? percentTop >= anchorTop + scrollTopPadding : percentTop <= anchorTop - scrollTopPadding;
+          const newState = {
+            ...oldState,
+            percentTop,
+            inBounds,
+            anchorTop,
+            scrollingDown
+          };
+          if (oldState && inBounds && // @ts-expect-error - TS2339 - Property 'inBounds' does not exist on type '{}'.
+            (scrollDirectionChanged || newState.inBounds !== oldState.inBounds)) {
+            return handler(options, newState) || newState;
+          }
+          return newState;
         };
-        if (oldState && inBounds && // @ts-expect-error - TS2339 - Property 'inBounds' does not exist on type '{}'.
-        (scrollDirectionChanged || newState.inBounds !== oldState.inBounds)) {
-          return handler(options, newState) || newState;
-        }
-        return newState;
-      };
       pointIntersects = (point, rect) => point.left > rect.left && point.left < rect.right && point.top > rect.top && point.top < rect.bottom;
       whenPageLoadFinish = (handler) => (options, oldState) => {
         const newState = {
@@ -21939,8 +22079,8 @@
               value2 = Math.round(value2);
             }
             if (basedOn !== EventBasedOn.ELEMENT || elementHovered || // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-expect-error
-            elementHovered !== state.elementHovered) {
+              // @ts-expect-error
+              elementHovered !== state.elementHovered) {
               value2 = reverse ? 1 - value2 : value2;
               store.dispatch(parameterChanged(namespacedParameterId, value2));
             }
@@ -22989,7 +23129,7 @@
       var Webflow2 = require_webflow_lib();
       var ix2 = require_engine();
       ix2.setEnv(Webflow2.env);
-      Webflow2.define("ix2", module2.exports = function() {
+      Webflow2.define("ix2", module2.exports = function () {
         return ix2;
       });
     }
@@ -23000,7 +23140,7 @@
     "packages/shared/render/plugins/BaseSiteModules/webflow-links.js"(exports2, module2) {
       "use strict";
       var Webflow2 = require_webflow_lib();
-      Webflow2.define("links", module2.exports = function($2, _) {
+      Webflow2.define("links", module2.exports = function ($2, _) {
         var api = {};
         var $win = $2(window);
         var designer;
@@ -23058,7 +23198,7 @@
         function scroll() {
           var viewTop = $win.scrollTop();
           var viewHeight = $win.height();
-          _.each(anchors, function(anchor) {
+          _.each(anchors, function (anchor) {
             if (anchor.link.attr("hreflang")) {
               return;
             }
@@ -23095,7 +23235,7 @@
     "packages/shared/render/plugins/BaseSiteModules/webflow-scroll.js"(exports2, module2) {
       "use strict";
       var Webflow2 = require_webflow_lib();
-      Webflow2.define("scroll", module2.exports = function($2) {
+      Webflow2.define("scroll", module2.exports = function ($2) {
         var NS_EVENTS = {
           WF_CLICK_EMPTY: "click.wf-empty-link",
           WF_CLICK_SCROLL: "click.wf-scroll"
@@ -23105,7 +23245,7 @@
         var $win = $2(window);
         var $doc = $2(document);
         var $body = $2(document.body);
-        var animate = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || function(fn) {
+        var animate = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || function (fn) {
           window.setTimeout(fn, 15);
         };
         var rootTag = Webflow2.env("editor") ? ".w-editor-body" : "body";
@@ -23174,7 +23314,7 @@
             evt.stopPropagation();
           }
           updateHistory(hash, evt);
-          window.setTimeout(function() {
+          window.setTimeout(function () {
             scroll($el, function setFocus() {
               setFocusable($el, "add");
               $el.get(0).focus({
@@ -23186,7 +23326,7 @@
         }
         function updateHistory(hash) {
           if (loc.hash !== hash && history && history.pushState && // Navigation breaks Chrome when the protocol is `file:`.
-          !(Webflow2.env.chrome && loc.protocol === "file:")) {
+            !(Webflow2.env.chrome && loc.protocol === "file:")) {
             var oldHash = history.state && history.state.hash;
             if (oldHash !== hash) {
               history.pushState({
@@ -23202,7 +23342,7 @@
             return;
           var duration = calculateScrollDuration($targetEl, start, end);
           var clock = Date.now();
-          var step = function() {
+          var step = function () {
             var elapsed = Date.now() - clock;
             window.scroll(0, getY(start, end, elapsed, duration));
             if (elapsed <= duration) {
@@ -23230,7 +23370,7 @@
           if (reducedMotionEnabled())
             return 0;
           var mult = 1;
-          $body.add($targetEl).each(function(_, el) {
+          $body.add($targetEl).each(function (_, el) {
             var time2 = parseFloat(el.getAttribute("data-scroll-time"));
             if (!isNaN(time2) && time2 >= 0) {
               mult = time2;
@@ -23253,7 +23393,7 @@
             WF_CLICK_SCROLL
           } = NS_EVENTS;
           $doc.on(WF_CLICK_SCROLL, localHrefSelector, validateScroll);
-          $doc.on(WF_CLICK_EMPTY, emptyHrefSelector, function(e) {
+          $doc.on(WF_CLICK_EMPTY, emptyHrefSelector, function (e) {
             e.preventDefault();
           });
           document.head.insertBefore(focusStylesEl, document.head.firstChild);
@@ -23270,14 +23410,14 @@
     "packages/shared/render/plugins/BaseSiteModules/webflow-touch.js"(exports2, module2) {
       "use strict";
       var Webflow2 = require_webflow_lib();
-      Webflow2.define("touch", module2.exports = function($2) {
+      Webflow2.define("touch", module2.exports = function ($2) {
         var api = {};
         var getSelection = window.getSelection;
         $2.event.special.tap = {
           bindType: "click",
           delegateType: "click"
         };
-        api.init = function(el) {
+        api.init = function (el) {
           el = typeof el === "string" ? $2(el).get(0) : el;
           return el ? new Touch(el) : null;
         };
@@ -23378,7 +23518,7 @@
       });
       exports2.default = hostedSubmitWebflow;
       function hostedSubmitWebflow(reset, loc, Webflow2, collectEnterpriseTrackingCookies, preventDefault, findFields, alert, findFileUploads, disableBtn, siteId, afterSubmit, $2, formUrl) {
-        return function(data2) {
+        return function (data2) {
           reset(data2);
           var form = data2.form;
           var payload = {
@@ -23413,12 +23553,12 @@
             data: payload,
             dataType: "json",
             crossDomain: true
-          }).done(function(response) {
+          }).done(function (response) {
             if (response && response.code === 200) {
               data2.success = true;
             }
             afterSubmit(data2);
-          }).fail(function() {
+          }).fail(function () {
             afterSubmit(data2);
           });
         };
@@ -23431,7 +23571,7 @@
     "packages/shared/render/plugins/Form/webflow-forms.js"(exports2, module2) {
       "use strict";
       var Webflow2 = require_webflow_lib();
-      Webflow2.define("forms", module2.exports = function($2, _) {
+      Webflow2.define("forms", module2.exports = function ($2, _) {
         var api = {};
         var $doc = $2(document);
         var $forms;
@@ -23447,10 +23587,10 @@
         var formUrl;
         var signFileUrl;
         var chimpRegex = /list-manage[1-9]?.com/i;
-        var disconnected = _.debounce(function() {
+        var disconnected = _.debounce(function () {
           alert("Oops! This page has improperly configured forms. Please contact your website administrator to fix this issue.");
         }, 100);
-        api.ready = api.design = api.preview = function() {
+        api.ready = api.design = api.preview = function () {
           init2();
           if (!inApp && !listening) {
             addListeners();
@@ -23482,7 +23622,7 @@
           data2.done = wrap.find("> .w-form-done");
           data2.fail = wrap.find("> .w-form-fail");
           data2.fileUploads = wrap.find(".w-file-upload");
-          data2.fileUploads.each(function(j) {
+          data2.fileUploads.each(function (j) {
             initFileUpload(j, data2);
           });
           var formName = data2.form.attr("aria-label") || data2.form.attr("data-name") || "Form";
@@ -23520,7 +23660,7 @@
         }
         function addListeners() {
           listening = true;
-          $doc.on("submit", namespace + " form", function(evt) {
+          $doc.on("submit", namespace + " form", function (evt) {
             var data2 = $2.data(this, namespace);
             if (data2.handler) {
               data2.evt = evt;
@@ -23573,7 +23713,7 @@
         function findFields(form, result) {
           var status = null;
           result = result || {};
-          form.find(':input:not([type="submit"]):not([type="file"])').each(function(i, el) {
+          form.find(':input:not([type="submit"]):not([type="file"])').each(function (i, el) {
             var field = $2(el);
             var type = field.attr("type");
             var name2 = field.attr("data-name") || field.attr("name") || "Field " + (i + 1);
@@ -23596,7 +23736,7 @@
         }
         function findFileUploads(form) {
           var result = {};
-          form.find(':input[type="file"]').each(function(i, el) {
+          form.find(':input[type="file"]').each(function (i, el) {
             var field = $2(el);
             var name2 = field.attr("data-name") || field.attr("name") || "File " + (i + 1);
             var value2 = field.attr("data-value");
@@ -23612,7 +23752,7 @@
           // __hstc: 'hubspot',
         };
         function collectEnterpriseTrackingCookies() {
-          const cookies = document.cookie.split("; ").reduce(function(acc, cookie) {
+          const cookies = document.cookie.split("; ").reduce(function (acc, cookie) {
             const splitCookie = cookie.split("=");
             const name2 = splitCookie[0];
             if (name2 in trackingCookieNameMap) {
@@ -23660,7 +23800,7 @@
           }
           disableBtn(data2);
           var fullName;
-          _.each(payload, function(value2, key2) {
+          _.each(payload, function (value2, key2) {
             if (emailField.test(key2)) {
               payload.EMAIL = value2;
             }
@@ -23689,13 +23829,13 @@
             url,
             data: payload,
             dataType: "jsonp"
-          }).done(function(resp) {
+          }).done(function (resp) {
             data2.success = resp.result === "success" || /already/.test(resp.msg);
             if (!data2.success) {
               console.info("MailChimp error: " + resp.msg);
             }
             afterSubmit(data2);
-          }).fail(function() {
+          }).fail(function () {
             afterSubmit(data2);
           });
         }
@@ -23742,7 +23882,7 @@
           var typeErrMsg = $errorMsgEl.attr("data-w-type-error");
           var genericErrMsg = $errorMsgEl.attr("data-w-generic-error");
           if (!inApp) {
-            $label.on("click keydown", function(e) {
+            $label.on("click keydown", function (e) {
               if (e.type === "keydown" && e.which !== 13 && e.which !== 32) {
                 return;
               }
@@ -23753,7 +23893,7 @@
           $label.find(".w-icon-file-upload-icon").attr("aria-hidden", "true");
           $removeEl.find(".w-icon-file-upload-remove").attr("aria-hidden", "true");
           if (!inApp) {
-            $removeEl.on("click keydown", function(e) {
+            $removeEl.on("click keydown", function (e) {
               if (e.type === "keydown") {
                 if (e.which !== 13 && e.which !== 32) {
                   return;
@@ -23767,7 +23907,7 @@
               $successWrap.toggle(false);
               $label.focus();
             });
-            $input.on("change", function(e) {
+            $input.on("change", function (e) {
               file = e.target && e.target.files && e.target.files[0];
               if (!file) {
                 return;
@@ -23787,13 +23927,13 @@
             $input.height(height2);
             $input.width(1);
           } else {
-            $input.on("click", function(e) {
+            $input.on("click", function (e) {
               e.preventDefault();
             });
-            $label.on("click", function(e) {
+            $label.on("click", function (e) {
               e.preventDefault();
             });
-            $labelChildren.on("click", function(e) {
+            $labelChildren.on("click", function (e) {
               e.preventDefault();
             });
           }
@@ -23842,7 +23982,7 @@
           }
           function isUploading() {
             var uploads = form.fileUploads && form.fileUploads.toArray() || [];
-            return uploads.some(function(value2) {
+            return uploads.some(function (value2) {
               return value2.uploading;
             });
           }
@@ -23856,9 +23996,9 @@
             type: "GET",
             url: `${signFileUrl}?${payload}`,
             crossDomain: true
-          }).done(function(data2) {
+          }).done(function (data2) {
             cb(null, data2);
-          }).fail(function(err) {
+          }).fail(function (err) {
             cb(err);
           });
         }
@@ -23874,9 +24014,9 @@
             data: formData,
             processData: false,
             contentType: false
-          }).done(function() {
+          }).done(function () {
             cb(null);
-          }).fail(function(err) {
+          }).fail(function (err) {
             cb(err);
           });
         }
@@ -23893,7 +24033,7 @@
       var CONDITION_INVISIBLE_CLASS = "w-condition-invisible";
       var CONDVIS_SELECTOR = "." + CONDITION_INVISIBLE_CLASS;
       function withoutConditionallyHidden(items) {
-        return items.filter(function(item) {
+        return items.filter(function (item) {
           return !isConditionallyHidden(item);
         });
       }
@@ -23945,7 +24085,7 @@
           }
           if (withoutConditionallyHidden(items).length > 1) {
             $refs.items = $refs.empty;
-            items.forEach(function(item, idx) {
+            items.forEach(function (item, idx) {
               var $thumbnail = dom("thumbnail");
               var $item = dom("item").prop("tabIndex", 0).attr("aria-controls", "w-lightbox-view").attr("role", "tab").append($thumbnail);
               setAriaLabelIfEmpty($item, `show item ${idx + 1} of ${items.length}`);
@@ -23953,7 +24093,7 @@
                 $item.addClass(CONDITION_INVISIBLE_CLASS);
               }
               $refs.items = $refs.items.add($item);
-              loadImage(item.thumbnailUrl || item.url, function($image) {
+              loadImage(item.thumbnailUrl || item.url, function ($image) {
                 if ($image.prop("width") > $image.prop("height")) {
                   addClass($image, "wide");
                 } else {
@@ -23974,7 +24114,7 @@
           addClass($refs.html, "noscroll");
           return lightbox.show(index2 || 0);
         }
-        lightbox.build = function() {
+        lightbox.build = function () {
           lightbox.destroy();
           $refs = {
             html: $2(document2.documentElement),
@@ -24000,7 +24140,7 @@
           $2(container).append($refs.lightbox);
           return lightbox;
         };
-        lightbox.destroy = function() {
+        lightbox.destroy = function () {
           if (!$refs) {
             return;
           }
@@ -24008,7 +24148,7 @@
           $refs.lightbox.remove();
           $refs = void 0;
         };
-        lightbox.show = function(index2) {
+        lightbox.show = function (index2) {
           if (index2 === currentIndex) {
             return;
           }
@@ -24031,7 +24171,7 @@
           $refs.spinner.attr("aria-hidden", false).attr("aria-busy", true).attr("aria-valuenow", 0).attr("aria-valuetext", "Loading image");
           spinner.show();
           var url = item.html && svgDataUri(item.width, item.height) || item.url;
-          loadImage(url, function($image) {
+          loadImage(url, function ($image) {
             if (index2 !== currentIndex) {
               return;
             }
@@ -24102,7 +24242,7 @@
           $refs.close.prop("tabIndex", 0);
           $2(":focus").addClass("active-lightbox");
           if (resetVisibilityState.length === 0) {
-            $2("body").children().each(function() {
+            $2("body").children().each(function () {
               if ($2(this).hasClass("w-lightbox-backdrop") || $2(this).is("script")) {
                 return;
               }
@@ -24117,26 +24257,26 @@
           }
           return lightbox;
         };
-        lightbox.hide = function() {
+        lightbox.hide = function () {
           tram($refs.lightbox).add("opacity .3s").start({
             opacity: 0
           }).then(hideLightbox);
           return lightbox;
         };
-        lightbox.prev = function() {
+        lightbox.prev = function () {
           var previousVisibleIndex = getPreviousVisibleIndex(currentIndex - 1, items);
           if (previousVisibleIndex > -1) {
             lightbox.show(previousVisibleIndex);
           }
         };
-        lightbox.next = function() {
+        lightbox.next = function () {
           var nextVisibleIndex = getNextVisibleIndex(currentIndex + 1, items);
           if (nextVisibleIndex > -1) {
             lightbox.show(nextVisibleIndex);
           }
         };
         function createHandler(action) {
-          return function(event) {
+          return function (event) {
             if (this !== event.target) {
               return;
             }
@@ -24148,12 +24288,12 @@
         var handlerPrev = createHandler(lightbox.prev);
         var handlerNext = createHandler(lightbox.next);
         var handlerHide = createHandler(lightbox.hide);
-        var itemTapHandler = function(event) {
+        var itemTapHandler = function (event) {
           var index2 = $2(this).index();
           event.preventDefault();
           lightbox.show(index2);
         };
-        var swipeHandler = function(event, data2) {
+        var swipeHandler = function (event, data2) {
           event.preventDefault();
           if (data2.direction === "left") {
             lightbox.next();
@@ -24161,7 +24301,7 @@
             lightbox.prev();
           }
         };
-        var focusThis = function() {
+        var focusThis = function () {
           this.focus();
         };
         function preventDefault(event) {
@@ -24197,7 +24337,7 @@
             addClass($refs.arrowLeft, "inactive");
             addClass($refs.arrowRight, "inactive");
             currentIndex = $refs.view = void 0;
-            resetVisibilityState.forEach(function(visibilityState) {
+            resetVisibilityState.forEach(function (visibilityState) {
               var node = visibilityState.node;
               if (!node) {
                 return;
@@ -24219,14 +24359,14 @@
         }
         function loadImage(url, callback) {
           var $image = dom("img", "img");
-          $image.one("load", function() {
+          $image.one("load", function () {
             callback($image);
           });
           $image.attr("src", url);
           return $image;
         }
         function remover($element) {
-          return function() {
+          return function () {
             $element.remove();
           };
         }
@@ -24256,17 +24396,17 @@
           this.delay = delay || 200;
           this.hide();
         }
-        Spinner.prototype.show = function() {
+        Spinner.prototype.show = function () {
           var spinner2 = this;
           if (spinner2.timeoutId) {
             return;
           }
-          spinner2.timeoutId = setTimeout(function() {
+          spinner2.timeoutId = setTimeout(function () {
             spinner2.$element.removeClass(spinner2.className);
             delete spinner2.timeoutId;
           }, spinner2.delay);
         };
-        Spinner.prototype.hide = function() {
+        Spinner.prototype.hide = function () {
           var spinner2 = this;
           if (spinner2.timeoutId) {
             clearTimeout(spinner2.timeoutId);
@@ -24300,7 +24440,7 @@
           var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + width2 + '" height="' + height2 + '"/>';
           return "data:image/svg+xml;charset=utf-8," + encodeURI(svg);
         }
-        (function() {
+        (function () {
           var ua2 = window2.navigator.userAgent;
           var iOSRegex = /(iPhone|iPad|iPod);[^OS]*OS (\d)/;
           var iOSMatches = ua2.match(iOSRegex);
@@ -24321,7 +24461,7 @@
         })();
         return lightbox;
       }
-      Webflow2.define("lightbox", module2.exports = function($2) {
+      Webflow2.define("lightbox", module2.exports = function ($2) {
         var api = {};
         var inApp = Webflow2.env();
         var lightbox = createLightbox(window, document, $2, inApp ? "#lightbox-mountpoint" : "body");
@@ -24337,15 +24477,15 @@
           groups = {};
           $lightboxes = $doc.find(namespace);
           $lightboxes.webflowLightBox();
-          $lightboxes.each(function() {
+          $lightboxes.each(function () {
             setAriaLabelIfEmpty($2(this), "open lightbox");
             $2(this).attr("aria-haspopup", "dialog");
           });
         }
         jQuery.fn.extend({
-          webflowLightBox: function() {
+          webflowLightBox: function () {
             var $el = this;
-            $2.each($el, function(i, el) {
+            $2.each($el, function (i, el) {
               var data2 = $2.data(el, namespace);
               if (!data2) {
                 data2 = $2.data(el, namespace, {
@@ -24360,7 +24500,7 @@
               if (designer) {
                 data2.el.on("setting" + namespace, configure.bind(null, data2));
               } else {
-                data2.el.on("click" + namespace, clickHandler(data2)).on("click" + namespace, function(e) {
+                data2.el.on("click" + namespace, clickHandler(data2)).on("click" + namespace, function (e) {
                   e.preventDefault();
                 });
               }
@@ -24381,7 +24521,7 @@
             console.error("Malformed lightbox JSON configuration.", e);
           }
           supportOldLightboxJson(json);
-          json.items.forEach(function(item) {
+          json.items.forEach(function (item) {
             item.$el = data2.el;
           });
           groupName = json.group;
@@ -24401,13 +24541,13 @@
           }
         }
         function clickHandler(data2) {
-          return function() {
+          return function () {
             data2.items.length && lightbox(data2.items, data2.index || 0);
           };
         }
         function supportOldLightboxJson(data2) {
           if (data2.images) {
-            data2.images.forEach(function(item) {
+            data2.images.forEach(function (item) {
               item.type = "image";
             });
             data2.items = data2.images;
@@ -24442,7 +24582,7 @@
         HOME: 36,
         END: 35
       };
-      Webflow2.define("navbar", module2.exports = function($2, _) {
+      Webflow2.define("navbar", module2.exports = function ($2, _) {
         var api = {};
         var tram = $2.tram;
         var $win = $2(window);
@@ -24463,7 +24603,7 @@
         var ix = IXEvents.triggers;
         var menuSibling = $2();
         api.ready = api.design = api.preview = init2;
-        api.destroy = function() {
+        api.destroy = function () {
           menuSibling = $2();
           removeListeners();
           if ($navbars && $navbars.length) {
@@ -24581,13 +24721,13 @@
           data2.config = config;
         }
         function handler(data2) {
-          return function(evt, options) {
+          return function (evt, options) {
             options = options || {};
             var winWidth = $win.width();
             configure(data2);
             options.open === true && open(data2, true);
             options.open === false && close(data2, true);
-            data2.open && _.defer(function() {
+            data2.open && _.defer(function () {
               if (winWidth !== $win.width()) {
                 reopen(data2);
               }
@@ -24595,7 +24735,7 @@
           };
         }
         function makeToggleButtonKeyboardHandler(data2) {
-          return function(evt) {
+          return function (evt) {
             switch (evt.keyCode) {
               case KEY_CODES.SPACE:
               case KEY_CODES.ENTER: {
@@ -24629,7 +24769,7 @@
           };
         }
         function makeLinksKeyboardHandler(data2) {
-          return function(evt) {
+          return function (evt) {
             if (!data2.open) {
               return;
             }
@@ -24684,12 +24824,12 @@
           open(data2, true);
         }
         function toggle(data2) {
-          return debounce(function() {
+          return debounce(function () {
             data2.open ? close(data2) : open(data2);
           });
         }
         function navigate(data2) {
-          return function(evt) {
+          return function (evt) {
             var link = $2(this);
             var href = link.attr("href");
             if (!Webflow2.validClick(evt.currentTarget)) {
@@ -24705,7 +24845,7 @@
           if (data2.outside) {
             $doc.off("click" + namespace, data2.outside);
           }
-          return function(evt) {
+          return function (evt) {
             var $target = $2(evt.target);
             if (inEditor && $target.closest(".w-editor-bem-EditorOverlay").length) {
               return;
@@ -24713,7 +24853,7 @@
             outsideDebounced(data2, $target);
           };
         }
-        var outsideDebounced = debounce(function(data2, $target) {
+        var outsideDebounced = debounce(function (data2, $target) {
           if (!data2.open) {
             return;
           }
@@ -24743,7 +24883,7 @@
           if (containMax === "none") {
             containMax = "";
           }
-          return function(i, link) {
+          return function (i, link) {
             link = $2(link);
             link.css(maxWidth, "");
             if (link.css(maxWidth) === "none") {
@@ -24896,7 +25036,7 @@
         END: 35
       };
       var FOCUSABLE_SELECTOR = 'a[href], area[href], [role="button"], input, select, textarea, button, iframe, object, embed, *[tabindex], *[contenteditable]';
-      Webflow2.define("slider", module2.exports = function($2, _) {
+      Webflow2.define("slider", module2.exports = function ($2, _) {
         var api = {};
         var tram = $2.tram;
         var $doc = $2(document);
@@ -24910,19 +25050,19 @@
         var ix = IXEvents.triggers;
         var fallback;
         var inRedraw = false;
-        api.ready = function() {
+        api.ready = function () {
           designer = Webflow2.env("design");
           init2();
         };
-        api.design = function() {
+        api.design = function () {
           designer = true;
           setTimeout(init2, 1e3);
         };
-        api.preview = function() {
+        api.preview = function () {
           designer = false;
           init2();
         };
-        api.redraw = function() {
+        api.redraw = function () {
           inRedraw = true;
           init2();
           inRedraw = false;
@@ -25036,7 +25176,7 @@
           }
           data2.nav.on("click" + namespace, "> div", handler(data2));
           if (!inApp) {
-            data2.mask.contents().filter(function() {
+            data2.mask.contents().filter(function () {
               return this.nodeType === 3;
             }).remove();
           }
@@ -25079,7 +25219,7 @@
             config.timerMax = parseInt(data2.el.attr("data-autoplay-limit"), 10);
             var touchEvents = "mousedown" + namespace + " touchstart" + namespace;
             if (!designer) {
-              data2.el.off(touchEvents).one(touchEvents, function() {
+              data2.el.off(touchEvents).one(touchEvents, function () {
                 stopTimer(data2);
               });
             }
@@ -25092,7 +25232,7 @@
           return value2 === "1" || value2 === "true";
         }
         function hasFocus(data2, focusIn, eventType) {
-          return function(evt) {
+          return function (evt) {
             if (!focusIn) {
               if ($2.contains(data2.el.get(0), evt.relatedTarget)) {
                 return;
@@ -25119,7 +25259,7 @@
           };
         }
         function keyboardSlideButtonsFunction(data2, directionFunction) {
-          return function(evt) {
+          return function (evt) {
             switch (evt.keyCode) {
               case KEY_CODES.SPACE:
               case KEY_CODES.ENTER: {
@@ -25131,7 +25271,7 @@
           };
         }
         function previousFunction(data2) {
-          return function() {
+          return function () {
             change(data2, {
               index: data2.index - 1,
               vector: -1
@@ -25139,7 +25279,7 @@
           };
         }
         function next(data2) {
-          return function() {
+          return function () {
             change(data2, {
               index: data2.index + 1,
               vector: 1
@@ -25152,8 +25292,8 @@
             init2();
             layout(data2);
           }
-          _.each(data2.anchors, function(anchor, index2) {
-            $2(anchor.els).each(function(i, el) {
+          _.each(data2.anchors, function (anchor, index2) {
+            $2(anchor.els).each(function (i, el) {
               if ($2(el).index() === value2) {
                 found = index2;
               }
@@ -25173,7 +25313,7 @@
           if (timerMax && data2.timerCount++ > timerMax) {
             return;
           }
-          data2.timerId = window.setTimeout(function() {
+          data2.timerId = window.setTimeout(function () {
             if (data2.timerId == null || designer) {
               return;
             }
@@ -25186,7 +25326,7 @@
           data2.timerId = null;
         }
         function handler(data2) {
-          return function(evt, options) {
+          return function (evt, options) {
             options = options || {};
             var config = data2.config;
             if (designer && evt.type === "setting") {
@@ -25449,7 +25589,7 @@
             x: 0,
             width: 0
           }];
-          data2.slides.each(function(i, el) {
+          data2.slides.each(function (i, el) {
             if (anchor - offset > threshold) {
               pages++;
               offset += maskWidth;
@@ -25517,7 +25657,7 @@
         }
         function slidesChanged(data2) {
           var slidesWidth = 0;
-          data2.slides.each(function(i, el) {
+          data2.slides.each(function (i, el) {
             slidesWidth += $2(el).outerWidth(true);
           });
           if (data2.slidesWidth !== slidesWidth) {
@@ -25594,5 +25734,5 @@ timm/lib/timm.js:
  * Webflow: Interactions 2.0: Init
  */
 Webflow.require('ix2').init(
-{"events":{"e":{"id":"e","name":"","animationType":"custom","eventTypeId":"PAGE_SCROLL","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a","affectedElements":{},"duration":0}},"mediaQueries":["main"],"target":{"id":"65b138c5e673c7a4d58fb16f","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb16f","appliesTo":"PAGE","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-p","smoothing":50,"startsEntering":true,"addStartOffset":false,"addOffsetValue":50,"startsExiting":false,"addEndOffset":false,"endOffsetValue":50}],"createdOn":1616448816503},"e-5":{"id":"e-5","name":"","animationType":"custom","eventTypeId":"SLIDER_ACTIVE","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-6","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-6"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".speaker-slide","originalId":"65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d4","appliesTo":"CLASS"},"targets":[{"selector":".speaker-slide","originalId":"65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d4","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616455857444},"e-6":{"id":"e-6","name":"","animationType":"custom","eventTypeId":"SLIDER_INACTIVE","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-7","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-5"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".speaker-slide","originalId":"65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d4","appliesTo":"CLASS"},"targets":[{"selector":".speaker-slide","originalId":"65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d4","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616455857445},"e-7":{"id":"e-7","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-8","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-8"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"1331348f-648e-6e60-41f3-74945daf5fcb","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"1331348f-648e-6e60-41f3-74945daf5fcb","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616460971548},"e-8":{"id":"e-8","name":"","animationType":"custom","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-9","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-7"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"1331348f-648e-6e60-41f3-74945daf5fcb","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"1331348f-648e-6e60-41f3-74945daf5fcb","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616460971548},"e-9":{"id":"e-9","name":"","animationType":"custom","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-10","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-10"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"1331348f-648e-6e60-41f3-74945daf5fe6","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"1331348f-648e-6e60-41f3-74945daf5fe6","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616462834873},"e-10":{"id":"e-10","name":"","animationType":"custom","eventTypeId":"MOUSE_SECOND_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-11","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-9"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"1331348f-648e-6e60-41f3-74945daf5fe6","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"1331348f-648e-6e60-41f3-74945daf5fe6","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616462834873},"e-11":{"id":"e-11","name":"","animationType":"preset","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-2","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb16f|23ac2e55-ca2f-09de-7d81-bad51bab7f7f","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb16f|23ac2e55-ca2f-09de-7d81-bad51bab7f7f","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-2-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":90,"restingState":50},{"continuousParameterGroupId":"a-2-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":90,"restingState":50}],"createdOn":1616467336553},"e-13":{"id":"e-13","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-3","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-14"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".hover-link","originalId":"65b138c5e673c7a4d58fb16f|26e51ff0-dff0-e30a-2812-46b9c8de69cb","appliesTo":"CLASS"},"targets":[{"selector":".hover-link","originalId":"65b138c5e673c7a4d58fb16f|26e51ff0-dff0-e30a-2812-46b9c8de69cb","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616467854944},"e-14":{"id":"e-14","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-13"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".hover-link","originalId":"65b138c5e673c7a4d58fb16f|26e51ff0-dff0-e30a-2812-46b9c8de69cb","appliesTo":"CLASS"},"targets":[{"selector":".hover-link","originalId":"65b138c5e673c7a4d58fb16f|26e51ff0-dff0-e30a-2812-46b9c8de69cb","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616467854944},"e-15":{"id":"e-15","name":"","animationType":"custom","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-12","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb16f|4aca0248-4cb1-508b-2488-b07866000037","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb16f|4aca0248-4cb1-508b-2488-b07866000037","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-12-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":94,"restingState":50},{"continuousParameterGroupId":"a-12-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":94,"restingState":50}],"createdOn":1616468206803},"e-17":{"id":"e-17","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-14","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-18"}},"mediaQueries":["main"],"target":{"selector":".team-item","originalId":"65b138c5e673c7a4d58fb16f|66a9661f-cc1f-7d6f-4fe6-8eba097e279f","appliesTo":"CLASS"},"targets":[{"selector":".team-item","originalId":"65b138c5e673c7a4d58fb16f|66a9661f-cc1f-7d6f-4fe6-8eba097e279f","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616471285328},"e-18":{"id":"e-18","name":"","animationType":"custom","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-15","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-17"}},"mediaQueries":["main"],"target":{"selector":".team-item","originalId":"65b138c5e673c7a4d58fb16f|66a9661f-cc1f-7d6f-4fe6-8eba097e279f","appliesTo":"CLASS"},"targets":[{"selector":".team-item","originalId":"65b138c5e673c7a4d58fb16f|66a9661f-cc1f-7d6f-4fe6-8eba097e279f","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616471285329},"e-19":{"id":"e-19","name":"","animationType":"custom","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-13","affectedElements":{},"duration":0}},"mediaQueries":["main"],"target":{"id":"65b138c5e673c7a4d58fb16f|39e7d324-7206-8032-0a1c-5686af579281","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb16f|39e7d324-7206-8032-0a1c-5686af579281","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-13-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50},{"continuousParameterGroupId":"a-13-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50}],"createdOn":1616471428240},"e-20":{"id":"e-20","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-23"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2feea0","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2feea0","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1608226073919},"e-22":{"id":"e-22","name":"","animationType":"custom","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-21","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-25"}},"mediaQueries":["main"],"target":{"selector":".social-block","originalId":"65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2feea2","appliesTo":"CLASS"},"targets":[{"selector":".social-block","originalId":"65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2feea2","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1608243069782},"e-25":{"id":"e-25","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-20","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-22"}},"mediaQueries":["main"],"target":{"selector":".social-block","originalId":"65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2feea2","appliesTo":"CLASS"},"targets":[{"selector":".social-block","originalId":"65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2feea2","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1608243069777},"e-26":{"id":"e-26","name":"","animationType":"custom","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-12","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"50b4bd1a-1e4d-e659-b727-7a1a8e56bd43","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"50b4bd1a-1e4d-e659-b727-7a1a8e56bd43","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-12-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50},{"continuousParameterGroupId":"a-12-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50}],"createdOn":1616517865271},"e-27":{"id":"e-27","name":"","animationType":"custom","eventTypeId":"PAGE_SCROLL","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-22","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb16f","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb16f","appliesTo":"PAGE","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-22-p","smoothing":50,"startsEntering":true,"addStartOffset":false,"addOffsetValue":50,"startsExiting":false,"addEndOffset":false,"endOffsetValue":50}],"createdOn":1616519985339},"e-28":{"id":"e-28","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-23","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-29"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb16f|4aca0248-4cb1-508b-2488-b07866000037","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb16f|4aca0248-4cb1-508b-2488-b07866000037","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":35,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616526228111},"e-30":{"id":"e-30","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-20","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-31"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".feature-item","originalId":"65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3","appliesTo":"CLASS"},"targets":[{"selector":".feature-item","originalId":"65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616526457377},"e-31":{"id":"e-31","name":"","animationType":"custom","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-21","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-30"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".feature-item","originalId":"65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3","appliesTo":"CLASS"},"targets":[{"selector":".feature-item","originalId":"65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616526457379},"e-32":{"id":"e-32","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-24","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-33"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb16f|13c6cb59-c09c-c05d-ce76-0c83d3a94a94","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb16f|13c6cb59-c09c-c05d-ce76-0c83d3a94a94","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":35,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616526818450},"e-40":{"id":"e-40","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-41"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb16f|d39d1dd5-02b1-9cee-b8f7-5b00216ca7a4","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb16f|d39d1dd5-02b1-9cee-b8f7-5b00216ca7a4","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":35,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616528147122},"e-42":{"id":"e-42","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-43"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb16f|39e7d324-7206-8032-0a1c-5686af579281","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb16f|39e7d324-7206-8032-0a1c-5686af579281","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":35,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616528253810},"e-46":{"id":"e-46","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-47"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb16f|06ce3a72-84c1-6330-db17-7fd0a028ecfa","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb16f|06ce3a72-84c1-6330-db17-7fd0a028ecfa","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616528348466},"e-50":{"id":"e-50","name":"","animationType":"preset","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-13","affectedElements":{},"duration":0}},"mediaQueries":["main"],"target":{"id":"65b138c5e673c7a4d58fb170|5b385c9d-d99b-86de-e694-c5cb3c8a87c0","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170|5b385c9d-d99b-86de-e694-c5cb3c8a87c0","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-13-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50},{"continuousParameterGroupId":"a-13-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50}],"createdOn":1616531378053},"e-55":{"id":"e-55","name":"","animationType":"preset","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-2","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb170|40a1d52f-3dd6-d480-6a49-7f7c0982382b","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170|40a1d52f-3dd6-d480-6a49-7f7c0982382b","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-2-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":90,"restingState":50},{"continuousParameterGroupId":"a-2-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":90,"restingState":50}],"createdOn":1616531843251},"e-56":{"id":"e-56","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-3","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-57"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb170|40a1d52f-3dd6-d480-6a49-7f7c0982382c","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170|40a1d52f-3dd6-d480-6a49-7f7c0982382c","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616531843251},"e-57":{"id":"e-57","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-56"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb170|40a1d52f-3dd6-d480-6a49-7f7c0982382c","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170|40a1d52f-3dd6-d480-6a49-7f7c0982382c","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616531843251},"e-58":{"id":"e-58","name":"","animationType":"custom","eventTypeId":"PAGE_SCROLL","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-22","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb170","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170","appliesTo":"PAGE","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-22-p","smoothing":50,"startsEntering":true,"addStartOffset":false,"addOffsetValue":50,"startsExiting":false,"addEndOffset":false,"endOffsetValue":50}],"createdOn":1616532196717},"e-59":{"id":"e-59","name":"","animationType":"custom","eventTypeId":"PAGE_SCROLL","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb170","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170","appliesTo":"PAGE","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-p","smoothing":50,"startsEntering":true,"addStartOffset":false,"addOffsetValue":50,"startsExiting":false,"addEndOffset":false,"endOffsetValue":50}],"createdOn":1616532206606},"e-60":{"id":"e-60","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-61"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c114017a","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c114017a","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616532863680},"e-62":{"id":"e-62","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-29","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-63"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb170|fdd25448-9cdd-315e-43f1-aa052b6c8988","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c1140188","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":35,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616532863680},"e-64":{"id":"e-64","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-65"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c1140191","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c1140191","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616532863680},"e-66":{"id":"e-66","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-67"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb170|04e02730-5ce1-3978-8f7b-17847bf45a8e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170|04e02730-5ce1-3978-8f7b-17847bf45a8e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616532883942},"e-68":{"id":"e-68","name":"","animationType":"custom","eventTypeId":"SCROLLING_IN_VIEW","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-30","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb170|cb6fe43b-b45d-4171-0395-fc368972b39f","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170|cb6fe43b-b45d-4171-0395-fc368972b39f","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-30-p","smoothing":94,"startsEntering":true,"addStartOffset":false,"addOffsetValue":50,"startsExiting":false,"addEndOffset":false,"endOffsetValue":50}],"createdOn":1616532947437},"e-69":{"id":"e-69","name":"","animationType":"preset","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-2","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb173|a22d8838-67ba-32b3-f8a7-72ab78846a7c","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb173|a22d8838-67ba-32b3-f8a7-72ab78846a7c","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-2-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":90,"restingState":50},{"continuousParameterGroupId":"a-2-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":90,"restingState":50}],"createdOn":1616533822363},"e-70":{"id":"e-70","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-3","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-71"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb173|a22d8838-67ba-32b3-f8a7-72ab78846a7d","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb173|a22d8838-67ba-32b3-f8a7-72ab78846a7d","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616533822363},"e-71":{"id":"e-71","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-70"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb173|a22d8838-67ba-32b3-f8a7-72ab78846a7d","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb173|a22d8838-67ba-32b3-f8a7-72ab78846a7d","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616533822363},"e-74":{"id":"e-74","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-75"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb173|6ebd2c01-3f39-69a3-e871-b0a36057a5c0","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb173|6ebd2c01-3f39-69a3-e871-b0a36057a5c0","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616534245491},"e-78":{"id":"e-78","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-79"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb173|6ebd2c01-3f39-69a3-e871-b0a36057a5d7","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb173|6ebd2c01-3f39-69a3-e871-b0a36057a5d7","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616534245491},"e-80":{"id":"e-80","name":"","animationType":"preset","eventTypeId":"SCROLLING_IN_VIEW","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-30","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb173|b43cef0c-ed21-042a-524d-99bfd35acc7f","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb173|b43cef0c-ed21-042a-524d-99bfd35acc7f","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-30-p","smoothing":94,"startsEntering":true,"addStartOffset":false,"addOffsetValue":50,"startsExiting":false,"addEndOffset":false,"endOffsetValue":50}],"createdOn":1616534351950},"e-81":{"id":"e-81","name":"","animationType":"custom","eventTypeId":"PAGE_SCROLL","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-22","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb173","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb173","appliesTo":"PAGE","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-22-p","smoothing":50,"startsEntering":true,"addStartOffset":false,"addOffsetValue":50,"startsExiting":false,"addEndOffset":false,"endOffsetValue":50}],"createdOn":1616534665234},"e-82":{"id":"e-82","name":"","animationType":"custom","eventTypeId":"PAGE_SCROLL","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb173","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb173","appliesTo":"PAGE","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-p","smoothing":50,"startsEntering":true,"addStartOffset":false,"addOffsetValue":50,"startsExiting":false,"addEndOffset":false,"endOffsetValue":50}],"createdOn":1616534674737},"e-83":{"id":"e-83","name":"","animationType":"custom","eventTypeId":"PAGE_SCROLL","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-22","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb171","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb171","appliesTo":"PAGE","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-22-p","smoothing":50,"startsEntering":true,"addStartOffset":false,"addOffsetValue":50,"startsExiting":false,"addEndOffset":false,"endOffsetValue":50}],"createdOn":1616534811545},"e-84":{"id":"e-84","name":"","animationType":"custom","eventTypeId":"PAGE_SCROLL","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb171","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb171","appliesTo":"PAGE","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-p","smoothing":50,"startsEntering":true,"addStartOffset":false,"addOffsetValue":50,"startsExiting":false,"addEndOffset":false,"endOffsetValue":50}],"createdOn":1616534820980},"e-85":{"id":"e-85","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-86"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d37","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d37","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616534869000},"e-87":{"id":"e-87","name":"","animationType":"preset","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-2","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d4b","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d4b","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-2-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":90,"restingState":50},{"continuousParameterGroupId":"a-2-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":90,"restingState":50}],"createdOn":1616534869000},"e-88":{"id":"e-88","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-3","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-89"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d4c","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d4c","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616534869000},"e-89":{"id":"e-89","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-88"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d4c","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d4c","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616534869000},"e-90":{"id":"e-90","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-91"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb171|04e02730-5ce1-3978-8f7b-17847bf45a8e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb171|04e02730-5ce1-3978-8f7b-17847bf45a8e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":35,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616536072353},"e-92":{"id":"e-92","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-93"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb173|6b1adea7-93eb-185e-4bf4-ad3bf53fcc90","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb173|6b1adea7-93eb-185e-4bf4-ad3bf53fcc90","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616536292093},"e-94":{"id":"e-94","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-95"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbab","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbab","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616537020525},"e-96":{"id":"e-96","name":"","animationType":"preset","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-2","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbc1","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbc1","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-2-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":90,"restingState":50},{"continuousParameterGroupId":"a-2-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":90,"restingState":50}],"createdOn":1616537020525},"e-97":{"id":"e-97","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-3","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-98"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbc2","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbc2","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616537020525},"e-98":{"id":"e-98","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-97"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbc2","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbc2","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616537020525},"e-99":{"id":"e-99","name":"","animationType":"preset","eventTypeId":"SCROLLING_IN_VIEW","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-30","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb174|a75b58da-d24d-1d5c-40ba-9c4729c2e110","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb174|a75b58da-d24d-1d5c-40ba-9c4729c2e110","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-30-p","smoothing":94,"startsEntering":true,"addStartOffset":false,"addOffsetValue":50,"startsExiting":false,"addEndOffset":false,"endOffsetValue":50}],"createdOn":1616537051125},"e-100":{"id":"e-100","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-101"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb174|37413672-66d9-2923-9dc2-c37f1a0a3a57","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb174|37413672-66d9-2923-9dc2-c37f1a0a3a57","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616537096159},"e-104":{"id":"e-104","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-105"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb174|37413672-66d9-2923-9dc2-c37f1a0a3a6e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb174|37413672-66d9-2923-9dc2-c37f1a0a3a6e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616537096159},"e-109":{"id":"e-109","name":"","animationType":"custom","eventTypeId":"PAGE_SCROLL","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-22","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb174","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb174","appliesTo":"PAGE","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-22-p","smoothing":50,"startsEntering":true,"addStartOffset":false,"addOffsetValue":50,"startsExiting":false,"addEndOffset":false,"endOffsetValue":50}],"createdOn":1616537221981},"e-110":{"id":"e-110","name":"","animationType":"custom","eventTypeId":"PAGE_SCROLL","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb174","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb174","appliesTo":"PAGE","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-p","smoothing":50,"startsEntering":true,"addStartOffset":false,"addOffsetValue":50,"startsExiting":false,"addEndOffset":false,"endOffsetValue":50}],"createdOn":1616537228337},"e-113":{"id":"e-113","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-26","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-114"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb170|5b385c9d-d99b-86de-e694-c5cb3c8a87c0","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170|5b385c9d-d99b-86de-e694-c5cb3c8a87c0","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616537280943},"e-115":{"id":"e-115","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-29","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-116"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb173|fdd25448-9cdd-315e-43f1-aa052b6c8987","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb173|fdd25448-9cdd-315e-43f1-aa052b6c8987","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":35,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616547408946},"e-117":{"id":"e-117","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-29","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-118"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb174|901822f3-3710-8628-a203-615a6103352d","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb174|901822f3-3710-8628-a203-615a6103352d","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616547449226},"e-119":{"id":"e-119","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-29","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-120"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c1140188","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c1140188","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616547467007},"e-121":{"id":"e-121","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-29","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-122"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2fee8a","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2fee8a","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":35,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616547499638},"e-123":{"id":"e-123","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-124"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb173|c84451a2-bb39-89c2-54e7-fe84cf4ce706","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb173|c84451a2-bb39-89c2-54e7-fe84cf4ce706","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":35,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616548423815},"e-125":{"id":"e-125","name":"","animationType":"preset","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-13","affectedElements":{},"duration":0}},"mediaQueries":["main"],"target":{"id":"65b138c5e673c7a4d58fb173|c84451a2-bb39-89c2-54e7-fe84cf4ce706","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb173|c84451a2-bb39-89c2-54e7-fe84cf4ce706","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-13-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50},{"continuousParameterGroupId":"a-13-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50}],"createdOn":1616548423815},"e-126":{"id":"e-126","name":"","animationType":"preset","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-13","affectedElements":{},"duration":0}},"mediaQueries":["main"],"target":{"id":"65b138c5e673c7a4d58fb174|5d0ede7f-cc03-41c4-85e6-0181abfe8ae6","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb174|5d0ede7f-cc03-41c4-85e6-0181abfe8ae6","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-13-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50},{"continuousParameterGroupId":"a-13-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50}],"createdOn":1616548642526},"e-127":{"id":"e-127","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-128"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb174|5d0ede7f-cc03-41c4-85e6-0181abfe8ae6","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb174|5d0ede7f-cc03-41c4-85e6-0181abfe8ae6","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":35,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616548642526},"e-129":{"id":"e-129","name":"","animationType":"custom","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-12","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb170|04e02730-5ce1-3978-8f7b-17847bf45a8e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb170|04e02730-5ce1-3978-8f7b-17847bf45a8e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-12-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50},{"continuousParameterGroupId":"a-12-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50}],"createdOn":1616549023019},"e-130":{"id":"e-130","name":"","animationType":"custom","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-12","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d37","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d37","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":[{"continuousParameterGroupId":"a-12-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50},{"continuousParameterGroupId":"a-12-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":96,"restingState":50}],"createdOn":1616549096472},"e-131":{"id":"e-131","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-31","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-132"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".speaker-arrow","originalId":"65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d8","appliesTo":"CLASS"},"targets":[{"selector":".speaker-arrow","originalId":"65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d8","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616549640649},"e-132":{"id":"e-132","name":"","animationType":"custom","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-32","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-131"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".speaker-arrow","originalId":"65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d8","appliesTo":"CLASS"},"targets":[{"selector":".speaker-arrow","originalId":"65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d8","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1616549640654},"e-133":{"id":"e-133","name":"","animationType":"custom","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-26","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-134"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".team-collection-list-wrapper","originalId":"65b138c5e673c7a4d58fb16f|5786214b-9cc1-a03f-36e0-eccb065ba7d8","appliesTo":"CLASS"},"targets":[{"selector":".team-collection-list-wrapper","originalId":"65b138c5e673c7a4d58fb16f|5786214b-9cc1-a03f-36e0-eccb065ba7d8","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":35,"scrollOffsetUnit":"%","delay":null,"direction":null,"effectIn":null},"createdOn":1616551143125},"e-135":{"id":"e-135","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-33","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-136"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"33f9068b-f9b7-b5ad-d40e-c80ecd14af09","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"33f9068b-f9b7-b5ad-d40e-c80ecd14af09","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1663860679015}},"actionLists":{"a":{"id":"a","title":"Nav bar scrolling animation","continuousParameterGroups":[{"id":"a-p","type":"SCROLL_PROGRESS","parameterLabel":"Scroll","continuousActionGroups":[{"keyframe":0,"actionItems":[{"id":"a-n-5","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"","duration":500,"target":{"selector":".nav-bar","selectorGuids":["3738244a-6c99-e5b4-fdb7-6f645ed5c93a"]},"heightValue":100,"widthUnit":"PX","heightUnit":"px","locked":false}}]},{"keyframe":6,"actionItems":[{"id":"a-n-6","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"","duration":500,"target":{"selector":".nav-bar","selectorGuids":["3738244a-6c99-e5b4-fdb7-6f645ed5c93a"]},"heightValue":65,"widthUnit":"PX","heightUnit":"px","locked":false}}]}]}],"createdOn":1616448822055},"a-6":{"id":"a-6","title":"Speaker slide in view","actionItemGroups":[{"actionItems":[{"id":"a-6-n","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-slide-content","selectorGuids":["a368db31-ddbc-a733-58f0-774b99f8db37"]},"xValue":0.7,"yValue":0.7,"locked":true}},{"id":"a-6-n-27","actionTypeId":"GENERAL_DISPLAY","config":{"delay":0,"easing":"","duration":0,"target":{"selector":".speaker-image-cover","selectorGuids":["33048181-3c38-d185-fa8c-a6af1d2094ea"]},"value":"block"}},{"id":"a-6-n-25","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"value":0,"unit":""}},{"id":"a-6-n-24","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-name","selectorGuids":["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"]},"value":0,"unit":""}},{"id":"a-6-n-21","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".body-display.large","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e","334d93b8-61e7-f8cb-5574-42b74c4c705d"]},"value":0,"unit":""}},{"id":"a-6-n-20","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".body-display.large","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e","334d93b8-61e7-f8cb-5574-42b74c4c705d"]},"yValue":5,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-6-n-18","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-name","selectorGuids":["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"]},"xValue":null,"yValue":5,"xUnit":"deg","yUnit":"deg","zUnit":"DEG"}},{"id":"a-6-n-15","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"xValue":null,"yValue":5,"xUnit":"deg","yUnit":"deg","zUnit":"DEG"}},{"id":"a-6-n-7","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"]},"xValue":1.3,"yValue":1.3,"locked":true}},{"id":"a-6-n-6","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image-cover","selectorGuids":["33048181-3c38-d185-fa8c-a6af1d2094ea"]},"xValue":1.02,"yValue":1.02,"locked":true}},{"id":"a-6-n-5","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image-cover","selectorGuids":["33048181-3c38-d185-fa8c-a6af1d2094ea"]},"value":1,"unit":""}},{"id":"a-6-n-4","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"yValue":100,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-6-n-3","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".body-display.large","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e","334d93b8-61e7-f8cb-5574-42b74c4c705d"]},"yValue":100,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-6-n-2","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-name","selectorGuids":["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"]},"yValue":100,"xUnit":"PX","yUnit":"%","zUnit":"PX"}}]},{"actionItems":[{"id":"a-6-n-8","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"inOutCirc","duration":1800,"target":{"useEventTarget":"CHILDREN","selector":".speaker-slide-content","selectorGuids":["a368db31-ddbc-a733-58f0-774b99f8db37"]},"xValue":1,"yValue":1,"locked":true}},{"id":"a-6-n-11","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"inOutCirc","duration":1800,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image-cover","selectorGuids":["33048181-3c38-d185-fa8c-a6af1d2094ea"]},"value":0,"unit":""}},{"id":"a-6-n-10","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"inOutCirc","duration":1800,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image-cover","selectorGuids":["33048181-3c38-d185-fa8c-a6af1d2094ea"]},"xValue":1.5,"yValue":1.5,"locked":true}},{"id":"a-6-n-9","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"inOutCirc","duration":1800,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"]},"xValue":1,"yValue":1,"locked":true}},{"id":"a-6-n-14","actionTypeId":"TRANSFORM_MOVE","config":{"delay":700,"easing":"outCirc","duration":900,"target":{"useEventTarget":"CHILDREN","selector":".speaker-name","selectorGuids":["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"]},"yValue":0,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-6-n-23","actionTypeId":"STYLE_OPACITY","config":{"delay":700,"easing":"outCirc","duration":900,"target":{"useEventTarget":"CHILDREN","selector":".speaker-name","selectorGuids":["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"]},"value":1,"unit":""}},{"id":"a-6-n-17","actionTypeId":"TRANSFORM_SKEW","config":{"delay":700,"easing":"outCirc","duration":900,"target":{"useEventTarget":"CHILDREN","selector":".speaker-name","selectorGuids":["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"]},"xValue":null,"yValue":0,"xUnit":"deg","yUnit":"deg","zUnit":"DEG"}},{"id":"a-6-n-19","actionTypeId":"TRANSFORM_SKEW","config":{"delay":800,"easing":"outCirc","duration":900,"target":{"useEventTarget":"CHILDREN","selector":".body-display.large","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e","334d93b8-61e7-f8cb-5574-42b74c4c705d"]},"yValue":0,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-6-n-13","actionTypeId":"TRANSFORM_MOVE","config":{"delay":800,"easing":"outCirc","duration":900,"target":{"useEventTarget":"CHILDREN","selector":".body-display.large","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e","334d93b8-61e7-f8cb-5574-42b74c4c705d"]},"yValue":0,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-6-n-22","actionTypeId":"STYLE_OPACITY","config":{"delay":800,"easing":"outCirc","duration":900,"target":{"useEventTarget":"CHILDREN","selector":".body-display.large","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e","334d93b8-61e7-f8cb-5574-42b74c4c705d"]},"value":1,"unit":""}},{"id":"a-6-n-16","actionTypeId":"TRANSFORM_SKEW","config":{"delay":900,"easing":"outCirc","duration":900,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"yValue":0,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-6-n-12","actionTypeId":"TRANSFORM_MOVE","config":{"delay":900,"easing":"outCirc","duration":900,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"yValue":0,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-6-n-26","actionTypeId":"STYLE_OPACITY","config":{"delay":900,"easing":"outCirc","duration":900,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"value":1,"unit":""}}]}],"useFirstGroupAsInitialState":true,"createdOn":1616455860635},"a-7":{"id":"a-7","title":"Speaker slide out view","actionItemGroups":[{"actionItems":[{"id":"a-7-n","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".speaker-slide-content","selectorGuids":["a368db31-ddbc-a733-58f0-774b99f8db37"]},"xValue":0.7,"yValue":0.7,"locked":true}},{"id":"a-7-n-2","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"value":0,"unit":""}},{"id":"a-7-n-3","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".speaker-name","selectorGuids":["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"]},"value":0,"unit":""}},{"id":"a-7-n-4","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".body-display.large","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e","334d93b8-61e7-f8cb-5574-42b74c4c705d"]},"value":0,"unit":""}},{"id":"a-7-n-5","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".body-display.large","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e","334d93b8-61e7-f8cb-5574-42b74c4c705d"]},"yValue":5,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-7-n-6","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".speaker-name","selectorGuids":["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"]},"xValue":null,"yValue":5,"xUnit":"deg","yUnit":"deg","zUnit":"DEG"}},{"id":"a-7-n-7","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"xValue":null,"yValue":5,"xUnit":"deg","yUnit":"deg","zUnit":"DEG"}},{"id":"a-7-n-8","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"]},"xValue":1.3,"yValue":1.3,"locked":true}},{"id":"a-7-n-9","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image-cover","selectorGuids":["33048181-3c38-d185-fa8c-a6af1d2094ea"]},"xValue":1.02,"yValue":1.02,"locked":true}},{"id":"a-7-n-10","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image-cover","selectorGuids":["33048181-3c38-d185-fa8c-a6af1d2094ea"]},"value":1,"unit":""}},{"id":"a-7-n-11","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"yValue":100,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-7-n-12","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".body-display.large","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e","334d93b8-61e7-f8cb-5574-42b74c4c705d"]},"yValue":100,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-7-n-13","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".speaker-name","selectorGuids":["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"]},"yValue":100,"xUnit":"PX","yUnit":"%","zUnit":"PX"}}]}],"useFirstGroupAsInitialState":false,"createdOn":1616455860635},"a-8":{"id":"a-8","title":"Speaker quick list on hover","actionItemGroups":[{"actionItems":[{"id":"a-8-n","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image.quick-list","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda","9ac0447a-f5a6-cf64-d287-c805edcccd5b"]},"xValue":1.1,"yValue":1.1,"locked":true}},{"id":"a-8-n-12","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".quick-link-arrow","selectorGuids":["6639ebfd-c87a-9276-e47e-5919bc925332"]},"value":0,"unit":""}},{"id":"a-8-n-11","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".quick-link-arrow","selectorGuids":["6639ebfd-c87a-9276-e47e-5919bc925332"]},"xValue":-12,"xUnit":"px","yUnit":"PX","zUnit":"PX"}},{"id":"a-8-n-10","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image.quick-list","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda","9ac0447a-f5a6-cf64-d287-c805edcccd5b"]},"value":0,"unit":""}},{"id":"a-8-n-7","actionTypeId":"GENERAL_DISPLAY","config":{"delay":0,"easing":"","duration":0,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image.quick-list","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda","9ac0447a-f5a6-cf64-d287-c805edcccd5b"]},"value":"none"}}]},{"actionItems":[{"id":"a-8-n-8","actionTypeId":"GENERAL_DISPLAY","config":{"delay":0,"easing":"","duration":0,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image.quick-list","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda","9ac0447a-f5a6-cf64-d287-c805edcccd5b"]},"value":"flex"}}]},{"actionItems":[{"id":"a-8-n-6","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outQuad","duration":900,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image.quick-list","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda","9ac0447a-f5a6-cf64-d287-c805edcccd5b"]},"xValue":1,"yValue":1,"locked":true}},{"id":"a-8-n-14","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".quick-link-arrow","selectorGuids":["6639ebfd-c87a-9276-e47e-5919bc925332"]},"value":1,"unit":""}},{"id":"a-8-n-13","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"outQuad","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".quick-link-arrow","selectorGuids":["6639ebfd-c87a-9276-e47e-5919bc925332"]},"xValue":0,"xUnit":"px","yUnit":"PX","zUnit":"PX"}},{"id":"a-8-n-9","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":700,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image.quick-list","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda","9ac0447a-f5a6-cf64-d287-c805edcccd5b"]},"value":1,"unit":""}}]}],"useFirstGroupAsInitialState":true,"createdOn":1616460974632},"a-9":{"id":"a-9","title":"Speaker quick list out hover","actionItemGroups":[{"actionItems":[{"id":"a-9-n","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outQuad","duration":900,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image.quick-list","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda","9ac0447a-f5a6-cf64-d287-c805edcccd5b"]},"xValue":1.1,"yValue":1.1,"locked":true}},{"id":"a-9-n-8","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":400,"target":{"useEventTarget":"CHILDREN","selector":".quick-link-arrow","selectorGuids":["6639ebfd-c87a-9276-e47e-5919bc925332"]},"value":0,"unit":""}},{"id":"a-9-n-7","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"outQuad","duration":400,"target":{"useEventTarget":"CHILDREN","selector":".quick-link-arrow","selectorGuids":["6639ebfd-c87a-9276-e47e-5919bc925332"]},"xValue":-12,"xUnit":"px","yUnit":"PX","zUnit":"PX"}},{"id":"a-9-n-6","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":700,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image.quick-list","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda","9ac0447a-f5a6-cf64-d287-c805edcccd5b"]},"value":0,"unit":""}}]},{"actionItems":[{"id":"a-9-n-5","actionTypeId":"GENERAL_DISPLAY","config":{"delay":0,"easing":"","duration":0,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image.quick-list","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda","9ac0447a-f5a6-cf64-d287-c805edcccd5b"]},"value":"none"}}]}],"useFirstGroupAsInitialState":false,"createdOn":1616460974632},"a-10":{"id":"a-10","title":"Open quick list On click","actionItemGroups":[{"actionItems":[{"id":"a-10-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"selector":".off-page-menu","selectorGuids":["a5539a6d-0ed6-e908-12bb-40485d29a845"]},"xValue":100,"xUnit":"%","yUnit":"PX","zUnit":"PX"}},{"id":"a-10-n-13","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"","duration":500,"target":{"selector":".nav-link","selectorGuids":["cf12bb81-6a08-eca0-d30e-438aa1dff8f6"]},"globalSwatchId":"","rValue":255,"bValue":255,"gValue":255,"aValue":1}},{"id":"a-10-n-11","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"selector":".quick-list-overlay","selectorGuids":["a8ace188-bbf0-fd6c-9c8f-44f5cb12b8f6"]},"value":0,"unit":""}},{"id":"a-10-n-9","actionTypeId":"GENERAL_DISPLAY","config":{"delay":0,"easing":"","duration":0,"target":{"selector":".quick-list-overlay","selectorGuids":["a8ace188-bbf0-fd6c-9c8f-44f5cb12b8f6"]},"value":"none"}},{"id":"a-10-n-7","actionTypeId":"GENERAL_DISPLAY","config":{"delay":0,"easing":"","duration":0,"target":{"selector":".off-page-menu","selectorGuids":["a5539a6d-0ed6-e908-12bb-40485d29a845"]},"value":"none"}},{"id":"a-10-n-5","actionTypeId":"PLUGIN_LOTTIE","config":{"delay":0,"easing":"","duration":500,"target":{"selector":".lottie-menu","selectorGuids":["e823b198-6ff9-bdef-76cd-825ea441c005"]},"value":0}},{"id":"a-10-n-3","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"","duration":500,"target":{"selector":".quick-list-image-hover.quick-list","selectorGuids":["619ff943-a746-ceb1-91ae-5a1762cb498c","370df0f6-fe65-04d5-350e-30630a0c18ad"]},"widthValue":0,"widthUnit":"px","heightUnit":"AUTO","locked":false}}]},{"actionItems":[{"id":"a-10-n-8","actionTypeId":"GENERAL_DISPLAY","config":{"delay":0,"easing":"","duration":0,"target":{"selector":".off-page-menu","selectorGuids":["a5539a6d-0ed6-e908-12bb-40485d29a845"]},"value":"flex"}}]},{"actionItems":[{"id":"a-10-n-2","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"inOutQuint","duration":1600,"target":{"selector":".off-page-menu","selectorGuids":["a5539a6d-0ed6-e908-12bb-40485d29a845"]},"xValue":0,"xUnit":"%","yUnit":"PX","zUnit":"PX"}},{"id":"a-10-n-14","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"","duration":900,"target":{"selector":".nav-link","selectorGuids":["cf12bb81-6a08-eca0-d30e-438aa1dff8f6"]},"globalSwatchId":"","rValue":18,"bValue":30,"gValue":21,"aValue":1}},{"id":"a-10-n-12","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"selector":".quick-list-overlay","selectorGuids":["a8ace188-bbf0-fd6c-9c8f-44f5cb12b8f6"]},"value":1,"unit":""}},{"id":"a-10-n-6","actionTypeId":"PLUGIN_LOTTIE","config":{"delay":0,"easing":"","duration":1240,"target":{"selector":".lottie-menu","selectorGuids":["e823b198-6ff9-bdef-76cd-825ea441c005"]},"value":50}},{"id":"a-10-n-10","actionTypeId":"GENERAL_DISPLAY","config":{"delay":0,"easing":"","duration":0,"target":{"selector":".quick-list-overlay","selectorGuids":["a8ace188-bbf0-fd6c-9c8f-44f5cb12b8f6"]},"value":"flex"}},{"id":"a-10-n-4","actionTypeId":"STYLE_SIZE","config":{"delay":1100,"easing":"inOutCirc","duration":1300,"target":{"selector":".quick-list-image-hover.quick-list","selectorGuids":["619ff943-a746-ceb1-91ae-5a1762cb498c","370df0f6-fe65-04d5-350e-30630a0c18ad"]},"widthUnit":"AUTO","heightUnit":"AUTO","locked":false}}]}],"useFirstGroupAsInitialState":true,"createdOn":1616462843965},"a-11":{"id":"a-11","title":"Open quick list Off click","actionItemGroups":[{"actionItems":[{"id":"a-11-n-2","actionTypeId":"PLUGIN_LOTTIE","config":{"delay":0,"easing":"","duration":1240,"target":{"selector":".lottie-menu","selectorGuids":["e823b198-6ff9-bdef-76cd-825ea441c005"]},"value":0}},{"id":"a-11-n-7","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"","duration":500,"target":{"selector":".nav-link","selectorGuids":["cf12bb81-6a08-eca0-d30e-438aa1dff8f6"]},"globalSwatchId":"","rValue":255,"bValue":255,"gValue":255,"aValue":1}},{"id":"a-11-n-6","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"selector":".quick-list-overlay","selectorGuids":["a8ace188-bbf0-fd6c-9c8f-44f5cb12b8f6"]},"value":0,"unit":""}},{"id":"a-11-n-3","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"outQuad","duration":500,"target":{"selector":".quick-list-image-hover.quick-list","selectorGuids":["619ff943-a746-ceb1-91ae-5a1762cb498c","370df0f6-fe65-04d5-350e-30630a0c18ad"]},"widthValue":0,"widthUnit":"px","heightUnit":"PX","locked":false}},{"id":"a-11-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"inOutQuad","duration":800,"target":{"selector":".off-page-menu","selectorGuids":["a5539a6d-0ed6-e908-12bb-40485d29a845"]},"xValue":100,"xUnit":"%","yUnit":"PX","zUnit":"PX"}}]},{"actionItems":[{"id":"a-11-n-4","actionTypeId":"GENERAL_DISPLAY","config":{"delay":0,"easing":"","duration":0,"target":{"selector":".off-page-menu","selectorGuids":["a5539a6d-0ed6-e908-12bb-40485d29a845"]},"value":"none"}},{"id":"a-11-n-5","actionTypeId":"GENERAL_DISPLAY","config":{"delay":0,"easing":"","duration":0,"target":{"selector":".quick-list-overlay","selectorGuids":["a8ace188-bbf0-fd6c-9c8f-44f5cb12b8f6"]},"value":"none"}}]}],"useFirstGroupAsInitialState":false,"createdOn":1616462843965},"a-2":{"id":"a-2","title":"Scroll link mouse over","continuousParameterGroups":[{"id":"a-2-p","type":"MOUSE_X","parameterLabel":"Mouse X","continuousActionGroups":[{"keyframe":0,"actionItems":[{"id":"a-2-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".hover-link","selectorGuids":["5b4bba6f-bcdd-2e83-e848-ca27647c1687"]},"xValue":-24,"xUnit":"px","yUnit":"PX","zUnit":"PX"}}]},{"keyframe":100,"actionItems":[{"id":"a-2-n-2","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".hover-link","selectorGuids":["5b4bba6f-bcdd-2e83-e848-ca27647c1687"]},"xValue":24,"xUnit":"px","yUnit":"PX","zUnit":"PX"}}]}]},{"id":"a-2-p-2","type":"MOUSE_Y","parameterLabel":"Mouse Y","continuousActionGroups":[{"keyframe":0,"actionItems":[{"id":"a-2-n-3","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".hover-link","selectorGuids":["5b4bba6f-bcdd-2e83-e848-ca27647c1687"]},"yValue":-24,"xUnit":"PX","yUnit":"px","zUnit":"PX"}}]},{"keyframe":100,"actionItems":[{"id":"a-2-n-4","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".hover-link","selectorGuids":["5b4bba6f-bcdd-2e83-e848-ca27647c1687"]},"yValue":24,"xUnit":"PX","yUnit":"px","zUnit":"PX"}}]}]}],"createdOn":1616450285556},"a-3":{"id":"a-3","title":"Scroll link on hover","actionItemGroups":[{"actionItems":[{"id":"a-3-n-2","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".hover-link","selectorGuids":["5b4bba6f-bcdd-2e83-e848-ca27647c1687"]},"globalSwatchId":"","rValue":255,"bValue":255,"gValue":255,"aValue":0}},{"id":"a-3-n-7","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".hover-link","selectorGuids":["5b4bba6f-bcdd-2e83-e848-ca27647c1687"]},"value":0.65,"unit":""}},{"id":"a-3-n-5","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".hover-link","selectorGuids":["5b4bba6f-bcdd-2e83-e848-ca27647c1687"]},"xValue":1,"yValue":1,"locked":true}},{"id":"a-3-n-3","actionTypeId":"STYLE_FILTER","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".scroll-icon","selectorGuids":["36c5ea21-12d9-e048-5345-219b7eea222b"]},"filters":[{"type":"invert","filterId":"29f5","value":0,"unit":"%"}]}}]},{"actionItems":[{"id":"a-3-n","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"outQuad","duration":400,"target":{"useEventTarget":"CHILDREN","selector":".hover-link","selectorGuids":["5b4bba6f-bcdd-2e83-e848-ca27647c1687"]},"globalSwatchId":"","rValue":255,"bValue":255,"gValue":255,"aValue":1}},{"id":"a-3-n-8","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".hover-link","selectorGuids":["5b4bba6f-bcdd-2e83-e848-ca27647c1687"]},"value":1,"unit":""}},{"id":"a-3-n-6","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outQuad","duration":700,"target":{"useEventTarget":"CHILDREN","selector":".hover-link","selectorGuids":["5b4bba6f-bcdd-2e83-e848-ca27647c1687"]},"xValue":1.1,"yValue":1.1,"locked":true}},{"id":"a-3-n-4","actionTypeId":"STYLE_FILTER","config":{"delay":0,"easing":"outQuad","duration":400,"target":{"useEventTarget":"CHILDREN","selector":".scroll-icon","selectorGuids":["36c5ea21-12d9-e048-5345-219b7eea222b"]},"filters":[{"type":"invert","filterId":"ac94","value":100,"unit":"%"}]}}]}],"useFirstGroupAsInitialState":true,"createdOn":1616450402699},"a-4":{"id":"a-4","title":"Scroll link off hover","actionItemGroups":[{"actionItems":[{"id":"a-4-n","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"outQuad","duration":400,"target":{"useEventTarget":"CHILDREN","selector":".hover-link","selectorGuids":["5b4bba6f-bcdd-2e83-e848-ca27647c1687"]},"globalSwatchId":"","rValue":255,"bValue":255,"gValue":255,"aValue":0}},{"id":"a-4-n-4","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".hover-link","selectorGuids":["5b4bba6f-bcdd-2e83-e848-ca27647c1687"]},"value":0.65,"unit":""}},{"id":"a-4-n-2","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outQuad","duration":400,"target":{"useEventTarget":"CHILDREN","selector":".hover-link","selectorGuids":["5b4bba6f-bcdd-2e83-e848-ca27647c1687"]},"xValue":1,"yValue":1,"locked":true}},{"id":"a-4-n-3","actionTypeId":"STYLE_FILTER","config":{"delay":0,"easing":"outQuad","duration":400,"target":{"useEventTarget":"CHILDREN","selector":".scroll-icon","selectorGuids":["36c5ea21-12d9-e048-5345-219b7eea222b"]},"filters":[{"type":"invert","filterId":"29f5","value":0,"unit":"%"}]}}]}],"useFirstGroupAsInitialState":false,"createdOn":1616450402699},"a-12":{"id":"a-12","title":"Showreel mouseover","continuousParameterGroups":[{"id":"a-12-p","type":"MOUSE_X","parameterLabel":"Mouse X","continuousActionGroups":[{"keyframe":0,"actionItems":[{"id":"a-12-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".showreel-heading","selectorGuids":["06105122-faad-336c-1b72-97ccc30b1747"]},"xValue":-10,"xUnit":"%","yUnit":"PX","zUnit":"PX"}}]},{"keyframe":100,"actionItems":[{"id":"a-12-n-2","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".showreel-heading","selectorGuids":["06105122-faad-336c-1b72-97ccc30b1747"]},"xValue":10,"xUnit":"%","yUnit":"PX","zUnit":"PX"}}]}]},{"id":"a-12-p-2","type":"MOUSE_Y","parameterLabel":"Mouse Y","continuousActionGroups":[]}],"createdOn":1616468107135},"a-14":{"id":"a-14","title":"Team item hover","actionItemGroups":[{"actionItems":[{"id":"a-14-n","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-item","selectorGuids":["134795e2-7458-ec61-b806-d1e8ca161037"]},"xValue":0.8,"yValue":0.8,"locked":true}}]},{"actionItems":[{"id":"a-14-n-2","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outQuad","duration":700,"target":{"useEventTarget":"CHILDREN","selector":".team-item","selectorGuids":["134795e2-7458-ec61-b806-d1e8ca161037"]},"xValue":1,"yValue":1,"locked":true}}]}],"useFirstGroupAsInitialState":true,"createdOn":1616471287820},"a-15":{"id":"a-15","title":"Team item hover 2","actionItemGroups":[{"actionItems":[{"id":"a-15-n","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outQuad","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-item","selectorGuids":["134795e2-7458-ec61-b806-d1e8ca161037"]},"xValue":0.8,"yValue":0.8,"locked":true}}]}],"useFirstGroupAsInitialState":false,"createdOn":1616471287820},"a-13":{"id":"a-13","title":"Team hover over animation","continuousParameterGroups":[{"id":"a-13-p","type":"MOUSE_X","parameterLabel":"Mouse X","continuousActionGroups":[{"keyframe":0,"actionItems":[{"id":"a-13-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-item","selectorGuids":["134795e2-7458-ec61-b806-d1e8ca161037"]},"xValue":33.33,"xUnit":"vw","yUnit":"PX","zUnit":"PX"}}]},{"keyframe":100,"actionItems":[{"id":"a-13-n-2","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-item","selectorGuids":["134795e2-7458-ec61-b806-d1e8ca161037"]},"xValue":-33.33,"xUnit":"vw","yUnit":"PX","zUnit":"PX"}}]}]},{"id":"a-13-p-2","type":"MOUSE_Y","parameterLabel":"Mouse Y","continuousActionGroups":[]}],"createdOn":1616471116050},"a-19":{"id":"a-19","title":"Scroll intro text | About row IMAGE","actionItemGroups":[{"actionItems":[{"id":"a-19-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".box","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4222"]},"xValue":-20,"yValue":20,"xUnit":"%","yUnit":"%","zUnit":"PX"}},{"id":"a-19-n-2","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".box","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4222"]},"xValue":0.95,"yValue":0.95,"locked":true}},{"id":"a-19-n-3","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".box","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4222"]},"value":0,"unit":""}},{"id":"a-19-n-4","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".box","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4222"]},"yValue":7,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}}]},{"actionItems":[{"id":"a-19-n-5","actionTypeId":"TRANSFORM_MOVE","config":{"delay":200,"easing":"inOutQuint","duration":1600,"target":{"useEventTarget":"CHILDREN","selector":".box","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4222"]},"xValue":0,"yValue":0,"xUnit":"%","yUnit":"%","zUnit":"PX"}},{"id":"a-19-n-6","actionTypeId":"STYLE_OPACITY","config":{"delay":200,"easing":"inOutQuint","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".box","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4222"]},"value":1,"unit":""}},{"id":"a-19-n-7","actionTypeId":"TRANSFORM_SKEW","config":{"delay":200,"easing":"inOutQuint","duration":1600,"target":{"useEventTarget":"CHILDREN","selector":".box","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4222"]},"yValue":0,"xUnit":"deg","yUnit":"deg","zUnit":"DEG"}},{"id":"a-19-n-8","actionTypeId":"TRANSFORM_SCALE","config":{"delay":500,"easing":"inOutQuint","duration":1600,"target":{"useEventTarget":"CHILDREN","selector":".box","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4222"]},"xValue":1,"yValue":1,"locked":true}}]}],"useFirstGroupAsInitialState":true,"createdOn":1607896065057},"a-21":{"id":"a-21","title":"Hover projects | OUT","actionItemGroups":[{"actionItems":[{"id":"a-21-n","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"inOutQuad","duration":1000,"target":{"useEventTarget":"CHILDREN","selector":".circle-hover","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec421b"]},"widthValue":6,"heightValue":6,"widthUnit":"vw","heightUnit":"vw","locked":false}},{"id":"a-21-n-2","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"inOutQuad","duration":1000,"target":{"useEventTarget":"CHILDREN","selector":".circle-hover","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec421b"]},"xValue":3,"yValue":-3,"xUnit":"vw","yUnit":"vw","zUnit":"PX"}},{"id":"a-21-n-3","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":400,"easing":"","duration":200,"target":{"useEventTarget":true,"id":"65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3"},"globalSwatchId":"","rValue":255,"bValue":255,"gValue":255,"aValue":1}},{"id":"a-21-n-4","actionTypeId":"TRANSFORM_SKEW","config":{"delay":400,"easing":"inOutQuint","duration":1600,"target":{"useEventTarget":"CHILDREN","selector":".social-text","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4230"]},"yValue":7,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-21-n-5","actionTypeId":"STYLE_OPACITY","config":{"delay":400,"easing":"inOutQuint","duration":1600,"target":{"useEventTarget":"CHILDREN","selector":".social-text","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4230"]},"value":0,"unit":""}},{"id":"a-21-n-6","actionTypeId":"STYLE_FILTER","config":{"delay":400,"easing":"","duration":200,"target":{"useEventTarget":"CHILDREN","selector":".social-icon","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec421e"]},"filters":[{"type":"invert","filterId":"40cf","value":0,"unit":"%"}]}},{"id":"a-21-n-7","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":400,"easing":"","duration":200,"target":{"useEventTarget":"CHILDREN","selector":".social-block","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4229"]},"globalSwatchId":"","rValue":255,"bValue":255,"gValue":255,"aValue":1}},{"id":"a-21-n-8","actionTypeId":"TRANSFORM_MOVE","config":{"delay":400,"easing":"inOutQuint","duration":1600,"target":{"useEventTarget":"CHILDREN","selector":".social-text","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4230"]},"yValue":100,"xUnit":"PX","yUnit":"%","zUnit":"PX"}}]}],"useFirstGroupAsInitialState":false,"createdOn":1608134130023},"a-20":{"id":"a-20","title":"Hover projects","actionItemGroups":[{"actionItems":[{"id":"a-20-n","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".circle-hover","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec421b"]},"widthValue":6,"heightValue":6,"widthUnit":"vw","heightUnit":"vw","locked":false}},{"id":"a-20-n-2","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".social-text","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4230"]},"value":0,"unit":""}},{"id":"a-20-n-3","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".social-text","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4230"]},"yValue":7,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-20-n-4","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".social-text","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4230"]},"yValue":100,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-20-n-5","actionTypeId":"STYLE_FILTER","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".social-icon","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec421e"]},"filters":[{"type":"invert","filterId":"0f03","value":0,"unit":"%"}]}},{"id":"a-20-n-6","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".social-block","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4229"]},"globalSwatchId":"","rValue":255,"bValue":255,"gValue":255,"aValue":1}},{"id":"a-20-n-7","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":true,"id":"65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3"},"globalSwatchId":"","rValue":255,"bValue":255,"gValue":255,"aValue":1}},{"id":"a-20-n-8","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".circle-hover","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec421b"]},"xValue":3,"yValue":-3,"xUnit":"vw","yUnit":"vw","zUnit":"PX"}}]},{"actionItems":[{"id":"a-20-n-9","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"inOutQuad","duration":1000,"target":{"useEventTarget":"CHILDREN","selector":".circle-hover","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec421b"]},"widthValue":55,"heightValue":55,"widthUnit":"vw","heightUnit":"vw","locked":false}},{"id":"a-20-n-10","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".circle-hover","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec421b"]},"xValue":9,"yValue":-9,"xUnit":"vw","yUnit":"vw","zUnit":"PX"}},{"id":"a-20-n-11","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"inOutQuint","duration":1600,"target":{"useEventTarget":"CHILDREN","selector":".social-text","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4230"]},"value":1,"unit":""}},{"id":"a-20-n-12","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"inOutQuint","duration":1600,"target":{"useEventTarget":"CHILDREN","selector":".social-text","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4230"]},"yValue":0,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-20-n-13","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"inOutQuint","duration":1600,"target":{"useEventTarget":"CHILDREN","selector":".social-text","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4230"]},"yValue":0,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-20-n-14","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":300,"easing":"","duration":200,"target":{"useEventTarget":true,"id":"65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3"},"globalSwatchId":"c4e753ff","rValue":30,"bValue":41,"gValue":32,"aValue":1}},{"id":"a-20-n-15","actionTypeId":"STYLE_FILTER","config":{"delay":300,"easing":"","duration":200,"target":{"useEventTarget":"CHILDREN","selector":".social-icon","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec421e"]},"filters":[{"type":"invert","filterId":"1094","value":100,"unit":"%"}]}},{"id":"a-20-n-16","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":300,"easing":"","duration":200,"target":{"useEventTarget":"CHILDREN","selector":".social-block","selectorGuids":["21454636-ee8a-b095-b89f-15f376ec4229"]},"globalSwatchId":"","rValue":0,"bValue":0,"gValue":0,"aValue":1}}]}],"useFirstGroupAsInitialState":true,"createdOn":1608134130023},"a-22":{"id":"a-22","title":"Nav bar Shade","continuousParameterGroups":[{"id":"a-22-p","type":"SCROLL_PROGRESS","parameterLabel":"Scroll","continuousActionGroups":[{"keyframe":0,"actionItems":[{"id":"a-22-n","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"","duration":500,"target":{"selector":".navigation-cover","selectorGuids":["216f5a74-2565-ce58-35c5-52c417c3c3a3"]},"heightValue":0,"widthUnit":"PX","heightUnit":"%","locked":false}}]},{"keyframe":6,"actionItems":[{"id":"a-22-n-3","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"","duration":500,"target":{"selector":".navigation-cover","selectorGuids":["216f5a74-2565-ce58-35c5-52c417c3c3a3"]},"heightValue":100,"widthUnit":"PX","heightUnit":"%","locked":false}}]}]}],"createdOn":1616448822055},"a-23":{"id":"a-23","title":"Showreel scroll into view","actionItemGroups":[{"actionItems":[{"id":"a-23-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".showreel-wrapper","selectorGuids":["b5fef2c9-edbd-3913-07cf-00860be9795a"]},"yValue":120,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-23-n-7","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".showreel-wrapper","selectorGuids":["b5fef2c9-edbd-3913-07cf-00860be9795a"]},"xValue":0.9,"yValue":0.9,"locked":true}},{"id":"a-23-n-3","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".showreel-wrapper","selectorGuids":["b5fef2c9-edbd-3913-07cf-00860be9795a"]},"value":0,"unit":""}},{"id":"a-23-n-2","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".showreel-wrapper","selectorGuids":["b5fef2c9-edbd-3913-07cf-00860be9795a"]},"yValue":5,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}}]},{"actionItems":[{"id":"a-23-n-4","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".showreel-wrapper","selectorGuids":["b5fef2c9-edbd-3913-07cf-00860be9795a"]},"yValue":0,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-23-n-6","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".showreel-wrapper","selectorGuids":["b5fef2c9-edbd-3913-07cf-00860be9795a"]},"yValue":0,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-23-n-5","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":1600,"target":{"useEventTarget":"CHILDREN","selector":".showreel-wrapper","selectorGuids":["b5fef2c9-edbd-3913-07cf-00860be9795a"]},"value":1,"unit":""}},{"id":"a-23-n-8","actionTypeId":"TRANSFORM_SCALE","config":{"delay":600,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".showreel-wrapper","selectorGuids":["b5fef2c9-edbd-3913-07cf-00860be9795a"]},"xValue":1,"yValue":1,"locked":true}}]}],"useFirstGroupAsInitialState":true,"createdOn":1616526230828},"a-24":{"id":"a-24","title":"Gradient background scroll into view","actionItemGroups":[{"actionItems":[{"id":"a-24-n","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".background-fill","selectorGuids":["dcb6db33-2198-d551-9e8e-286372a25968"]},"widthValue":0,"widthUnit":"px","heightUnit":"AUTO","locked":false}},{"id":"a-24-n-7","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".call-to-action-heading","selectorGuids":["cc4ee85b-6cd7-7307-1287-90e462e05d91"]},"value":0,"unit":""}},{"id":"a-24-n-5","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".call-to-action-heading","selectorGuids":["cc4ee85b-6cd7-7307-1287-90e462e05d91"]},"xValue":null,"yValue":5,"xUnit":"deg","yUnit":"deg","zUnit":"DEG"}},{"id":"a-24-n-3","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".call-to-action-heading","selectorGuids":["cc4ee85b-6cd7-7307-1287-90e462e05d91"]},"yValue":100,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-24-n-12","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"value":0,"unit":""}},{"id":"a-24-n-14","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"yValue":100,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-24-n-13","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"xValue":null,"yValue":5,"xUnit":"deg","yUnit":"deg","zUnit":"DEG"}}]},{"actionItems":[{"id":"a-24-n-2","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".background-fill","selectorGuids":["dcb6db33-2198-d551-9e8e-286372a25968"]},"widthUnit":"AUTO","heightUnit":"AUTO","locked":false}},{"id":"a-24-n-4","actionTypeId":"TRANSFORM_MOVE","config":{"delay":400,"easing":"inOutCirc","duration":1000,"target":{"useEventTarget":"CHILDREN","selector":".call-to-action-heading","selectorGuids":["cc4ee85b-6cd7-7307-1287-90e462e05d91"]},"yValue":0,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-24-n-8","actionTypeId":"STYLE_OPACITY","config":{"delay":400,"easing":"inOutCirc","duration":1000,"target":{"useEventTarget":"CHILDREN","selector":".call-to-action-heading","selectorGuids":["cc4ee85b-6cd7-7307-1287-90e462e05d91"]},"value":1,"unit":""}},{"id":"a-24-n-6","actionTypeId":"TRANSFORM_SKEW","config":{"delay":400,"easing":"inOutCirc","duration":1000,"target":{"useEventTarget":"CHILDREN","selector":".call-to-action-heading","selectorGuids":["cc4ee85b-6cd7-7307-1287-90e462e05d91"]},"yValue":0,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-24-n-9","actionTypeId":"STYLE_OPACITY","config":{"delay":600,"easing":"inOutCirc","duration":1000,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"value":1,"unit":""}},{"id":"a-24-n-11","actionTypeId":"TRANSFORM_MOVE","config":{"delay":600,"easing":"inOutCirc","duration":1000,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"yValue":0,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-24-n-10","actionTypeId":"TRANSFORM_SKEW","config":{"delay":600,"easing":"inOutCirc","duration":1000,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"yValue":0,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}}]}],"useFirstGroupAsInitialState":true,"createdOn":1616526821608},"a-28":{"id":"a-28","title":"Intro text scroll into view","actionItemGroups":[{"actionItems":[{"id":"a-28-n-4","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".large-heading","selectorGuids":["91f46fc9-6168-c81b-e3ed-55bfd5f54e9e"]},"yValue":80,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-28-n-5","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".large-heading","selectorGuids":["91f46fc9-6168-c81b-e3ed-55bfd5f54e9e"]},"yValue":5,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-28-n-6","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".large-heading","selectorGuids":["91f46fc9-6168-c81b-e3ed-55bfd5f54e9e"]},"value":0,"unit":""}},{"id":"a-28-n-7","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".body-display","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e"]},"yValue":80,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-28-n-8","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".body-display","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e"]},"value":0,"unit":""}},{"id":"a-28-n-9","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".body-display","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e"]},"yValue":5,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-28-n-10","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"yValue":80,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-28-n-11","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"yValue":5,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-28-n-12","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"value":0,"unit":""}}]},{"actionItems":[{"id":"a-28-n-13","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".large-heading","selectorGuids":["91f46fc9-6168-c81b-e3ed-55bfd5f54e9e"]},"yValue":0,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-28-n-14","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".large-heading","selectorGuids":["91f46fc9-6168-c81b-e3ed-55bfd5f54e9e"]},"yValue":0,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-28-n-15","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".large-heading","selectorGuids":["91f46fc9-6168-c81b-e3ed-55bfd5f54e9e"]},"value":1,"unit":""}},{"id":"a-28-n-16","actionTypeId":"TRANSFORM_MOVE","config":{"delay":200,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".body-display","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e"]},"yValue":0,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-28-n-17","actionTypeId":"TRANSFORM_SKEW","config":{"delay":200,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".body-display","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e"]},"yValue":0,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-28-n-18","actionTypeId":"STYLE_OPACITY","config":{"delay":200,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".body-display","selectorGuids":["b020a93e-73e1-6237-c267-4910f72f980e"]},"value":1,"unit":""}},{"id":"a-28-n-19","actionTypeId":"TRANSFORM_MOVE","config":{"delay":400,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"yValue":0,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-28-n-20","actionTypeId":"TRANSFORM_SKEW","config":{"delay":400,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"yValue":0,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-28-n-21","actionTypeId":"STYLE_OPACITY","config":{"delay":400,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".button","selectorGuids":["9250dda0-07fc-d949-487f-e4749e76cae6"]},"value":1,"unit":""}}]}],"useFirstGroupAsInitialState":true,"createdOn":1616527632891},"a-29":{"id":"a-29","title":"Team images scroll into view","actionItemGroups":[{"actionItems":[{"id":"a-29-n","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"]},"xValue":1.3,"yValue":1.3,"locked":true}},{"id":"a-29-n-3","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"]},"yValue":5,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-29-n-2","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"]},"value":0,"unit":""}}]},{"actionItems":[{"id":"a-29-n-4","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"]},"xValue":1,"yValue":1,"locked":true}},{"id":"a-29-n-6","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"]},"value":1,"unit":""}},{"id":"a-29-n-5","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".speaker-image","selectorGuids":["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"]},"yValue":0,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}}]}],"useFirstGroupAsInitialState":true,"createdOn":1616528376640},"a-30":{"id":"a-30","title":"Paralax section scrolling into view","continuousParameterGroups":[{"id":"a-30-p","type":"SCROLL_PROGRESS","parameterLabel":"Scroll","continuousActionGroups":[{"keyframe":0,"actionItems":[{"id":"a-30-n","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".background-fill-image","selectorGuids":["21ab0aba-7e4a-41a9-6192-83380b46bf12"]},"xValue":1.05,"yValue":1.05,"locked":true}},{"id":"a-30-n-3","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".background-fill-image","selectorGuids":["21ab0aba-7e4a-41a9-6192-83380b46bf12"]},"xValue":null,"yValue":70,"xUnit":"px","yUnit":"px","zUnit":"PX"}}]},{"keyframe":100,"actionItems":[{"id":"a-30-n-2","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".background-fill-image","selectorGuids":["21ab0aba-7e4a-41a9-6192-83380b46bf12"]},"xValue":1.2,"yValue":1.2,"locked":true}},{"id":"a-30-n-4","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".background-fill-image","selectorGuids":["21ab0aba-7e4a-41a9-6192-83380b46bf12"]},"yValue":-70,"xUnit":"PX","yUnit":"px","zUnit":"PX"}}]}]}],"createdOn":1616532950135},"a-26":{"id":"a-26","title":"Team items scroll into view","actionItemGroups":[{"actionItems":[{"id":"a-26-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-item","selectorGuids":["134795e2-7458-ec61-b806-d1e8ca161037"]},"yValue":80,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-26-n-5","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-item","selectorGuids":["134795e2-7458-ec61-b806-d1e8ca161037"]},"value":0,"unit":""}},{"id":"a-26-n-3","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-item","selectorGuids":["134795e2-7458-ec61-b806-d1e8ca161037"]},"yValue":5,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}}]},{"actionItems":[{"id":"a-26-n-4","actionTypeId":"TRANSFORM_SKEW","config":{"delay":0,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".team-item","selectorGuids":["134795e2-7458-ec61-b806-d1e8ca161037"]},"yValue":0,"xUnit":"DEG","yUnit":"deg","zUnit":"DEG"}},{"id":"a-26-n-2","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".team-item","selectorGuids":["134795e2-7458-ec61-b806-d1e8ca161037"]},"yValue":0,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-26-n-6","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"inOutCirc","duration":1300,"target":{"useEventTarget":"CHILDREN","selector":".team-item","selectorGuids":["134795e2-7458-ec61-b806-d1e8ca161037"]},"value":1,"unit":""}}]}],"useFirstGroupAsInitialState":true,"createdOn":1616527632891},"a-31":{"id":"a-31","title":"Slider arrow hover","actionItemGroups":[{"actionItems":[{"id":"a-31-n","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-arrow","selectorGuids":["4633c90d-f0a5-08cb-0b47-0f8d1945c414"]},"xValue":1,"yValue":1,"locked":true}},{"id":"a-31-n-5","actionTypeId":"STYLE_FILTER","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".slide-arrow","selectorGuids":["e9ad25be-2723-d274-b069-251b750efefb"]},"filters":[{"type":"invert","filterId":"b98c","value":0,"unit":"%"}]}},{"id":"a-31-n-3","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-arrow","selectorGuids":["4633c90d-f0a5-08cb-0b47-0f8d1945c414"]},"globalSwatchId":"c4e753ff","rValue":30,"bValue":41,"gValue":32,"aValue":1}}]},{"actionItems":[{"id":"a-31-n-2","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outQuad","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-arrow","selectorGuids":["4633c90d-f0a5-08cb-0b47-0f8d1945c414"]},"xValue":1.1,"yValue":1.1,"locked":true}},{"id":"a-31-n-6","actionTypeId":"STYLE_FILTER","config":{"delay":0,"easing":"outQuad","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".slide-arrow","selectorGuids":["e9ad25be-2723-d274-b069-251b750efefb"]},"filters":[{"type":"invert","filterId":"26fa","value":100,"unit":"%"}]}},{"id":"a-31-n-4","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"outQuad","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".speaker-arrow","selectorGuids":["4633c90d-f0a5-08cb-0b47-0f8d1945c414"]},"globalSwatchId":"","rValue":255,"bValue":255,"gValue":255,"aValue":1}}]}],"useFirstGroupAsInitialState":true,"createdOn":1616549643594},"a-32":{"id":"a-32","title":"Slider arrow hover 2","actionItemGroups":[{"actionItems":[{"id":"a-32-n","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outQuad","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".speaker-arrow","selectorGuids":["4633c90d-f0a5-08cb-0b47-0f8d1945c414"]},"xValue":1,"yValue":1,"locked":true}},{"id":"a-32-n-2","actionTypeId":"STYLE_FILTER","config":{"delay":0,"easing":"outQuad","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".slide-arrow","selectorGuids":["e9ad25be-2723-d274-b069-251b750efefb"]},"filters":[{"type":"invert","filterId":"b98c","value":0,"unit":"%"}]}},{"id":"a-32-n-3","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"outQuad","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".speaker-arrow","selectorGuids":["4633c90d-f0a5-08cb-0b47-0f8d1945c414"]},"globalSwatchId":"c4e753ff","rValue":30,"bValue":41,"gValue":32,"aValue":1}}]}],"useFirstGroupAsInitialState":false,"createdOn":1616549643594},"a-33":{"id":"a-33","title":"Hide notice","actionItemGroups":[{"actionItems":[{"id":"a-33-n","actionTypeId":"GENERAL_DISPLAY","config":{"delay":0,"easing":"","duration":0,"target":{"useEventTarget":"PARENT","selector":".delete-me","selectorGuids":["4b85aef0-29a0-b805-992c-75ed5679cc0a"]},"value":"none"}}]}],"useFirstGroupAsInitialState":true,"createdOn":1663860684374}},"site":{"mediaQueries":[{"key":"main","min":992,"max":10000},{"key":"medium","min":768,"max":991},{"key":"small","min":480,"max":767},{"key":"tiny","min":0,"max":479}]}}
+  { "events": { "e": { "id": "e", "name": "", "animationType": "custom", "eventTypeId": "PAGE_SCROLL", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main"], "target": { "id": "65b138c5e673c7a4d58fb16f", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb16f", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-p", "smoothing": 50, "startsEntering": true, "addStartOffset": false, "addOffsetValue": 50, "startsExiting": false, "addEndOffset": false, "endOffsetValue": 50 }], "createdOn": 1616448816503 }, "e-5": { "id": "e-5", "name": "", "animationType": "custom", "eventTypeId": "SLIDER_ACTIVE", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-6", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-6" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".speaker-slide", "originalId": "65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d4", "appliesTo": "CLASS" }, "targets": [{ "selector": ".speaker-slide", "originalId": "65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d4", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616455857444 }, "e-6": { "id": "e-6", "name": "", "animationType": "custom", "eventTypeId": "SLIDER_INACTIVE", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-7", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-5" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".speaker-slide", "originalId": "65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d4", "appliesTo": "CLASS" }, "targets": [{ "selector": ".speaker-slide", "originalId": "65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d4", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616455857445 }, "e-7": { "id": "e-7", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-8", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-8" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "1331348f-648e-6e60-41f3-74945daf5fcb", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "1331348f-648e-6e60-41f3-74945daf5fcb", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616460971548 }, "e-8": { "id": "e-8", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-9", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-7" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "1331348f-648e-6e60-41f3-74945daf5fcb", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "1331348f-648e-6e60-41f3-74945daf5fcb", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616460971548 }, "e-9": { "id": "e-9", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-10", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-10" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "1331348f-648e-6e60-41f3-74945daf5fe6", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "1331348f-648e-6e60-41f3-74945daf5fe6", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616462834873 }, "e-10": { "id": "e-10", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_SECOND_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-11", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-9" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "1331348f-648e-6e60-41f3-74945daf5fe6", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "1331348f-648e-6e60-41f3-74945daf5fe6", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616462834873 }, "e-11": { "id": "e-11", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_MOVE", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-2", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb16f|23ac2e55-ca2f-09de-7d81-bad51bab7f7f", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb16f|23ac2e55-ca2f-09de-7d81-bad51bab7f7f", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-2-p", "selectedAxis": "X_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 90, "restingState": 50 }, { "continuousParameterGroupId": "a-2-p-2", "selectedAxis": "Y_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 90, "restingState": 50 }], "createdOn": 1616467336553 }, "e-13": { "id": "e-13", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-3", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-14" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".hover-link", "originalId": "65b138c5e673c7a4d58fb16f|26e51ff0-dff0-e30a-2812-46b9c8de69cb", "appliesTo": "CLASS" }, "targets": [{ "selector": ".hover-link", "originalId": "65b138c5e673c7a4d58fb16f|26e51ff0-dff0-e30a-2812-46b9c8de69cb", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616467854944 }, "e-14": { "id": "e-14", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-4", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-13" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".hover-link", "originalId": "65b138c5e673c7a4d58fb16f|26e51ff0-dff0-e30a-2812-46b9c8de69cb", "appliesTo": "CLASS" }, "targets": [{ "selector": ".hover-link", "originalId": "65b138c5e673c7a4d58fb16f|26e51ff0-dff0-e30a-2812-46b9c8de69cb", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616467854944 }, "e-15": { "id": "e-15", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_MOVE", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-12", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb16f|4aca0248-4cb1-508b-2488-b07866000037", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb16f|4aca0248-4cb1-508b-2488-b07866000037", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-12-p", "selectedAxis": "X_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 94, "restingState": 50 }, { "continuousParameterGroupId": "a-12-p-2", "selectedAxis": "Y_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 94, "restingState": 50 }], "createdOn": 1616468206803 }, "e-17": { "id": "e-17", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-14", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-18" } }, "mediaQueries": ["main"], "target": { "selector": ".team-item", "originalId": "65b138c5e673c7a4d58fb16f|66a9661f-cc1f-7d6f-4fe6-8eba097e279f", "appliesTo": "CLASS" }, "targets": [{ "selector": ".team-item", "originalId": "65b138c5e673c7a4d58fb16f|66a9661f-cc1f-7d6f-4fe6-8eba097e279f", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616471285328 }, "e-18": { "id": "e-18", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-15", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-17" } }, "mediaQueries": ["main"], "target": { "selector": ".team-item", "originalId": "65b138c5e673c7a4d58fb16f|66a9661f-cc1f-7d6f-4fe6-8eba097e279f", "appliesTo": "CLASS" }, "targets": [{ "selector": ".team-item", "originalId": "65b138c5e673c7a4d58fb16f|66a9661f-cc1f-7d6f-4fe6-8eba097e279f", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616471285329 }, "e-19": { "id": "e-19", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_MOVE", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-13", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main"], "target": { "id": "65b138c5e673c7a4d58fb16f|39e7d324-7206-8032-0a1c-5686af579281", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb16f|39e7d324-7206-8032-0a1c-5686af579281", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-13-p", "selectedAxis": "X_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }, { "continuousParameterGroupId": "a-13-p-2", "selectedAxis": "Y_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }], "createdOn": 1616471428240 }, "e-20": { "id": "e-20", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-23" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2feea0", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2feea0", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1608226073919 }, "e-22": { "id": "e-22", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-21", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-25" } }, "mediaQueries": ["main"], "target": { "selector": ".social-block", "originalId": "65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2feea2", "appliesTo": "CLASS" }, "targets": [{ "selector": ".social-block", "originalId": "65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2feea2", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1608243069782 }, "e-25": { "id": "e-25", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-20", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-22" } }, "mediaQueries": ["main"], "target": { "selector": ".social-block", "originalId": "65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2feea2", "appliesTo": "CLASS" }, "targets": [{ "selector": ".social-block", "originalId": "65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2feea2", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1608243069777 }, "e-26": { "id": "e-26", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_MOVE", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-12", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "50b4bd1a-1e4d-e659-b727-7a1a8e56bd43", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "50b4bd1a-1e4d-e659-b727-7a1a8e56bd43", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-12-p", "selectedAxis": "X_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }, { "continuousParameterGroupId": "a-12-p-2", "selectedAxis": "Y_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }], "createdOn": 1616517865271 }, "e-27": { "id": "e-27", "name": "", "animationType": "custom", "eventTypeId": "PAGE_SCROLL", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-22", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb16f", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb16f", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-22-p", "smoothing": 50, "startsEntering": true, "addStartOffset": false, "addOffsetValue": 50, "startsExiting": false, "addEndOffset": false, "endOffsetValue": 50 }], "createdOn": 1616519985339 }, "e-28": { "id": "e-28", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-23", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-29" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb16f|4aca0248-4cb1-508b-2488-b07866000037", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb16f|4aca0248-4cb1-508b-2488-b07866000037", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 35, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616526228111 }, "e-30": { "id": "e-30", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-20", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-31" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".feature-item", "originalId": "65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3", "appliesTo": "CLASS" }, "targets": [{ "selector": ".feature-item", "originalId": "65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616526457377 }, "e-31": { "id": "e-31", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-21", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-30" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".feature-item", "originalId": "65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3", "appliesTo": "CLASS" }, "targets": [{ "selector": ".feature-item", "originalId": "65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616526457379 }, "e-32": { "id": "e-32", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-24", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-33" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb16f|13c6cb59-c09c-c05d-ce76-0c83d3a94a94", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb16f|13c6cb59-c09c-c05d-ce76-0c83d3a94a94", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 35, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616526818450 }, "e-40": { "id": "e-40", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-28", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-41" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb16f|d39d1dd5-02b1-9cee-b8f7-5b00216ca7a4", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb16f|d39d1dd5-02b1-9cee-b8f7-5b00216ca7a4", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 35, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616528147122 }, "e-42": { "id": "e-42", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-28", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-43" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb16f|39e7d324-7206-8032-0a1c-5686af579281", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb16f|39e7d324-7206-8032-0a1c-5686af579281", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 35, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616528253810 }, "e-46": { "id": "e-46", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-28", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-47" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb16f|06ce3a72-84c1-6330-db17-7fd0a028ecfa", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb16f|06ce3a72-84c1-6330-db17-7fd0a028ecfa", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616528348466 }, "e-50": { "id": "e-50", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_MOVE", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-13", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main"], "target": { "id": "65b138c5e673c7a4d58fb170|5b385c9d-d99b-86de-e694-c5cb3c8a87c0", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170|5b385c9d-d99b-86de-e694-c5cb3c8a87c0", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-13-p", "selectedAxis": "X_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }, { "continuousParameterGroupId": "a-13-p-2", "selectedAxis": "Y_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }], "createdOn": 1616531378053 }, "e-55": { "id": "e-55", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_MOVE", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-2", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb170|40a1d52f-3dd6-d480-6a49-7f7c0982382b", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170|40a1d52f-3dd6-d480-6a49-7f7c0982382b", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-2-p", "selectedAxis": "X_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 90, "restingState": 50 }, { "continuousParameterGroupId": "a-2-p-2", "selectedAxis": "Y_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 90, "restingState": 50 }], "createdOn": 1616531843251 }, "e-56": { "id": "e-56", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-3", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-57" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb170|40a1d52f-3dd6-d480-6a49-7f7c0982382c", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170|40a1d52f-3dd6-d480-6a49-7f7c0982382c", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616531843251 }, "e-57": { "id": "e-57", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-4", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-56" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb170|40a1d52f-3dd6-d480-6a49-7f7c0982382c", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170|40a1d52f-3dd6-d480-6a49-7f7c0982382c", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616531843251 }, "e-58": { "id": "e-58", "name": "", "animationType": "custom", "eventTypeId": "PAGE_SCROLL", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-22", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb170", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-22-p", "smoothing": 50, "startsEntering": true, "addStartOffset": false, "addOffsetValue": 50, "startsExiting": false, "addEndOffset": false, "endOffsetValue": 50 }], "createdOn": 1616532196717 }, "e-59": { "id": "e-59", "name": "", "animationType": "custom", "eventTypeId": "PAGE_SCROLL", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb170", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-p", "smoothing": 50, "startsEntering": true, "addStartOffset": false, "addOffsetValue": 50, "startsExiting": false, "addEndOffset": false, "endOffsetValue": 50 }], "createdOn": 1616532206606 }, "e-60": { "id": "e-60", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-28", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-61" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c114017a", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c114017a", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616532863680 }, "e-62": { "id": "e-62", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-29", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-63" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb170|fdd25448-9cdd-315e-43f1-aa052b6c8988", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c1140188", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 35, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616532863680 }, "e-64": { "id": "e-64", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-65" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c1140191", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c1140191", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616532863680 }, "e-66": { "id": "e-66", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-28", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-67" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb170|04e02730-5ce1-3978-8f7b-17847bf45a8e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170|04e02730-5ce1-3978-8f7b-17847bf45a8e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616532883942 }, "e-68": { "id": "e-68", "name": "", "animationType": "custom", "eventTypeId": "SCROLLING_IN_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-30", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb170|cb6fe43b-b45d-4171-0395-fc368972b39f", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170|cb6fe43b-b45d-4171-0395-fc368972b39f", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-30-p", "smoothing": 94, "startsEntering": true, "addStartOffset": false, "addOffsetValue": 50, "startsExiting": false, "addEndOffset": false, "endOffsetValue": 50 }], "createdOn": 1616532947437 }, "e-69": { "id": "e-69", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_MOVE", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-2", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb173|a22d8838-67ba-32b3-f8a7-72ab78846a7c", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb173|a22d8838-67ba-32b3-f8a7-72ab78846a7c", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-2-p", "selectedAxis": "X_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 90, "restingState": 50 }, { "continuousParameterGroupId": "a-2-p-2", "selectedAxis": "Y_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 90, "restingState": 50 }], "createdOn": 1616533822363 }, "e-70": { "id": "e-70", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-3", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-71" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb173|a22d8838-67ba-32b3-f8a7-72ab78846a7d", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb173|a22d8838-67ba-32b3-f8a7-72ab78846a7d", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616533822363 }, "e-71": { "id": "e-71", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-4", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-70" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb173|a22d8838-67ba-32b3-f8a7-72ab78846a7d", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb173|a22d8838-67ba-32b3-f8a7-72ab78846a7d", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616533822363 }, "e-74": { "id": "e-74", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-28", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-75" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb173|6ebd2c01-3f39-69a3-e871-b0a36057a5c0", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb173|6ebd2c01-3f39-69a3-e871-b0a36057a5c0", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616534245491 }, "e-78": { "id": "e-78", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-79" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb173|6ebd2c01-3f39-69a3-e871-b0a36057a5d7", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb173|6ebd2c01-3f39-69a3-e871-b0a36057a5d7", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616534245491 }, "e-80": { "id": "e-80", "name": "", "animationType": "preset", "eventTypeId": "SCROLLING_IN_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-30", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb173|b43cef0c-ed21-042a-524d-99bfd35acc7f", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb173|b43cef0c-ed21-042a-524d-99bfd35acc7f", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-30-p", "smoothing": 94, "startsEntering": true, "addStartOffset": false, "addOffsetValue": 50, "startsExiting": false, "addEndOffset": false, "endOffsetValue": 50 }], "createdOn": 1616534351950 }, "e-81": { "id": "e-81", "name": "", "animationType": "custom", "eventTypeId": "PAGE_SCROLL", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-22", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb173", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb173", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-22-p", "smoothing": 50, "startsEntering": true, "addStartOffset": false, "addOffsetValue": 50, "startsExiting": false, "addEndOffset": false, "endOffsetValue": 50 }], "createdOn": 1616534665234 }, "e-82": { "id": "e-82", "name": "", "animationType": "custom", "eventTypeId": "PAGE_SCROLL", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb173", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb173", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-p", "smoothing": 50, "startsEntering": true, "addStartOffset": false, "addOffsetValue": 50, "startsExiting": false, "addEndOffset": false, "endOffsetValue": 50 }], "createdOn": 1616534674737 }, "e-83": { "id": "e-83", "name": "", "animationType": "custom", "eventTypeId": "PAGE_SCROLL", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-22", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb171", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb171", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-22-p", "smoothing": 50, "startsEntering": true, "addStartOffset": false, "addOffsetValue": 50, "startsExiting": false, "addEndOffset": false, "endOffsetValue": 50 }], "createdOn": 1616534811545 }, "e-84": { "id": "e-84", "name": "", "animationType": "custom", "eventTypeId": "PAGE_SCROLL", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb171", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb171", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-p", "smoothing": 50, "startsEntering": true, "addStartOffset": false, "addOffsetValue": 50, "startsExiting": false, "addEndOffset": false, "endOffsetValue": 50 }], "createdOn": 1616534820980 }, "e-85": { "id": "e-85", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-28", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-86" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d37", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d37", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616534869000 }, "e-87": { "id": "e-87", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_MOVE", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-2", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d4b", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d4b", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-2-p", "selectedAxis": "X_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 90, "restingState": 50 }, { "continuousParameterGroupId": "a-2-p-2", "selectedAxis": "Y_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 90, "restingState": 50 }], "createdOn": 1616534869000 }, "e-88": { "id": "e-88", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-3", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-89" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d4c", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d4c", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616534869000 }, "e-89": { "id": "e-89", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-4", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-88" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d4c", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d4c", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616534869000 }, "e-90": { "id": "e-90", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-28", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-91" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb171|04e02730-5ce1-3978-8f7b-17847bf45a8e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb171|04e02730-5ce1-3978-8f7b-17847bf45a8e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 35, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616536072353 }, "e-92": { "id": "e-92", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-28", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-93" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb173|6b1adea7-93eb-185e-4bf4-ad3bf53fcc90", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb173|6b1adea7-93eb-185e-4bf4-ad3bf53fcc90", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616536292093 }, "e-94": { "id": "e-94", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-28", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-95" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbab", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbab", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616537020525 }, "e-96": { "id": "e-96", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_MOVE", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-2", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbc1", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbc1", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-2-p", "selectedAxis": "X_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 90, "restingState": 50 }, { "continuousParameterGroupId": "a-2-p-2", "selectedAxis": "Y_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 90, "restingState": 50 }], "createdOn": 1616537020525 }, "e-97": { "id": "e-97", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-3", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-98" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbc2", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbc2", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616537020525 }, "e-98": { "id": "e-98", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-4", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-97" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbc2", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb174|e71f584d-e6f0-532b-15ac-ea580c58cbc2", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616537020525 }, "e-99": { "id": "e-99", "name": "", "animationType": "preset", "eventTypeId": "SCROLLING_IN_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-30", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb174|a75b58da-d24d-1d5c-40ba-9c4729c2e110", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb174|a75b58da-d24d-1d5c-40ba-9c4729c2e110", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-30-p", "smoothing": 94, "startsEntering": true, "addStartOffset": false, "addOffsetValue": 50, "startsExiting": false, "addEndOffset": false, "endOffsetValue": 50 }], "createdOn": 1616537051125 }, "e-100": { "id": "e-100", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-28", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-101" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb174|37413672-66d9-2923-9dc2-c37f1a0a3a57", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb174|37413672-66d9-2923-9dc2-c37f1a0a3a57", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616537096159 }, "e-104": { "id": "e-104", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-105" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb174|37413672-66d9-2923-9dc2-c37f1a0a3a6e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb174|37413672-66d9-2923-9dc2-c37f1a0a3a6e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616537096159 }, "e-109": { "id": "e-109", "name": "", "animationType": "custom", "eventTypeId": "PAGE_SCROLL", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-22", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb174", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb174", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-22-p", "smoothing": 50, "startsEntering": true, "addStartOffset": false, "addOffsetValue": 50, "startsExiting": false, "addEndOffset": false, "endOffsetValue": 50 }], "createdOn": 1616537221981 }, "e-110": { "id": "e-110", "name": "", "animationType": "custom", "eventTypeId": "PAGE_SCROLL", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb174", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb174", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-p", "smoothing": 50, "startsEntering": true, "addStartOffset": false, "addOffsetValue": 50, "startsExiting": false, "addEndOffset": false, "endOffsetValue": 50 }], "createdOn": 1616537228337 }, "e-113": { "id": "e-113", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-26", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-114" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb170|5b385c9d-d99b-86de-e694-c5cb3c8a87c0", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170|5b385c9d-d99b-86de-e694-c5cb3c8a87c0", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616537280943 }, "e-115": { "id": "e-115", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-29", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-116" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb173|fdd25448-9cdd-315e-43f1-aa052b6c8987", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb173|fdd25448-9cdd-315e-43f1-aa052b6c8987", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 35, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616547408946 }, "e-117": { "id": "e-117", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-29", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-118" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb174|901822f3-3710-8628-a203-615a6103352d", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb174|901822f3-3710-8628-a203-615a6103352d", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616547449226 }, "e-119": { "id": "e-119", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-29", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-120" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c1140188", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170|41e71508-0cfe-61a0-439c-dc50c1140188", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616547467007 }, "e-121": { "id": "e-121", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-29", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-122" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2fee8a", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb16f|9d7a3bbe-ceea-0bea-42bf-4f137d2fee8a", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 35, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616547499638 }, "e-123": { "id": "e-123", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-28", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-124" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb173|c84451a2-bb39-89c2-54e7-fe84cf4ce706", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb173|c84451a2-bb39-89c2-54e7-fe84cf4ce706", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 35, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616548423815 }, "e-125": { "id": "e-125", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_MOVE", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-13", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main"], "target": { "id": "65b138c5e673c7a4d58fb173|c84451a2-bb39-89c2-54e7-fe84cf4ce706", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb173|c84451a2-bb39-89c2-54e7-fe84cf4ce706", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-13-p", "selectedAxis": "X_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }, { "continuousParameterGroupId": "a-13-p-2", "selectedAxis": "Y_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }], "createdOn": 1616548423815 }, "e-126": { "id": "e-126", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_MOVE", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-13", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main"], "target": { "id": "65b138c5e673c7a4d58fb174|5d0ede7f-cc03-41c4-85e6-0181abfe8ae6", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb174|5d0ede7f-cc03-41c4-85e6-0181abfe8ae6", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-13-p", "selectedAxis": "X_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }, { "continuousParameterGroupId": "a-13-p-2", "selectedAxis": "Y_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }], "createdOn": 1616548642526 }, "e-127": { "id": "e-127", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-28", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-128" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb174|5d0ede7f-cc03-41c4-85e6-0181abfe8ae6", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb174|5d0ede7f-cc03-41c4-85e6-0181abfe8ae6", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 35, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616548642526 }, "e-129": { "id": "e-129", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_MOVE", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-12", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb170|04e02730-5ce1-3978-8f7b-17847bf45a8e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb170|04e02730-5ce1-3978-8f7b-17847bf45a8e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-12-p", "selectedAxis": "X_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }, { "continuousParameterGroupId": "a-12-p-2", "selectedAxis": "Y_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }], "createdOn": 1616549023019 }, "e-130": { "id": "e-130", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_MOVE", "action": { "id": "", "actionTypeId": "GENERAL_CONTINUOUS_ACTION", "config": { "actionListId": "a-12", "affectedElements": {}, "duration": 0 } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d37", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "65b138c5e673c7a4d58fb171|022a9482-167d-8118-b962-09c1357a9d37", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": [{ "continuousParameterGroupId": "a-12-p", "selectedAxis": "X_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }, { "continuousParameterGroupId": "a-12-p-2", "selectedAxis": "Y_AXIS", "basedOn": "ELEMENT", "reverse": false, "smoothing": 96, "restingState": 50 }], "createdOn": 1616549096472 }, "e-131": { "id": "e-131", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-31", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-132" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".speaker-arrow", "originalId": "65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d8", "appliesTo": "CLASS" }, "targets": [{ "selector": ".speaker-arrow", "originalId": "65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d8", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616549640649 }, "e-132": { "id": "e-132", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-32", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-131" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".speaker-arrow", "originalId": "65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d8", "appliesTo": "CLASS" }, "targets": [{ "selector": ".speaker-arrow", "originalId": "65b138c5e673c7a4d58fb16f|46f595bc-657e-4baf-2e41-18fa999c46d8", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616549640654 }, "e-133": { "id": "e-133", "name": "", "animationType": "custom", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-26", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-134" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".team-collection-list-wrapper", "originalId": "65b138c5e673c7a4d58fb16f|5786214b-9cc1-a03f-36e0-eccb065ba7d8", "appliesTo": "CLASS" }, "targets": [{ "selector": ".team-collection-list-wrapper", "originalId": "65b138c5e673c7a4d58fb16f|5786214b-9cc1-a03f-36e0-eccb065ba7d8", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 35, "scrollOffsetUnit": "%", "delay": null, "direction": null, "effectIn": null }, "createdOn": 1616551143125 }, "e-135": { "id": "e-135", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-33", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-136" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "33f9068b-f9b7-b5ad-d40e-c80ecd14af09", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "33f9068b-f9b7-b5ad-d40e-c80ecd14af09", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1663860679015 } }, "actionLists": { "a": { "id": "a", "title": "Nav bar scrolling animation", "continuousParameterGroups": [{ "id": "a-p", "type": "SCROLL_PROGRESS", "parameterLabel": "Scroll", "continuousActionGroups": [{ "keyframe": 0, "actionItems": [{ "id": "a-n-5", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "selector": ".nav-bar", "selectorGuids": ["3738244a-6c99-e5b4-fdb7-6f645ed5c93a"] }, "heightValue": 100, "widthUnit": "PX", "heightUnit": "px", "locked": false } }] }, { "keyframe": 6, "actionItems": [{ "id": "a-n-6", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "selector": ".nav-bar", "selectorGuids": ["3738244a-6c99-e5b4-fdb7-6f645ed5c93a"] }, "heightValue": 65, "widthUnit": "PX", "heightUnit": "px", "locked": false } }] }] }], "createdOn": 1616448822055 }, "a-6": { "id": "a-6", "title": "Speaker slide in view", "actionItemGroups": [{ "actionItems": [{ "id": "a-6-n", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-slide-content", "selectorGuids": ["a368db31-ddbc-a733-58f0-774b99f8db37"] }, "xValue": 0.7, "yValue": 0.7, "locked": true } }, { "id": "a-6-n-27", "actionTypeId": "GENERAL_DISPLAY", "config": { "delay": 0, "easing": "", "duration": 0, "target": { "selector": ".speaker-image-cover", "selectorGuids": ["33048181-3c38-d185-fa8c-a6af1d2094ea"] }, "value": "block" } }, { "id": "a-6-n-25", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "value": 0, "unit": "" } }, { "id": "a-6-n-24", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-name", "selectorGuids": ["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"] }, "value": 0, "unit": "" } }, { "id": "a-6-n-21", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display.large", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e", "334d93b8-61e7-f8cb-5574-42b74c4c705d"] }, "value": 0, "unit": "" } }, { "id": "a-6-n-20", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display.large", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e", "334d93b8-61e7-f8cb-5574-42b74c4c705d"] }, "yValue": 5, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-6-n-18", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-name", "selectorGuids": ["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"] }, "xValue": null, "yValue": 5, "xUnit": "deg", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-6-n-15", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "xValue": null, "yValue": 5, "xUnit": "deg", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-6-n-7", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"] }, "xValue": 1.3, "yValue": 1.3, "locked": true } }, { "id": "a-6-n-6", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image-cover", "selectorGuids": ["33048181-3c38-d185-fa8c-a6af1d2094ea"] }, "xValue": 1.02, "yValue": 1.02, "locked": true } }, { "id": "a-6-n-5", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image-cover", "selectorGuids": ["33048181-3c38-d185-fa8c-a6af1d2094ea"] }, "value": 1, "unit": "" } }, { "id": "a-6-n-4", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "yValue": 100, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-6-n-3", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display.large", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e", "334d93b8-61e7-f8cb-5574-42b74c4c705d"] }, "yValue": 100, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-6-n-2", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-name", "selectorGuids": ["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"] }, "yValue": 100, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }] }, { "actionItems": [{ "id": "a-6-n-8", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1800, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-slide-content", "selectorGuids": ["a368db31-ddbc-a733-58f0-774b99f8db37"] }, "xValue": 1, "yValue": 1, "locked": true } }, { "id": "a-6-n-11", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1800, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image-cover", "selectorGuids": ["33048181-3c38-d185-fa8c-a6af1d2094ea"] }, "value": 0, "unit": "" } }, { "id": "a-6-n-10", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1800, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image-cover", "selectorGuids": ["33048181-3c38-d185-fa8c-a6af1d2094ea"] }, "xValue": 1.5, "yValue": 1.5, "locked": true } }, { "id": "a-6-n-9", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1800, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"] }, "xValue": 1, "yValue": 1, "locked": true } }, { "id": "a-6-n-14", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 700, "easing": "outCirc", "duration": 900, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-name", "selectorGuids": ["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"] }, "yValue": 0, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-6-n-23", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 700, "easing": "outCirc", "duration": 900, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-name", "selectorGuids": ["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"] }, "value": 1, "unit": "" } }, { "id": "a-6-n-17", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 700, "easing": "outCirc", "duration": 900, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-name", "selectorGuids": ["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"] }, "xValue": null, "yValue": 0, "xUnit": "deg", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-6-n-19", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 800, "easing": "outCirc", "duration": 900, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display.large", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e", "334d93b8-61e7-f8cb-5574-42b74c4c705d"] }, "yValue": 0, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-6-n-13", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 800, "easing": "outCirc", "duration": 900, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display.large", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e", "334d93b8-61e7-f8cb-5574-42b74c4c705d"] }, "yValue": 0, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-6-n-22", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 800, "easing": "outCirc", "duration": 900, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display.large", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e", "334d93b8-61e7-f8cb-5574-42b74c4c705d"] }, "value": 1, "unit": "" } }, { "id": "a-6-n-16", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 900, "easing": "outCirc", "duration": 900, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "yValue": 0, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-6-n-12", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 900, "easing": "outCirc", "duration": 900, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "yValue": 0, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-6-n-26", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 900, "easing": "outCirc", "duration": 900, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "value": 1, "unit": "" } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1616455860635 }, "a-7": { "id": "a-7", "title": "Speaker slide out view", "actionItemGroups": [{ "actionItems": [{ "id": "a-7-n", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-slide-content", "selectorGuids": ["a368db31-ddbc-a733-58f0-774b99f8db37"] }, "xValue": 0.7, "yValue": 0.7, "locked": true } }, { "id": "a-7-n-2", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "value": 0, "unit": "" } }, { "id": "a-7-n-3", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-name", "selectorGuids": ["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"] }, "value": 0, "unit": "" } }, { "id": "a-7-n-4", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display.large", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e", "334d93b8-61e7-f8cb-5574-42b74c4c705d"] }, "value": 0, "unit": "" } }, { "id": "a-7-n-5", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display.large", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e", "334d93b8-61e7-f8cb-5574-42b74c4c705d"] }, "yValue": 5, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-7-n-6", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-name", "selectorGuids": ["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"] }, "xValue": null, "yValue": 5, "xUnit": "deg", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-7-n-7", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "xValue": null, "yValue": 5, "xUnit": "deg", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-7-n-8", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"] }, "xValue": 1.3, "yValue": 1.3, "locked": true } }, { "id": "a-7-n-9", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image-cover", "selectorGuids": ["33048181-3c38-d185-fa8c-a6af1d2094ea"] }, "xValue": 1.02, "yValue": 1.02, "locked": true } }, { "id": "a-7-n-10", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image-cover", "selectorGuids": ["33048181-3c38-d185-fa8c-a6af1d2094ea"] }, "value": 1, "unit": "" } }, { "id": "a-7-n-11", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "yValue": 100, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-7-n-12", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display.large", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e", "334d93b8-61e7-f8cb-5574-42b74c4c705d"] }, "yValue": 100, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-7-n-13", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-name", "selectorGuids": ["2ba395ac-ecc5-84a4-dcb1-14992fa23bd7"] }, "yValue": 100, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1616455860635 }, "a-8": { "id": "a-8", "title": "Speaker quick list on hover", "actionItemGroups": [{ "actionItems": [{ "id": "a-8-n", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image.quick-list", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda", "9ac0447a-f5a6-cf64-d287-c805edcccd5b"] }, "xValue": 1.1, "yValue": 1.1, "locked": true } }, { "id": "a-8-n-12", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".quick-link-arrow", "selectorGuids": ["6639ebfd-c87a-9276-e47e-5919bc925332"] }, "value": 0, "unit": "" } }, { "id": "a-8-n-11", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".quick-link-arrow", "selectorGuids": ["6639ebfd-c87a-9276-e47e-5919bc925332"] }, "xValue": -12, "xUnit": "px", "yUnit": "PX", "zUnit": "PX" } }, { "id": "a-8-n-10", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image.quick-list", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda", "9ac0447a-f5a6-cf64-d287-c805edcccd5b"] }, "value": 0, "unit": "" } }, { "id": "a-8-n-7", "actionTypeId": "GENERAL_DISPLAY", "config": { "delay": 0, "easing": "", "duration": 0, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image.quick-list", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda", "9ac0447a-f5a6-cf64-d287-c805edcccd5b"] }, "value": "none" } }] }, { "actionItems": [{ "id": "a-8-n-8", "actionTypeId": "GENERAL_DISPLAY", "config": { "delay": 0, "easing": "", "duration": 0, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image.quick-list", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda", "9ac0447a-f5a6-cf64-d287-c805edcccd5b"] }, "value": "flex" } }] }, { "actionItems": [{ "id": "a-8-n-6", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "outQuad", "duration": 900, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image.quick-list", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda", "9ac0447a-f5a6-cf64-d287-c805edcccd5b"] }, "xValue": 1, "yValue": 1, "locked": true } }, { "id": "a-8-n-14", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".quick-link-arrow", "selectorGuids": ["6639ebfd-c87a-9276-e47e-5919bc925332"] }, "value": 1, "unit": "" } }, { "id": "a-8-n-13", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "outQuad", "duration": 600, "target": { "useEventTarget": "CHILDREN", "selector": ".quick-link-arrow", "selectorGuids": ["6639ebfd-c87a-9276-e47e-5919bc925332"] }, "xValue": 0, "xUnit": "px", "yUnit": "PX", "zUnit": "PX" } }, { "id": "a-8-n-9", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 700, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image.quick-list", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda", "9ac0447a-f5a6-cf64-d287-c805edcccd5b"] }, "value": 1, "unit": "" } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1616460974632 }, "a-9": { "id": "a-9", "title": "Speaker quick list out hover", "actionItemGroups": [{ "actionItems": [{ "id": "a-9-n", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "outQuad", "duration": 900, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image.quick-list", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda", "9ac0447a-f5a6-cf64-d287-c805edcccd5b"] }, "xValue": 1.1, "yValue": 1.1, "locked": true } }, { "id": "a-9-n-8", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 400, "target": { "useEventTarget": "CHILDREN", "selector": ".quick-link-arrow", "selectorGuids": ["6639ebfd-c87a-9276-e47e-5919bc925332"] }, "value": 0, "unit": "" } }, { "id": "a-9-n-7", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "outQuad", "duration": 400, "target": { "useEventTarget": "CHILDREN", "selector": ".quick-link-arrow", "selectorGuids": ["6639ebfd-c87a-9276-e47e-5919bc925332"] }, "xValue": -12, "xUnit": "px", "yUnit": "PX", "zUnit": "PX" } }, { "id": "a-9-n-6", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 700, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image.quick-list", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda", "9ac0447a-f5a6-cf64-d287-c805edcccd5b"] }, "value": 0, "unit": "" } }] }, { "actionItems": [{ "id": "a-9-n-5", "actionTypeId": "GENERAL_DISPLAY", "config": { "delay": 0, "easing": "", "duration": 0, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image.quick-list", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda", "9ac0447a-f5a6-cf64-d287-c805edcccd5b"] }, "value": "none" } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1616460974632 }, "a-10": { "id": "a-10", "title": "Open quick list On click", "actionItemGroups": [{ "actionItems": [{ "id": "a-10-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "selector": ".off-page-menu", "selectorGuids": ["a5539a6d-0ed6-e908-12bb-40485d29a845"] }, "xValue": 100, "xUnit": "%", "yUnit": "PX", "zUnit": "PX" } }, { "id": "a-10-n-13", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "selector": ".nav-link", "selectorGuids": ["cf12bb81-6a08-eca0-d30e-438aa1dff8f6"] }, "globalSwatchId": "", "rValue": 255, "bValue": 255, "gValue": 255, "aValue": 1 } }, { "id": "a-10-n-11", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "selector": ".quick-list-overlay", "selectorGuids": ["a8ace188-bbf0-fd6c-9c8f-44f5cb12b8f6"] }, "value": 0, "unit": "" } }, { "id": "a-10-n-9", "actionTypeId": "GENERAL_DISPLAY", "config": { "delay": 0, "easing": "", "duration": 0, "target": { "selector": ".quick-list-overlay", "selectorGuids": ["a8ace188-bbf0-fd6c-9c8f-44f5cb12b8f6"] }, "value": "none" } }, { "id": "a-10-n-7", "actionTypeId": "GENERAL_DISPLAY", "config": { "delay": 0, "easing": "", "duration": 0, "target": { "selector": ".off-page-menu", "selectorGuids": ["a5539a6d-0ed6-e908-12bb-40485d29a845"] }, "value": "none" } }, { "id": "a-10-n-5", "actionTypeId": "PLUGIN_LOTTIE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "selector": ".lottie-menu", "selectorGuids": ["e823b198-6ff9-bdef-76cd-825ea441c005"] }, "value": 0 } }, { "id": "a-10-n-3", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "selector": ".quick-list-image-hover.quick-list", "selectorGuids": ["619ff943-a746-ceb1-91ae-5a1762cb498c", "370df0f6-fe65-04d5-350e-30630a0c18ad"] }, "widthValue": 0, "widthUnit": "px", "heightUnit": "AUTO", "locked": false } }] }, { "actionItems": [{ "id": "a-10-n-8", "actionTypeId": "GENERAL_DISPLAY", "config": { "delay": 0, "easing": "", "duration": 0, "target": { "selector": ".off-page-menu", "selectorGuids": ["a5539a6d-0ed6-e908-12bb-40485d29a845"] }, "value": "flex" } }] }, { "actionItems": [{ "id": "a-10-n-2", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "inOutQuint", "duration": 1600, "target": { "selector": ".off-page-menu", "selectorGuids": ["a5539a6d-0ed6-e908-12bb-40485d29a845"] }, "xValue": 0, "xUnit": "%", "yUnit": "PX", "zUnit": "PX" } }, { "id": "a-10-n-14", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "", "duration": 900, "target": { "selector": ".nav-link", "selectorGuids": ["cf12bb81-6a08-eca0-d30e-438aa1dff8f6"] }, "globalSwatchId": "", "rValue": 18, "bValue": 30, "gValue": 21, "aValue": 1 } }, { "id": "a-10-n-12", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "selector": ".quick-list-overlay", "selectorGuids": ["a8ace188-bbf0-fd6c-9c8f-44f5cb12b8f6"] }, "value": 1, "unit": "" } }, { "id": "a-10-n-6", "actionTypeId": "PLUGIN_LOTTIE", "config": { "delay": 0, "easing": "", "duration": 1240, "target": { "selector": ".lottie-menu", "selectorGuids": ["e823b198-6ff9-bdef-76cd-825ea441c005"] }, "value": 50 } }, { "id": "a-10-n-10", "actionTypeId": "GENERAL_DISPLAY", "config": { "delay": 0, "easing": "", "duration": 0, "target": { "selector": ".quick-list-overlay", "selectorGuids": ["a8ace188-bbf0-fd6c-9c8f-44f5cb12b8f6"] }, "value": "flex" } }, { "id": "a-10-n-4", "actionTypeId": "STYLE_SIZE", "config": { "delay": 1100, "easing": "inOutCirc", "duration": 1300, "target": { "selector": ".quick-list-image-hover.quick-list", "selectorGuids": ["619ff943-a746-ceb1-91ae-5a1762cb498c", "370df0f6-fe65-04d5-350e-30630a0c18ad"] }, "widthUnit": "AUTO", "heightUnit": "AUTO", "locked": false } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1616462843965 }, "a-11": { "id": "a-11", "title": "Open quick list Off click", "actionItemGroups": [{ "actionItems": [{ "id": "a-11-n-2", "actionTypeId": "PLUGIN_LOTTIE", "config": { "delay": 0, "easing": "", "duration": 1240, "target": { "selector": ".lottie-menu", "selectorGuids": ["e823b198-6ff9-bdef-76cd-825ea441c005"] }, "value": 0 } }, { "id": "a-11-n-7", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "selector": ".nav-link", "selectorGuids": ["cf12bb81-6a08-eca0-d30e-438aa1dff8f6"] }, "globalSwatchId": "", "rValue": 255, "bValue": 255, "gValue": 255, "aValue": 1 } }, { "id": "a-11-n-6", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "selector": ".quick-list-overlay", "selectorGuids": ["a8ace188-bbf0-fd6c-9c8f-44f5cb12b8f6"] }, "value": 0, "unit": "" } }, { "id": "a-11-n-3", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "outQuad", "duration": 500, "target": { "selector": ".quick-list-image-hover.quick-list", "selectorGuids": ["619ff943-a746-ceb1-91ae-5a1762cb498c", "370df0f6-fe65-04d5-350e-30630a0c18ad"] }, "widthValue": 0, "widthUnit": "px", "heightUnit": "PX", "locked": false } }, { "id": "a-11-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "inOutQuad", "duration": 800, "target": { "selector": ".off-page-menu", "selectorGuids": ["a5539a6d-0ed6-e908-12bb-40485d29a845"] }, "xValue": 100, "xUnit": "%", "yUnit": "PX", "zUnit": "PX" } }] }, { "actionItems": [{ "id": "a-11-n-4", "actionTypeId": "GENERAL_DISPLAY", "config": { "delay": 0, "easing": "", "duration": 0, "target": { "selector": ".off-page-menu", "selectorGuids": ["a5539a6d-0ed6-e908-12bb-40485d29a845"] }, "value": "none" } }, { "id": "a-11-n-5", "actionTypeId": "GENERAL_DISPLAY", "config": { "delay": 0, "easing": "", "duration": 0, "target": { "selector": ".quick-list-overlay", "selectorGuids": ["a8ace188-bbf0-fd6c-9c8f-44f5cb12b8f6"] }, "value": "none" } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1616462843965 }, "a-2": { "id": "a-2", "title": "Scroll link mouse over", "continuousParameterGroups": [{ "id": "a-2-p", "type": "MOUSE_X", "parameterLabel": "Mouse X", "continuousActionGroups": [{ "keyframe": 0, "actionItems": [{ "id": "a-2-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".hover-link", "selectorGuids": ["5b4bba6f-bcdd-2e83-e848-ca27647c1687"] }, "xValue": -24, "xUnit": "px", "yUnit": "PX", "zUnit": "PX" } }] }, { "keyframe": 100, "actionItems": [{ "id": "a-2-n-2", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".hover-link", "selectorGuids": ["5b4bba6f-bcdd-2e83-e848-ca27647c1687"] }, "xValue": 24, "xUnit": "px", "yUnit": "PX", "zUnit": "PX" } }] }] }, { "id": "a-2-p-2", "type": "MOUSE_Y", "parameterLabel": "Mouse Y", "continuousActionGroups": [{ "keyframe": 0, "actionItems": [{ "id": "a-2-n-3", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".hover-link", "selectorGuids": ["5b4bba6f-bcdd-2e83-e848-ca27647c1687"] }, "yValue": -24, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }] }, { "keyframe": 100, "actionItems": [{ "id": "a-2-n-4", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".hover-link", "selectorGuids": ["5b4bba6f-bcdd-2e83-e848-ca27647c1687"] }, "yValue": 24, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }] }] }], "createdOn": 1616450285556 }, "a-3": { "id": "a-3", "title": "Scroll link on hover", "actionItemGroups": [{ "actionItems": [{ "id": "a-3-n-2", "actionTypeId": "STYLE_BACKGROUND_COLOR", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".hover-link", "selectorGuids": ["5b4bba6f-bcdd-2e83-e848-ca27647c1687"] }, "globalSwatchId": "", "rValue": 255, "bValue": 255, "gValue": 255, "aValue": 0 } }, { "id": "a-3-n-7", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".hover-link", "selectorGuids": ["5b4bba6f-bcdd-2e83-e848-ca27647c1687"] }, "value": 0.65, "unit": "" } }, { "id": "a-3-n-5", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".hover-link", "selectorGuids": ["5b4bba6f-bcdd-2e83-e848-ca27647c1687"] }, "xValue": 1, "yValue": 1, "locked": true } }, { "id": "a-3-n-3", "actionTypeId": "STYLE_FILTER", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".scroll-icon", "selectorGuids": ["36c5ea21-12d9-e048-5345-219b7eea222b"] }, "filters": [{ "type": "invert", "filterId": "29f5", "value": 0, "unit": "%" }] } }] }, { "actionItems": [{ "id": "a-3-n", "actionTypeId": "STYLE_BACKGROUND_COLOR", "config": { "delay": 0, "easing": "outQuad", "duration": 400, "target": { "useEventTarget": "CHILDREN", "selector": ".hover-link", "selectorGuids": ["5b4bba6f-bcdd-2e83-e848-ca27647c1687"] }, "globalSwatchId": "", "rValue": 255, "bValue": 255, "gValue": 255, "aValue": 1 } }, { "id": "a-3-n-8", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".hover-link", "selectorGuids": ["5b4bba6f-bcdd-2e83-e848-ca27647c1687"] }, "value": 1, "unit": "" } }, { "id": "a-3-n-6", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "outQuad", "duration": 700, "target": { "useEventTarget": "CHILDREN", "selector": ".hover-link", "selectorGuids": ["5b4bba6f-bcdd-2e83-e848-ca27647c1687"] }, "xValue": 1.1, "yValue": 1.1, "locked": true } }, { "id": "a-3-n-4", "actionTypeId": "STYLE_FILTER", "config": { "delay": 0, "easing": "outQuad", "duration": 400, "target": { "useEventTarget": "CHILDREN", "selector": ".scroll-icon", "selectorGuids": ["36c5ea21-12d9-e048-5345-219b7eea222b"] }, "filters": [{ "type": "invert", "filterId": "ac94", "value": 100, "unit": "%" }] } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1616450402699 }, "a-4": { "id": "a-4", "title": "Scroll link off hover", "actionItemGroups": [{ "actionItems": [{ "id": "a-4-n", "actionTypeId": "STYLE_BACKGROUND_COLOR", "config": { "delay": 0, "easing": "outQuad", "duration": 400, "target": { "useEventTarget": "CHILDREN", "selector": ".hover-link", "selectorGuids": ["5b4bba6f-bcdd-2e83-e848-ca27647c1687"] }, "globalSwatchId": "", "rValue": 255, "bValue": 255, "gValue": 255, "aValue": 0 } }, { "id": "a-4-n-4", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".hover-link", "selectorGuids": ["5b4bba6f-bcdd-2e83-e848-ca27647c1687"] }, "value": 0.65, "unit": "" } }, { "id": "a-4-n-2", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "outQuad", "duration": 400, "target": { "useEventTarget": "CHILDREN", "selector": ".hover-link", "selectorGuids": ["5b4bba6f-bcdd-2e83-e848-ca27647c1687"] }, "xValue": 1, "yValue": 1, "locked": true } }, { "id": "a-4-n-3", "actionTypeId": "STYLE_FILTER", "config": { "delay": 0, "easing": "outQuad", "duration": 400, "target": { "useEventTarget": "CHILDREN", "selector": ".scroll-icon", "selectorGuids": ["36c5ea21-12d9-e048-5345-219b7eea222b"] }, "filters": [{ "type": "invert", "filterId": "29f5", "value": 0, "unit": "%" }] } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1616450402699 }, "a-12": { "id": "a-12", "title": "Showreel mouseover", "continuousParameterGroups": [{ "id": "a-12-p", "type": "MOUSE_X", "parameterLabel": "Mouse X", "continuousActionGroups": [{ "keyframe": 0, "actionItems": [{ "id": "a-12-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".showreel-heading", "selectorGuids": ["06105122-faad-336c-1b72-97ccc30b1747"] }, "xValue": -10, "xUnit": "%", "yUnit": "PX", "zUnit": "PX" } }] }, { "keyframe": 100, "actionItems": [{ "id": "a-12-n-2", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".showreel-heading", "selectorGuids": ["06105122-faad-336c-1b72-97ccc30b1747"] }, "xValue": 10, "xUnit": "%", "yUnit": "PX", "zUnit": "PX" } }] }] }, { "id": "a-12-p-2", "type": "MOUSE_Y", "parameterLabel": "Mouse Y", "continuousActionGroups": [] }], "createdOn": 1616468107135 }, "a-14": { "id": "a-14", "title": "Team item hover", "actionItemGroups": [{ "actionItems": [{ "id": "a-14-n", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-item", "selectorGuids": ["134795e2-7458-ec61-b806-d1e8ca161037"] }, "xValue": 0.8, "yValue": 0.8, "locked": true } }] }, { "actionItems": [{ "id": "a-14-n-2", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "outQuad", "duration": 700, "target": { "useEventTarget": "CHILDREN", "selector": ".team-item", "selectorGuids": ["134795e2-7458-ec61-b806-d1e8ca161037"] }, "xValue": 1, "yValue": 1, "locked": true } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1616471287820 }, "a-15": { "id": "a-15", "title": "Team item hover 2", "actionItemGroups": [{ "actionItems": [{ "id": "a-15-n", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "outQuad", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-item", "selectorGuids": ["134795e2-7458-ec61-b806-d1e8ca161037"] }, "xValue": 0.8, "yValue": 0.8, "locked": true } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1616471287820 }, "a-13": { "id": "a-13", "title": "Team hover over animation", "continuousParameterGroups": [{ "id": "a-13-p", "type": "MOUSE_X", "parameterLabel": "Mouse X", "continuousActionGroups": [{ "keyframe": 0, "actionItems": [{ "id": "a-13-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-item", "selectorGuids": ["134795e2-7458-ec61-b806-d1e8ca161037"] }, "xValue": 33.33, "xUnit": "vw", "yUnit": "PX", "zUnit": "PX" } }] }, { "keyframe": 100, "actionItems": [{ "id": "a-13-n-2", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-item", "selectorGuids": ["134795e2-7458-ec61-b806-d1e8ca161037"] }, "xValue": -33.33, "xUnit": "vw", "yUnit": "PX", "zUnit": "PX" } }] }] }, { "id": "a-13-p-2", "type": "MOUSE_Y", "parameterLabel": "Mouse Y", "continuousActionGroups": [] }], "createdOn": 1616471116050 }, "a-19": { "id": "a-19", "title": "Scroll intro text | About row IMAGE", "actionItemGroups": [{ "actionItems": [{ "id": "a-19-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".box", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4222"] }, "xValue": -20, "yValue": 20, "xUnit": "%", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-19-n-2", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".box", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4222"] }, "xValue": 0.95, "yValue": 0.95, "locked": true } }, { "id": "a-19-n-3", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".box", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4222"] }, "value": 0, "unit": "" } }, { "id": "a-19-n-4", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".box", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4222"] }, "yValue": 7, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }] }, { "actionItems": [{ "id": "a-19-n-5", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 200, "easing": "inOutQuint", "duration": 1600, "target": { "useEventTarget": "CHILDREN", "selector": ".box", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4222"] }, "xValue": 0, "yValue": 0, "xUnit": "%", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-19-n-6", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 200, "easing": "inOutQuint", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".box", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4222"] }, "value": 1, "unit": "" } }, { "id": "a-19-n-7", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 200, "easing": "inOutQuint", "duration": 1600, "target": { "useEventTarget": "CHILDREN", "selector": ".box", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4222"] }, "yValue": 0, "xUnit": "deg", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-19-n-8", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 500, "easing": "inOutQuint", "duration": 1600, "target": { "useEventTarget": "CHILDREN", "selector": ".box", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4222"] }, "xValue": 1, "yValue": 1, "locked": true } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1607896065057 }, "a-21": { "id": "a-21", "title": "Hover projects | OUT", "actionItemGroups": [{ "actionItems": [{ "id": "a-21-n", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "inOutQuad", "duration": 1000, "target": { "useEventTarget": "CHILDREN", "selector": ".circle-hover", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec421b"] }, "widthValue": 6, "heightValue": 6, "widthUnit": "vw", "heightUnit": "vw", "locked": false } }, { "id": "a-21-n-2", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "inOutQuad", "duration": 1000, "target": { "useEventTarget": "CHILDREN", "selector": ".circle-hover", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec421b"] }, "xValue": 3, "yValue": -3, "xUnit": "vw", "yUnit": "vw", "zUnit": "PX" } }, { "id": "a-21-n-3", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 400, "easing": "", "duration": 200, "target": { "useEventTarget": true, "id": "65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3" }, "globalSwatchId": "", "rValue": 255, "bValue": 255, "gValue": 255, "aValue": 1 } }, { "id": "a-21-n-4", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 400, "easing": "inOutQuint", "duration": 1600, "target": { "useEventTarget": "CHILDREN", "selector": ".social-text", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4230"] }, "yValue": 7, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-21-n-5", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 400, "easing": "inOutQuint", "duration": 1600, "target": { "useEventTarget": "CHILDREN", "selector": ".social-text", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4230"] }, "value": 0, "unit": "" } }, { "id": "a-21-n-6", "actionTypeId": "STYLE_FILTER", "config": { "delay": 400, "easing": "", "duration": 200, "target": { "useEventTarget": "CHILDREN", "selector": ".social-icon", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec421e"] }, "filters": [{ "type": "invert", "filterId": "40cf", "value": 0, "unit": "%" }] } }, { "id": "a-21-n-7", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 400, "easing": "", "duration": 200, "target": { "useEventTarget": "CHILDREN", "selector": ".social-block", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4229"] }, "globalSwatchId": "", "rValue": 255, "bValue": 255, "gValue": 255, "aValue": 1 } }, { "id": "a-21-n-8", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 400, "easing": "inOutQuint", "duration": 1600, "target": { "useEventTarget": "CHILDREN", "selector": ".social-text", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4230"] }, "yValue": 100, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1608134130023 }, "a-20": { "id": "a-20", "title": "Hover projects", "actionItemGroups": [{ "actionItems": [{ "id": "a-20-n", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".circle-hover", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec421b"] }, "widthValue": 6, "heightValue": 6, "widthUnit": "vw", "heightUnit": "vw", "locked": false } }, { "id": "a-20-n-2", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".social-text", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4230"] }, "value": 0, "unit": "" } }, { "id": "a-20-n-3", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".social-text", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4230"] }, "yValue": 7, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-20-n-4", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".social-text", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4230"] }, "yValue": 100, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-20-n-5", "actionTypeId": "STYLE_FILTER", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".social-icon", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec421e"] }, "filters": [{ "type": "invert", "filterId": "0f03", "value": 0, "unit": "%" }] } }, { "id": "a-20-n-6", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".social-block", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4229"] }, "globalSwatchId": "", "rValue": 255, "bValue": 255, "gValue": 255, "aValue": 1 } }, { "id": "a-20-n-7", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": true, "id": "65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3" }, "globalSwatchId": "", "rValue": 255, "bValue": 255, "gValue": 255, "aValue": 1 } }, { "id": "a-20-n-8", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".circle-hover", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec421b"] }, "xValue": 3, "yValue": -3, "xUnit": "vw", "yUnit": "vw", "zUnit": "PX" } }] }, { "actionItems": [{ "id": "a-20-n-9", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "inOutQuad", "duration": 1000, "target": { "useEventTarget": "CHILDREN", "selector": ".circle-hover", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec421b"] }, "widthValue": 55, "heightValue": 55, "widthUnit": "vw", "heightUnit": "vw", "locked": false } }, { "id": "a-20-n-10", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".circle-hover", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec421b"] }, "xValue": 9, "yValue": -9, "xUnit": "vw", "yUnit": "vw", "zUnit": "PX" } }, { "id": "a-20-n-11", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "inOutQuint", "duration": 1600, "target": { "useEventTarget": "CHILDREN", "selector": ".social-text", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4230"] }, "value": 1, "unit": "" } }, { "id": "a-20-n-12", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "inOutQuint", "duration": 1600, "target": { "useEventTarget": "CHILDREN", "selector": ".social-text", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4230"] }, "yValue": 0, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-20-n-13", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "inOutQuint", "duration": 1600, "target": { "useEventTarget": "CHILDREN", "selector": ".social-text", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4230"] }, "yValue": 0, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-20-n-14", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 300, "easing": "", "duration": 200, "target": { "useEventTarget": true, "id": "65b138c5e673c7a4d58fb16f|b7457600-ca7a-28f3-f002-5d720802c6e3" }, "globalSwatchId": "c4e753ff", "rValue": 30, "bValue": 41, "gValue": 32, "aValue": 1 } }, { "id": "a-20-n-15", "actionTypeId": "STYLE_FILTER", "config": { "delay": 300, "easing": "", "duration": 200, "target": { "useEventTarget": "CHILDREN", "selector": ".social-icon", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec421e"] }, "filters": [{ "type": "invert", "filterId": "1094", "value": 100, "unit": "%" }] } }, { "id": "a-20-n-16", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 300, "easing": "", "duration": 200, "target": { "useEventTarget": "CHILDREN", "selector": ".social-block", "selectorGuids": ["21454636-ee8a-b095-b89f-15f376ec4229"] }, "globalSwatchId": "", "rValue": 0, "bValue": 0, "gValue": 0, "aValue": 1 } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1608134130023 }, "a-22": { "id": "a-22", "title": "Nav bar Shade", "continuousParameterGroups": [{ "id": "a-22-p", "type": "SCROLL_PROGRESS", "parameterLabel": "Scroll", "continuousActionGroups": [{ "keyframe": 0, "actionItems": [{ "id": "a-22-n", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "selector": ".navigation-cover", "selectorGuids": ["216f5a74-2565-ce58-35c5-52c417c3c3a3"] }, "heightValue": 0, "widthUnit": "PX", "heightUnit": "%", "locked": false } }] }, { "keyframe": 6, "actionItems": [{ "id": "a-22-n-3", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "selector": ".navigation-cover", "selectorGuids": ["216f5a74-2565-ce58-35c5-52c417c3c3a3"] }, "heightValue": 100, "widthUnit": "PX", "heightUnit": "%", "locked": false } }] }] }], "createdOn": 1616448822055 }, "a-23": { "id": "a-23", "title": "Showreel scroll into view", "actionItemGroups": [{ "actionItems": [{ "id": "a-23-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".showreel-wrapper", "selectorGuids": ["b5fef2c9-edbd-3913-07cf-00860be9795a"] }, "yValue": 120, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-23-n-7", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".showreel-wrapper", "selectorGuids": ["b5fef2c9-edbd-3913-07cf-00860be9795a"] }, "xValue": 0.9, "yValue": 0.9, "locked": true } }, { "id": "a-23-n-3", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".showreel-wrapper", "selectorGuids": ["b5fef2c9-edbd-3913-07cf-00860be9795a"] }, "value": 0, "unit": "" } }, { "id": "a-23-n-2", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".showreel-wrapper", "selectorGuids": ["b5fef2c9-edbd-3913-07cf-00860be9795a"] }, "yValue": 5, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }] }, { "actionItems": [{ "id": "a-23-n-4", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".showreel-wrapper", "selectorGuids": ["b5fef2c9-edbd-3913-07cf-00860be9795a"] }, "yValue": 0, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-23-n-6", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".showreel-wrapper", "selectorGuids": ["b5fef2c9-edbd-3913-07cf-00860be9795a"] }, "yValue": 0, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-23-n-5", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 1600, "target": { "useEventTarget": "CHILDREN", "selector": ".showreel-wrapper", "selectorGuids": ["b5fef2c9-edbd-3913-07cf-00860be9795a"] }, "value": 1, "unit": "" } }, { "id": "a-23-n-8", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 600, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".showreel-wrapper", "selectorGuids": ["b5fef2c9-edbd-3913-07cf-00860be9795a"] }, "xValue": 1, "yValue": 1, "locked": true } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1616526230828 }, "a-24": { "id": "a-24", "title": "Gradient background scroll into view", "actionItemGroups": [{ "actionItems": [{ "id": "a-24-n", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".background-fill", "selectorGuids": ["dcb6db33-2198-d551-9e8e-286372a25968"] }, "widthValue": 0, "widthUnit": "px", "heightUnit": "AUTO", "locked": false } }, { "id": "a-24-n-7", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".call-to-action-heading", "selectorGuids": ["cc4ee85b-6cd7-7307-1287-90e462e05d91"] }, "value": 0, "unit": "" } }, { "id": "a-24-n-5", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".call-to-action-heading", "selectorGuids": ["cc4ee85b-6cd7-7307-1287-90e462e05d91"] }, "xValue": null, "yValue": 5, "xUnit": "deg", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-24-n-3", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".call-to-action-heading", "selectorGuids": ["cc4ee85b-6cd7-7307-1287-90e462e05d91"] }, "yValue": 100, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-24-n-12", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "value": 0, "unit": "" } }, { "id": "a-24-n-14", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "yValue": 100, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-24-n-13", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "xValue": null, "yValue": 5, "xUnit": "deg", "yUnit": "deg", "zUnit": "DEG" } }] }, { "actionItems": [{ "id": "a-24-n-2", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".background-fill", "selectorGuids": ["dcb6db33-2198-d551-9e8e-286372a25968"] }, "widthUnit": "AUTO", "heightUnit": "AUTO", "locked": false } }, { "id": "a-24-n-4", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 400, "easing": "inOutCirc", "duration": 1000, "target": { "useEventTarget": "CHILDREN", "selector": ".call-to-action-heading", "selectorGuids": ["cc4ee85b-6cd7-7307-1287-90e462e05d91"] }, "yValue": 0, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-24-n-8", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 400, "easing": "inOutCirc", "duration": 1000, "target": { "useEventTarget": "CHILDREN", "selector": ".call-to-action-heading", "selectorGuids": ["cc4ee85b-6cd7-7307-1287-90e462e05d91"] }, "value": 1, "unit": "" } }, { "id": "a-24-n-6", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 400, "easing": "inOutCirc", "duration": 1000, "target": { "useEventTarget": "CHILDREN", "selector": ".call-to-action-heading", "selectorGuids": ["cc4ee85b-6cd7-7307-1287-90e462e05d91"] }, "yValue": 0, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-24-n-9", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 600, "easing": "inOutCirc", "duration": 1000, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "value": 1, "unit": "" } }, { "id": "a-24-n-11", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 600, "easing": "inOutCirc", "duration": 1000, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "yValue": 0, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-24-n-10", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 600, "easing": "inOutCirc", "duration": 1000, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "yValue": 0, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1616526821608 }, "a-28": { "id": "a-28", "title": "Intro text scroll into view", "actionItemGroups": [{ "actionItems": [{ "id": "a-28-n-4", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".large-heading", "selectorGuids": ["91f46fc9-6168-c81b-e3ed-55bfd5f54e9e"] }, "yValue": 80, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-28-n-5", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".large-heading", "selectorGuids": ["91f46fc9-6168-c81b-e3ed-55bfd5f54e9e"] }, "yValue": 5, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-28-n-6", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".large-heading", "selectorGuids": ["91f46fc9-6168-c81b-e3ed-55bfd5f54e9e"] }, "value": 0, "unit": "" } }, { "id": "a-28-n-7", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e"] }, "yValue": 80, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-28-n-8", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e"] }, "value": 0, "unit": "" } }, { "id": "a-28-n-9", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e"] }, "yValue": 5, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-28-n-10", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "yValue": 80, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-28-n-11", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "yValue": 5, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-28-n-12", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "value": 0, "unit": "" } }] }, { "actionItems": [{ "id": "a-28-n-13", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".large-heading", "selectorGuids": ["91f46fc9-6168-c81b-e3ed-55bfd5f54e9e"] }, "yValue": 0, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-28-n-14", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".large-heading", "selectorGuids": ["91f46fc9-6168-c81b-e3ed-55bfd5f54e9e"] }, "yValue": 0, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-28-n-15", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".large-heading", "selectorGuids": ["91f46fc9-6168-c81b-e3ed-55bfd5f54e9e"] }, "value": 1, "unit": "" } }, { "id": "a-28-n-16", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 200, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e"] }, "yValue": 0, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-28-n-17", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 200, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e"] }, "yValue": 0, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-28-n-18", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 200, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".body-display", "selectorGuids": ["b020a93e-73e1-6237-c267-4910f72f980e"] }, "value": 1, "unit": "" } }, { "id": "a-28-n-19", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 400, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "yValue": 0, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-28-n-20", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 400, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "yValue": 0, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-28-n-21", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 400, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".button", "selectorGuids": ["9250dda0-07fc-d949-487f-e4749e76cae6"] }, "value": 1, "unit": "" } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1616527632891 }, "a-29": { "id": "a-29", "title": "Team images scroll into view", "actionItemGroups": [{ "actionItems": [{ "id": "a-29-n", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"] }, "xValue": 1.3, "yValue": 1.3, "locked": true } }, { "id": "a-29-n-3", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"] }, "yValue": 5, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-29-n-2", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"] }, "value": 0, "unit": "" } }] }, { "actionItems": [{ "id": "a-29-n-4", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"] }, "xValue": 1, "yValue": 1, "locked": true } }, { "id": "a-29-n-6", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"] }, "value": 1, "unit": "" } }, { "id": "a-29-n-5", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-image", "selectorGuids": ["5783219b-1cd1-44d4-f9c3-f7d7a7e94cda"] }, "yValue": 0, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1616528376640 }, "a-30": { "id": "a-30", "title": "Paralax section scrolling into view", "continuousParameterGroups": [{ "id": "a-30-p", "type": "SCROLL_PROGRESS", "parameterLabel": "Scroll", "continuousActionGroups": [{ "keyframe": 0, "actionItems": [{ "id": "a-30-n", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".background-fill-image", "selectorGuids": ["21ab0aba-7e4a-41a9-6192-83380b46bf12"] }, "xValue": 1.05, "yValue": 1.05, "locked": true } }, { "id": "a-30-n-3", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".background-fill-image", "selectorGuids": ["21ab0aba-7e4a-41a9-6192-83380b46bf12"] }, "xValue": null, "yValue": 70, "xUnit": "px", "yUnit": "px", "zUnit": "PX" } }] }, { "keyframe": 100, "actionItems": [{ "id": "a-30-n-2", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".background-fill-image", "selectorGuids": ["21ab0aba-7e4a-41a9-6192-83380b46bf12"] }, "xValue": 1.2, "yValue": 1.2, "locked": true } }, { "id": "a-30-n-4", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".background-fill-image", "selectorGuids": ["21ab0aba-7e4a-41a9-6192-83380b46bf12"] }, "yValue": -70, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }] }] }], "createdOn": 1616532950135 }, "a-26": { "id": "a-26", "title": "Team items scroll into view", "actionItemGroups": [{ "actionItems": [{ "id": "a-26-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-item", "selectorGuids": ["134795e2-7458-ec61-b806-d1e8ca161037"] }, "yValue": 80, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-26-n-5", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-item", "selectorGuids": ["134795e2-7458-ec61-b806-d1e8ca161037"] }, "value": 0, "unit": "" } }, { "id": "a-26-n-3", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-item", "selectorGuids": ["134795e2-7458-ec61-b806-d1e8ca161037"] }, "yValue": 5, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }] }, { "actionItems": [{ "id": "a-26-n-4", "actionTypeId": "TRANSFORM_SKEW", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".team-item", "selectorGuids": ["134795e2-7458-ec61-b806-d1e8ca161037"] }, "yValue": 0, "xUnit": "DEG", "yUnit": "deg", "zUnit": "DEG" } }, { "id": "a-26-n-2", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".team-item", "selectorGuids": ["134795e2-7458-ec61-b806-d1e8ca161037"] }, "yValue": 0, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-26-n-6", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "inOutCirc", "duration": 1300, "target": { "useEventTarget": "CHILDREN", "selector": ".team-item", "selectorGuids": ["134795e2-7458-ec61-b806-d1e8ca161037"] }, "value": 1, "unit": "" } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1616527632891 }, "a-31": { "id": "a-31", "title": "Slider arrow hover", "actionItemGroups": [{ "actionItems": [{ "id": "a-31-n", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-arrow", "selectorGuids": ["4633c90d-f0a5-08cb-0b47-0f8d1945c414"] }, "xValue": 1, "yValue": 1, "locked": true } }, { "id": "a-31-n-5", "actionTypeId": "STYLE_FILTER", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".slide-arrow", "selectorGuids": ["e9ad25be-2723-d274-b069-251b750efefb"] }, "filters": [{ "type": "invert", "filterId": "b98c", "value": 0, "unit": "%" }] } }, { "id": "a-31-n-3", "actionTypeId": "STYLE_BACKGROUND_COLOR", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-arrow", "selectorGuids": ["4633c90d-f0a5-08cb-0b47-0f8d1945c414"] }, "globalSwatchId": "c4e753ff", "rValue": 30, "bValue": 41, "gValue": 32, "aValue": 1 } }] }, { "actionItems": [{ "id": "a-31-n-2", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "outQuad", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-arrow", "selectorGuids": ["4633c90d-f0a5-08cb-0b47-0f8d1945c414"] }, "xValue": 1.1, "yValue": 1.1, "locked": true } }, { "id": "a-31-n-6", "actionTypeId": "STYLE_FILTER", "config": { "delay": 0, "easing": "outQuad", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".slide-arrow", "selectorGuids": ["e9ad25be-2723-d274-b069-251b750efefb"] }, "filters": [{ "type": "invert", "filterId": "26fa", "value": 100, "unit": "%" }] } }, { "id": "a-31-n-4", "actionTypeId": "STYLE_BACKGROUND_COLOR", "config": { "delay": 0, "easing": "outQuad", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-arrow", "selectorGuids": ["4633c90d-f0a5-08cb-0b47-0f8d1945c414"] }, "globalSwatchId": "", "rValue": 255, "bValue": 255, "gValue": 255, "aValue": 1 } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1616549643594 }, "a-32": { "id": "a-32", "title": "Slider arrow hover 2", "actionItemGroups": [{ "actionItems": [{ "id": "a-32-n", "actionTypeId": "TRANSFORM_SCALE", "config": { "delay": 0, "easing": "outQuad", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-arrow", "selectorGuids": ["4633c90d-f0a5-08cb-0b47-0f8d1945c414"] }, "xValue": 1, "yValue": 1, "locked": true } }, { "id": "a-32-n-2", "actionTypeId": "STYLE_FILTER", "config": { "delay": 0, "easing": "outQuad", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".slide-arrow", "selectorGuids": ["e9ad25be-2723-d274-b069-251b750efefb"] }, "filters": [{ "type": "invert", "filterId": "b98c", "value": 0, "unit": "%" }] } }, { "id": "a-32-n-3", "actionTypeId": "STYLE_BACKGROUND_COLOR", "config": { "delay": 0, "easing": "outQuad", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".speaker-arrow", "selectorGuids": ["4633c90d-f0a5-08cb-0b47-0f8d1945c414"] }, "globalSwatchId": "c4e753ff", "rValue": 30, "bValue": 41, "gValue": 32, "aValue": 1 } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1616549643594 }, "a-33": { "id": "a-33", "title": "Hide notice", "actionItemGroups": [{ "actionItems": [{ "id": "a-33-n", "actionTypeId": "GENERAL_DISPLAY", "config": { "delay": 0, "easing": "", "duration": 0, "target": { "useEventTarget": "PARENT", "selector": ".delete-me", "selectorGuids": ["4b85aef0-29a0-b805-992c-75ed5679cc0a"] }, "value": "none" } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1663860684374 } }, "site": { "mediaQueries": [{ "key": "main", "min": 992, "max": 10000 }, { "key": "medium", "min": 768, "max": 991 }, { "key": "small", "min": 480, "max": 767 }, { "key": "tiny", "min": 0, "max": 479 }] } }
 );

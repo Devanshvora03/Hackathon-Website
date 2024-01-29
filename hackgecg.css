@@ -3607,6 +3607,7 @@ h3 {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 120%;
+  
   -webkit-background-clip: text;
   background-clip: text;
 }

@@ -1995,6 +1995,16 @@ textarea.w-input, textarea.w-select {
   }
 }
 
+@media screen and (max-width: 620px){
+  .clip{
+    display: inline!important;
+  }
+
+  .clip a{
+    margin-bottom: 10px!important;
+  }
+}
+
 @media screen and (max-width: 479px) {
   .w-nav[data-collapse="tiny"] .w-nav-menu {
     display: none;

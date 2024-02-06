@@ -39,6 +39,40 @@ abbr[title] {
   border-bottom: 1px dotted;
 }
 
+
+.button:hover{
+  /* background: linear-gradient(to right, #f95c4b, #fc804a, #eba452, #bbad5d, #7d9261, #4c6857, #304549, #e54560); */
+  background-color: white;
+  color:black;
+}
+
+.submit-button{
+  color: #ffffff!important;
+  background-color: #12141d!important ;
+  border: 1px solid #fff!important; 
+}
+
+.submit-button:hover{
+  background-color: white!important;
+  color:black!important;
+}
+
+.solid{
+  color: #ffffff!important;
+  background-color: #1e2029!important ;
+  border: 1px solid #fff!important; 
+}
+
+.solid:hover{
+  background-color: white!important;
+  color:black!important;
+}
+
+.nav-link:hover{
+  color: white;
+  transform: scale(1.1);
+}
+
 b, strong {
   font-weight: bold;
 }

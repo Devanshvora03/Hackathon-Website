@@ -484,7 +484,12 @@ figcaption {
 ul, ol {
   margin-top: 0;
   margin-bottom: 10px;
-  padding-left: 40px;
+  padding-left: 0px;
+}
+
+.price{
+  font-size: 25px;
+  font-weight: 500;
 }
 
 .w-list-unstyled {
@@ -4930,8 +4935,10 @@ h3 {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  height: 100vh;
+  height: 80vh;
   font-family: "Open Sans";
+  width: 80%;
+  margin: auto;
 }
 
 .education {
@@ -4985,7 +4992,7 @@ h3 {
 }
 
 .card:hover .overlay {
-  transform: scale(4) translateZ(0);
+  transform: scale(5) translateZ(0);
 }
 
 .card:hover .circle {
@@ -5053,8 +5060,8 @@ h3 {
   height: 118px;
   border-radius: 50%;
   background: var(--bg-color);
-  top: 70px;
-  left: 50px;
+  top: 80px;
+  left: 80px;
   z-index: 0;
   transition: transform 0.3s ease-out;
 }

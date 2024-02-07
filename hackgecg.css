@@ -2976,7 +2976,7 @@ h3 {
 .team-item {
   width: 33.33%;
   height: 100%;
-  min-width: 33.33vw;
+  min-width: 28vw;
   color: #fff;
   text-decoration: none;
 }

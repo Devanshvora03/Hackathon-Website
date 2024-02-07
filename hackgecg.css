@@ -3615,7 +3615,8 @@ h3 {
 }
 
 .footer-wrapper-2 {
-  max-width: 900px;
+  width: 100%;
+  /* max-width: 900px; */
   justify-content: space-between;
   align-items: flex-start;
   margin: 1px auto;

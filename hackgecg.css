@@ -2033,6 +2033,10 @@ textarea.w-input, textarea.w-select {
   .w-nav-brand {
     padding-left: 10px;
   }
+
+  .box{
+    margin-bottom: -60px;
+  }
 }
 
 @media screen and (max-width: 620px){
@@ -3132,7 +3136,7 @@ h3 {
 
 .box {
   background-color: #fff;
-  margin-bottom: -160px;
+  margin-bottom: -100.5px;
   margin-left: -6vw;
   position: relative;
 }
@@ -3620,7 +3624,8 @@ h3 {
 }
 
 .footer-wrapper-2 {
-  max-width: 900px;
+  width: 100%;
+  /* max-width: 900px; */
   justify-content: space-between;
   align-items: flex-start;
   margin: 1px auto;
@@ -3964,7 +3969,7 @@ h3 {
 
   .box {
     min-height: 400px;
-    margin-bottom: -140px;
+    margin-bottom: -59.5px;
   }
 
   .half-dual {
@@ -4151,7 +4156,7 @@ h3 {
   }
 
   .box {
-    margin-bottom: -100px;
+    margin-bottom: -60px;
   }
 
   .about-wrapper {
@@ -4405,7 +4410,7 @@ h3 {
 
   .box {
     min-height: 250px;
-    margin-bottom: -100px;
+    margin-bottom: -48px;
   }
 
   .half-dual {
@@ -4970,7 +4975,7 @@ h3 {
 }
 
 .card {
-  width: 280px;
+  width: 275px;
   height: 360px;
   background: #fff;
   border-top-right-radius: 10px;

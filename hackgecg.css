@@ -3009,6 +3009,7 @@ h3 {
   bottom: -48px;
   left: 0%;
   right: 0%;
+  color: white;
 }
 
 .footer-wrapper {
@@ -4072,6 +4073,8 @@ h3 {
   .large-heading {
     font-size: 42px;
   }
+
+  
 
   .nav-link.mobile-speaker-text {
     padding-right: 12px;

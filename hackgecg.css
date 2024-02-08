@@ -2316,7 +2316,7 @@ h3 {
 }
 
 .large-heading {
-  font-size: 54px;
+  font-size: 25px;
 }
 
 .nav-menu {
@@ -2995,8 +2995,8 @@ h3 {
 
 .team-item {
   width: 33.33%;
-  height: 100%;
-  min-width: 28vw;
+  height: 60%;
+  min-width: 23vw;
   color: #fff;
   text-decoration: none!important;
 }
@@ -5255,3 +5255,12 @@ section::after {
   }
 }
 
+.about_section{
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+  padding: 0!important;
+}
+
+.background-shade.third-height{
+  bottom: 35%!important;
+}

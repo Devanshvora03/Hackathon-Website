@@ -317,6 +317,7 @@ html.w-mod-touch * {
   padding: 9px 15px;
   text-decoration: none!important;
   display: inline-block;
+
 }
 
 input.w-button {
@@ -2469,6 +2470,7 @@ h3 {
   text-transform: uppercase;
   border-style: none;
   font-weight: 400;
+  margin: auto;
 }
 
 .feature-item {
@@ -5152,8 +5154,8 @@ section::after {
 
 .container .card .content .imgBx {
 	position: relative;
-	width: 150px;
-	height: 150px;
+	width: 260px;
+  height: 190px;
 	overflow: hidden;
 }
 
@@ -5204,6 +5206,15 @@ section::after {
   font-weight: 500;
 }
 
+.loc_icon{
+  color:#2a2c34;
+  font-size: 26px;
+}
+
+.card2{
+  top:-50px;
+}
+
 
 @media screen and (max-width:768px) {
     .container_tracks{
@@ -5229,7 +5240,7 @@ section::after {
   }
 }
 
-@media screen and (max-width:1500px) {
+@media screen and (max-width:1300px) {
   .tracks_content{
     margin-top: 50px!important;
   }

@@ -2164,7 +2164,7 @@ h1 {
   margin-bottom: 0;
   font-family: Eudoxussans, sans-serif;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 700!important;
   line-height: 1.3em;
 }
 
@@ -2316,7 +2316,7 @@ h3 {
 }
 
 .large-heading {
-  font-size: 25px;
+  font-size: 54px;
 }
 
 .nav-menu {
@@ -5264,4 +5264,12 @@ section::after {
 
 .background-shade.third-height{
   bottom: 35%!important;
+}
+
+.team-card-font{
+  font-size: 25px!important;
+}
+
+.index-clip{
+  overflow: visible!important;
 }

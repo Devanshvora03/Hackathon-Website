@@ -536,7 +536,7 @@ button, [type="button"], [type="reset"] {
 }
 
 .w-form {
-  margin: 0 0 15px;
+  margin: 40px 0 15px;
 }
 
 .w-form-done {
@@ -3331,7 +3331,7 @@ h3 {
 .clip {
   width: auto;
   justify-content: center;
-  margin-top: 7px;
+  margin-top: -7px;
   display: flex;
   overflow: hidden;
 }
@@ -4784,6 +4784,7 @@ h3 {
 
   #w-node-c1e5364f-083a-dd24-3474-059ea7ffc08e-d58fb171 {
     justify-self: stretch;
+    margin-left: 0px;
   }
 }
 

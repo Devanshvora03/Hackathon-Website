@@ -5302,3 +5302,9 @@ section::after {
 .icon_lap4{
   color:#3b6cb7;
 }
+
+.index-timer{
+  margin: auto;
+  width: 75%;
+  margin-top: 15%;
+}

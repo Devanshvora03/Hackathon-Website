@@ -3061,6 +3061,10 @@ h3 {
   right: 0%;
 }
 
+.glider_background{
+  bottom:10%;
+}
+
 .background-cover.left-cover {
   z-index: 10;
   margin-bottom: -60px;

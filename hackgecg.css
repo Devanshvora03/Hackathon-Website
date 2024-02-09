@@ -5279,3 +5279,26 @@ section::after {
 .index-clip{
   overflow: visible!important;
 }
+
+
+.icon_lap{
+  font-size: 60px;
+  z-index: 999;
+  position: relative;
+}
+
+.icon_lap1{
+  color:#d98a19;
+}
+
+.icon_lap2{
+  color:#59b08b;
+}
+
+.icon_lap3{
+  color:#8b6fc0;
+}
+
+.icon_lap4{
+  color:#3b6cb7;
+}

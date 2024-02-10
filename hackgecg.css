@@ -2433,8 +2433,8 @@ h3 {
 .button {
   color: #fff;
   text-align: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  /* letter-spacing: 2px; */
+  /* text-transform: uppercase; */
   object-fit: fill;
   border: 1px solid #fff;
   border-radius: 100px;
@@ -3345,14 +3345,28 @@ h3 {
 
 
 .discord_btn{
-  border-radius: 4px;
-  height: 44px; 
-  width: 312px;
+  /* border-radius: 4px; */
+  /* height: 44px;  */
+  /* width: 312px; */
   background-color: #ffffff!important;
   color:#27333f!important;
-  font-size: 15px;
-  font-weight: 300;
-  font-family: 'Nunito Sans', sans-serif;
+  /* font-size: 15px; */
+  /* font-weight: 300; */
+  /* font-family: 'Nunito Sans', sans-serif; */
+  height: 44px;
+  width: 320px;
+  font-size: 20px;
+  font-weight: 500;
+  /* color: #27333f; */
+  /* background-color: #fff; */
+  padding: 0 32px;
+  font-family: Nunito Sans,sans-serif;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.index-discord-icon{
+  margin-right: 8px;
 }
 
 .dis_icon{

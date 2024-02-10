@@ -3340,10 +3340,28 @@ h3 {
   overflow: hidden;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,600&display=swap');
+
+
 .discord_btn{
   border-radius: 0%;
   height: 44px; 
-  width: 289px;
+  width: 312px;
+  background-color: white;
+  color:#27333f!important;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.dis_icon{
+  margin-left: 6px;
+}
+
+.devfolio_btn{
+  font-size: 15px;
+  
 }
 
 .background-fill-image {

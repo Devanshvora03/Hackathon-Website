@@ -850,6 +850,19 @@ textarea.w-input, textarea.w-select {
     max-width: 728px;
   }
 
+  .featured-logos-wrapper {
+    grid-column-gap: 24px;
+    grid-row-gap: 12px;
+    flex-wrap: wrap;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: row;
+    align-content: stretch;
+    justify-content: space-between;
+    display: grid;
+  }
+
   .w-hidden-main {
     display: inherit !important;
   }
@@ -914,6 +927,10 @@ textarea.w-input, textarea.w-select {
 }
 
 @media screen and (max-width: 767px) {
+  .heading_sponser{
+    font-size: 37px!important;
+  }
+
   .w-hidden-main, .w-hidden-medium {
     display: inherit !important;
   }
@@ -983,8 +1000,17 @@ textarea.w-input, textarea.w-select {
 }
 
 @media screen and (max-width: 479px) {
+
   .w-container {
     max-width: none;
+  }
+
+  .count_down{
+
+  }
+
+  .main_head_sponsor{
+    font-size: 31px!important;
   }
 
   .w-hidden-main, .w-hidden-medium, .w-hidden-small {
@@ -2052,7 +2078,7 @@ textarea.w-input, textarea.w-select {
 
 @media screen and (max-width: 479px) {
   .w-nav[data-collapse="tiny"] .w-nav-menu {
-    display: none;
+    display: block;
   }
 
   .w-nav[data-collapse="tiny"] .w-nav-button {
@@ -4392,18 +4418,7 @@ h3 {
     margin-left: 0;
   }
 
-  .featured-logos-wrapper {
-    grid-column-gap: 24px;
-    grid-row-gap: 12px;
-    flex-wrap: wrap;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-columns: 1fr;
-    grid-auto-flow: row;
-    align-content: stretch;
-    justify-content: space-between;
-    display: grid;
-  }
+
 
   .showreel-wrapper {
     height: 30vh;
@@ -4975,7 +4990,7 @@ h3 {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  height: 80vh;
+  height: auto;
   font-family: "Open Sans";
   width: 80%;
   margin: auto;
@@ -5118,10 +5133,11 @@ h3 {
 	flex-wrap: wrap;
 	background: 12141d;
 	min-height: 120vh;
+  margin-top: 100px;
 }
 
 .prize_content{
-  margin-top: 80px!important;
+  margin-top: 50px!important;
 }
 
 
@@ -5254,7 +5270,7 @@ section::after {
       height: 215vh !important;;
     }
     .tracks_content{
-      margin-top: 50px!important;
+      margin-top: 30px;
     }
     .container_prices{
       margin-top: 70px;
@@ -5262,6 +5278,7 @@ section::after {
     .prize_content{
       margin-top: 40px;
     }
+
 }
 
 @media screen and (max-width:1200px) {
@@ -5275,7 +5292,7 @@ section::after {
 
 @media screen and (max-width:1300px) {
   .tracks_content{
-    margin-top: 50px!important;
+    margin-top: 30px;
   }
   .container_prices{
     margin-top: 70px;
@@ -5283,6 +5300,13 @@ section::after {
   .prize_content{
     margin-top: 30px!important;
   }
+}
+
+
+
+
+.tracks_content{
+  margin-top: 50px;
 }
 
 .about_section{

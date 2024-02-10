@@ -3345,10 +3345,10 @@ h3 {
 
 
 .discord_btn{
-  border-radius: 0%;
+  border-radius: 4px;
   height: 44px; 
   width: 312px;
-  background-color: white;
+  background-color: #ffffff!important;
   color:#27333f!important;
   font-size: 15px;
   font-weight: 300;
@@ -3361,7 +3361,6 @@ h3 {
 
 .devfolio_btn{
   font-size: 15px;
-  
 }
 
 .background-fill-image {

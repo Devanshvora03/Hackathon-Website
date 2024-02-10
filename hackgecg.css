@@ -3340,6 +3340,12 @@ h3 {
   overflow: hidden;
 }
 
+.discord_btn{
+  border-radius: 0%;
+  height: 44px; 
+  width: 289px;
+}
+
 .background-fill-image {
   width: 120%;
   height: 120%;

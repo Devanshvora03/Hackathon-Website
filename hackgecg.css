@@ -924,6 +924,10 @@ textarea.w-input, textarea.w-select {
     left: auto;
     right: auto;
   }
+
+  .index-main-image{
+    width: 50%!important;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -996,6 +1000,10 @@ textarea.w-input, textarea.w-select {
 
   .w-col-small-12 {
     width: 100%;
+  }
+
+  .index-main-image{
+    width: 60%!important;
   }
 }
 
@@ -1071,6 +1079,10 @@ textarea.w-input, textarea.w-select {
 
   .w-col-tiny-12 {
     width: 100%;
+  }
+
+  .index-main-image{
+    width: 70%!important;
   }
 }
 
@@ -2459,16 +2471,16 @@ h3 {
 .button {
   color: #fff;
   text-align: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  /* letter-spacing: 2px; */
+  /* text-transform: uppercase; */
   object-fit: fill;
   border: 1px solid #fff;
   border-radius: 100px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-left: 40px;
-  margin-right: 40px;
+  /* margin-left: 40px;
+  margin-right: 40px; */
   padding: 14px 32px;
   font-size: 12px;
   font-weight: 400;
@@ -3371,14 +3383,28 @@ h3 {
 
 
 .discord_btn{
-  border-radius: 4px;
-  height: 44px; 
-  width: 312px;
+  /* border-radius: 4px; */
+  /* height: 44px;  */
+  /* width: 312px; */
   background-color: #ffffff!important;
   color:#27333f!important;
-  font-size: 15px;
-  font-weight: 300;
-  font-family: 'Nunito Sans', sans-serif;
+  /* font-size: 15px; */
+  /* font-weight: 300; */
+  /* font-family: 'Nunito Sans', sans-serif; */
+  height: 44px;
+  width: 320px;
+  font-size: 20px;
+  font-weight: 500;
+  /* color: #27333f; */
+  /* background-color: #fff; */
+  padding: 0 32px;
+  font-family: Nunito Sans,sans-serif;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.index-discord-icon{
+  margin-right: 8px;
 }
 
 .dis_icon{
@@ -4325,8 +4351,8 @@ h3 {
   }
 
   .button {
-    margin-left: 10px;
-    margin-right: 10px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -5354,4 +5380,12 @@ section::after {
   margin: auto;
   width: 75%;
   margin-top: 15%;
+}
+
+.about-w-dyn-item{
+  margin: 0 5px;
+}
+
+.index-main-image{
+  width: 30%;
 }

@@ -911,6 +911,10 @@ textarea.w-input, textarea.w-select {
     left: auto;
     right: auto;
   }
+
+  .index-main-image{
+    width: 50%!important;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -980,6 +984,10 @@ textarea.w-input, textarea.w-select {
   .w-col-small-12 {
     width: 100%;
   }
+
+  .index-main-image{
+    width: 60%!important;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1045,6 +1053,10 @@ textarea.w-input, textarea.w-select {
 
   .w-col-tiny-12 {
     width: 100%;
+  }
+
+  .index-main-image{
+    width: 70%!important;
   }
 }
 
@@ -2441,8 +2453,8 @@ h3 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-left: 40px;
-  margin-right: 40px;
+  /* margin-left: 40px;
+  margin-right: 40px; */
   padding: 14px 32px;
   font-size: 12px;
   font-weight: 400;
@@ -4313,8 +4325,8 @@ h3 {
   }
 
   .button {
-    margin-left: 10px;
-    margin-right: 10px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -5344,4 +5356,12 @@ section::after {
   margin: auto;
   width: 75%;
   margin-top: 15%;
+}
+
+.about-w-dyn-item{
+  margin: 0 5px;
+}
+
+.index-main-image{
+  width: 30%;
 }

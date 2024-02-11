@@ -2911,6 +2911,15 @@ h3 {
 
 .quick-list-collection-item:first-child {
   border-top: 1px solid var(--outline-dark);
+  height: 0px;
+}
+
+.list-item-3{
+  margin-top: -187px;
+}
+
+.list-item-2{
+  margin-top: -85px;
 }
 
 .logos-heading-wrapper {
@@ -3426,7 +3435,7 @@ h3 {
 .dis_icon{
   margin-left: 6px;
   font-family: 'Nunito Sans', sans-serif;
-  font-weight:500;
+  font-weight:400;
 }
 
 .devfolio_btn{

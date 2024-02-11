@@ -3391,7 +3391,9 @@ h3 {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&display=swap');
+
 
 
 .discord_btn{
@@ -3410,7 +3412,7 @@ h3 {
   /* color: #27333f; */
   /* background-color: #fff; */
   padding: 0 32px;
-  font-family: Nunito Sans,sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   border-radius: 4px;
   border: 2px solid transparent;
 }

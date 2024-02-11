@@ -4152,6 +4152,10 @@ h3 {
     font-size: 24px;
   }
 
+  .count_down{
+    display: none;
+  }
+
   .section.footer {
     padding-top: 120px;
     padding-bottom: 100px;

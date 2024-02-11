@@ -935,6 +935,10 @@ textarea.w-input, textarea.w-select {
 }
 
 @media screen and (max-width: 767px) {
+  .image-2{
+    width: 25vw !important;;
+  }
+
   .heading_sponser{
     font-size: 37px!important;
   }
@@ -2062,6 +2066,10 @@ textarea.w-input, textarea.w-select {
   .w-nav[data-collapse="medium"] .w-nav-button {
     display: block;
   }
+
+  .image-2{
+    margin-top: 30%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2409,7 +2417,7 @@ h3 {
   display: flex;
   position: absolute;
   top: auto;
-  bottom: 5vw;
+  bottom: -1vw;
   left: 5vw;
   right: auto;
 }
@@ -3803,6 +3811,13 @@ h3 {
   width: 15vw;
 }
 
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+.contact_button{
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 2px;
+}
+
 @media screen and (min-width: 1280px) {
   .button {
     margin-left: 40px;
@@ -4261,10 +4276,10 @@ h3 {
     padding-right: 15px;
   }
 
-  .footer-wrapper-2 {
+  /* .footer-wrapper-2 {
     flex-direction: column;
     align-items: center;
-  }
+  } */
 
   .footer-content {
     grid-template-columns: 1fr;
@@ -4791,7 +4806,12 @@ h3 {
     width: 100px;
     height: 100px;
     right:1vw;
-    margin-bottom: 15px;
+    margin-bottom: 45px;
+  }
+
+  .footer-wrapper-2 {
+    flex-direction: column;
+    align-items: center;
   }
 
 }

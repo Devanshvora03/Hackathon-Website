@@ -850,6 +850,10 @@ textarea.w-input, textarea.w-select {
     max-width: 728px;
   }
 
+  .background-clip{
+
+  }
+
   .featured-logos-wrapper {
     grid-column-gap: 24px;
     grid-row-gap: 12px;
@@ -2482,7 +2486,7 @@ h3 {
   /* margin-left: 40px;
   margin-right: 40px; */
   padding: 14px 32px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
   text-decoration: none!important;
   display: flex;
@@ -3869,7 +3873,7 @@ h3 {
 
   .section.about-hero-section {
     padding-top: 160px;
-    padding-bottom: 80px;
+    padding-bottom: 180px;
   }
 
   .section.paralax-section {
@@ -3910,7 +3914,7 @@ h3 {
   }
 
   .hover-link-wrapper.scroll-link-wrapper {
-    display: none;
+    /* display: none; */
   }
 
   .three-grid-wrapper {
@@ -4134,7 +4138,7 @@ h3 {
   }
 
   .section.about-hero-section {
-    padding-bottom: 60px;
+    padding-bottom: 190px;
   }
 
   .section.extra-top-padding.no-bottom-padding {
@@ -4161,7 +4165,7 @@ h3 {
   }
 
   .hover-link-wrapper.right-scroll-link {
-    display: none;
+    right:1vw;
   }
 
   .three-grid-wrapper {
@@ -4314,7 +4318,7 @@ h3 {
 
   .section.about-hero-section {
     padding-top: 120px;
-    padding-bottom: 48px;
+    padding-bottom: 230px;
   }
 
   .section.paralax-section {
@@ -4783,6 +4787,13 @@ h3 {
   #w-node-_5d0ede7f-cc03-41c4-85e6-0181abfe8af2-d58fb174 {
     justify-self: start;
   }
+  .hover-link-wrapper.right-scroll-link {
+    width: 100px;
+    height: 100px;
+    right:1vw;
+    margin-bottom: 15px;
+  }
+
 }
 
 @media screen and (max-width: 767px) {

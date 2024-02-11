@@ -40,6 +40,7 @@ abbr[title] {
 }
 
 
+
 .button:hover{
   /* background: linear-gradient(to right, #f95c4b, #fc804a, #eba452, #bbad5d, #7d9261, #4c6857, #304549, #e54560); */
   background-color: white;
@@ -3425,7 +3426,7 @@ h3 {
 .dis_icon{
   margin-left: 6px;
   font-family: 'Nunito Sans', sans-serif;
-  font-weight:300;
+  font-weight:500;
 }
 
 .devfolio_btn{
@@ -4321,9 +4322,11 @@ h3 {
   h2 {
     font-size: 28px;
   }
+
   .clip_btn{
     margin-top: 15px;
   }
+
   h3 {
     font-size: 20px;
   }

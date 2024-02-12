@@ -5443,3 +5443,7 @@ section::after {
 .index-main-image{
   width: 30%;
 }
+
+.clip.clip_btn{
+  margin-top: 15px!important;
+}

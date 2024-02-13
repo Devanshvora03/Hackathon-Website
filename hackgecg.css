@@ -851,9 +851,6 @@ textarea.w-input, textarea.w-select {
     max-width: 728px;
   }
 
-  .background-clip{
-
-  }
 
   .featured-logos-wrapper {
     grid-column-gap: 24px;
@@ -2098,6 +2095,7 @@ textarea.w-input, textarea.w-select {
 @media screen and (max-width: 620px){
   .clip{
     display: inline!important;
+    
   }
 
   .clip a{

@@ -851,9 +851,6 @@ textarea.w-input, textarea.w-select {
     max-width: 728px;
   }
 
-  .background-clip{
-
-  }
 
   .featured-logos-wrapper {
     grid-column-gap: 24px;
@@ -2097,7 +2094,8 @@ textarea.w-input, textarea.w-select {
 
 @media screen and (max-width: 620px){
   .clip{
-    display: inline!important;
+    /* display: inline!important; */
+
   }
 
   .clip a{
@@ -4343,6 +4341,7 @@ h3 {
 
   .clip_btn{
     margin-top: 15px;
+    margin: auto;
   }
 
   h3 {

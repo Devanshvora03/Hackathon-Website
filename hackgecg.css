@@ -2260,6 +2260,10 @@ h3 {
   position: relative;
 }
 
+.timeline_section{
+  margin-top: 300px;
+}
+
 .section.home-hero-section {
   min-height: 100vh;
   justify-content: space-between;

@@ -4215,7 +4215,7 @@ h3 {
 
   .speaker-list-icon-wrapper {
     margin-right: 18px;
-    padding-left: 18px;
+    /* padding-left: 18px; */
   }
 
   .speaker-list-icon {

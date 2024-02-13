@@ -2094,7 +2094,7 @@ textarea.w-input, textarea.w-select {
 
 @media screen and (max-width: 620px){
   .clip{
-    /* display: inline!important; */
+    display: inline!important;
     
   }
 

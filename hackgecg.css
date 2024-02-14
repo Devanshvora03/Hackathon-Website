@@ -2959,6 +2959,8 @@ h3 {
   display: grid;
 }
 
+
+
 .showreel-wrapper {
   height: 70vh;
   background-color: #1e2029;
@@ -3819,9 +3821,7 @@ h3 {
   color: #fdfdfd;
 
 }
-.footer-social-link:hover{
-  
-}
+
 
 .footer-divider {
   width: 100%;
@@ -5377,6 +5377,17 @@ section::after {
 .card2{
   top:-50px;
 }
+
+@media screen and (max-width:572px) {
+      .gdsc_logo{
+          margin-top: -60px;
+      }
+      .logo{
+        margin-top:-30px!important ;
+      }
+} 
+  
+
 
 
 @media screen and (max-width:768px) {

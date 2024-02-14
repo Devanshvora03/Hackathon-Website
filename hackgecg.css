@@ -4359,6 +4359,10 @@ h3 {
     padding-bottom: 36px;
   }
 
+  /* .timeline_section{
+    margin-top: 50px;
+  } */
+
   .section.thin-section {
     margin-top: 36px;
     margin-bottom: 36px;
@@ -4896,6 +4900,10 @@ h3 {
 
   #w-node-_5d0ede7f-cc03-41c4-85e6-0181abfe8af2-d58fb174 {
     justify-self: center;
+  }
+
+  .timeline_section{
+    margin-top: 50px;
   }
 }
 

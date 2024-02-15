@@ -2336,7 +2336,7 @@ textarea.w-select {
 }
 
 h1 {
-  letter-spacing: -0.05em;
+  /* letter-spacing: -0.05em; */
   margin-top: 0;
   margin-bottom: 0;
   font-family: Eudoxussans, sans-serif;
@@ -2781,7 +2781,7 @@ h3 {
 
 .slide-image {
   width: 100%;
-  height: 65vh;
+  height: 50vh;
   justify-content: flex-start;
   align-items: flex-end;
   display: flex;
@@ -2826,7 +2826,7 @@ h3 {
   z-index: 10;
   margin-top: 5px;
   margin-bottom: 3px;
-  font-size: 50px;
+  font-size: 45px;
   position: relative;
 }
 
@@ -5633,4 +5633,8 @@ section::after {
 .index-outer-clip{
   display: flex;
   justify-content: center;
+}
+
+.contact-font{
+  font-size: 16px;
 }

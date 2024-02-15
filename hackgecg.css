@@ -5094,7 +5094,12 @@ h3 {
 
 
 
-
+  .spo{
+    /* margin-left: 70px;   */
+    margin-top: 45px;
+    justify-content: center;
+    display: flex;
+}
 
 /* css */
 
@@ -5136,6 +5141,11 @@ h3 {
   --bg-color-light: #f1f7ff;
   --text-color-hover: #4C5656;
   --box-shadow-color: rgba(0, 0, 0, 0.48);
+}
+
+.title_sponsor{
+  height:180px!important;
+  
 }
 
 .card {

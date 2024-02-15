@@ -2486,6 +2486,13 @@ h3 {
   font-weight: 700;
   color: #ffffff;
 }
+
+.heading_sponser_title{
+  font-size: 40px;
+  font-weight:400 ;
+  color: #ffffff;
+}
+
 .body-display.feature-descriptor {
   color: #fff;
   margin-bottom: 0;

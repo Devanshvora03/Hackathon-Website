@@ -4338,7 +4338,7 @@ h3 {
   }
 
   .count_down {
-    display: none;
+    width: 100%!important;
   }
 
   .section.footer {

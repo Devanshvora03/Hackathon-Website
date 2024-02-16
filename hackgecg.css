@@ -5138,10 +5138,10 @@ h3 {
 
 /* tracks */
 
-.projects {
-  height: auto;
-  padding-top: 150px;
-  font-family: "Poppins", sans-serif !important;
+.projects{
+    height: auto;
+    padding-top: 95px;
+    font-family: 'Poppins', sans-serif!important;
 }
 .pro {
   /* margin-left: 70px;   */
@@ -5178,66 +5178,198 @@ h3 {
 }
 
 .card {
-  display: block;
-  top: 0px;
-  position: relative;
-  max-width: 300px;
-  background-color: #1e2029 !important;
-  border-radius: 26px;
-  padding: 32px 24px;
-  margin: 12px;
-  z-index: 0;
-  overflow: hidden;
-  /* border: 1px solid #f2f8f9; */
-  max-height: 500px;
-  margin-left: 15px !important;
+    display: block;
+    top: 0px;
+    position: relative;
+    max-width: 300px;
+    background-color: #1e2029!important;
+    border-radius: 26px;
+    padding: 32px 24px;
+    margin: 12px;
+    z-index: 0;
+    overflow: hidden;
+    /* border: 1px solid #f2f8f9; */
+    max-height: 500px;
+    margin-left: 15px !important;
+    
+    &:hover {
+        transition: all 0.2s ease-out;
+        box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+        top: -4px;
+        border: 2px solid #cccccc;
+        background-color: #12141d!important;
 
-  &:hover {
-    transition: all 0.2s ease-out;
-    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
-    top: -4px;
-    border: 2px solid #cccccc;
-    background-color: #12141d !important;
+      }
+  
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -16px;
+        right: -16px;
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+        transform: scale(2);
+        transform-origin: 50% 50%;
+        transition: transform 0.15s ease-out;
+    }
+  
+    &:hover:before {
+      transform: scale(2.15);
+    }
+  }
+  
+  .card:hover {
+    p {
+        transition: all 0.3s ease-out;
+        color: rgba(0, 0, 0, 0.8);
+        text-decoration: none !important;
+      }
+    .h6 {
+        transition: all 0.3s ease-out;
+        color: #000000;
+        text-decoration: none !important;
+      }
+  
   }
 
-  &:before {
-    content: "";
+
+
+  .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    max-width: 1360px!important;
+  }
+  
+  .container .card {
+    position: relative;
+    width: 80%;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    /* margin: 20px; */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  .container .card .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+  }
+  
+  .container .card:hover .content {
+    transform: translateY(-20px);
+  }
+  
+  .container .card .content .imgBx {
+    position: relative;
+    width: 266px;
+    height: 207px;
+    overflow: hidden;
+  }
+  
+  .container .card .content .imgBx img {
     position: absolute;
-    z-index: -1;
-    top: -16px;
-    right: -16px;
-    height: 32px;
-    width: 32px;
-    border-radius: 32px;
-    transform: scale(2);
-    transform-origin: 50% 50%;
-    transition: transform 0.15s ease-out;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .container .card .content .contentBx h3 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+  }
+  
+  
+  .container .card .sci {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+  
+  }
+  
+  .container .card .sci li {
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    opacity: 0;
+  }
+  
+  .container .card:hover .sci li {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  
+  .container .card .sci li a {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
   }
 
-  &:hover:before {
-    transform: scale(2.15);
+  .container .card .content .imgBx_spo {
+    position: relative;
+    width: 260px;
+    height: 190px;
+    overflow: hidden;
   }
-}
+  
+  .container .card .content .imgBx_spo img {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
 
-.card:hover {
-  p {
-    transition: all 0.3s ease-out;
-    color: rgba(0, 0, 0, 0.8);
-    text-decoration: none !important;
-  }
-  .h6 {
-    transition: all 0.3s ease-out;
-    color: #000000;
-    text-decoration: none !important;
-  }
+.car{
+  margin-top: 45px;
 }
 
   .spo{
     /* margin-left: 70px;   */
-    margin-top: 45px;
+    /* margin-top: 45px; */
     justify-content: center;
     display: flex;
 }
+
+.card_sponsor{
+  height: 200px!important;
+}
+
+.container .card_sponsor .sci {
+  position: absolute;
+  bottom: 0px!important;
+  display: flex;
+}
+
+.price_spo{
+  font-size: 15px;
+  text-align: center;
+}
+
+
+
 
 /* css */
 
@@ -5458,31 +5590,31 @@ section::after {
   transform: translateY(-20px);
 }
 
-.container .card .content .imgBx {
-  position: relative;
-  width: 260px;
-  height: 190px;
-  overflow: hidden;
-}
+/* .container .card .content .imgBx {
+	position: relative;
+	width: 285px;
+  height: 215px;
+	overflow: hidden;
+} */
 
-.container .card .content .imgBx img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+/* .container .card .content .imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+} */
 
 .container .card .content .contentBx h3 {
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 500;
-  font-size: 18px;
-  text-align: center;
-  margin: 20px 0 10px;
-  line-height: 1.1em;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	margin: 30px 0 50px;
+	line-height: 1.1em;
 }
 
 .container .card .sci {

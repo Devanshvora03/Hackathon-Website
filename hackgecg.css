@@ -5163,11 +5163,16 @@ h3 {
   font-display: swap;
 }
 
+@media screen and (min-width:1200px) {
+  .container{
+    max-width: 1460px!important;
+  }
+}
 /* tracks */
 
 .projects{
     height: auto;
-    padding-top: 95px;
+    padding-top: 55px;
     font-family: 'Poppins', sans-serif!important;
 }
 .pro {
@@ -5694,6 +5699,13 @@ section::after {
       margin-top: 40px;
     }
 
+    .projects{
+      padding-top: 38px;
+    }
+
+    .main_spo_heading{
+      margin-top: 120px;
+    }
 }
 
 @media screen and (max-width: 1200px) {

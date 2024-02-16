@@ -1012,6 +1012,33 @@ textarea.w-select {
   }
 }
 
+@media screen and (max-width: 684px) {
+    .card_sponsor{
+      max-height: 172px!important;
+    }
+
+    .heading_sponser_title{
+      font-size: 35px!important ;
+    }
+
+    .img_prize_title{
+      scale: 1.2!important;
+    }
+    .prize_img_1{
+      scale:0.8!important;
+    }
+
+    .prize_img_community_1{
+      scale: 0.6!important;
+    }
+
+    .prize_img_community_2{
+      scale: 0.8!important;
+    }
+    
+
+}
+
 @media screen and (max-width: 767px) {
   .image-2 {
     width: 25vw !important;
@@ -5354,7 +5381,7 @@ h3 {
 }
 
 .card_sponsor{
-  height: 200px!important;
+  max-height: 200px;
 }
 
 .container .card_sponsor .sci {

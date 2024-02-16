@@ -5004,7 +5004,7 @@ h3 {
 
 .projects{
     height: auto;
-    padding-top: 150px;
+    padding-top: 95px;
     font-family: 'Poppins', sans-serif!important;
 }
 .pro{
@@ -5101,12 +5101,140 @@ h3 {
 
 
 
+  .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    max-width: 1360px!important;
+  }
+  
+  .container .card {
+    position: relative;
+    width: 80%;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    /* margin: 20px; */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  .container .card .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+  }
+  
+  .container .card:hover .content {
+    transform: translateY(-20px);
+  }
+  
+  .container .card .content .imgBx {
+    position: relative;
+    width: 266px;
+    height: 207px;
+    overflow: hidden;
+  }
+  
+  .container .card .content .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .container .card .content .contentBx h3 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+  }
+  
+  
+  .container .card .sci {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+  
+  }
+  
+  .container .card .sci li {
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    opacity: 0;
+  }
+  
+  .container .card:hover .sci li {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  
+  .container .card .sci li a {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .container .card .content .imgBx_spo {
+    position: relative;
+    width: 260px;
+    height: 190px;
+    overflow: hidden;
+  }
+  
+  .container .card .content .imgBx_spo img {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+
+.car{
+  margin-top: 45px;
+}
+
   .spo{
     /* margin-left: 70px;   */
-    margin-top: 45px;
+    /* margin-top: 45px; */
     justify-content: center;
     display: flex;
 }
+
+.card_sponsor{
+  height: 200px!important;
+}
+
+.container .card_sponsor .sci {
+  position: absolute;
+  bottom: 0px!important;
+  display: flex;
+}
+
+.price_spo{
+  font-size: 15px;
+  text-align: center;
+}
+
+
+
 
 /* css */
 
@@ -5332,21 +5460,21 @@ section::after {
 	transform: translateY(-20px);
 }
 
-.container .card .content .imgBx {
+/* .container .card .content .imgBx {
 	position: relative;
-	width: 260px;
-  height: 190px;
+	width: 285px;
+  height: 215px;
 	overflow: hidden;
-}
+} */
 
-.container .card .content .imgBx img {
+/* .container .card .content .imgBx img {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-}
+} */
 
 .container .card .content .contentBx h3 {
 	color: #fff;
@@ -5355,7 +5483,7 @@ section::after {
 	font-weight: 500;
 	font-size: 18px;
 	text-align: center;
-	margin: 20px 0 10px;
+	margin: 30px 0 50px;
 	line-height: 1.1em;
 }
 

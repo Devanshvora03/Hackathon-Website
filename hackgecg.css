@@ -5219,14 +5219,14 @@ h3 {
     max-height: 500px;
     margin-left: 15px !important;
     
-    &:hover {
+    /* &:hover {
         transition: all 0.2s ease-out;
         box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
         top: -4px;
         border: 2px solid #cccccc;
         background-color: #12141d!important;
 
-      }
+      } */
   
     &:before {
         content: "";
@@ -5242,24 +5242,14 @@ h3 {
         transition: transform 0.15s ease-out;
     }
   
-    &:hover:before {
+    /* &:hover:before {
       transform: scale(2.15);
-    }
+    } */
   }
   
-  .card:hover {
-    p {
-        transition: all 0.3s ease-out;
-        color: rgba(0, 0, 0, 0.8);
-        text-decoration: none !important;
-      }
-    .h6 {
-        transition: all 0.3s ease-out;
-        color: #000000;
-        text-decoration: none !important;
-      }
+
   
-  }
+  */
 
 
 
@@ -5294,12 +5284,12 @@ h3 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: 0.5s;
+    /* transition: 0.5s; */
   }
   
-  .container .card:hover .content {
+  /* .container .card:hover .content {
     transform: translateY(-20px);
-  }
+  } */
   
   .container .card .content .imgBx {
     position: relative;

@@ -4338,7 +4338,8 @@ h3 {
   }
 
   .count_down {
-    width: 100%!important;
+    /* width: 100%!important; */
+    display: none;
   }
 
   .section.footer {

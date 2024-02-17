@@ -5686,8 +5686,12 @@ section::after {
 
 
 @media screen and (max-width:768px) {
-    .container_tracks{
+    /* .container_tracks{
       height: 215vh !important;;
+    } */
+
+    .container_tracks{
+      height: 25vh !important;
     }
     .tracks_content{
       margin-top: 30px;
@@ -5709,8 +5713,12 @@ section::after {
 }
 
 @media screen and (max-width: 1200px) {
-  .container_tracks {
+  /* .container_tracks {
     height: 125vh;
+  } */
+
+  .container_tracks{
+    height: 25vh !important;;
   }
   .prize_content {
     margin-top: 40px;

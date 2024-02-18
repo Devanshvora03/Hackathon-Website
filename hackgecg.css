@@ -4020,6 +4020,12 @@ h3 {
   }
 }
 
+@media screen and (max-width: 1520px) {
+  .about-clip{
+    display: inline!important;
+  }
+}
+
 @media screen and (min-width: 1920px) {
   .wrapper {
     flex-direction: column;

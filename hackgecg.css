@@ -1033,6 +1033,10 @@ textarea.w-select {
     }
 
     .prize_img_community_2{
+      scale: 0.9!important;
+    }
+
+    .prize_img_community_2{
       scale: 0.8!important;
     }
     
@@ -3900,7 +3904,7 @@ h3 {
 
 .footer-wrapper-2 {
   width: 100%;
-  /* max-width: 900px; */
+  max-width: 1000px;
   justify-content: space-between;
   align-items: flex-start;
   margin: 1px auto;
@@ -4017,6 +4021,12 @@ h3 {
 @media screen and (min-width: 1440px) {
   .section.home-hero-section {
     min-height: 60vh;
+  }
+}
+
+@media screen and (max-width: 1520px) {
+  .about-clip{
+    display: inline!important;
   }
 }
 
@@ -4338,7 +4348,8 @@ h3 {
   }
 
   .count_down {
-    width: 100%!important;
+    /* width: 100%!important; */
+    display: none;
   }
 
   .section.footer {
@@ -5386,7 +5397,7 @@ h3 {
 }
 
 .price_spo{
-  font-size: 15px;
+  font-size: 16px;
   text-align: center;
 }
 

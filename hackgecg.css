@@ -1033,6 +1033,10 @@ textarea.w-select {
     }
 
     .prize_img_community_2{
+      scale: 0.9!important;
+    }
+
+    .prize_img_community_2{
       scale: 0.8!important;
     }
     

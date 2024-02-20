@@ -5261,7 +5261,7 @@ h3 {
     /* &:hover:before {
       transform: scale(2.15);
     } */
-  }
+}
   
 
   
@@ -5384,6 +5384,10 @@ h3 {
     /* margin-top: 45px; */
     justify-content: center;
     display: flex;
+}
+
+.prize_img_2 {
+  top: 70px !important;
 }
 
 .card_sponsor{

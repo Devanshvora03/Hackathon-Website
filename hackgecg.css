@@ -2641,6 +2641,11 @@ h3 {
   color: #ffffff;
 }
 
+.title-padding{
+  padding-top: 55px;
+}
+
+
 .body-display.feature-descriptor {
   color: #fff;
   margin-bottom: 0;
@@ -5177,6 +5182,10 @@ h3 {
 @media screen and (min-width:1200px) {
   .container{
     max-width: 1460px!important;
+  }
+
+  .service-container{
+    max-width: 1100px!important;
   }
 }
 /* tracks */

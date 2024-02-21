@@ -5716,7 +5716,7 @@ section::after {
 
 @media screen and (max-width:768px) {
     .container_tracks{
-      height: 215vh !important;;
+      height: 151vh !important;;
     }
 
     /* .container_tracks{
@@ -5743,7 +5743,7 @@ section::after {
 
 @media screen and (max-width: 1200px) {
   .container_tracks {
-    height: 125vh;
+    height: 151vh!important;
   }
 
   /* .container_tracks{

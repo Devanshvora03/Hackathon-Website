@@ -5431,24 +5431,29 @@ h3 {
   margin: auto;
 }
 
-.education {
-  --bg-color: #fcd355;
+.GenAI {
+  --bg-color: #ceb2fc;
   --bg-color-light: #ffeeba;
   --text-color-hover: #4c5656;
   --box-shadow-color: rgba(0, 0, 0, 0.48);
 }
 
-.credentialing {
+.track-img{
+  border-radius: 50%;
+
+}
+
+.App-development {
   --bg-color: #acefc7;
   --bg-color-light: #e2fced;
   --text-color-hover: #4c5656;
   --box-shadow-color: rgba(0, 0, 0, 0.48);
 }
 
-.wallet {
-  --bg-color: #ceb2fc;
+.open-innovation {
+  --bg-color: #FCD355;
   --bg-color-light: #f0e7ff;
-  --text-color-hover: #fff;
+  --text-color-hover: #4c5656;
   --box-shadow-color: rgba(0, 0, 0, 0.48);
 }
 

@@ -5433,7 +5433,7 @@ h3 {
 
 .GenAI {
   --bg-color: #ceb2fc;
-  --bg-color-light: #ffeeba;
+  --bg-color-light: #ceb2fc;
   --text-color-hover: #4c5656;
   --box-shadow-color: rgba(0, 0, 0, 0.48);
 }
@@ -5445,14 +5445,14 @@ h3 {
 
 .App-development {
   --bg-color: #acefc7;
-  --bg-color-light: #e2fced;
+  --bg-color-light: #acefc7;
   --text-color-hover: #4c5656;
   --box-shadow-color: rgba(0, 0, 0, 0.48);
 }
 
 .open-innovation {
   --bg-color: #FCD355;
-  --bg-color-light: #f0e7ff;
+  --bg-color-light: #FCD355;
   --text-color-hover: #4c5656;
   --box-shadow-color: rgba(0, 0, 0, 0.48);
 }

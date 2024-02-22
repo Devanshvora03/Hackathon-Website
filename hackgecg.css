@@ -2458,6 +2458,10 @@ h3 {
   padding-top: 0;
 }
 
+.section.no-top-padding.custom-video{
+  padding: 50px 5vw!important;
+}
+
 .section.thin-section {
   margin-top: 100px;
   margin-bottom: 100px;

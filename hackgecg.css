@@ -5531,9 +5531,9 @@ h3 {
   --box-shadow-color: rgba(0, 0, 0, 0.48);
 }
 
-.human-resources {
-  --bg-color: #dce9ff;
-  --bg-color-light: #f1f7ff;
+.GenAI {
+  --bg-color: #cbfdfd;
+  --bg-color-light: #cbfdfd;
   --text-color-hover: #4c5656;
   --box-shadow-color: rgba(0, 0, 0, 0.48);
 }

@@ -3300,12 +3300,13 @@ h3 {
 
 .background-shading{
   z-index: 5;
-  width: 75%;
+  width: 80%;
   height: 100%;
   /* padding-left: 5vw;
   padding-right: 5vw; */
   border-radius: 32px;
   overflow: visible;
+  max-width: 1024px;
 }
 
 .background-shade {

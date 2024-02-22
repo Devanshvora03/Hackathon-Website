@@ -5816,7 +5816,7 @@ section::after {
 
 @media screen and (max-width: 1200px) {
   .container_tracks {
-    height: 190vh!important;
+    height: 195vh!important;
   }
 
   .speaker1-img {

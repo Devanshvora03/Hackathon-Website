@@ -5788,9 +5788,9 @@ section::after {
 
 
 @media screen and (max-width:768px) {
-    .container_tracks{
+    /* .container_tracks{
       height: 160vh !important;;
-    }
+    } */
 
     /* .container_tracks{
       height: 25vh !important;
@@ -5815,9 +5815,9 @@ section::after {
 }
 
 @media screen and (max-width: 1200px) {
-  .container_tracks {
+  /* .container_tracks {
     height: 195vh!important;
-  }
+  } */
 
   .speaker1-img {
     width: 90%;
